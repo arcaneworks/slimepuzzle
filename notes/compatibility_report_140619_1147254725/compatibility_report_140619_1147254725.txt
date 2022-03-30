@@ -1,0 +1,15 @@
+Converting GML script: ${project_dir}\scripts\scr_draw_resizable\scr_draw_resizable.gml
+Converted description /// @description  scr_draw_resizable(sprite_index, width, height, pivot_x, pivot_y)/// @param sprite_index
+/// @param  width
+/// @param  height
+/// @param  pivot_x
+/// @param  pivot_y
+
+Converting GML script: ${project_dir}\scripts\scr_draw_resizable_ext\scr_draw_resizable_ext.gml
+Converted description /// @description  scr_draw_resizable(sprite_index, x, y, width, height, pivot_x, pivot_y)/// @param sprite_index
+/// @param  x
+/// @param  y
+/// @param  width
+/// @param  height
+/// @param  pivot_x
+/// @param  pivot_y

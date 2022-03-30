@@ -1,0 +1,9 @@
+terrainString = "GROUND";
+component = false;
+node = false;
+isTerrain = true;
+terrain = true;
+gridX = noone;
+gridY = noone;
+hovered = false;
+depth = -10; 

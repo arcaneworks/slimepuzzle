@@ -1,0 +1,1 @@
+guiString = string_upper(levelString);

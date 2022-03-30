@@ -1,0 +1,10 @@
+
+event_inherited();
+visible = true;
+tool = false;
+terrain = true;
+terrainString = "NONE";
+gridX = noone;
+gridY = noone;
+hovered = false;
+depth = -10; 
