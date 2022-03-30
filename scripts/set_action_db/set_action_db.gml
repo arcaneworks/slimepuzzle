@@ -121,6 +121,7 @@ function set_action_db(){
 		info.iconSpr = spr_fire_sm;
 		damage.damage = 1; 
 		damage.damageType = "fire";
+		damage.tempDamageType = "fire";
 		targeting.range = 1; 
 		targeting.targetType = "diagonal";
 		actionEvent.eventType = "QTE";
