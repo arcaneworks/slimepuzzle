@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function get_level_file_list(){
 	var fileCount = 0;
-	var directoryLocation = working_directory + "level*";
+	var directoryLocation = working_directory + "CGs//" + "level*";
 	var fileName = file_find_first(directoryLocation,0);
 	var fArray = array_create(0);
 	while(fileName != ""){

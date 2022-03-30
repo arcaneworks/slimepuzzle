@@ -3,9 +3,6 @@
 global.gameObj = id;
 
 levelString = global.testTarget;
-if(!directory_exists("CGs")){
-	directory_create("CGs");
-}
  
 debugMode = false;
 matt = 0;

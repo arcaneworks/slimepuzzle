@@ -23,7 +23,7 @@ cw = camera_get_view_width(cam)
 ch = camera_get_view_height(cam)
 
 //if new level file exists, allow progression to next level
-if(file_exists(newString + ".csv")){
+if(file_exists("CGs\\" + newString + ".csv")){
 	text = "VICTORY";
 	subtext = "PRESS SPACE-BAR TO ADVANCE TO THE NEXT LEVEL.";
 	nextLevel = true;

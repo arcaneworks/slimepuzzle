@@ -44,7 +44,7 @@ function save_CG_set(filename){
 			
 			var _buffer = buffer_create(string_byte_length(saveString) + 1, buffer_fixed, 1);
 			buffer_write(_buffer, buffer_string, saveString);
-			buffer_save(_buffer,  filename + ".csv");
+			buffer_save(_buffer, "CGs\\" + filename + ".csv");
 			buffer_delete(_buffer);
 			show_debug_message("Level " + filename +"  Saved! " + saveString);
 			

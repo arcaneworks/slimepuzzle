@@ -6,7 +6,7 @@ function load_CG_set(filename){
 	
 	var mapStartCol = 3;	 // the first column of the .csv grid that contains node data,
 							  // (namely the nodes in leftmost column of the map)
-	var fileGrid = load_csv(working_directory + filename + ".csv");
+	var fileGrid = load_csv(working_directory + "CGs\\" + filename + ".csv");
 	
 	// ensures fileGrid so that it is exactly as wide as the map 
 	// (if columns on the right side of the CG file are left blank, they will not be loaded in with the load_csv function)

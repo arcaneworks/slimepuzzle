@@ -1,8 +1,5 @@
 
 
-if(!directory_exists("CGs")){
-	directory_create("CGs");
-}
 instance_create_layer(x, y, "Instances", obj_interface_editor); //create the cursor
 global.cursor = obj_interface_editor;
 instance_create_layer(x + 550, y + 2, "Instances", obj_test_button); //create the cursor

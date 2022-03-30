@@ -2,12 +2,7 @@
 
 global.gameObj = id;
 
-
 levelString = "level" + string(global.currentLevel);
-
-if(!directory_exists("CGs")){
-	directory_create("CGs");
-}
  
 debugMode = false;
 matt = 0;
