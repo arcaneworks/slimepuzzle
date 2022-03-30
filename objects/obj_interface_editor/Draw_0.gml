@@ -1,4 +1,4 @@
-draw_sprite_ext(cursorSprite,cursorImg, x, y , 1, 1, 0, c_white, 1 );
+//draw_sprite_ext(cursorSprite,cursorImg, x, y , 1, 1, 0, c_white, 1 );
 
 if(hoverTool != noone){
 	draw_set_font(f_battle_text_small);

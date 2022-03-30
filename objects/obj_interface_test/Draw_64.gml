@@ -1,4 +1,4 @@
-
+draw_sprite(sprite_index,cursorImg, device_mouse_x_to_gui(0)+ x_offset, device_mouse_y_to_gui(0) + y_offset);
 if(obj_test_game.debugMode){
 	var debugList = ds_list_create();
 

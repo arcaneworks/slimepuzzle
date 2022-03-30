@@ -1,6 +1,5 @@
 //creates constructor function and 
 function set_action_db(){
-	
 	//creates struct containing information about the action (title, actionText, icon sprite, hotkey)
 	function info_struct(_title = "NO TITLE", _actionText = "NO ACTION TEXT", _iconSpr = spr_stab_sm, _hotKey = ord("Z"), _instructText = "THIS ACTION HAS NO INSTRUCTION TEXT") constructor {
 		title = _title; 
