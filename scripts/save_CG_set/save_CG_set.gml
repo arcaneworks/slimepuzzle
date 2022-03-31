@@ -30,9 +30,9 @@ function save_CG_set(filename){
 					}
 					
 					show_debug_message(text);
-					 csvRows[ii + 1] = csvRows[ii + 1] + text  + ",";
+					 csvRows[map_height - ii] = csvRows[map_height - ii] + text  + ",";
 					 if(jj == map_width -1)
-						csvRows[ii+1] += "\n";
+						csvRows[map_height - ii] += "\n";
 					//componentGrid.cellInfo[jj][ii] = fileGrid[# mapStartCol + jj, rowIndex + ii]; // add the file's cell data to the component grid data structure
 					
 				}

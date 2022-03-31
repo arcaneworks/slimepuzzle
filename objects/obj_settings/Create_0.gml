@@ -7,7 +7,7 @@ global.editorTarget = "blank level";
 global.testTarget = "blank level";
 global.cursor = noone;
 global.gameObj = noone;
-global.score = 0;
+global.cursorSensitivity = 5;
 componentCodes = ds_map_create(); // decoding key for CG data files
 set_action_db();
 set_component_info_db();
