@@ -193,8 +193,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "5 - Rooms",
-    "path": "folders/00 - GAME/5 - Rooms.yy",
+    "name": "03 - ROOMS",
+    "path": "folders/03 - ROOMS.yy",
   },
   "resourceVersion": "1.0",
   "name": "test_room",
