@@ -12,7 +12,7 @@ mpos = 0;
 selected = noone;
 textColor = c_white;
 
-var levelFile = file_find_first(working_directory + "CGs/*", fa_directory);
+var levelFile = file_find_first(working_directory + "CGs/*", 0);
 while (levelFile != ""){
 	var extNum = string_last_pos(".csv", levelFile)
 	var LevelFileNoExt = string_delete(levelFile, extNum, 4);

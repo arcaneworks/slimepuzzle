@@ -1,1 +1,1 @@
-draw_sprite(sprite_index,cursorImg, device_mouse_x_to_gui(0)+ x_offset, device_mouse_y_to_gui(0) + y_offset);
+draw_sprite(sprite_index,cursorImg, mouse_x+ x_offset, mouse_y + y_offset);

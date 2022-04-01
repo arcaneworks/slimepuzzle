@@ -1,4 +1,4 @@
-if(instance_position(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), id)){
+if(instance_position(mouse_x, mouse_y, id)){
 		image_index = 1;
 		
 		if(mouse_check_button_released(mb_left)){

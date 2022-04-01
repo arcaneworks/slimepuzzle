@@ -1,9 +1,9 @@
-draw_sprite(sprite_index,cursorImg, device_mouse_x_to_gui(0)+ x_offset, device_mouse_y_to_gui(0) + y_offset);
+//draw_sprite(sprite_index,cursorImg, mouse_x+ x_offset, mouse_y + y_offset);
 if(global.gameObj.debugMode){
 	var debugList = ds_list_create();
 
-	draw_text(device_mouse_x_to_gui(0) + sprite_width, device_mouse_y_to_gui(0), "standby queue" + string(ds_queue_size(global.gameObj.actionQueue)));
-	draw_text(device_mouse_x_to_gui(0) + sprite_width, device_mouse_y_to_gui(0) + 25, "game phase: " + global.gameObj.phase);
+	draw_text(mouse_x + sprite_width, mouse_y, "standby queue" + string(ds_queue_size(global.gameObj.actionQueue)));
+	draw_text(mouse_x + sprite_width, mouse_y + 25, "game phase: " + global.gameObj.phase);
 
 	ds_list_add(debugList, "interface state: " + state);
 	ds_list_add(debugList, "counter" + string(global.gameObj.matt));
@@ -40,6 +40,6 @@ if(global.gameObj.debugMode){
 		}
 	
 	}
-	ds_list_draw(debugList,device_mouse_x_to_gui(0) + sprite_width, device_mouse_y_to_gui(0) + 50, 0, 20, false);
+	ds_list_draw(debugList,mouse_x + sprite_width, mouse_y + 50, 0, 20, false);
 	ds_list_destroy(debugList);
 }
