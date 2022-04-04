@@ -96,8 +96,9 @@ update_cursor_pos();
 					obj_sub_toolbar_write.visible = false;				
 				}
 				step_tool_select();
-				input = get_string_async("Name your map.", auto_gen_mapname(working_directory + "levels/*", "level")); 
-				state = "idle"
+				var mapName = auto_gen_mapname(working_directory + "levels/*", "level");
+				input = get_string_async("Name your map.", mapName); 
+				state = "idle";
 			
 			break;
 			

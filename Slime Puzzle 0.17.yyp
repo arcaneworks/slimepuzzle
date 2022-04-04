@@ -133,6 +133,7 @@
     {"id":{"name":"spr_load_box","path":"sprites/spr_load_box/spr_load_box.yy",},"order":8,},
     {"id":{"name":"obj_interface_menu","path":"objects/obj_interface_menu/obj_interface_menu.yy",},"order":5,},
     {"id":{"name":"s_fire4","path":"sounds/s_fire4/s_fire4.yy",},"order":6,},
+    {"id":{"name":"obj_saveas","path":"objects/obj_saveas/obj_saveas.yy",},"order":7,},
     {"id":{"name":"step_move_relocate","path":"scripts/step_move_relocate/step_move_relocate.yy",},"order":2,},
     {"id":{"name":"spr_air2","path":"sprites/spr_air2/spr_air2.yy",},"order":3,},
     {"id":{"name":"spr_web","path":"sprites/spr_web/spr_web.yy",},"order":0,},
