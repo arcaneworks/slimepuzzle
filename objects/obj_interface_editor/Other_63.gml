@@ -8,15 +8,16 @@ if i_d == input {
             // if the user has clicked 'Okay'
 
         var mapName = ds_map_find_value(async_load, "result");
+		
                 // might be good to adjust this so that the user can't put '/' in the team name
 
         if (mapName == "") {
 
             input = get_string_async("You didn't enter anything! Gimme something: ", "")
 
-        } else if (file_exists(mapName + ".csv")) {
+        } else if (file_exists("CGs\\" + mapName + ".csv")) {
 
-            input = get_string_async("A map with that name already exists. Try a different one: ", mapName);
+            input = get_string_async("A map with that name already exists. Try a different one: ", auto_gen_mapname(, "level"));
 
         } else {
                 // directory_create("maps/" + mapName); 
@@ -26,7 +27,8 @@ if i_d == input {
             // reset everything
             show_message(mapName + " saved!");
             state = "move";
-            obj_level_editor.level = mapName; // update current map name
+			selectedObj = noone;
+            obj_sub_toolbar_write.selectedObjTool = noone // update current map name
         }
     }
 }
