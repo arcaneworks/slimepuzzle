@@ -25,6 +25,9 @@ update_cursor_pos();
 			break;
 			
 			case "move2":
+			if(obj_sub_toolbar_write.visible){
+					obj_sub_toolbar_write.visible = false;				
+				}
 				cursorSprite = spr_move_cursor;
 				step_move_relocate();
 				step_tool_select();
@@ -100,10 +103,13 @@ update_cursor_pos();
 			
 			
 			case "load":
-				instance_activate_object(obj_level_load_menu);
-				if(obj_sub_toolbar_write.visible){
+			if(obj_sub_toolbar_write.visible){
 					obj_sub_toolbar_write.visible = false;				
 				}
+				instance_activate_object(obj_scroll_load_box);
+				instance_activate_object(obj_scroll_bar);
+				instance_activate_object(obj_scroll_bead);
+				
 				step_tool_select();
 				
 			break;

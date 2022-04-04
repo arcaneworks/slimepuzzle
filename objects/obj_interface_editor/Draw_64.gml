@@ -1,4 +1,4 @@
-draw_sprite(sprite_index,cursorImg, device_mouse_x_to_gui(0)+ x_offset, device_mouse_y_to_gui(0) + y_offset);
+//draw_sprite(sprite_index,cursorImg, mouse_x+ x_offset, mouse_y + y_offset);
 if(obj_level_editor.debugMode){
 	var debugList = ds_list_create();
 	
@@ -37,7 +37,7 @@ if(obj_level_editor.debugMode){
 	}
 	
 	if(ds_list_size(debugList) > 0){
-	ds_list_draw(debugList,device_mouse_x_to_gui(0) + sprite_width, device_mouse_y_to_gui(0) + 50, 0, 20, false);
+	ds_list_draw(debugList,mouse_x + sprite_width, mouse_y + 50, 0, 20, false);
 	}
 	ds_list_destroy(debugList);
 }

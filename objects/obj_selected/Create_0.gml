@@ -1,2 +1,2 @@
 cursor = global.cursor;
-depth = cursor.depth - 1; 
+depth = -99; 
