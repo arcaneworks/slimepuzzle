@@ -10,9 +10,12 @@ function move_nodes(originNode) {
 	var bBound = 0; //bottom side
 	var tBound = map_height; //top side
 	var moveNodes = global.cursor.moveNodes;
+	var moveRange = 1;
+	if( global.cursor.selectedActor != -4)
+		moveRange = global.cursor.selectedActor.move;
 	ds_list_clear_inner_lists(moveNodes);
 
-	for(var xx = oX - 1; xx <= oX + 1; xx++){
+	for(var xx = oX - moveRange; xx <= oX + moveRange; xx++){
 		if(xx >= lBound && xx < rBound){
 			if(xx < oX){
 				var dirList = ds_list_find_value(moveNodes, dir.west);
@@ -34,7 +37,7 @@ function move_nodes(originNode) {
 		}
 	}
 	
-	for(var yy = oY - 1; yy <= oY + 1; yy++){
+	for(var yy = oY - moveRange; yy <= oY + moveRange; yy++){
 		if(yy >= bBound && yy < tBound){	
 			if(yy < oY){
 				var dirList = ds_list_find_value(moveNodes, dir.south);

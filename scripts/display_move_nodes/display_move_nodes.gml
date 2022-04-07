@@ -9,8 +9,10 @@ function display_move_nodes(originNode){
 	var rBound = map_width; //right side
 	var bBound = 0; //bottom side
 	var tBound = map_height; //top side
-
-	for(var xx = oX - 1; xx <= oX + 1; xx++){
+	var moveRange = 1;
+	if( originNode.occupant != -4)
+		moveRange = originNode.occupant.move;
+	for(var xx = oX - moveRange; xx <= oX + moveRange; xx++){
 		if(xx >= lBound && xx < rBound){
 			if(xx < oX){
 				if(map[xx, oY].occupant == noone){
@@ -26,7 +28,7 @@ function display_move_nodes(originNode){
 		}
 	}
 	
-	for(var yy = oY - 1; yy <= oY + 1; yy++){
+	for(var yy = oY - moveRange; yy <= oY + moveRange; yy++){
 		if(yy >= bBound && yy < tBound){	
 			if(yy < oY){
 				 if(map[oX, yy].occupant == noone){
