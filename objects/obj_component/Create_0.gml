@@ -75,6 +75,7 @@ enemy = false;
 vehicle = false; 
 node = false;
 move = 0;
+diagonal = false;
 moveSpeed = 4;
 
 selected = false;
