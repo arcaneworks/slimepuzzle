@@ -37,3 +37,11 @@ if(shoved){
 }
 
 push = false;
+
+
+
+	for(var gg = 0; gg < instance_number(obj_enemy); gg++){
+	    var tempEnemy = instance_find(obj_enemy, gg); 
+		enemy_reaction(tempEnemy);
+	}
+	

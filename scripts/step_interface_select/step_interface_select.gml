@@ -6,7 +6,7 @@ function step_interface_select() {
 		
 		if(hoverNode.occupant && hoverNode.occupant.canMove && selectedActor == noone){
 			wipe_nodes();
-			display_move_nodes(map[gridX, gridY]); 
+			move_nodes(map[gridX, gridY]); 
 			
 		}else{
 			wipe_nodes();	
