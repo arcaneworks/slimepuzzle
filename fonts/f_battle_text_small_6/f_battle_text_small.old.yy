@@ -21,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 1,
-  "ascender": 7,
   "glyphs": {
     "32": {"x":2,"y":2,"w":3,"h":12,"character":32,"shift":3,"offset":0,},
     "33": {"x":54,"y":58,"w":3,"h":12,"character":33,"shift":2,"offset":-1,},
@@ -226,10 +225,10 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "7 - Fonts",
-    "path": "folders/00 - GAME/7 - Fonts.yy",
+    "path": "folders/7 - Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "f_battle_text_small_10",
+  "name": "f_battle_text_small",
   "tags": [],
   "resourceType": "GMFont",
 }

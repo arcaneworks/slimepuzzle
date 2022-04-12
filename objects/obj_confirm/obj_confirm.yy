@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_frame_bg",
+    "path": "sprites/spr_frame_bg/spr_frame_bg.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -19,17 +22,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Level Editor UI",
-    "path": "folders/01 - LEVEL EDITOR/Level Editor UI.yy",
+    "name": "01 - LEVEL EDITOR",
+    "path": "folders/01 - LEVEL EDITOR.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_node_info_le",
+  "name": "obj_confirm",
   "tags": [],
   "resourceType": "GMObject",
 }

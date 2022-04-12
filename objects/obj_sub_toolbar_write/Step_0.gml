@@ -1,3 +1,9 @@
+if(obj_interface_editor.state == "write"){
+	visible = true; 	
+}else{
+	visible = false; 
+}	
+
 if(obj_sub_toolbar_write.visible){
 	pageText = string(currPage) + " / " + string(totalPages);
 	switch(selectedTab.tabType){

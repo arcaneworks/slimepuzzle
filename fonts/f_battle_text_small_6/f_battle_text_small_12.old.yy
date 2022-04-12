@@ -226,10 +226,10 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "7 - Fonts",
-    "path": "folders/00 - GAME/7 - Fonts.yy",
+    "path": "folders/7 - Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "f_battle_text_small_10",
+  "name": "f_battle_text_small_12",
   "tags": [],
   "resourceType": "GMFont",
 }

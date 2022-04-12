@@ -1,3 +1,4 @@
+global.cursor = id; 
 depth = -200;
 cursorSprite = spr_cursor;
 cursorImg = 0;

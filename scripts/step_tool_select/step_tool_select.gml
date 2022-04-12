@@ -43,4 +43,12 @@ function step_tool_select(){
 			}
 		}
 	}
+		
+		
+	if(mouse_check_button_pressed(mb_right)){
+		state = "idle";
+		selectedTool = noone;
+		selectedObjTool = noone;
+
+	}
 }

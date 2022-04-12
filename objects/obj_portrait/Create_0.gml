@@ -26,7 +26,7 @@
 portraitSpr = spr_port_knight;
 portraitFrame = spr_frame;
 
-scale = 3.5;
+scale = 3;
 
 portraitWidth = sprite_get_width(portraitSpr) * scale;
 portraitHeight = sprite_get_height(portraitSpr) * scale;
@@ -38,8 +38,8 @@ interface = global.cursor;
 bgColor = c_olive;
 xMark = false;
 
-y = display_get_gui_height() - portraitHeight;
-x = 0;
+y = room_height - portraitHeight * 2 + 25;
+x = portraitWidth - 45;
 
 portraitEndX = y - .5 * portraitWidth;
 

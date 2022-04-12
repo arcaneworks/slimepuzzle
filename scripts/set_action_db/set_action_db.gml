@@ -115,7 +115,7 @@ function set_action_db(){
 	fire = new act_struct(); 
 	with(fire){
 		info.title = "FIRE";
-		info.infoText = "Ignites a diagonal node.";
+		info.infoText = "Ignites a diagonal node and deals one damage. Destroys webs and other flamable objects.";
 		info.instructText = "Press the buttons in order as they appear on-screen!"
 		info.iconSpr = spr_fire_sm;
 		damage.damage = 1; 

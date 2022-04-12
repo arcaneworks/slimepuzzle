@@ -12,22 +12,14 @@ update_cursor_pos();
 		switch(state){
 			
 			case "move":
-			
 				cursorSprite = spr_move_cursor;
-				
-				if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
-				}
-				
 				step_move_components_assign();	
 				step_tool_select();		
 			
 			break;
 			
 			case "move2":
-			if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
-				}
+
 				cursorSprite = spr_move_cursor;
 				step_move_relocate();
 				step_tool_select();
@@ -35,24 +27,13 @@ update_cursor_pos();
 			
 			
 			case "idle":
-				if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
-				}
+
 				step_tool_select();
 			
 			break;
 			
 			case "write":
-				
-				if(!obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = true;				
-				}
-				if(mouse_check_button_pressed(mb_right)){
-					state = "idle";
-					selectedTool = noone;
-					selectedObjTool = noone;
 
-				}
 				
 				step_tool_select();
 				
@@ -66,9 +47,6 @@ update_cursor_pos();
 			
 			case "delete":
 				cursorSprite = spr_delete_cursor;
-				if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
-				}
 					
 				step_delete();
 				step_tool_select();
@@ -77,12 +55,8 @@ update_cursor_pos();
 			
 			
 			case "save":
-				
+				//create_confirm_box(x, y, width, height, text, choice
 				save_CG_set(obj_level_editor.level);
-				
-				if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
-				}
 				step_tool_select();
 				
 				state = "move";
@@ -92,24 +66,21 @@ update_cursor_pos();
 			
 			
 			case "saveas":
-				if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
+			
+				if(!instance_exists(obj_saveas)){
+					instance_create_layer(x, y, "Instances", obj_saveas);	
 				}
 				step_tool_select();
-				var mapName = auto_gen_mapname(working_directory + "levels/*", "level");
-				input = get_string_async("Name your map.", mapName); 
 				state = "idle";
 			
 			break;
 			
 			
 			case "load":
-			if(obj_sub_toolbar_write.visible){
-					obj_sub_toolbar_write.visible = false;				
+
+				if(!instance_exists(obj_scroll_load_box)){
+					instance_create_layer(x, y, "Instances", obj_scroll_load_box);	
 				}
-				instance_activate_object(obj_scroll_load_box);
-				instance_activate_object(obj_scroll_bar);
-				instance_activate_object(obj_scroll_bead);
 				
 				step_tool_select();
 				
