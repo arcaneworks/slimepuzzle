@@ -160,7 +160,7 @@ if (!hoveringBar) {
 	for(ii = 0; ii < ds_list_size(visObjs); ii ++){
 		var menuXL = x + objHeight;
 		var menuXR = x + width * .75;
-		var menuYtop = y + 20 + (ii * objHeight);    
+		var menuYtop = y + 10  + (ii * objHeight);    
 		var menuYbot = menuYtop + objHeight;
 				
 		if(collision_rectangle(menuXL, menuYtop, menuXR, menuYbot, obj_interface_editor, true, false)){

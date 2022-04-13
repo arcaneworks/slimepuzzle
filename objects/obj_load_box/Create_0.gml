@@ -16,7 +16,6 @@ state = "initializing";
 
 var levelFile = file_find_first(working_directory + "CGs/*", fa_directory);
 while (levelFile != ""){
-	
     ds_list_add(objs, levelFile);
     levelFile = file_find_next();
 }
