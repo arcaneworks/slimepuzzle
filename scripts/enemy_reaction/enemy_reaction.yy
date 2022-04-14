@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "2 - Scripts",
-    "path": "folders/00 - GAME/2 - Scripts.yy",
+    "name": "Reactions",
+    "path": "folders/00 - GAME/2 - Scripts/Nodes &Targeting/Reactions.yy",
   },
   "resourceVersion": "1.0",
   "name": "enemy_reaction",
