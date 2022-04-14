@@ -24,7 +24,7 @@ function valuebar_get_width(argument0, argument1, argument2, argument3) {
 
 
 	///DRAWS FRAME BASED ON MAX VALUE
-	for(var i = 1; i < maxValue; i++){
+	for(var i = 0; i < maxValue; i++){
 	
 	
 

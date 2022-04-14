@@ -16,7 +16,25 @@ var actBoxX = x + portraitWidth;
 var actBoxY = y + actBoxH;
 var frameColor = c_black;
 
-
+var pActor = noone;
+if(interface.selectedActor != noone)
+	pActor = interface.selectedActor;
+else if(interface.hoverNode.occupant != noone)
+	pActor = interface.hoverNode.occupant;
+if(pActor != noone && pActor.hpSec1 != noone){
+	var hpSec1 = pActor.hpSec1;
+	var hpSec2 = pActor.hpSec2;
+	var hpSec3 = pActor.hpSec3;
+	var fillSpr = pActor.fillSpr;
+	
+	var maxHp = pActor.maxHp;
+	var hp = pActor.hp;
+	
+	var barWidth = valuebar_get_width(hpSec1, hpSec2, hpSec3, maxHp);
+	var barHeight = sprite_get_height(hpSec1);
+	draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth + .5 * barWidth, y + 5 , node_size/8, maxHp, hp, 0, c_white, 1,1);
+	
+}
 var title = action1.info.title;
 var titleWidth = string_width(title);
 
@@ -123,7 +141,7 @@ var portraitSize = 1.5 * node_size;
 	
 					var barWidth = valuebar_get_width(hpSec1, hpSec2, hpSec3, maxHp);
 					var barHeight = sprite_get_height(hpSec1);
-					//draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth + .5 * barWidth, y - 5 , node_size/8, maxHp, hp, 0, c_white, 1,1);
+					draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth + .5 * barWidth, y + 5 , node_size/8, maxHp, hp, 0, c_white, 1,1);
 	
 				}
 			}
