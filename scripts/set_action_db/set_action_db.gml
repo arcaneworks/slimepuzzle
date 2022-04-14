@@ -134,6 +134,8 @@ function set_action_db(){
 		info.title = "COUNTER";
 		info.infoText = "COUNTER targets components that move into the node in front of the actor."
 		damage.damage = 2;	
+		targeting.range = 1; 
+		targeting.targetType = "melee";
 	}
 	
 	bless = new act_struct(); 
@@ -170,7 +172,9 @@ function set_action_db(){
 		targeting.targetType = "adjacent";
 		vfx.vfxSprite = spr_nuke_explode;
 		vfx.vfxType = "target node";
-		sfx.startSfx = s_explode;				
+		sfx.startSfx = s_explode;		
+		targeting.targetType = "melee";
+		targeting.range = "1";		
 	}
 	
 	global.actionDB = {

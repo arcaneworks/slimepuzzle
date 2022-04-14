@@ -74,7 +74,7 @@ if(maxHp > 0){ //IF ACTOR DIES
 //}
 
 if(react){
-	get_reaction();	
+	//get_reaction();	
 	global.gameObj.actionState = "standby";
 	react = false; 
 }

@@ -7,12 +7,23 @@ function enemy_reaction(enemy){
 	var bBound = 0; //bottom side
 	var tBound = map_height; //top side
 	originNode =  map[ enemy.gridX, enemy.gridY];
-	aStruct = enemy.action;
+	var aStruct = enemy.action;
 	wipe_nodes();
-	action_nodes(originNode, aStruct.targeting.targetType, aStruct.targeting.range);
+	var targetType = "melee";
+	var attackRange = 1;
+	if(aStruct != noone){
+	if(aStruct.targeting.targetType != noone)
+		targetType = aStruct.targeting.targetType;
+	
+	if(aStruct.targeting.range != noone)
+		attackRange = aStruct.targeting.range;
+		
+	}
+	
+	action_nodes(originNode, targetType, attackRange);
 	for(xx = 0; xx <= rBound; xx++){
 		for (yy=0; yy < tBound; yy++){
-			if(map[xx,yy].actionNode && map[xx,yy].occupant && map[xx,yy].occupant == global.cursor.selectedActor){
+			if(map[xx,yy].actionNode && map[xx,yy].occupant && map[xx,yy].occupant.triggersReaction && map[xx,yy].occupant == global.cursor.selectedActor){
 					enemy.target = map[xx,yy].occupant;
 					ds_list_add(enemy.targetList, enemy.target);
 					wipe_nodes();

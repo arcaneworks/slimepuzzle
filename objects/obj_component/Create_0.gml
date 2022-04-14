@@ -23,6 +23,7 @@ incapacitated = false;
 moveState = "idle";
 actState = "idle";
 gameState = "player turn";
+triggersReaction = true;
  
 sprXscale = 1;
 sprYscale = 1;
