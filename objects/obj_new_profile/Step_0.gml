@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-message = keyboard_string;
-if(string_length(keyboard_string) < limit)
+if(string_length(keyboard_string) < limit && !instance_exists(obj_confirm))
 	message = keyboard_string;
 else
 	keyboard_string = message;
+	
