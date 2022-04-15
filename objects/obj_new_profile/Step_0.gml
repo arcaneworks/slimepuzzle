@@ -5,3 +5,8 @@ if(string_length(keyboard_string) < limit && !instance_exists(obj_confirm))
 else
 	keyboard_string = message;
 	
+	
+if(confirmDec){
+	global.playerProfile = message;
+	room_goto_next();
+}
