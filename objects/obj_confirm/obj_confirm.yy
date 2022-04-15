@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_frame_bg",
-    "path": "sprites/spr_frame_bg/spr_frame_bg.yy",
+    "name": "spr_frame_bg_1",
+    "path": "sprites/spr_frame_bg_1/spr_frame_bg_1.yy",
   },
   "solid": false,
   "visible": true,

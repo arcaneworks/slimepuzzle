@@ -32,14 +32,16 @@ function step_tool_select(){
 				//	var fileCount = array_length(fArray);
 				//	save_CG_set(global.editorTarget)
 				//}
-				
-				
 					
-				
 				selectedTool = hoverTool;
 				obj_sub_toolbar_write.selectedObjTool = noone;
 				selectedObjTool = noone;
 				state = selectedTool.toolType; 
+				
+				if(state == "save"){
+					var confirmText = "are you sure you want to overwrite this file?";
+					create_confirm_box(100, 350, confirmText, true, id);	
+				}
 			}
 		}
 	}

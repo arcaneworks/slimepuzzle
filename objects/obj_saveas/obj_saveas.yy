@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_textbox134",
-    "path": "sprites/spr_textbox134/spr_textbox134.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

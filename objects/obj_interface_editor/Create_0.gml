@@ -39,6 +39,7 @@ prevState = "nothing";
 prevNode = noone;
 
 confirmPress = false;
+confirmDec = noone;
 tempVfx = noone;
 readiedAction = noone;
 
