@@ -77,7 +77,6 @@ update_cursor_pos();
 			
 			
 			case "save":
-<<<<<<< Updated upstream
 				
 				save_CG_set(obj_level_editor.level);
 				
@@ -85,28 +84,9 @@ update_cursor_pos();
 					obj_sub_toolbar_write.visible = false;				
 				}
 				step_tool_select();
-=======
-			
-			
-			if(confirmDec == true){
-				save_CG_set(obj_level_editor.level);
->>>>>>> Stashed changes
 				
 				state = "move";
 				selectedTool = noone;
-				confirmDec = noone;
-					
-			}else{
-				if(confirmDec == false){
-					state = "move";
-					selectedTool = noone;
-					confirmDec = noone;
-					
-				}
-				
-			}
-			
-			
 			
 			break; 
 			
@@ -116,13 +96,9 @@ update_cursor_pos();
 					obj_sub_toolbar_write.visible = false;				
 				}
 				step_tool_select();
-<<<<<<< Updated upstream
 				var mapName = auto_gen_mapname(working_directory + "levels/*", "level");
 				input = get_string_async("Name your map.", mapName); 
 				state = "idle";
-=======
-			
->>>>>>> Stashed changes
 			
 			break;
 			

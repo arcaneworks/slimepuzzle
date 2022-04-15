@@ -26,7 +26,12 @@ function step_tool_select(){
 					}
 				}
 				
-				
+				//if(state == "save"){
+				//	var fArray = array_create(0); 
+				//	fArray = get_level_file_list();
+				//	var fileCount = array_length(fArray);
+				//	save_CG_set(global.editorTarget)
+				//}
 				
 				
 					
@@ -35,11 +40,6 @@ function step_tool_select(){
 				obj_sub_toolbar_write.selectedObjTool = noone;
 				selectedObjTool = noone;
 				state = selectedTool.toolType; 
-				
-				if(state == "save"){
-					var confirmText = "are you sure you want to overwrite this file?";
-					create_confirm_box(100, 350, confirmText, true, id);	
-				}
 			}
 		}
 	}

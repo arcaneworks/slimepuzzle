@@ -41,21 +41,10 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.rock; 
 		break;
 		
-		case "EA":
-			tempStruct = global.componentDB.directorLD;
+		case "EC":
+		
 		break;
 		
-		case "ES":
-			tempStruct = global.componentDB.directorRD;
-		break;
-		
-		case "ED":
-			tempStruct = global.componentDB.directorUL;
-		break;
-		
-		case "EF":
-			tempStruct = global.componentDB.directorUR;
-		break;
 	}
 	
 	if(tempStruct != noone){

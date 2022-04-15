@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-<<<<<<< Updated upstream
 draw_self();
-=======
-
->>>>>>> Stashed changes
 draw_set_valign(fa_top);
 
 draw_rectangle_color(x, y, x + width - 2, y + height - 1, color, color, color, color, false);
