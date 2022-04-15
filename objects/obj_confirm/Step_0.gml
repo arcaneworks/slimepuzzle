@@ -31,7 +31,9 @@ if(decision){
 	if(colBox2){
 		decBox2Color = c_green; 
 		if(mouse_check_button_pressed(mb_left)){
-			instance_destroy(id);	
+				
+			caller.confirmDec = false; 
+			instance_destroy(id);
 		}
 	}else{
 		decBox2Color = c_black;		

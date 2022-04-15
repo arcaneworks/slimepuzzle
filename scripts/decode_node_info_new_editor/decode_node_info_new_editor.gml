@@ -44,6 +44,7 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 				var element = instance_create_layer(nodeID.x, nodeID.y, "Instances", obj_bare_element); // create instance
 				element.componentCode = char1 + char2;
 				get_component_info(element, element.componentCode); 
+				
 				element.sprite_index = object_get_sprite(objectID);
 				element.gridX = nodeID.gridX; 
 				element.gridY = nodeID.gridY; 

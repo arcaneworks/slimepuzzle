@@ -73,29 +73,60 @@ totalActorPages = 2;
 #endregion
 #region ELEMENT CREATION AND LIST
 
-	elementList = ds_list_create();
+	elementList1 = ds_list_create();
+	elementList2 = ds_list_create();
+	
 	rock = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
 	rock.tabType = "elements";
 	rock.componentCode = "ER";
 	rock.sprite_index = spr_rock1;
 	rock.tool = true;
-	ds_list_add(elementList, rock);
+	ds_list_add(elementList1, rock);
 	
 	barrel = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
 	barrel.tabType = "elements";
 	barrel.componentCode = "EB";
 	barrel.sprite_index = spr_barrel1;
 	barrel.tool = true;
-	ds_list_add(elementList, barrel);
+	ds_list_add(elementList1, barrel);
 	
 	crate = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
 	crate.tabType = "elements";
 	crate.componentCode = "EP";
 	crate.sprite_index = spr_crate;
 	crate.tool = true;
-	ds_list_add(elementList, crate);
+	ds_list_add(elementList1, crate);
+	
+	directorLD = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	directorLD.tabType = "elements";
+	directorLD.componentCode = "EA";
+	directorLD.sprite_index = spr_directorLD;
+	directorLD.tool = true;
+	ds_list_add(elementList2, directorLD);
+	
+	directorRD = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	directorRD.tabType = "elements";
+	directorRD.componentCode = "ES";
+	directorRD.sprite_index = spr_directorRD;
+	directorRD.tool = true;
+	ds_list_add(elementList2, directorRD);
+	
+	directorUL = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	directorUL.tabType = "elements";
+	directorUL.componentCode = "ED";
+	directorUL.sprite_index = spr_directorUL;
+	directorUL.tool = true;
+	ds_list_add(elementList2, directorUL);
+	
+	directorUR = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	directorUR.tabType = "elements";
+	directorUR.componentCode = "EF";
+	directorUR.sprite_index = spr_directorUR;
+	directorUR.tool = true;
+	ds_list_add(elementList2, directorUR);
+	
 
-	totalElementPages = 1; 
+	totalElementPages = 2; 
 #endregion
 #region TERRAIN CREATOION AND LIST
 	
@@ -199,19 +230,31 @@ for(var ii = 0; ii < ds_list_size(actorList2); ii++){
 
 #endregion
 
-elementListSize = ds_list_size(elementList);
+elementListSize = ds_list_size(elementList1);
 spriteSize = sprite_get_width(spr_wizard1);
 elementBuffer = 10;
 elementWidth = elementListSize * (elementBuffer + spriteSize); 
 toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * elementWidth;
 toolY = y + .5 * height - .5 * spriteSize + 5;
 
-for(var ii = 0; ii < ds_list_size(elementList); ii++){
-	var element = ds_list_find_value(elementList, ii);	
+for(var ii = 0; ii < ds_list_size(elementList1); ii++){
+	var element = ds_list_find_value(elementList1, ii);	
 	element.x = toolStartX + ii * (elementBuffer + spriteSize); 
 	element.y = toolY;	
 }
 
+elementListSize = ds_list_size(elementList2);
+spriteSize = sprite_get_width(spr_wizard1);
+elementBuffer = 10;
+elementWidth = elementListSize * (elementBuffer + spriteSize); 
+toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * elementWidth;
+toolY = y + .5 * height - .5 * spriteSize + 5;
+
+for(var ii = 0; ii < ds_list_size(elementList2); ii++){
+	var element = ds_list_find_value(elementList2, ii);	
+	element.x = toolStartX + ii * (elementBuffer + spriteSize); 
+	element.y = toolY;	
+}
 terrainListSize = ds_list_size(terrainList);
 spriteSize = sprite_get_width(spr_wizard1);
 terrainBuffer = 10;

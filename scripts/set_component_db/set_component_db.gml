@@ -20,7 +20,7 @@ function set_component_info_db(){
 	
 	//enemies 
 	shooter = new component_info_struct("shooter", "The shooter doesn't have an action yet.", spr_shooter2, spr_port_cleric, 1);
-	shooterFire = new component_info_struct("shooter", "The shooter doesn't have an action yet.", spr_shooter2, spr_port_cleric, 1);
+	shooterFire = new component_info_struct("shooter", "A shooter that is vulerable to fire.", spr_shooter3, spr_port_cleric, 1);
 	fighter = new component_info_struct("fighter", "The fighter strikes the actor in front of it.", spr_fighter2, spr_port_fighter, 1);
 	
 	
@@ -30,6 +30,10 @@ function set_component_info_db(){
 	barrel = new component_info_struct("breakable", "barrels can be destroyed.", spr_barrel1, spr_barrel1, 1);
 	crate = new component_info_struct("breakable", "crates can be destroyed.", spr_crate1, spr_crate1, 1);
 	
+	directorLD = new component_info_struct("director", "redirects arrows", spr_directorLD, spr_directorLD, 1);
+	directorRD = new component_info_struct("director", "redirects arrows", spr_directorRD, spr_directorRD, 1);
+	directorUL = new component_info_struct("director", "redirects arrows", spr_directorUL, spr_directorUL, 1);
+	directorUR = new component_info_struct("director", "redirects arrows", spr_directorUR, spr_directorUR, 1);
 	
 	
 	global.componentDB = {
@@ -41,9 +45,16 @@ function set_component_info_db(){
 		shooter : other.shooter, 
 		shooterFire : other.shooterFire, 
 		fighter : other.fighter, 
+		
+		
 		rock : other.rock, 
 		barrel : other.barrel,
-		crate : other.crate
+		crate : other.crate,
+		directorLD : other.directorLD, 
+		directorRD : other.directorRD,
+		directorUL : other.directorUL,
+		directorUR : other.directorUR,
+		
 	}
 
 

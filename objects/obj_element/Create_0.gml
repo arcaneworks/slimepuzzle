@@ -8,3 +8,5 @@ event_inherited();
 canAct = false;
 hitSfx = s_impact6;
 element = true;
+agent = false;
+
