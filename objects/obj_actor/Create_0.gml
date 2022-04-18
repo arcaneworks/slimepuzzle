@@ -12,6 +12,7 @@ event_inherited(); //inherits most stuff from obj_component
 	rotatable = true;
 	damagable = true;
 	setDir = true;
+	targeted = false;
 	poob = false;
 	weakness = false;
 	hasReaction = false;

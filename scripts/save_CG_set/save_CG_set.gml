@@ -13,6 +13,8 @@ function save_CG_set(filename){
 	csvRows[7] = "-,-,-,";
 	CGheight = 8;
 	show_debug_message(noone);
+	var oldDir = "CGs\\" + filename + ".csv";
+	var newDir = "C:\Users\Matt\Desktop\SLIME REPO 2\slimepuzzle\datafiles\CGs";
 		for (var ii = 0; ii < map_height; ii++) { // for every row in this CG (Y)
 				for (var jj = 0; jj < map_width; jj++) { // for every node in this row, left-right (X)
 					show_debug_message(csvRows[ii+1]);
@@ -47,5 +49,5 @@ function save_CG_set(filename){
 			buffer_save(_buffer, "CGs\\" + filename + ".csv");
 			buffer_delete(_buffer);
 			show_debug_message("Level " + filename +"  Saved! " + saveString);
-			
+		
 }

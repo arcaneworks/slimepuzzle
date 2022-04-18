@@ -104,6 +104,7 @@ function set_action_db(){
 		info.instructText = "Hold 'Z' and release to shoot!";
 		info.iconSpr = spr_shoot_sm;
 		effect.rotate = true;
+		effect.shove = false;
 		actionEvent.eventType = "bar";
 		targeting.range = 8; 
 		targeting.targetType = "bow";

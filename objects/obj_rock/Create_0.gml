@@ -7,3 +7,4 @@ type = "stone";
 canAct = false;
 obstacle = true;
 class = "rock";
+

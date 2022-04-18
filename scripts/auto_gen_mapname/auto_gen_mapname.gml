@@ -16,6 +16,6 @@ function auto_gen_mapname(directory, nameSeed){
 		}
     }
     file_find_close();
-    return nameSeed + string(ct);
+    return nameSeed + string(ct + 2);
 }
 

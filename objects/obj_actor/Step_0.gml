@@ -74,17 +74,46 @@ switch(moveState){  //MOVESTATE
 						
 				}
 				
-				if(action.effect.shove && target.component){
-					actState = "wait push";
-				}else{			
+						
 					actState = "start attack"; 
-				}
+		
 					
 			}else{ //if there is no target
 				actState = "wait";
 			}
 		
 		break;
+		
+		case "start attack":
+			canAct = false;
+			
+		
+			if(!instance_exists(vfx)){ //once the vfx has finished
+				
+				if(ds_list_size(targetList) > 0){ //if there is a target in the targetlist
+					
+					if(ds_list_size(targetList) == 1){ //if there is only one target
+						
+						apply_action();
+					}else{//if there are multiple target
+						for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
+							target = ds_list_find_value(targetList, j); 
+							apply_action();
+						}		
+					}
+				}	
+				
+				
+				if(action.effect.shove && target.component){
+					
+					actState = "wait push";
+				}else{			
+					actState = "end attack"; 
+				}
+				
+			}
+			
+			break;
 		
 		case "wait push":
 			if(!instance_exists(vfx) && !finPush){ //once the vfx has finished
@@ -108,37 +137,12 @@ switch(moveState){  //MOVESTATE
 			if(instance_exists(target) && target.component){
 				if(finPush && target.moveState == "idle"){
 					finPush = false;
-					actState = "start attack";
+					actState = "end attack";
 				
 				}
 			}else{
 				actState = "wait";
 			}
-		
-		break;
-		
-		case "start attack":
-			canAct = false;
-			
-		
-			if(!instance_exists(vfx)){ //once the vfx has finished
-				
-				if(ds_list_size(targetList) > 0){ //if there is a target in the targetlist
-					
-					if(ds_list_size(targetList) == 1){ //if there is only one target
-						
-						apply_action();
-					}else{//if there are multiple target
-						for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
-							target = ds_list_find_value(targetList, j); 
-							apply_action();
-						}		
-					}
-				}		
-				actState = "end attack";
-			}
-			
-				
 		
 		break;
 		
@@ -230,13 +234,26 @@ switch(moveState){  //MOVESTATE
 				}	
 			}
 			
+			if(global.cursor.selectedActor == id){
+				global.cursor.selectedActor = noone; 
+				global.cursor.state = "idle";
+			}else{
+				if(global.cursor.selectedActor.canAct){
+					global.cursor.state = "action target";
+				}else{
+					global.cursor.selectedActor = noone;
+					global.cursor.state = "idle";
+				}
+			}
+			
 			ds_list_clear(targetList);
 			target = noone;
 			reaction = false;
 			miss = false;
 			canAct = false;
-			global.cursor.selectedActor = noone; 
-			global.cursor.state = "idle";
+			
+			
+			
 				
 		break;
 		

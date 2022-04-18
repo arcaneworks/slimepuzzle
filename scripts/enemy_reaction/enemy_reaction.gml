@@ -8,7 +8,7 @@ function enemy_reaction(enemy){
 	var tBound = map_height; //top side
 	originNode =  map[ enemy.gridX, enemy.gridY];
 	var aStruct = enemy.action;
-	wipe_nodes();
+	//wipe_nodes();
 	var targetType = "melee";
 	var attackRange = 1;
 	if(aStruct != noone){
@@ -25,8 +25,9 @@ function enemy_reaction(enemy){
 		for (yy=0; yy < tBound; yy++){
 			if(map[xx,yy].actionNode && map[xx,yy].occupant && map[xx,yy].occupant.triggersReaction && map[xx,yy].occupant == global.cursor.selectedActor){
 					enemy.target = map[xx,yy].occupant;
+					enemy.target.targeted = true;
 					ds_list_add(enemy.targetList, enemy.target);
-					wipe_nodes();
+					//wipe_nodes();
 					state = "nothing";
 					enemy.actState = "action standby";
 					enemy.canAct = false;
