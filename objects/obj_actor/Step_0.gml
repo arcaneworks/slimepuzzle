@@ -238,11 +238,14 @@ switch(moveState){  //MOVESTATE
 				global.cursor.selectedActor = noone; 
 				global.cursor.state = "idle";
 			}else{
-				if(global.cursor.selectedActor.canAct){
-					global.cursor.state = "action target";
-				}else{
-					global.cursor.selectedActor = noone;
-					global.cursor.state = "idle";
+				if(global.cursor.selectedActor != noone){
+					if(global.cursor.selectedActor.canAct){
+						global.cursor.state = "action target";
+						
+					}else{
+						global.cursor.selectedActor = noone;
+						global.cursor.state = "idle";
+					}
 				}
 			}
 			

@@ -25,6 +25,8 @@ actState = "idle";
 gameState = "player turn";
 triggersReaction = true;
  
+targetedBy = noone;
+ 
 sprXscale = 1;
 sprYscale = 1;
 // current position on grid

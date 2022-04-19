@@ -5,6 +5,7 @@ global.undoneMoves = 0;
 global.resets = 0;
 global.editorTarget = "blank level";
 global.testTarget = "blank level";
+global.tempTarget = "temp level";
 global.cursor = obj_interface_menu;
 global.gameObj = noone;
 global.cursorSensitivity = 5;

@@ -3,8 +3,7 @@ if(instance_exists(obj_bare_component)){
 		image_index = 1;
 		
 		if(mouse_check_button_released(mb_left)){
-			save_CG_set("testroom");
-			global.testTarget = "testroom";
+			global.testTarget = "blank level";
 			global.cursor = noone;
 			room_goto(test_room);
 		}

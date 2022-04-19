@@ -16,6 +16,9 @@ function apply_damage_class(){
 				shake = true;
 				
 			}
+		break;
+		
+		case "director":
 		
 		break;
 		

@@ -6,8 +6,8 @@ function mb_press_act(){
 		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
 			
 			if(hoverNode.occupant){
-				selectedActor.target = hoverNode.occupant
-			
+				selectedActor.target = hoverNode.occupant;
+				hoverNode.occupant.targetedBy = selectedActor;
 			}else{
 				selectedActor.target = hoverNode;
 			}

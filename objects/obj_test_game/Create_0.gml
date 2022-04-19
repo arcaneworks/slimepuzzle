@@ -49,7 +49,7 @@ initialize = true;
 	largestCG = 0; // the height of the largest CG in our active CG set. used to determine
 	
 	var ii = 1;// when we need to preload a new CG
-	load_CG_set(levelString); 
+	load_CG_set(global.testTarget); 
 	//set_action_db(); //creates structs containing action information (damage, targeting info, ect)
 
 	init_populate_map(); // creates nodes based on CG set
