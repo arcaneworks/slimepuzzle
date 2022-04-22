@@ -18,6 +18,22 @@ function apply_damage_class(){
 			}
 		break;
 		
+		case "bomb":
+			if(hp > 0){
+				if(damageType == "fire"){
+					find_bomb_targets();
+					shake = true;
+				
+					ds_queue_enqueue(global.gameObj.actionQueue, id);
+					global.gameObj.state = "standby";
+					actState = "action standby";
+					damageClass = "default";
+				
+				}
+			}
+		
+		break;
+		
 		case "director":
 		
 		break;

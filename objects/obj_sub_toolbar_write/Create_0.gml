@@ -64,6 +64,13 @@ fighter.sprite_index = spr_fighter2;
 fighter.tool = true;
 ds_list_add(actorList, fighter);
 
+bomb = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+bomb.tabType = "actors";
+bomb.componentCode = "CB";
+bomb.sprite_index = spr_bomb1; 
+bomb.tool = true;
+ds_list_add(actorList, bomb);
+
 
 sort_actor_pages();
 

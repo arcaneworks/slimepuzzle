@@ -8,12 +8,23 @@
 			}else{
 				targetNode = map[target.gridX, target.gridY]; //animation goes to node, not node occupant (helps with components taking up multiple nodes)		
 			}
+			
+			//if(target.node){
+			//	if(target.occupant != noone && target.occupant.hitable){
+			//		target = target.occupant;	
+			//	}	
+			//}
+			
 				switch(aStruct.vfx.vfxType){
 					
 		
 					case "target node":
 						 vfx = instance_create_layer(targetNode.x + 16, targetNode.y + 16, "Instances", obj_vfx); //creates vfx object at target node	
-						vfx.actor = id;													//destroys self on sprite animation completion
+						 var t = target; 
+						 
+						vfx.actor = id;
+						vfx.sprite = action.vfx.vfxSprite;
+						//destroys self on sprite animation completion
 						 //asigns the sprite
 		
 		

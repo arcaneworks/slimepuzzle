@@ -35,7 +35,9 @@ switch(moveState){  //MOVESTATE
 		
 		case "action standby":
 			
-			actState = "create effect";
+
+				actState = "create effect";
+
 
 	
 		break;
@@ -62,22 +64,21 @@ switch(moveState){  //MOVESTATE
 					target = ds_list_find_value(targetList, 0);
 		
 					create_action_vfx();
+				
 				}else{//if there are multiple target
 					for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
 						target = ds_list_find_value(targetList, j); 
 						create_action_vfx();
 					}
+					
+					var kk = 1;
 				}
 					
 				if(action.sfx.startSfx){
 					audio_play_sound(action.sfx.startSfx, 0, false);
 						
-				}
-				
-						
-					actState = "start attack"; 
-		
-					
+				}	
+					actState = "start attack"; 		
 			}else{ //if there is no target
 				actState = "wait";
 			}
@@ -96,8 +97,28 @@ switch(moveState){  //MOVESTATE
 						
 						apply_action();
 					}else{//if there are multiple target
+						
+						var kk = 0;
+						
 						for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
 							target = ds_list_find_value(targetList, j); 
+							
+							
+							
+							 if(target.node){ // if the target is a node and has an occupant
+								if(target.occupant){
+									if(target.occupant.incapacitated == false){
+										target = target.occupant;	
+									}
+								}else{
+									if(target.terrain != noone){
+										target = target.terrain; 
+					
+									}
+								}
+							}
+								 
+								 
 							apply_action();
 						}		
 					}

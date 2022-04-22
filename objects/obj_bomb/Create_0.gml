@@ -6,9 +6,9 @@ hasReaction = true;
 moveState = "idle";
 actState = "idle";
 bomb = true;
-
+damageClass = "bomb";
 class = "bomb";
-maxHp = 2; 
+maxHp = 1; 
 hp = maxHp;
 
 action = global.actionDB.explode;

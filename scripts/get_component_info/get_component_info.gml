@@ -37,6 +37,10 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.fighter; 
 		break;
 		
+		case "CB":
+			tempStruct = global.componentDB.bomb; 
+		break;
+		
 		case "ER":
 			tempStruct = global.componentDB.rock; 
 		break;

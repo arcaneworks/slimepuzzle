@@ -170,7 +170,8 @@ function set_action_db(){
 		info.title = "EXPLODE";
 		info.infoText = "SELF-DESTRUCTS self and damages adjacent nodes.";
 		damage.damageType = "fire";
-		targeting.targetType = "adjacent";
+		damage.tempDamageType = "fire";
+		damage.damage = 1; 
 		vfx.vfxSprite = spr_nuke_explode;
 		vfx.vfxType = "target node";
 		sfx.startSfx = s_explode;		

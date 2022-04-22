@@ -226,6 +226,7 @@
     {"id":{"name":"eb_menu1","path":"sounds/eb_menu1/eb_menu1.yy",},"order":1,},
     {"id":{"name":"eb_menu2","path":"sounds/eb_menu2/eb_menu2.yy",},"order":2,},
     {"id":{"name":"obj_load_box","path":"objects/obj_load_box/obj_load_box.yy",},"order":7,},
+    {"id":{"name":"find_bomb_targets","path":"scripts/find_bomb_targets/find_bomb_targets.yy",},"order":17,},
     {"id":{"name":"s_cancel","path":"sounds/s_cancel/s_cancel.yy",},"order":3,},
     {"id":{"name":"eb_menu4","path":"sounds/eb_menu4/eb_menu4.yy",},"order":4,},
     {"id":{"name":"eb_menu5","path":"sounds/eb_menu5/eb_menu5.yy",},"order":5,},

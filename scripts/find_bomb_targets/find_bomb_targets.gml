@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function find_bomb_react_nodes(){
+function find_bomb_targets(){
 
 	var lBound = 0; //boundry on left side of map
 	var rBound = map_width - 1; //right side
@@ -9,9 +9,12 @@ function find_bomb_react_nodes(){
 
 		var yy = gridY + 1;
 			
+			
+			
+			
 		if(yy <= tBound){
 			var tNode = map[gridX, yy]
-			ds_list_add(reactList, tNode);
+			ds_list_add(targetList, tNode);
 		}
 
 
@@ -20,7 +23,7 @@ function find_bomb_react_nodes(){
 			
 		if(xx <= rBound){
 			var tNode = map[xx, gridY];
-			ds_list_add(reactList, tNode);	
+			ds_list_add(targetList, tNode);	
 		}		
 
 		
@@ -28,14 +31,16 @@ function find_bomb_react_nodes(){
 			
 		if(yy >= bBound){
 			var tNode = map[gridX, yy];
-			ds_list_add(reactList, tNode);
+			ds_list_add(targetList, tNode);
 		}	
 
 		var xx = gridX - 1; 
 			
 		if(xx >= lBound){
 			var tNode = map[xx, gridY];
-			ds_list_add(reactList, tNode);
+			ds_list_add(targetList, tNode);
 		}
+		
+		ds_list_add(targetList, map[gridX, gridY]);
 
 }
