@@ -38,6 +38,10 @@ function init_CG_decoding_key_new(){
 	ds_map_add(elementCodes, "S", asset_get_index("obj_directorRD"));
 	ds_map_add(elementCodes, "D", asset_get_index("obj_directorUL"));
 	ds_map_add(elementCodes, "F", asset_get_index("obj_directorUR"));
+	ds_map_add(elementCodes, "B", asset_get_index("obj_barrel"));
+	ds_map_add(elementCodes, "P", asset_get_index("obj_crate"));
+
+	get_component_info()
 
 	terrainCodes = ds_map_create();
 	ds_map_add(terrainCodes, "L", asset_get_index("obj_flame"));

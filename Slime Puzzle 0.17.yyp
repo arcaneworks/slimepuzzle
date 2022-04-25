@@ -244,6 +244,7 @@
     {"id":{"name":"multi_chance","path":"scripts/multi_chance/multi_chance.yy",},"order":3,},
     {"id":{"name":"ds_list_reverse","path":"scripts/ds_list_reverse/ds_list_reverse.yy",},"order":2,},
     {"id":{"name":"ds_list_random","path":"scripts/ds_list_random/ds_list_random.yy",},"order":1,},
+    {"id":{"name":"obj_barrel","path":"objects/obj_barrel/obj_barrel.yy",},"order":5,},
     {"id":{"name":"ds_list_delete_all","path":"scripts/ds_list_delete_all/ds_list_delete_all.yy",},"order":2,},
     {"id":{"name":"obj_undo","path":"objects/obj_undo/obj_undo.yy",},"order":2,},
     {"id":{"name":"spr_port_knight","path":"sprites/spr_port_knight/spr_port_knight.yy",},"order":2,},

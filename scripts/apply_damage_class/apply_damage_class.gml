@@ -38,5 +38,13 @@ function apply_damage_class(){
 		
 		break;
 		
+		case "breakable":
+		
+			 breaking = true; 
+			 
+			 shake = true;
+		
+		break;
+		
 	}
 }

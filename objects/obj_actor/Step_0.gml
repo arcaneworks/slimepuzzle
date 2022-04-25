@@ -270,7 +270,7 @@ switch(moveState){  //MOVESTATE
 				}
 			}
 			
-			ds_list_clear(targetList);
+			//ds_list_clear(targetList);
 			target = noone;
 			reaction = false;
 			miss = false;

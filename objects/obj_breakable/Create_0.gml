@@ -1,9 +1,11 @@
 event_inherited();
 
 particle = obj_crate_particle;
-
-durability = 3;
+maxDurability = 2;
+durability = maxDurability;
 
 breaking = false;
 
 contents = noone;
+
+damageClass = "breakable";

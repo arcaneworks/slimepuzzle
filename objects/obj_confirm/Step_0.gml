@@ -13,8 +13,8 @@ if(decision){
 	decBox2X = decBoxStartX + decBoxW + buffer;
 	decBox2Y = y + height - buffer * 2 - decBoxH;
 	
-	var colBox1 = collision_rectangle(decBox1X, decBox1Y + buffer, decBox1X + decBoxW, decBox1Y + decBoxH + buffer, global.cursor, false, false);
-	var colBox2 = collision_rectangle(decBox2X, decBox2Y + buffer, decBox2X + decBoxW, decBox2Y + decBoxH + buffer, global.cursor, false, false);
+	var colBox1 = collision_rectangle(decBox1X + buffer * 3, decBox1Y + buffer, decBox1X + decBoxW, decBox1Y + decBoxH + buffer, global.cursor, false, false);
+	var colBox2 = collision_rectangle(decBox2X + buffer * 3, decBox2Y + buffer, decBox2X + decBoxW, decBox2Y + decBoxH + buffer, global.cursor, false, false);
 	
 	if(colBox1){
 		decBox1Color = c_green;

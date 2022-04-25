@@ -5,7 +5,7 @@ function find_bomb_react_nodes(){
 	var lBound = 0; //boundry on left side of map
 	var rBound = map_width - 1; //right side
 	var bBound = 0; //bottom side
-	var tBound = map_height; //top side
+	var tBound = map_height - 1; //top side
 
 		var yy = gridY + 1;
 			
