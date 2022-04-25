@@ -550,6 +550,8 @@
     {"id":{"name":"LICENSE","path":"notes/LICENSE/LICENSE.yy",},"order":0,},
     {"id":{"name":"Contributors","path":"notes/Contributors/Contributors.yy",},"order":1,},
     {"id":{"name":"spr_textbox134","path":"sprites/spr_textbox134/spr_textbox134.yy",},"order":4,},
+    {"id":{"name":"spr_eye","path":"sprites/spr_eye/spr_eye.yy",},"order":4,},
+    {"id":{"name":"spr_thumper","path":"sprites/spr_thumper/spr_thumper.yy",},"order":4,},
     {"id":{"name":"obj_confirm","path":"objects/obj_confirm/obj_confirm.yy",},"order":8,},
     {"id":{"name":"auto_gen_mapname","path":"scripts/auto_gen_mapname/auto_gen_mapname.yy",},"order":4,},
     {"id":{"name":"spr_leaves","path":"sprites/spr_leaves/spr_leaves.yy",},"order":1,},
