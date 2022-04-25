@@ -134,10 +134,24 @@ function set_action_db(){
 	with(counter){
 		info.title = "COUNTER";
 		info.infoText = "COUNTER targets components that move into the node in front of the actor."
-		damage.damage = 2;	
+		effect.shove = true;
+		damage.damage = 1;	
+		damage.damageType = "physical";
 		targeting.range = 1; 
 		targeting.targetType = "melee";
 	}
+	
+	thump = new act_struct();
+	with(thump){
+		info.title = "THUMP";
+		info.infoText = "thump targets components that move into the node in front of the actor."
+		damage.damage = 1;	
+		targeting.range = 1; 
+		targeting.targetType = "melee";
+		effect.shove = true;
+	}
+	
+	
 	
 	bless = new act_struct(); 
 	with(bless){
@@ -187,7 +201,8 @@ function set_action_db(){
 		counter: other.counter,
 		spit: other.spit,
 		explode : other.explode,
-		bless : other.bless
+		bless : other.bless,
+		thump : other.thump
 		
 	}
 

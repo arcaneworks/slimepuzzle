@@ -23,7 +23,7 @@ function set_component_info_db(){
 	shooterFire = new component_info_struct("shooter", "A shooter that is vulerable to fire.", spr_shooter3, spr_port_cleric, 1);
 	fighter = new component_info_struct("fighter", "The fighter strikes the actor in front of it.", spr_fighter2, spr_port_fighter, 1);
 	bomb = new component_info_struct("bomb", "the bomb explodes.", spr_bomb1, spr_bomb1, 0);
-	
+	thumper = new component_info_struct("thumper", "the thumper knocks backs all components adjacent to it.", spr_thumper, spr_thumper, 1);
 	//elements 
 	
 	rock = new component_info_struct("rock", "Rocks can be pushed and fill holes.", spr_rock1, spr_rock1, 1);
@@ -47,6 +47,7 @@ function set_component_info_db(){
 		shooterFire : other.shooterFire, 
 		fighter : other.fighter, 
 		bomb : other.bomb,
+		thumper : other.thumper,
 		
 		
 		rock : other.rock, 

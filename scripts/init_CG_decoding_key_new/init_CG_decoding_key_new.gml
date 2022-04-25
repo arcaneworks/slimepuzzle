@@ -30,6 +30,8 @@ function init_CG_decoding_key_new(){
 	ds_map_add(componentCodes, "S", asset_get_index("obj_shooter_par"))
 	ds_map_add(componentCodes, "P", asset_get_index("obj_shooter_fire"));
 	ds_map_add(componentCodes, "F", asset_get_index("obj_fighter_par"));  
+	ds_map_add(componentCodes, "T", asset_get_index("obj_thumper_par")); 
+	
 	
 	elementCodes = ds_map_create();
 	ds_map_add(elementCodes, "R", asset_get_index("obj_rock"));
@@ -41,7 +43,6 @@ function init_CG_decoding_key_new(){
 	ds_map_add(elementCodes, "B", asset_get_index("obj_barrel"));
 	ds_map_add(elementCodes, "P", asset_get_index("obj_crate"));
 
-	get_component_info()
 
 	terrainCodes = ds_map_create();
 	ds_map_add(terrainCodes, "L", asset_get_index("obj_flame"));

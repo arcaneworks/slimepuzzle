@@ -64,6 +64,13 @@ fighter.sprite_index = spr_fighter2;
 fighter.tool = true;
 ds_list_add(actorList, fighter);
 
+thumper = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+thumper.tabType = "actors";
+thumper.componentCode = "CT";
+thumper.sprite_index = spr_thumper; 
+thumper.tool = true;
+ds_list_add(actorList, thumper);
+
 bomb = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 bomb.tabType = "actors";
 bomb.componentCode = "CB";

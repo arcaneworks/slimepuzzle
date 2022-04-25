@@ -60,6 +60,12 @@ function get_component_info(component, componentCode){
 		case "EF":
 			tempStruct = global.componentDB.directorUR;
 		break;
+		
+		case "CT":
+			tempStruct = global.componentDB.thumper;
+			
+			break;
+			
 	}
 	
 	if(tempStruct != noone){
