@@ -736,7 +736,7 @@
     "path": "folders/00 - GAME/7 - Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "f_battle_text_small_12",
+  "name": "f_battle_text_12",
   "tags": [],
   "resourceType": "GMFont",
 }

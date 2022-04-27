@@ -3,7 +3,7 @@
 //Draw menu background
 draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width, height/sprite_height, 0, c_white, 1);
 
-draw_set_font(f_battle_text_small_12);
+draw_set_font(f_battle_text_12);
 
 var title = "LOAD MENU";
 var titleX = x + .5 * width - .5 * string_width(title);

@@ -9,9 +9,9 @@ function action_nodes(originNode, targetType, range) {
 	var oY = oNode.gridY;
 	var dirNum = 4; //number of directions the target
 	var lBound = 0; //boundry on left side of map
-	var rBound = map_width - 1; //right side
+	var rBound = map_width; //right side
 	var bBound = 0; //bottom side
-	var tBound = map_height - 1; //top side
+	var tBound = map_height; //top side
 	var dirNodes = global.cursor.dirNodes;
 	var foundTarget = false;
 	ds_list_clear_inner_lists(dirNodes);

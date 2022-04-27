@@ -2,7 +2,7 @@ draw_sprite_ext(cursorSprite,cursorImg, x,  y, 1, 1, 0, c_white, 1 );
 //draw_sprite(sprite_index,cursorImg, mouse_x+ x_offset, mouse_y + y_offset);
 if(obj_test_game.debugMode){
 	
-	draw_set_font(f_battle_text_small_10);
+	draw_set_font(f_battle_text_10);
 	var debugList = ds_list_create();
 
 	draw_text(mouse_x + sprite_width, mouse_y, "standby queue" + string(ds_queue_size(global.gameObj.actionQueue)));

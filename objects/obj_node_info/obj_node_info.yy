@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_terrain_info",
+    "path": "sprites/spr_terrain_info/spr_terrain_info.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

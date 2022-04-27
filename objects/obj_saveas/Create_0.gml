@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = 64;
-y = 376; 
+x = 8;
+y = 70; 
 
 message = "";
 keyboard_string = auto_gen_mapname(, "level");

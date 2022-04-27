@@ -48,7 +48,7 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 				element.gridX = nodeID.gridX; 
 				element.gridY = nodeID.gridY; 
 				nodeID.occupant = element; 	
-				nodeID.componentCode = char2;
+				nodeID.componentCode = char1 + char2;
 			}
 		}
 		

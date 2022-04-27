@@ -32,4 +32,5 @@ for(ii = 0; ii < ds_list_size(visObjs); ii ++){
 	}
 }
 
-draw_default();
+draw_default();/// @description Insert description here
+// You can write your code in this editor

@@ -1,5 +1,5 @@
 draw_default();
-draw_set_font(f_battle_text_small_10);
+draw_set_font(f_battle_text_10);
 draw_rectangle_color(x, y, x + width - 2, y + height -2, c_black, c_black, c_black, c_black, false);
 draw_resizable_ext(sprite_index, x, y, width, height, 0, 0);
 draw_text_ext(x + buffer + 5, y + buffer, textString, 15, width - buffer/2); 

@@ -60,11 +60,9 @@ initialize = true;
 var xBuffer = 6;
 var spriteWidth = sprite_get_width(spr_undo);
 
-instance_create_layer(xBuffer + spriteWidth * 2 , y, "Instances", obj_reset);
-instance_create_layer(xBuffer + spriteWidth * 3, y, "Instances", obj_undo);
-instance_create_layer(xBuffer + spriteWidth * 4, y, "Instances", obj_back);
+
 instance_create_layer(x + mapOrgX, y + mapOrgY + game_height, "Instances", obj_portrait);
-instance_create_layer(x, y, "Instances", obj_node_info);
+
 
 turnAnimations = false;
 

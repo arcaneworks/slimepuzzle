@@ -4,8 +4,8 @@ if(instance_position(mouse_x, mouse_y, id)){
 		
 		if(mouse_check_button_released(mb_left)){
 				global.cursor = noone;
-				global.editorTarget = "blank level";
-				room_goto(level_editor);
+				global.editorTarget = global.testTarget;
+				room_goto(level_editor_room);
 		}
 	
 	}else{

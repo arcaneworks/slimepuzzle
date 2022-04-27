@@ -8,7 +8,7 @@ if(hoverNode){
 	draw_set_color(c_white);
 var iconSprite = hoverNode.sprite_index; 
 
-var scale = 2; 
+var scale = 1; 
 var iconSize = sprite_get_width(iconSprite) * scale;
 var iconBufferX = 10; 
 
@@ -23,7 +23,7 @@ if(hoverNode.occupant != noone){
 }
 var titleX = x + iconSize + (iconBufferX * 2);
 var titleY = y + .25 * boxHeight - .25 * iconSize;
-draw_set_font(f_battle_text_16);
+draw_set_font(f_battle_text_12);
 
 draw_text_ext(titleX, titleY, title, 10, 150); 
 
@@ -33,7 +33,7 @@ draw_text_ext(titleX, titleY, title, 10, 150);
 
 var infoY = titleY + string_height(title);
 
-draw_set_font(f_battle_text_small_10);
+draw_set_font(f_battle_text_10);
 
 var infoWidth = boxWidth - (iconSize + iconBufferX * 2);
 
