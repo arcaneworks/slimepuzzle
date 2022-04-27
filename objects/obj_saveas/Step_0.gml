@@ -18,7 +18,7 @@ if(!instance_exists(obj_confirm) && !saveNoti){
 	
 var saveBox = collision_rectangle(x , y + height, x + width/2, y + height *  2 , obj_interface_editor, false, false);
 
-var cancelBox = collision_rectangle(x + width/2 , y + height , x + width - 5, y + height *  2, obj_interface_editor, false, false);
+var cancelBox = collision_rectangle(x + width/2 , y + height , x + width, y + height *  2, obj_interface_editor, false, false);
 
 		
 

@@ -1,3 +1,6 @@
+
+x = obj_scroll_load_box.x + obj_scroll_load_box.width;
+y = obj_scroll_load_box.y;
 /// @description Insert description here
 // You can write your code in this editor
 /*
