@@ -765,6 +765,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"temp level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/saves","resourceVersion":"1.0","name":"asd.sav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/saves","resourceVersion":"1.0","name":"default.sav","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"blank level.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.3.0.625",

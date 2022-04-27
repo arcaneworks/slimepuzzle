@@ -40,7 +40,7 @@ function step_tool_select(){
 				
 				if(state == "save"){
 					var confirmText = "are you sure you want to overwrite this file?";
-					create_confirm_box(100, 350, confirmText, true, id);	
+					create_confirm_box(100, 100, confirmText, true, id);	
 				}
 			}
 		}
