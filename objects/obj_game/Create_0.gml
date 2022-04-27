@@ -74,12 +74,8 @@ global.cursor = obj_interface;
 	populate_neighbors(); //makes neighbors for nodes
 	set_node_occupancy(); //sets occupancy for components 
 	
-	var xBuffer = 6
 
-instance_create_layer(xBuffer, y, "Instances", obj_reset);
-instance_create_layer(xBuffer + obj_reset.sprite_width, y, "Instances", obj_undo);
-instance_create_layer(x + mapOrgX, y + mapOrgY + game_height, "Instances", obj_portrait);
-instance_create_layer(x, y, "Instances", obj_node_info);
+
 
 turnAnimations = false;
 

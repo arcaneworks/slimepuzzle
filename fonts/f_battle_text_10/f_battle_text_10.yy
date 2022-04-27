@@ -14,8 +14,8 @@
   "first": 0,
   "last": 0,
   "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
-  "includeTTF": false,
-  "TTFName": "",
+  "includeTTF": true,
+  "TTFName": "${project_dir}\\fonts\\f_battle_text_10\\ChevyRay - Classified.ttf",
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -229,7 +229,7 @@
     "path": "folders/00 - GAME/7 - Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "f_battle_text_small_10",
+  "name": "f_battle_text_10",
   "tags": [],
   "resourceType": "GMFont",
 }

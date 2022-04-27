@@ -22,3 +22,6 @@ menu_level = 0;
 instance_create_layer(x, y, "Instances", obj_interface_menu);
 global.cursor = obj_interface_menu;
 instance_deactivate_object(obj_new_profile);
+
+display_set_gui_maximize();
+display_set_gui_size(room_width, room_height);

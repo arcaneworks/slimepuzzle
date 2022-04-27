@@ -29,11 +29,11 @@ if(stick_cooldown > 0){
 stick_cooldown -= delta_time/ 1000000;
 }
 	
-col0 = collision_rectangle(x + op_border, y + op_border, x + op_border + width,  y + op_border + op_space, obj_interface_menu, false, true);
-col1 = collision_rectangle(x + op_border, y + op_border * 2 + op_space * 1.5, x + op_border + width,  y + op_border * 2 + op_space * 2, obj_interface_menu, false, true);
-col2 = collision_rectangle(x + op_border, y + op_border * 3 + op_space * 2, x + op_border + width,  y + op_border * 3 + op_space * 3, obj_interface_menu, false, true);
-col3 = collision_rectangle(x + op_border, y + op_border * 4+ op_space * 3, x + op_border + width,  y + op_border * 4 + op_space * 4, obj_interface_menu, false, true);
-col4 =  collision_rectangle(x + op_border, y + op_border * 5 + op_space * 4, x + op_border + width,  y + op_border * 5 + op_space * 5, obj_interface_menu, false, true);
+col0 = collision_rectangle(x + op_border, y + op_border, x + width,   y + op_border + op_space, obj_interface_menu, false, true);
+col1 = collision_rectangle(x + op_border, y + op_border + op_space, x +  width,  y + op_border * 2 + op_space * 2, obj_interface_menu, false, true);
+col2 = collision_rectangle(x + op_border, y + op_border * 2 + op_space * 2, x +  width,  y + op_border * 3 + op_space * 3, obj_interface_menu, false, true);
+col3 = collision_rectangle(x + op_border, y + op_border * 3 + op_space * 3, x +  width,  y + op_border * 4 + op_space * 4, obj_interface_menu, false, true);
+col4 =  collision_rectangle(x + op_border, y + op_border * 4 + op_space * 4, x +  width,  y + op_border * 5 + op_space * 5, obj_interface_menu, false, true);
 if(col0){
 	pos = 0;
 }
@@ -85,7 +85,7 @@ if(accept_key > 0){
 			case 4:
 				//load level editor
 				global.cursor = noone;
-				room_goto(level_editor);
+				room_goto(level_editor_room);
 				break;
 			}
 			break;

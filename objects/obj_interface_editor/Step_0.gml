@@ -12,7 +12,7 @@ update_cursor_pos();
 		switch(state){
 			
 			case "move":
-				cursorSprite = spr_move_cursor;
+				cursorSprite = spr_move;
 				step_move_components_assign();	
 				step_tool_select();		
 			
@@ -20,7 +20,7 @@ update_cursor_pos();
 			
 			case "move2":
 
-				cursorSprite = spr_move_cursor;
+				cursorSprite = spr_move;
 				step_move_relocate();
 				step_tool_select();
 			break; 

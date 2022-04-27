@@ -32,7 +32,7 @@ if(pActor != noone && pActor.hpSec1 != noone){
 	
 	var barWidth = valuebar_get_width(hpSec1, hpSec2, hpSec3, maxHp);
 	var barHeight = sprite_get_height(hpSec1);
-	draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth + .5 * barWidth, y + 5 , node_size/8, maxHp, hp, 0, c_white, 1,1);
+	draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth , y +.5 * portraitHeight - barHeight , node_size/8, maxHp, hp, 0, c_white, 1,1);
 	
 }
 var title = action1.info.title;
@@ -63,7 +63,7 @@ var iconX = actBoxX + buffer;
 var iconY = actBoxY + .5 * actBoxH - .5 * iconHeight + buffer;
 draw_sprite(iconSpr, 0, iconX , iconY);
 
-draw_set_font(f_battle_text_big);
+draw_set_font(f_battle_text_10);
 	
 
 var hotKeyX = iconX + iconWidth + buffer ;
@@ -72,7 +72,7 @@ var hotKeyY = iconY + buffer;
 
 draw_text_shadow(hotKeyX, hotKeyY, "[ " + chr(action1.info.hotKey) + " ]", c_yellow, c_black, .8);
 
-draw_set_font(f_battle_text_big);
+draw_set_font(f_battle_text_10);
 
 var titleWidth = string_width(title)
 var titleX = actBoxX + .5 * actBoxW - .5 * titleWidth;
@@ -141,7 +141,7 @@ var portraitSize = 1.5 * node_size;
 	
 					var barWidth = valuebar_get_width(hpSec1, hpSec2, hpSec3, maxHp);
 					var barHeight = sprite_get_height(hpSec1);
-					draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth + .5 * barWidth, y + 5 , node_size/8, maxHp, hp, 0, c_white, 1,1);
+					//draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x , y + actBoxH * 4 + barHeight, node_size/8, maxHp, hp, 0, c_white, 1,1);
 	
 				}
 			}

@@ -1,7 +1,7 @@
 event_inherited();
 depth = -100;
-x = 62; 
-y = 377;
+x = 8; 
+y = 55;
 var displaySpace = sprite_height * 9 / 10;
 objHeight = 20;
 
