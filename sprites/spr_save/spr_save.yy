@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Tools",
-    "path": "folders/01 - LEVEL EDITOR/Level Editor Sprites/Tools.yy",
+    "path": "folders/Tools.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_save",

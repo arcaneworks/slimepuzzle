@@ -1,9 +1,9 @@
-var guiString = "TEST ROOM"
+var guiString = "TEST LEVEL"
 draw_set_font(f_battle_text_10);
 var x1 =  30;
 var y1 =  6;
 var width = 105;
-var height = 35;
+var height = 20;
 var x2 = x1 + width;
 var y2 = y1 + height;
 

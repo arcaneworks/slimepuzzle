@@ -1,3 +1,5 @@
+
+ 
  beadX = x + sprite_width/2; // origin of bead sprite is middle top
  beadY = y + sprite_height/10; // assumed that bead is ~1/10 as tall as the bar
 
