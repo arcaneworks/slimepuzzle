@@ -192,6 +192,18 @@ function set_action_db(){
 		targeting.targetType = "melee";
 		targeting.range = "1";		
 	}
+	stun = new act_struct();
+	with (stun){
+		info.title = "STUN";
+		info.infoText = "Prevents any actors within the targeting cone from taking their action.";
+		damage.damageType = "fire";
+		damage.damage = 0;
+		vfx.vfxSprite = spr_nuke_explode;
+		vfx.vfxType = "target node";
+		sfx.startSfx = s_explode;
+		targeting.targetType = "cone";
+		targeting.range = "4";
+	}
 	
 	global.actionDB = {
 		

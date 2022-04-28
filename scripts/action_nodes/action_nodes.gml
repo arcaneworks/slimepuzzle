@@ -14,6 +14,7 @@ function action_nodes(originNode, targetType, range) {
 	var tBound = map_height; //top side
 	var dirNodes = global.cursor.dirNodes;
 	var foundTarget = false;
+	var facingDir = originNode.occupant.facingDir;
 	ds_list_clear_inner_lists(dirNodes);
 
 	switch(targetType){
@@ -22,7 +23,64 @@ function action_nodes(originNode, targetType, range) {
 			oNode.actionNode = true;
 		break;
 	
-	
+		case "cone":
+			switch(facingDir){
+				case dir.south:
+					for(yy = oY - range; yy <= oY; yy++){
+						var diff = yy-oY;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(xx = oX -diff; xx<= oX + diff; xx++){
+							map[xx,yy].actionNode = true; 
+						}
+					}
+					break;
+				case dir.east:
+				for(xx = oX + range; xx <= oX; xx--){
+						var diff = xx-oX;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(yy = oY -diff; yy<= oY + diff; yy++){
+							map[xx,yy].actionNode = true; 
+						}
+					}
+				break;
+				case dir.north:
+				for(yy = oY + range; yy <= oY; yy--){
+						var diff = yy-oY;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(xx = oX -diff; xx<= oX + diff; xx++){
+							map[xx,yy].actionNode = true; 
+						}
+					}
+				break;
+				case dir.west:
+				for(xx = oX - range; xx <= oX; xx++){
+						var diff = xx-oX;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(yy = oY -diff; yy<= oY + diff; yy++){
+							map[xx,yy].actionNode = true; 
+						}
+					}
+				break;
+			
+			}
+			
+		break;
 		case "line":
 		
 			for(var xx = oX - range; xx <= oX + range; xx++){

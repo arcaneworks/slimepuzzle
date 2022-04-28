@@ -15,7 +15,7 @@ function set_component_info_db(){
 	archer = new component_info_struct("archer", "The archer can shoot over gaps and through fire.", spr_archer1, spr_port_archer,1); 
 	wizard = new component_info_struct( "wizard", "The wizard uses fire to damage and ignite.", spr_wizard1, spr_port_wizard, 1);
 	cleric = new component_info_struct( "cleric", "The cleric rejuvenates allies, regaining their move and action.", spr_cleric, spr_port_wizard, 1);
-	rogue = new component_info_struct("rogue", "The rouge doesn't have an action yet", spr_rogue, spr_port_archer, 1);
+	rogue = new component_info_struct("rogue", "The rogue can move through enemy fields of attack without provoking a reaction", spr_rogue, spr_port_archer, 1);
 	
 	
 	//enemies 
