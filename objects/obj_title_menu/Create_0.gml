@@ -5,6 +5,7 @@ op_space = 60;
 
 pos = 0;
 
+
 option[0,0] = "New Game";
 option[0,1] = "Load Game";
 option[0,2] = "Quit Game";
