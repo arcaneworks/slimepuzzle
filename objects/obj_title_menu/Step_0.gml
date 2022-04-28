@@ -71,21 +71,22 @@ if(accept_key > 0){
 				array_push(option[1], "Back");
 				op_length = array_length(option[menu_level]);
 				break;
-
+	
 			case 2:
-				//quit game
-				game_end();
-				break;
-			case 3:
 				//load last autosave
 				global.cursor = noone;
 				load_player_data(global.playerProfile);
 				room_goto_next();
 				break;
-			case 4:
+			case 3:
 				//load level editor
 				global.cursor = noone;
 				room_goto(level_editor_room);
+				break;
+				
+			case 4:
+				//quit game
+				game_end();
 				break;
 			}
 			break;

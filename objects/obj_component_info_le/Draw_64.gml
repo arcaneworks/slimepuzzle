@@ -23,7 +23,7 @@ if(hoverNode.occupant != noone){
 }
 var titleX = x + iconSize + (iconBufferX * 2);
 var titleY = y + .25 * boxHeight - .25 * iconSize;
-draw_set_font(f_battle_text_12);
+draw_set_font(f_battle_text_10);
 
 draw_text_ext(titleX, titleY, title, 10, 150); 
 
@@ -33,7 +33,7 @@ draw_text_ext(titleX, titleY, title, 10, 150);
 
 var infoY = titleY + string_height(title);
 
-draw_set_font(f_battle_text_10);
+draw_set_font(f_battle_text_6);
 
 var infoWidth = boxWidth - (iconSize + iconBufferX * 2);
 
