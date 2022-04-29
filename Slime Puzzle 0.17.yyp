@@ -266,6 +266,7 @@
     {"id":{"name":"__init_global","path":"scripts/__init_global/__init_global.yy",},"order":2,},
     {"id":{"name":"end_key_check","path":"scripts/end_key_check/end_key_check.yy",},"order":1,},
     {"id":{"name":"cancel_key_check_move","path":"scripts/cancel_key_check_move/cancel_key_check_move.yy",},"order":0,},
+    {"id":{"name":"obj_eye","path":"objects/obj_eye/obj_eye.yy",},"order":7,},
     {"id":{"name":"sort_actor_pages","path":"scripts/sort_actor_pages/sort_actor_pages.yy",},"order":0,},
     {"id":{"name":"wipe_nodes_range_info","path":"scripts/wipe_nodes_range_info/wipe_nodes_range_info.yy",},"order":12,},
     {"id":{"name":"spr_write","path":"sprites/spr_write/spr_write.yy",},"order":5,},

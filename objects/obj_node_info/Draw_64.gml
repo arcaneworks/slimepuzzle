@@ -21,7 +21,7 @@ if(hoverNode.terrain != noone){
 }
 var titleX = x + iconSize ;
 var titleY = y + .5 * string_height(title);
-draw_set_font(f_battle_text_12);
+draw_set_font(f_battle_text_6);
 
 draw_text_ext(titleX, titleY, title, 10, 150); 
 
@@ -31,7 +31,7 @@ var info = hoverNode.infoText;
 
 var infoY = titleY + string_height(title);
 
-draw_set_font(f_battle_text_10);
+draw_set_font(f_battle_text_6);
 
 var infoWidth = boxWidth - (iconSize + iconBufferX * 2);
 

@@ -1,3 +1,7 @@
+pageText = string(currPage) + " / " + string(totalPages);
+pageTextWidth = string_width(pageText);
+textStartX = x +  tabWidth +  .5 * widthMinusTab - .5 * pageTextWidth;
+textStartY = y + 6; 
 if(obj_interface_editor.state == "write"){
 	visible = true; 	
 }else{

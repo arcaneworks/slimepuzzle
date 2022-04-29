@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "eb_menu1",
-  "duration": 0.062914,
+  "duration": 0.057914,
   "parent": {
     "name": "UI Sounds",
     "path": "folders/00 - GAME/4 - Sounds/UI Sounds.yy",

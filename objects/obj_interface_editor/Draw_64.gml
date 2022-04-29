@@ -2,7 +2,18 @@ draw_sprite_ext(cursorSprite,cursorImg, x, y , 1, 1, 0, c_white, 1 );
 
 if(hoverTool != noone){
 	draw_set_font(f_battle_text_small);
-	draw_text(hoverTool.x - 5, hoverTool.y - 10, hoverTool.toolType);	
+	var text = hoverTool.toolType;
+	var textWidth = string_width(text); 
+	var textHeight = string_height(text);
+	var sprite = hoverTool.sprite_index;
+	var spriteHeight = hoverTool.sprite_height;
+	var spriteWidth = hoverTool.sprite_width;
+	var xx = hoverTool.x - textWidth - 5;
+	var yy = hoverTool.y + spriteHeight;
+	var bgColor = c_black;
+	
+	draw_rectangle_color(xx - 3, yy, xx + textWidth + 3, yy + textHeight, bgColor, bgColor, bgColor, bgColor, false)
+	draw_text_shadow(xx, yy + 3, text, c_yellow, c_black, .1);	
 	draw_set_font(f_battle_text);
 }
 

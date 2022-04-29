@@ -220,7 +220,7 @@ actorBuffer = 10;
 actorWidth = actorListSize * (actorBuffer + spriteSize);
 widthMinusTab = width - tabWidth; 
 toolStartX = x + 2 + tabWidth +  .5 * widthMinusTab - .5 * actorWidth;
-toolY = y + .5 * height - .5 * spriteSize + 5;
+toolY = y + .5 * height - .5 * spriteSize + 6;
 
 for(var ii = 0; ii < ds_list_size(actorList1); ii++){
 	var actor = ds_list_find_value(actorList1, ii);	
@@ -234,7 +234,7 @@ actorBuffer = 10;
 actorWidth = actorListSize * (actorBuffer + spriteSize);
 widthMinusTab = width - tabWidth; 
 toolStartX = x + 2 + tabWidth +  .5 * widthMinusTab - .5 * actorWidth;
-toolY = y + .5 * height - .5 * spriteSize + 5;
+toolY = y + .5 * height - .5 * spriteSize + 6;
 
 for(var ii = 0; ii < ds_list_size(actorList2); ii++){
 	var actor = ds_list_find_value(actorList2, ii);	
@@ -249,7 +249,7 @@ spriteSize = sprite_get_width(spr_wizard1);
 elementBuffer = 10;
 elementWidth = elementListSize * (elementBuffer + spriteSize); 
 toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * elementWidth;
-toolY = y + .5 * height - .5 * spriteSize + 5;
+toolY = y + .5 * height - .5 * spriteSize + 6;
 
 for(var ii = 0; ii < ds_list_size(elementList1); ii++){
 	var element = ds_list_find_value(elementList1, ii);	
@@ -262,7 +262,7 @@ spriteSize = sprite_get_width(spr_wizard1);
 elementBuffer = 10;
 elementWidth = elementListSize * (elementBuffer + spriteSize); 
 toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * elementWidth;
-toolY = y + .5 * height - .5 * spriteSize + 5;
+toolY = y + .5 * height - .5 * spriteSize + 6;
 
 for(var ii = 0; ii < ds_list_size(elementList2); ii++){
 	var element = ds_list_find_value(elementList2, ii);	
@@ -274,7 +274,7 @@ spriteSize = sprite_get_width(spr_wizard1);
 terrainBuffer = 10;
 terrainWidth = terrainListSize * (terrainBuffer + spriteSize);
 toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * terrainWidth;
-toolY = y + .5 * height - .5 * spriteSize + 5;
+toolY = y + .5 * height - .5 * spriteSize + 6;
 
 for(var ii = 0; ii < ds_list_size(terrainList); ii++){
 	var terrain = ds_list_find_value(terrainList, ii);	
