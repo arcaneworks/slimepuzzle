@@ -13,6 +13,7 @@ function enemy_reaction(enemy){
 	var targetType = "melee";
 	var attackRange = 1;
 	var thump = false;
+	var stun = false;
 	if(aStruct != noone){
 	if(aStruct.targeting.targetType != noone)
 		targetType = aStruct.targeting.targetType;
@@ -25,6 +26,11 @@ function enemy_reaction(enemy){
 	{
 		thump = true;
 	}
+	
+	if(aStruct.info.title == "STUN")
+	{
+		stun= true;
+	}
 	action_nodes(originNode, targetType, attackRange);
 	for(xx = 0; xx <= rBound; xx++){
 		for (yy=0; yy < tBound; yy++){
@@ -32,6 +38,8 @@ function enemy_reaction(enemy){
 					enemy.target = map[xx,yy].occupant;
 					enemy.target.targeted = true;
 					ds_list_add(enemy.targetList, enemy.target);
+					if(stun)
+						enemy.target.canAct = false;
 					//wipe_nodes();
 					state = "nothing";
 					enemy.actState = "action standby";

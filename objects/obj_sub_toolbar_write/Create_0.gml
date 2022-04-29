@@ -71,6 +71,13 @@ thumper.sprite_index = spr_thumper;
 thumper.tool = true;
 ds_list_add(actorList, thumper);
 
+eye = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+eye.tabType = "actors";
+eye.componentCode = "CE";
+eye.sprite_index = spr_eye; 
+eye.tool = true;
+ds_list_add(actorList, eye);
+
 bomb = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 bomb.tabType = "actors";
 bomb.componentCode = "CB";

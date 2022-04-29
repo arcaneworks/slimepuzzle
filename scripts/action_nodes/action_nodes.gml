@@ -34,6 +34,10 @@ function action_nodes(originNode, targetType, range) {
 							}
 							diff /= 2;
 						for(xx = oX -diff; xx<= oX + diff; xx++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
 							map[xx,yy].actionNode = true; 
 						}
 					}
@@ -47,6 +51,10 @@ function action_nodes(originNode, targetType, range) {
 							}
 							diff /= 2;
 						for(yy = oY -diff; yy<= oY + diff; yy++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
 							map[xx,yy].actionNode = true; 
 						}
 					}
@@ -60,6 +68,10 @@ function action_nodes(originNode, targetType, range) {
 							}
 							diff /= 2;
 						for(xx = oX -diff; xx<= oX + diff; xx++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
 							map[xx,yy].actionNode = true; 
 						}
 					}
@@ -73,6 +85,10 @@ function action_nodes(originNode, targetType, range) {
 							}
 							diff /= 2;
 						for(yy = oY -diff; yy<= oY + diff; yy++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
 							map[xx,yy].actionNode = true; 
 						}
 					}

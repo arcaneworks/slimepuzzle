@@ -214,7 +214,8 @@ function set_action_db(){
 		spit: other.spit,
 		explode : other.explode,
 		bless : other.bless,
-		thump : other.thump
+		thump : other.thump,
+		stun : other.stun
 		
 	}
 
