@@ -41,6 +41,16 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.bomb; 
 		break;
 		
+		case "CT":
+			tempStruct = global.componentDB.thumper;
+			
+		break;
+			
+		case "CE":
+			tempStruct = global.componentDB.eye;
+		break;
+			
+		
 		case "ER":
 			tempStruct = global.componentDB.rock; 
 		break;
@@ -61,11 +71,7 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.directorUR;
 		break;
 		
-		case "CT":
-			tempStruct = global.componentDB.thumper;
-			
-			break;
-			
+		
 	}
 	
 	if(tempStruct != noone){

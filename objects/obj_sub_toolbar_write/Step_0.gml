@@ -25,6 +25,11 @@ if(obj_sub_toolbar_write.visible){
 						instance_activate_object(actor);		
 					}
 					
+					for(var ii = 0; ii < ds_list_size(actorList3); ii++){
+						var actor = ds_list_find_value(actorList3, ii);	
+						instance_deactivate_object(actor);		
+					}
+					
 					for(var ii = 0; ii < ds_list_size(actorList2); ii++){
 						var actor = ds_list_find_value(actorList2, ii);		
 						instance_deactivate_object(actor);		
@@ -39,8 +44,31 @@ if(obj_sub_toolbar_write.visible){
 						instance_deactivate_object(actor);		
 					}
 					
+					for(var ii = 0; ii < ds_list_size(actorList3); ii++){
+						var actor = ds_list_find_value(actorList3, ii);	
+						instance_deactivate_object(actor);		
+					}
+					
 					for(var ii = 0; ii < ds_list_size(actorList2); ii++){
 						var actor = ds_list_find_value(actorList2, ii)		
+						instance_activate_object(actor);		
+					}
+				
+				break;
+				
+				case 3:
+					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
+						var actor = ds_list_find_value(actorList1, ii);	
+						instance_deactivate_object(actor);		
+					}
+					
+					for(var ii = 0; ii < ds_list_size(actorList2); ii++){
+						var actor = ds_list_find_value(actorList2, ii);		
+						instance_deactivate_object(actor);		
+					}
+					
+					for(var ii = 0; ii < ds_list_size(actorList3); ii++){
+						var actor = ds_list_find_value(actorList3, ii)		
 						instance_activate_object(actor);		
 					}
 				

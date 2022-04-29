@@ -507,6 +507,7 @@
     {"id":{"name":"step_tool_select","path":"scripts/step_tool_select/step_tool_select.yy",},"order":6,},
     {"id":{"name":"obj_vfx","path":"objects/obj_vfx/obj_vfx.yy",},"order":2,},
     {"id":{"name":"obj_terrain","path":"objects/obj_terrain/obj_terrain.yy",},"order":0,},
+    {"id":{"name":"ds_list_positon_within","path":"scripts/ds_list_positon_within/ds_list_positon_within.yy",},"order":7,},
     {"id":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"order":0,},
     {"id":{"name":"obj_wind","path":"objects/obj_wind/obj_wind.yy",},"order":1,},
     {"id":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},"order":2,},
