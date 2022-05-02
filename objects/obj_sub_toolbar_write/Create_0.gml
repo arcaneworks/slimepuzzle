@@ -4,6 +4,13 @@ y = obj_level_editor.mapOrgY + 2;
 width = node_size * (map_width + 3);
 height = node_size * 1.7;
 
+
+//when a new component (actors or elements) gets added a few different things need to be updated. 
+//1. create instance of bare component within the object and assign instance variables, add to ds_list (see below);
+//2. add component to the component database script (set_component_db)
+//3. update decoding scripts (init_CG_decoding_key_new && get_component_info)
+
+//the same applies to new terrain
 #region ACTOR CREATION AND LIST
 
 actorList = ds_list_create();
@@ -88,7 +95,7 @@ ds_list_add(actorList, bomb);
 
 sort_actor_pages();
 
-totalActorPages = 2; 
+totalActorPages = 3; 
 
 
 #endregion
@@ -220,77 +227,20 @@ elementsTab.sprite_index = spr_elements_tab;
 #endregion
 #region POSITON SUBTOOLS
 
-#region ACTOR LIST SUBTOOL POSITIONS
-actorListSize = ds_list_size(actorList1);
-spriteSize = sprite_get_width(spr_wizard1);
-actorBuffer = 10;
-actorWidth = actorListSize * (actorBuffer + spriteSize);
+
+toolStartX = x + tabWidth
+buffer = 10;
 widthMinusTab = width - tabWidth; 
-toolStartX = x + 2 + tabWidth +  .5 * widthMinusTab - .5 * actorWidth;
-toolY = y + .5 * height - .5 * spriteSize + 6;
 
-for(var ii = 0; ii < ds_list_size(actorList1); ii++){
-	var actor = ds_list_find_value(actorList1, ii);	
-	actor.x = toolStartX + ii * (actorBuffer + spriteSize); 
-	actor.y = toolY;	
-}
-
-actorListSize = ds_list_size(actorList2);
-spriteSize = sprite_get_width(spr_wizard1);
-actorBuffer = 10;
-actorWidth = actorListSize * (actorBuffer + spriteSize);
-widthMinusTab = width - tabWidth; 
-toolStartX = x + 2 + tabWidth +  .5 * widthMinusTab - .5 * actorWidth;
-toolY = y + .5 * height - .5 * spriteSize + 6;
-
-for(var ii = 0; ii < ds_list_size(actorList2); ii++){
-	var actor = ds_list_find_value(actorList2, ii);	
-	actor.x = toolStartX + ii * (actorBuffer + spriteSize); 
-	actor.y = toolY;	
-}
+ds_list_position_within(actorList1, toolStartX, y, buffer, widthMinusTab, height);
+ds_list_position_within(actorList2, toolStartX, y, buffer, widthMinusTab, height);
+ds_list_position_within(actorList3, toolStartX, y, buffer, widthMinusTab, height);
+ds_list_position_within(elementList1, toolStartX, y, buffer, widthMinusTab, height);
+ds_list_position_within(elementList2, toolStartX, y, buffer, widthMinusTab, height);
+ds_list_position_within(terrainList, toolStartX, y, buffer, widthMinusTab, height);
 
 #endregion
 
-elementListSize = ds_list_size(elementList1);
-spriteSize = sprite_get_width(spr_wizard1);
-elementBuffer = 10;
-elementWidth = elementListSize * (elementBuffer + spriteSize); 
-toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * elementWidth;
-toolY = y + .5 * height - .5 * spriteSize + 6;
-
-for(var ii = 0; ii < ds_list_size(elementList1); ii++){
-	var element = ds_list_find_value(elementList1, ii);	
-	element.x = toolStartX + ii * (elementBuffer + spriteSize); 
-	element.y = toolY;	
-}
-
-elementListSize = ds_list_size(elementList2);
-spriteSize = sprite_get_width(spr_wizard1);
-elementBuffer = 10;
-elementWidth = elementListSize * (elementBuffer + spriteSize); 
-toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * elementWidth;
-toolY = y + .5 * height - .5 * spriteSize + 6;
-
-for(var ii = 0; ii < ds_list_size(elementList2); ii++){
-	var element = ds_list_find_value(elementList2, ii);	
-	element.x = toolStartX + ii * (elementBuffer + spriteSize); 
-	element.y = toolY;	
-}
-terrainListSize = ds_list_size(terrainList);
-spriteSize = sprite_get_width(spr_wizard1);
-terrainBuffer = 10;
-terrainWidth = terrainListSize * (terrainBuffer + spriteSize);
-toolStartX = x + 5 + tabWidth +  .5 * widthMinusTab - .5 * terrainWidth;
-toolY = y + .5 * height - .5 * spriteSize + 6;
-
-for(var ii = 0; ii < ds_list_size(terrainList); ii++){
-	var terrain = ds_list_find_value(terrainList, ii);	
-	terrain.x = toolStartX + ii * (terrainBuffer + spriteSize); 
-	terrain.y = toolY;	
-}
-
-
-#endregion
 #region PAGES
 
 leftArrow = instance_create_layer(x + tabWidth + textBuffer + 2, y + 3, "Instances", obj_arrow_button_left);

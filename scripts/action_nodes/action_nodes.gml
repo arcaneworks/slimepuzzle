@@ -107,7 +107,7 @@ function action_nodes(originNode, targetType, range) {
 		
 		
 			for(var yy = oY - range; yy <= oY + range; yy++){	
-				if(yy >= bBound && yy <= tBound){
+				if(yy >= bBound && yy < tBound){
 					map[oX, yy].actionNode = true;			
 				}
 			}
