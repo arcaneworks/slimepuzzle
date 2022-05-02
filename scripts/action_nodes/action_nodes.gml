@@ -9,9 +9,9 @@ function action_nodes(originNode, targetType, range) {
 	var oY = oNode.gridY;
 	var dirNum = 4; //number of directions the target
 	var lBound = 0; //boundry on left side of map
-	var rBound = map_width; //right side
+	var rBound = map_width - 1; //right side
 	var bBound = 0; //bottom side
-	var tBound = map_height; //top side
+	var tBound = map_height - 1; //top side
 	var dirNodes = global.cursor.dirNodes;
 	var foundTarget = false;
 	var facingDir = originNode.occupant.facingDir;
@@ -99,20 +99,102 @@ function action_nodes(originNode, targetType, range) {
 		break;
 		case "line":
 		
-			for(var xx = oX - range; xx <= oX + range; xx++){
-				if(xx >= lBound && xx < rBound){
-					map[xx, oY].actionNode = true;
+			//NORTH
+			for(var yy = oY + 1; yy < oY + range; yy++){ //searches tempTargets for occupants
+				if(yy <= tBound){ //if y pos is in boundry of map
+						
+					var tempTarget = map[oX,yy];
+				
+					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){
+						var dirList = ds_list_find_value(dirNodes, dir.north);
+						tempTarget.actionNode = true;
+						ds_list_add(dirList, tempTarget);
+						break;
+					}else{
+					
+						if(yy == oY + range + 1 || yy == tBound){
+							tempTarget.actionNode = true;		
+						}else{
+							tempTarget.actionNode = true;	
+						}
+					
+					}
 				}
 			}
-		
-		
-			for(var yy = oY - range; yy <= oY + range; yy++){	
-				if(yy >= bBound && yy < tBound){
-					map[oX, yy].actionNode = true;			
-				}
+					
+			//EAST		
+			for(var xx = oX + 1; xx < oX + range; xx++){
+				if(xx <= rBound){
+					var tempTarget = map[xx, oY];
+					
+					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){
+						var dirList = ds_list_find_value(dirNodes, dir.east);
+						tempTarget.actionNode = true;
+						ds_list_add(dirList, tempTarget);
+						break;
+					}else{
+						
+						if(xx == oX + range - 1 || xx == rBound){
+							tempTarget.actionNode = true;
+							
+						}else{
+							tempTarget.actionNode = true;		
+						}
+					}
+				}				
 			}
-		
-			oNode.actionNode = false;
+			 
+			//SOUTH 
+			for(var yy = oY - 1; yy > oY - range; yy--){ // start from closest node in range
+				if(yy >= bBound){// if that node is on map
+						
+					var tempTarget = map[oX, yy]; 
+							
+					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						var dirList = ds_list_find_value(dirNodes, dir.south);
+						tempTarget.actionNode = true;
+						ds_list_add(dirList, tempTarget);
+						break;
+						// get out of for loop
+					}else{
+							
+						if(yy == oY - range + 1 || yy == bBound){
+							tempTarget.actionNode = true;		
+						}else{
+							tempTarget.actionNode = true;	
+						}
+						
+					}
+				}
+
+			}	
+				
+			//WEST	
+			for(var xx = oX - 1; xx > oX - range; xx--){
+				if(xx >= 0){
+					var tempTarget = map[xx, oY]; 
+						
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){
+							var dirList = ds_list_find_value(dirNodes, dir.west);
+							tempTarget.actionNode = true;
+							ds_list_add(dirList, tempTarget);
+							break;
+						}else{
+							if(xx == oX - range + 1 || xx == lBound){
+								tempTarget.actionNode = true;
+								var dirList = ds_list_find_value(dirNodes, dir.west);
+								ds_list_add(dirList, tempTarget);
+							
+							}else{
+								tempTarget.actionNode = true;		
+							}
+								
+						}
+					}		
+				}
+				
+				
+				
 			
 			break;
 		
@@ -190,7 +272,7 @@ function action_nodes(originNode, targetType, range) {
 						break;
 					}else{
 					
-						if(yy == oY + range - 1 || yy == tBound){
+						if(yy == oY + range + 1 || yy == tBound){
 							tempTarget.actionNode = true;		
 						}else{
 							tempTarget.passNode = true;	
@@ -270,6 +352,9 @@ function action_nodes(originNode, targetType, range) {
 						}
 					}		
 				}
+				
+				
+				
 		break;
 		
 		case "diagonal":
