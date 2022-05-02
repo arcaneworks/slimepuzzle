@@ -97,6 +97,15 @@ function set_action_db(){
 		actionEvent.eventType = "sidebar";
 	}
 	
+	slime = new act_struct();
+	with(slime){
+		effect.shove = true;
+		targeting.range = 0;
+		damage.damage = 0;
+		damage.damageType = "physical";
+		targeting.targetType = "melee";
+	}
+	
 	shoot = new act_struct(); 
 	with(shoot){
 		info.title = "SHOOT";

@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Cyangmou Character Sprites",
-    "path": "folders/00 - GAME/3 - Sprites/Cyangmou Character Sprites.yy",
+    "path": "folders/00 - GAME/3 - Sprites/Components/Cyangmou Character Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_knight1",

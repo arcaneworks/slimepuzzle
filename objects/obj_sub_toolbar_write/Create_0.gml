@@ -50,6 +50,13 @@ cleric.sprite_index = spr_cleric;
 cleric.tool = true;
 ds_list_add(actorList, cleric);
 
+slime = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+slime.tabType = "actors";
+slime.componentCode = "CX";
+slime.sprite_index = spr_slime; 
+slime.tool = true;
+ds_list_add(actorList, slime);
+
 shooter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 shooter.tabType = "actors";
 shooter.componentCode = "CS";

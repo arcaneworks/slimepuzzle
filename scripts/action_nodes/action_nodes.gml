@@ -200,8 +200,8 @@ function action_nodes(originNode, targetType, range) {
 		
 		case "melee":
 
-			for(var xx = oX - 1; xx <= oX + 1; xx++){
-				if(xx >= lBound && xx < rBound){
+			for(var xx = oX - range; xx <= oX + range; xx++){
+				if(xx >= lBound && xx <= rBound){
 					if(xx < oX){
 						var dirList = ds_list_find_value(dirNodes, dir.west);
 						ds_list_add(dirList, map[xx, oY]);
@@ -216,8 +216,8 @@ function action_nodes(originNode, targetType, range) {
 				}
 			}
 	
-			for(var yy = oY - 1; yy <= oY + 1; yy++){
-				if(yy >= bBound && yy < tBound){	
+			for(var yy = oY - range; yy <= oY + range; yy++){
+				if(yy >= bBound && yy <= tBound){	
 					if(yy < oY){
 						var dirList = ds_list_find_value(dirNodes, dir.south);
 						ds_list_add(dirList, map[oX, yy]);

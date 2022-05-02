@@ -49,8 +49,11 @@ function get_component_info(component, componentCode){
 		case "CE":
 			tempStruct = global.componentDB.eye;
 		break;
-			
 		
+		case "CX":
+			tempStruct = global.componentDB.slime;
+		break;
+			
 		case "ER":
 			tempStruct = global.componentDB.rock; 
 		break;

@@ -32,6 +32,7 @@ function init_CG_decoding_key_new(){
 	ds_map_add(componentCodes, "F", asset_get_index("obj_fighter_par"));  
 	ds_map_add(componentCodes, "T", asset_get_index("obj_thumper_par")); 
 	ds_map_add(componentCodes, "E", asset_get_index("obj_eye")); 
+	ds_map_add(componentCodes, "X", asset_get_index("obj_slime")); 
 	
 	
 	elementCodes = ds_map_create();

@@ -78,7 +78,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Cyangmou Element Sprites",
-    "path": "folders/00 - GAME/3 - Sprites/Cyangmou Element Sprites.yy",
+    "path": "folders/00 - GAME/3 - Sprites/Components/Elements/Cyangmou Element Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_barrel1",
