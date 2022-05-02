@@ -477,6 +477,7 @@
     {"id":{"name":"spr_archer1","path":"sprites/spr_archer1/spr_archer1.yy",},"order":1,},
     {"id":{"name":"fnt_help","path":"fonts/fnt_help/fnt_help.yy",},"order":5,},
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},"order":0,},
+    {"id":{"name":"obj_volume_display","path":"objects/obj_volume_display/obj_volume_display.yy",},"order":6,},
     {"id":{"name":"fnt_dialogue_small","path":"fonts/fnt_dialogue_small/fnt_dialogue_small.yy",},"order":1,},
     {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},"order":2,},
     {"id":{"name":"spr_bless_sm","path":"sprites/spr_bless_sm/spr_bless_sm.yy",},"order":9,},

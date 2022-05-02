@@ -34,6 +34,7 @@ col1 = collision_rectangle(x + op_border, y + op_border + op_space, x +  width, 
 col2 = collision_rectangle(x + op_border, y + op_border + op_space * 2, x + width,  y + op_border + op_space * 3, obj_interface_menu, false, true);
 col3 = collision_rectangle(x + op_border, y + op_border + op_space * 3, x + width,  y + op_border + op_space * 4, obj_interface_menu, false, true);
 col4 =  collision_rectangle(x + op_border, y + op_border + op_space * 4, x + width,  y + op_border + op_space * 5, obj_interface_menu, false, true);
+col5 =  collision_rectangle(x + op_border, y + op_border + op_space * 5, x + width,  y + op_border + op_space * 6, obj_interface_menu, false, true);
 if(col0){
 	pos = 0;
 }
@@ -48,6 +49,9 @@ if(col3){
 }
 if(col4){
 	pos = 4;
+}
+if(col5){
+	pos = 5;
 }
 
 if(accept_key > 0){
@@ -88,6 +92,12 @@ if(accept_key > 0){
 				//quit game
 				game_end();
 				break;
+			break
+			case 5:
+				//Settings
+				menu_level = 2;
+				op_length = array_length(option[menu_level]);
+				break;
 			}
 			break;
 		case 1:
@@ -103,17 +113,44 @@ if(accept_key > 0){
 					room_goto_next();
 					
 				}
-			//switch(pos){
-			//	case 0:
-			//		//Window Size
-			//		break;
-			//	case 1:
-			//		//Brightness
-			//		break;
-			//	case 2:
-			//		//Back
-			//		menu_level = 0;
-			//		break;
-			//}
+				break;
+		case 2:
+				
+			switch(pos){
+				case 0:
+					//Window Size
+					break;
+				case 1:
+					//Volume
+					menu_level = 3;
+					op_length = array_length(option[3]);
+					instance_activate_object(obj_volume_display);
+					break;
+				case 2:
+					//Back
+					menu_level = 0;
+					break;
+			}
+			break;
+		case 3:
+			switch(pos){
+				case 0:
+					if(audio_get_master_gain(0) <= 0.9)
+					{
+						audio_set_master_gain(0, audio_get_master_gain(0) + 0.1);
+					}
+					break;
+				case 1:
+					if(audio_get_master_gain(0) >= 0.1)
+					{
+						audio_set_master_gain(0, audio_get_master_gain(0) - 0.1);
+					}
+					break;
+				case 2:
+					menu_level = 2;
+					op_length = array_length(option[menu_level]);
+					instance_deactivate_object(obj_volume_display);
+			}
+			
 	}
 }
