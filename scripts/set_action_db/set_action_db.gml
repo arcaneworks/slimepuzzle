@@ -224,8 +224,8 @@ function set_action_db(){
 		explode : other.explode,
 		bless : other.bless,
 		thump : other.thump,
-		stun : other.stun
-		
+		stun : other.stun,
+		slime : other.slime,
 	}
 
 
