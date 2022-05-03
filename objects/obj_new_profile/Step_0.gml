@@ -8,5 +8,5 @@ else
 	
 if(confirmDec){
 	global.playerProfile = message;
-	room_goto_next();
+	TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
 }

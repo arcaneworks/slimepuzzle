@@ -4,7 +4,7 @@ SPD = 15;
 
 name = "Parker"
 class = "rogue"
-move = 1;
+move = 2;
 triggersReaction = false;
 
 portraitSpr = spr_port_knight;

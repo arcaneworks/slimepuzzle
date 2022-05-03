@@ -80,12 +80,12 @@ if(accept_key > 0){
 				//load last autosave
 				global.cursor = noone;
 				load_player_data(global.playerProfile);
-				room_goto_next();
+				TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
 				break;
 			case 3:
 				//load level editor
 				global.cursor = noone;
-				room_goto(level_editor_room);
+				TransitionStart(level_editor_room,sqFadeOutMenu,sqFadeIn);
 				break;
 				
 			case 4:
@@ -110,7 +110,7 @@ if(accept_key > 0){
 				{
 					load_player_data(option[1,pos]);
 					global.cursor = noone;
-					room_goto_next();
+					TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);;
 					
 				}
 				break;
