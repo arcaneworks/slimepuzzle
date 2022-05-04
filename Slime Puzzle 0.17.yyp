@@ -566,6 +566,7 @@
     {"id":{"name":"spr_error3","path":"sprites/spr_error3/spr_error3.yy",},"order":7,},
     {"id":{"name":"d3d_set_fog","path":"scripts/d3d_set_fog/d3d_set_fog.yy",},"order":1,},
     {"id":{"name":"game_room","path":"rooms/game_room/game_room.yy",},"order":1,},
+    {"id":{"name":"spr_port_eye","path":"sprites/spr_port_eye/spr_port_eye.yy",},"order":12,},
     {"id":{"name":"ds_list_destroy_lists","path":"scripts/ds_list_destroy_lists/ds_list_destroy_lists.yy",},"order":3,},
     {"id":{"name":"spr_shooter5","path":"sprites/spr_shooter5/spr_shooter5.yy",},"order":16,},
     {"id":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},"order":0,},
