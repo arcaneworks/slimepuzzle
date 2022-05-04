@@ -9,7 +9,7 @@ function enemy_reaction(enemy){
 	var tBound = map_height; //top side
 	originNode =  map[ enemy.gridX, enemy.gridY];
 	var aStruct = enemy.action;
-	//wipe_nodes();
+	wipe_nodes();
 	var targetType = "melee";
 	var attackRange = 1;
 	var thump = false;
