@@ -1,7 +1,7 @@
 event_inherited();
 turnCt = 1;
 SPD = 15; 
-maxHp = 30; 
+maxHp = 3; 
 hp = maxHp;
 name = "Ezri"
 class = "knight"

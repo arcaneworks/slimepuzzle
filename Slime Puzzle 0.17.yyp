@@ -464,6 +464,7 @@
     {"id":{"name":"uc_error_message","path":"scripts/uc_error_message/uc_error_message.yy",},"order":0,},
     {"id":{"name":"uc_set_debug_mode","path":"scripts/uc_set_debug_mode/uc_set_debug_mode.yy",},"order":1,},
     {"id":{"name":"uc_get_debug_mode","path":"scripts/uc_get_debug_mode/uc_get_debug_mode.yy",},"order":0,},
+    {"id":{"name":"spr_valuebar_1hp","path":"sprites/spr_valuebar_1hp/spr_valuebar_1hp.yy",},"order":5,},
     {"id":{"name":"ds_list_populate","path":"scripts/ds_list_populate/ds_list_populate.yy",},"order":0,},
     {"id":{"name":"find_adjacent_nodes","path":"scripts/find_adjacent_nodes/find_adjacent_nodes.yy",},"order":0,},
     {"id":{"name":"f_battle_text_10","path":"fonts/f_battle_text_10/f_battle_text_10.yy",},"order":11,},

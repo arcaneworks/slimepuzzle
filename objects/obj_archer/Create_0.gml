@@ -11,6 +11,7 @@ portraitSpr = spr_port_archer;
 
 infoText =  name + ", the " + class + "."
 
-
+maxHp = 2;
+hp = maxHp;
 action = global.actionDB.shoot;
 

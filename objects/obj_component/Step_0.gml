@@ -98,7 +98,7 @@ if(applyStatus){ //APPLY STATUS
 		}
 	
 	
-		if(selected || hovered){	
+		if(hovered){	
 	
 	
 			displayHp = true;

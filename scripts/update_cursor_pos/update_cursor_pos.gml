@@ -55,5 +55,9 @@ function update_cursor_pos() {
 	}else{
 		cursorSprite = spr_cursor;		
 	}
+	
+	if(hoverNode != noone && hoverNode.occupant != noone && hoverNode.occupant.actor){
+		hoverNode.occupant.displayHp = true;	
+	}
 
 }

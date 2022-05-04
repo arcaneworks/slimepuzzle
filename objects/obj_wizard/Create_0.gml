@@ -6,6 +6,8 @@ name = "Efrin"
 class = "wizard"
 move = 1;
 
+maxHp = 2;
+hp = maxHp;
 portraitSpr = spr_port_wizard;
 
 action = global.actionDB.fire;

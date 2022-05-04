@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_valuebar_section3","path":"sprites/spr_valuebar_section3/spr_valuebar_section3.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "spr_valuebar_section3",
     "tags": [],
     "resourceType": "GMSequence",
   },
