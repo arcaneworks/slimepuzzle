@@ -19,13 +19,13 @@ function set_component_info_db(){
 	
 	
 	//enemies 
-	shooter = new component_info_struct("shooter", "The shooter doesn't have an action yet.", spr_shooter2, spr_port_cleric, 1);
-	shooterFire = new component_info_struct("shooter", "A shooter that is vulerable to fire.", spr_shooter3, spr_port_cleric, 1);
-	fighter = new component_info_struct("fighter", "The fighter strikes the actor in front of it.", spr_fighter2, spr_port_fighter, 1);
-	bomb = new component_info_struct("bomb", "the bomb explodes.", spr_bomb1, spr_bomb1, 0);
+	shooter = new component_info_struct("shooter", "The shooter doesn't have an action yet.", spr_shooter4, spr_port_shooter_2, 1);
+	shooterFire = new component_info_struct("shooter", "A shooter that is vulerable to fire.", spr_shooter5, spr_port_shooter_2, 1);
+	fighter = new component_info_struct("fighter", "The fighter strikes the actor in front of it.", spr_fighter3, spr_port_fighter_3, 1);
+	bomb = new component_info_struct("bomb", "the bomb explodes.", spr_bomb2, spr_port_bomb, 0);
 	thumper = new component_info_struct("thumper", "the thumper knocks backs all components adjacent to it.", spr_thumper, spr_thumper, 1);
 	eye = new component_info_struct("eye", "the eye freezes all actors in its field of vision", spr_eye, spr_eye, 1);
-	slime = new component_info_struct("slime", "fodder", spr_slime, spr_slime, 1);
+	slime = new component_info_struct("slime", "fodder", spr_slime, spr_port_slime, 1);
 	//elements 
 	
 	rock = new component_info_struct("rock", "Rocks can be pushed and fill holes.", spr_rock1, spr_rock1, 1);
