@@ -22,7 +22,7 @@ push = false;
 for(var gg = 0; gg < instance_number(obj_enemy); gg++){
 	var tempEnemy = instance_find(obj_enemy, gg); 
 	
-	if(tempEnemy.hp > 0){
+	if(tempEnemy.hp > 0 && !incapacitated){
 		enemy_reaction(tempEnemy);
 	}
 
