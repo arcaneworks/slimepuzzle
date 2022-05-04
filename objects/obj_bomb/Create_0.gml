@@ -11,6 +11,7 @@ class = "bomb";
 maxHp = 1; 
 hp = maxHp;
 
+portraitSpr = spr_port_bomb;
 action = global.actionDB.explode;
 
 infoText = "This is a " + class + ".";

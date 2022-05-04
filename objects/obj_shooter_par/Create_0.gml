@@ -9,6 +9,7 @@ class = "shooter";
 maxHp = 1; 
 hp = maxHp;
 
+portraitSpr = spr_port_shooter_2;
 SPD = 6;
 
 action = global.actionDB.spit;

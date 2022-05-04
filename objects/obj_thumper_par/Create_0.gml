@@ -11,7 +11,7 @@ beginX = noone;
 beginY = noone;
 
 class = "thumper";
-portraitSpr = spr_port_fighter;
+portraitSpr = spr_port_thumper;
 initialize = true;
 
 maxHp = 5;

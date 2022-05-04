@@ -60,21 +60,21 @@ ds_list_add(actorList, slime);
 shooter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 shooter.tabType = "actors";
 shooter.componentCode = "CS";
-shooter.sprite_index = spr_shooter2; 
+shooter.sprite_index = spr_shooter4; 
 shooter.tool = true;
 ds_list_add(actorList, shooter);
 
 shooter2 = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 shooter2.tabType = "actors";
 shooter2.componentCode = "CP";
-shooter2.sprite_index = spr_shooter3; 
+shooter2.sprite_index = spr_shooter5; 
 shooter2.tool = true;
 ds_list_add(actorList, shooter2);
 
 fighter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 fighter.tabType = "actors";
 fighter.componentCode = "CF";
-fighter.sprite_index = spr_fighter2; 
+fighter.sprite_index = spr_fighter3; 
 fighter.tool = true;
 ds_list_add(actorList, fighter);
 
@@ -95,7 +95,7 @@ ds_list_add(actorList, eye);
 bomb = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 bomb.tabType = "actors";
 bomb.componentCode = "CB";
-bomb.sprite_index = spr_bomb1; 
+bomb.sprite_index = spr_bomb2; 
 bomb.tool = true;
 ds_list_add(actorList, bomb);
 

@@ -11,7 +11,7 @@ vfx = noone;
 beginX = noone;
 beginY = noone;
 class = "eye";
-portraitSpr = spr_port_fighter;
+portraitSpr = spr_port_eye;
 initialize = true;
 
 maxHp = 5;

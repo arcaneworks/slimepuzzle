@@ -11,7 +11,7 @@ beginX = noone;
 beginY = noone;
 
 class = "fighter";
-portraitSpr = spr_port_fighter;
+portraitSpr = spr_port_fighter_3;
 initialize = true;
 
 maxHp = 5;
