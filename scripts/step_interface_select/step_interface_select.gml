@@ -31,10 +31,11 @@ function step_interface_select() {
 				}
 			}
 		}else{
-			if(hoverNode.occupant.enemy){
+			if(hoverNode.occupant != noone && hoverNode.occupant.enemy){
 				wipe_nodes();
 				var enemy = hoverNode.occupant;
-				action_nodes(map[enemy.gridX, hoverNode.occupant.gridY], enemy.action.targeting.targetType, enemy.action.targeting.range);
+				
+				action_nodes(map[enemy.gridX, enemy.gridY], enemy.action.targeting.targetType, enemy.action.targeting.range);
 			
 			}
 		}

@@ -103,7 +103,7 @@ function set_action_db(){
 		targeting.range = 0;
 		damage.damage = 0;
 		damage.damageType = "physical";
-		targeting.targetType = "melee";
+		targeting.targetType = "none";
 	}
 	
 	shoot = new act_struct(); 
