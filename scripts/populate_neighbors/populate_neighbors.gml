@@ -20,7 +20,7 @@ function populate_neighbors() {
 			}
 	
 			//add N, NE, SW neighbors
-			if(yy < loadThresh - 1){ 
+			if(yy < loadThresh){ 
 				
 				//add NORTH neighbor
 				ds_list_add(node.neighbors, map[xx, yy + 1]);

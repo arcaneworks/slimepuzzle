@@ -10,7 +10,7 @@ function cancel_key_check_move() {
 			wipe_nodes();
 			ds_list_clear_inner_lists(dirNodes);
 			ds_list_clear_inner_lists(moveNodes);
-			move_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move);
+			movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move);
 			state = "clear";
 			nextState = "move";
 		}

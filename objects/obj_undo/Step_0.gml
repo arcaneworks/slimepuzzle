@@ -37,7 +37,7 @@ if(clickable){
 				ds_list_clear_inner_lists(global.cursor.dirNodes);
 				ds_list_clear_inner_lists(global.cursor.moveNodes)
 				global.cursor.selectedActor = headActor;
-				move_nodes(map[headActor.gridX, headActor.gridY]);
+				movement_nodes(map[headActor.gridX, headActor.gridY]);
 				global.cursor.state = "move";
 				
 				if(map[headActor.gridX, headActor.gridY].terrain == "HOLE"){

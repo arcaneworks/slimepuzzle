@@ -84,7 +84,7 @@ moveSpeed = 4;
 selected = false;
 hovered = false; 
 
-type = "defualt";
+type = "default";
 color = c_white;
 outlineCol = c_white; 
 element = false; 

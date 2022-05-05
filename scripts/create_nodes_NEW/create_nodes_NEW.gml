@@ -54,7 +54,7 @@ function create_nodes_NEW(){
 			}
 	
 			//add top neighbor
-			if(yy < loadThresh - 1){
+			if(yy < loadThresh ){
 				ds_list_add(node.neighbors, map[xx, yy + 1]);
 			}
 	
@@ -64,13 +64,13 @@ function create_nodes_NEW(){
 			}
 	
 			//add top left neighbor
-			if(xx > 0 && yy < loadThresh - 1){
+			if(xx > 0 && yy < loadThresh){
 				ds_list_add(node.neighbors, map[xx - 1, yy + 1]);
 		
 			}
 	
 			//add top right neighbor
-			if(xx < liveMapWidth - 1 && yy < loadThresh - 1){
+			if(xx < liveMapWidth - 1 && yy < loadThresh){
 				ds_list_add(node.neighbors, map[xx + 1, yy + 1]);
 		
 			}

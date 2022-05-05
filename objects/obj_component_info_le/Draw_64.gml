@@ -18,7 +18,9 @@ if(hoverNode.occupant != noone){
 	var title = hoverNode.occupant.class; 	
 	var info = hoverNode.occupant.infoText;
 }else{
-	var title = "NO OCCUPANT"; 
+	var hovX = hoverNode.gridX;
+	var hovY = hoverNode.gridY;
+	var title = string(hovX) + ", " + string(hovY); 
 	var info = "no InfoText";
 }
 var titleX = x + iconSize + (iconBufferX * 2);

@@ -19,6 +19,10 @@ function movement_nodes(originNode, moveRange) {
 	start = argument0;
 	range = argument1;
 
+	var diagonal = false;
+	if( originNode.occupant != -4){
+		diagonal = originNode.occupant.diagonal;
+	}
 	//create data structures
 	processing = ds_priority_create();
 	destNodes = ds_list_create(); // list of nodes the actor can move TO (end of path)
@@ -62,6 +66,9 @@ function movement_nodes(originNode, moveRange) {
 				
 					//if node is diagonal, create appropriate costMod
 					if(neighbor.gridX != current.gridX && neighbor.gridY != current.gridY){
+						if(diagonal)
+						costMod = 1;
+						else
 						costMod = 2;
 					}
 				
@@ -80,6 +87,9 @@ function movement_nodes(originNode, moveRange) {
 				
 					//if node is diagonal, create appropriate costMod
 					if(neighbor.gridX != current.gridX && neighbor.gridY != current.gridY){
+						if(diagonal)
+						costMod = 1;
+						else
 						costMod = 2;
 					}
 				
