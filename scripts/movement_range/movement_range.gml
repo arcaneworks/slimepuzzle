@@ -22,7 +22,7 @@ function movement_nodes(originNode, moveRange) {
 	var diagonal = false;
 	if( originNode.occupant != -4){
 		diagonal = originNode.occupant.diagonal;
-	}
+		}
 	//create data structures
 	processing = ds_priority_create();
 	destNodes = ds_list_create(); // list of nodes the actor can move TO (end of path)
@@ -75,8 +75,9 @@ function movement_nodes(originNode, moveRange) {
 					//calculate G score of neighbor, with costMod in place
 				
 					neighbor.G = current.G + (neighbor.cost * costMod);
-				
+					
 					//add neigbor to the processing list so it can be checked
+					if(neighbor.G<= range)
 					ds_priority_add(processing, neighbor, neighbor.G);
 				
 				//ELSE 

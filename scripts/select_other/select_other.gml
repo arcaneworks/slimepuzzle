@@ -12,9 +12,9 @@ function select_other(){
 				state = "action target";
 				getTargets = true;
 	
-			}else{
+			}else if(selectedActor.canMove){
 				state = "move";
-				move_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move);
+				movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move);
 			}
 			
 		}

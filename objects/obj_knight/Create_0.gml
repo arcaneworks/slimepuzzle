@@ -6,7 +6,6 @@ hp = maxHp;
 name = "Ezri"
 class = "knight"
 move = 1;
-
 portraitSpr = spr_port_knight;
 
 action = global.actionDB.bash;

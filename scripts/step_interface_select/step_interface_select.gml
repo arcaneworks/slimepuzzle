@@ -6,8 +6,8 @@ function step_interface_select() {
 		if(hoverNode.occupant.agent){
 			if(hoverNode.occupant && hoverNode.occupant.canMove && selectedActor == noone){
 				wipe_nodes();
-				movement_nodes(map[gridX, gridY]); 
-			
+				movement_nodes(map[gridX, gridY], hoverNode.occupant.move);
+				
 			}else{
 				wipe_nodes();	
 			}
@@ -22,7 +22,7 @@ function step_interface_select() {
 					if(!selectedActor.canMove && selectedActor.canAct){
 						state = "action target";
 						getTargets = true;
-					}else{
+					}else if(selectedActor.canMove){
 				
 						state = "move";
 						movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move);
