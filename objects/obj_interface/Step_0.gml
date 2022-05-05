@@ -21,7 +21,6 @@ update_cursor_pos();
 					
 					if(selectedActor.canAct && keyboard_check_released(aStruct.info.hotKey)){
 						wipe_nodes();
-						
 						action_nodes(map[selectedActor.gridX, selectedActor.gridY], aStruct.targeting.targetType, aStruct.targeting.range);
 						state = "action target";	
 					}	
