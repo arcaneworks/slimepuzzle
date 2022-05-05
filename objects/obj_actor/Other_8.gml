@@ -27,18 +27,21 @@ for(var gg = 0; gg < instance_number(obj_enemy); gg++){
 	}
 
 }
-	
-if(global.cursor.selectedActor == id){	
-	if(canAct){
-		global.cursor.state = "action target";
-		if(incapacitated){
-			global.cursor.getTargets = false; 
+if(ds_queue_empty(global.gameObj.actionQueue)){
+	if(global.cursor.selectedActor == id){	
+		if(canAct){
+			global.cursor.state = "action target";
+			if(incapacitated){
+				global.cursor.getTargets = false; 
+			}else{
+				global.cursor.getTargets = true;	
+			}
 		}else{
-			global.cursor.getTargets = true;	
+			global.cursor.selectedActor = noone;
+			global.cursor.state = "idle";
 		}
-	}else{
-		global.cursor.selectedActor = noone;
-		global.cursor.state = "idle";
 	}
+}else{
+	queueWait = true;
 }
 	

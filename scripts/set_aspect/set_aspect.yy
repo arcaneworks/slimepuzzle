@@ -6,7 +6,7 @@
     "path": "folders/gui scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Transitions",
+  "name": "set_aspect",
   "tags": [],
   "resourceType": "GMScript",
 }

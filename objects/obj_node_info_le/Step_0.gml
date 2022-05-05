@@ -1,8 +1,3 @@
-hoverNode = obj_interface_editor.hoverNode;
 
 
-if(hoverNode){
-	
-
-	
-}
+event_inherited();

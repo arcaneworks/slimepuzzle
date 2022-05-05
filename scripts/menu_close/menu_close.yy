@@ -6,7 +6,7 @@
     "path": "folders/gui scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Transitions",
+  "name": "menu_close",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -1,6 +1,6 @@
 event_inherited(); //inherits most stuff from obj_component
 
-#region Actor specific instance Variables 
+#region Actor specific instance Variables
 	enemy = false;
 	actor = true; 
 	bomb = false;
@@ -58,7 +58,7 @@ event_inherited(); //inherits most stuff from obj_component
 	
 	
 	actionNodes = ds_list_create();
-	
+	queueWait = false;
 #endregion 
 
 #region HealthBar draw variables

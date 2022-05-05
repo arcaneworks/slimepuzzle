@@ -1,33 +1,20 @@
-camera = camera_create();
+/// @description 
+#macro cam view_camera[0]
+#macro base_width 640
+#macro base_height 360
+current_width = base_width
+current_height = base_height
+
+#macro center_window alarm[0]=1
+#macro resize_window alarm[1]=1 
+
+#macro resize_app_surface surface_resize(application_surface,current_width*sub_pixel_scale,current_height*sub_pixel_scale)
+
+window_scale= 3;
+gui_scale= 1;
+sub_pixel_scale= window_scale;
+is_full_screen= window_get_fullscreen();
 
 
-camX = x;
-camY = y; 
-camHeight = 360;
-camWidth = 640;
-
-var vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
-var pm = matrix_build_projection_ortho(camWidth,camHeight, 1, 10000);
-
-
-camera_set_view_mat(camera, vm);
-camera_set_proj_mat(camera, pm);
-
-display_set_gui_maximize();
-display_set_gui_size(camWidth, camHeight);
-
-view_camera[0] = camera;
-
-
-follow = noone;
-xTo = x;
-yTo = y;
-
-shake = true;
-
-state = "idle"
-
-//global.light_init = layer_create(-300, "Light_Init");
-//global.light_sources = layer_create(-299, "Light_Sources");
-//instance_create_layer(x, y, global.light_init, obj_light_ctrl);
-//instance_create_layer(x, obj_caravan.y - 100, global.light_sources, obj_lantern);
+resize_app_surface; 
+resize_window;

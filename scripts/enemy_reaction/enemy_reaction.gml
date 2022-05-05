@@ -40,7 +40,7 @@ function enemy_reaction(enemy){
 					ds_list_add(enemy.targetList, enemy.target);
 					if(stun)
 						enemy.target.canAct = false;
-					//wipe_nodes();
+					wipe_nodes();
 					state = "nothing";
 					enemy.actState = "action standby";
 					enemy.canAct = false;

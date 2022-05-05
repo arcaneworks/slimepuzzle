@@ -313,5 +313,27 @@ switch(moveState){  //MOVESTATE
 	
 		
 	}
+	
+	if(queueWait){
+		if(ds_queue_empty(global.gameObj.actionQueue)){
+			if(global.cursor.selectedActor == id){	
+				if(canAct){
+					if(incapacitated){
+						global.cursor.getTargets = false; 
+					}else{
+						global.cursor.getTargets = true;	
+					}
+					global.cursor.state = "action target";
+					
+				}else{
+					global.cursor.selectedActor = noone;
+					global.cursor.state = "idle";
+				}
+			}	
+			queueWait = false;
+		}
+		
+		
+	}
 
 #endregion 

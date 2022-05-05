@@ -55,7 +55,7 @@ function uc_set_window_size() {
 	}
 
 	// Apply changes
-	window_set_size(Camera.port_width, Camera.port_height);
+	resize_window;
 	surface_resize(application_surface, Camera.port_width, Camera.port_height);
 	display_set_gui_size(display_get_gui_height()*Camera.aspect_ratio, display_get_gui_height());
 	uc_window_center();

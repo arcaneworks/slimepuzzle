@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "gui scripts",
-    "path": "folders/gui scripts.yy",
+    "name": "Slime Puzzle 0.17",
+    "path": "Slime Puzzle 0.17.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "Transitions",
+  "name": "test_button",
   "tags": [],
   "resourceType": "GMScript",
 }

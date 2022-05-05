@@ -1,3 +1,4 @@
+event_inherited();
 hoverNode = noone; 
 
 boxWidth = 150; 

@@ -43,6 +43,14 @@ if(obj_test_game.debugMode){
 		}
 	
 	}
+	
+	var sActor = "selected actor: "
+	if(selectedActor != noone){
+		ds_list_add(debugList, sActor + selectedActor.class);
+		
+	}else{
+		ds_list_add(debugList, sActor + "NOOONE");
+	}
 	ds_list_draw(debugList,mouse_x + sprite_width, mouse_y + 50, 0, 10, false);
 	ds_list_destroy(debugList);
 }

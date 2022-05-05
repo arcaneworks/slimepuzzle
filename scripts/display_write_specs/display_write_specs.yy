@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "gui scripts",
-    "path": "folders/gui scripts.yy",
+    "name": "Helpers",
+    "path": "folders/gui scripts/Helpers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Transitions",
+  "name": "display_write_specs",
   "tags": [],
   "resourceType": "GMScript",
 }
