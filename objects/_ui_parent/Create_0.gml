@@ -36,7 +36,7 @@ enum VisualState
 	inactive,
 	activating
 }
-state = VisualState.active;
+state = VisualState.activating;
 
 length=15;
 timer=length;

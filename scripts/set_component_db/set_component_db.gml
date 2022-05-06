@@ -25,7 +25,7 @@ function set_component_info_db(){
 	bomb = new component_info_struct("bomb", "the bomb explodes.", spr_bomb2, spr_port_bomb, 0);
 	thumper = new component_info_struct("thumper", "the thumper knocks backs all components adjacent to it.", spr_thumper, spr_thumper, 1);
 	eye = new component_info_struct("eye", "the eye freezes all actors in its field of vision", spr_eye, spr_eye, 1);
-	slime = new component_info_struct("slime", "fodder", spr_slime, spr_port_slime, 1);
+	slime = new component_info_struct("slime", "A useless little slime. Squish it, slash it, or stomp it. It deserves to die.", spr_slime, spr_port_slime, 1);
 	//elements 
 	
 	rock = new component_info_struct("rock", "Rocks can be pushed and fill holes.", spr_rock1, spr_rock1, 1);

@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/00 - GAME/1 - Objects/UI.yy",
+    "name": "Level Editor UI",
+    "path": "folders/01 - LEVEL EDITOR/Level Editor UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_node_info",

@@ -33,7 +33,7 @@
     "path": "folders/01 - LEVEL EDITOR/Level Editor UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_component_info_le",
+  "name": "obj_component_info",
   "tags": [],
   "resourceType": "GMObject",
 }

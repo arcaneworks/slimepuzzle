@@ -26,7 +26,7 @@ function set_aspect(aspect) {
 				break;
 		}
 	
-		instance_create_depth(0,0,-1000,obj_screen_fade);
+		//instance_create_depth(0,0,-1000,obj_screen_fade);
 		window_set_size(current_width, current_height)
 		//resize_window;
 		event_user(0); //snap camera

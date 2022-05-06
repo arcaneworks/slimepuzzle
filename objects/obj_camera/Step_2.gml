@@ -14,3 +14,5 @@ camera_set_view_size(cam,current_width,current_height);
 //											lerp(_cur_x,_x,_spd),
 //											lerp(_cur_y,_y,_spd));
 //}
+
+
