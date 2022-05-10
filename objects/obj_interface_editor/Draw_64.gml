@@ -11,10 +11,15 @@ if(hoverTool != noone){
 	var xx = hoverTool.x - textWidth - 5;
 	var yy = hoverTool.y + spriteHeight;
 	var bgColor = c_black;
+	var textScale = .3;
 	
 	draw_rectangle_color(xx - 3, yy, xx + textWidth + 3, yy + textHeight, bgColor, bgColor, bgColor, bgColor, false)
-	draw_text_shadow(xx, yy + 3, text, c_yellow, c_black, .1);	
-	draw_set_font(f_battle_text);
+	draw_set_font(f_battle_text_28);
+	draw_set_color(c_yellow);
+	draw_text_transformed(xx, yy + 3, text, textScale, textScale,0);	
+	
+	
+	draw_set_color(c_white);
 }
 
 if(selectedObjTool != noone){
@@ -68,8 +73,12 @@ if(obj_level_editor.debugMode){
 	}
 	
 	if(ds_list_size(debugList) > 0){
-	ds_list_draw(debugList,mouse_x + sprite_width, mouse_y + 50, 0, 20, false);
+		draw_set_font(f_battle_text_28);
+		var textScale = .3;
+		ds_list_draw_transformed(debugList,mouse_x + sprite_width, mouse_y, textScale, true);
 	}
 	ds_list_destroy(debugList);
+	draw_default();
 }
+draw_default();
 

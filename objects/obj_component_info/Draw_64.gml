@@ -19,12 +19,12 @@ var scale = 1;
 var font = f_battle_text_28;
 var fontScale = .3;
 var iconSize = sprite_get_width(iconSprite) * scale;
-var iconBufferX = 2;
+var iconBufferX = 3;
 var titleX = x + iconSize + iconBufferX ;
 var titleY = y + .5 * string_height(title) * fontScale + 5;
 draw_set_color(c_white);
 var iconBufferY = y + .5 * boxHeight - .5 * iconSize;
-var maxText = 600;
+var maxText = 550;
 var sep = string_height(title) * 2.5;
 draw_set_font(font);
 

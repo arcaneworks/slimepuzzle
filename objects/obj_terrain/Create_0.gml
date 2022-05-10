@@ -1,4 +1,5 @@
 terrainString = "GROUND";
+infoText = "NOONE";
 component = false;
 node = false;
 isTerrain = true;

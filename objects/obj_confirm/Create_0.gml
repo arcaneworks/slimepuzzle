@@ -3,6 +3,7 @@ width = 275;
 height = 150;
 buffer = 0; 
 textString = "no text available.no text available.no text available. text available.no text available.no text available.no text available.no text available.no text available.no text available.";
+textScale = .6;
 decision = true;
 caller = noone; 
 

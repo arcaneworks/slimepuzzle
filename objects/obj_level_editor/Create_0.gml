@@ -2,7 +2,7 @@
 
 instance_create_layer(x, y, "Instances", obj_interface_editor); //create the cursor
 global.cursor = obj_interface_editor;
-
+global.gameObj = id;
 #region MAP VARIABLES (
 
 globalvar map; // map of nodes

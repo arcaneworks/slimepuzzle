@@ -3,7 +3,7 @@
 global.gameObj = id;
 
 levelString = global.testTarget;
- 
+ level = global.testTarget;
 debugMode = false;
 matt = 0;
 actionState = "standby";
@@ -36,8 +36,8 @@ standbyActor = noone;
 
 initialize = true; 
 
-	instance_create_layer(x, y, "Instances", obj_interface_test); //create the cursor
-	global.cursor = obj_interface_test;
+	instance_create_layer(x, y, "Instances", obj_interface); //create the cursor
+	global.cursor = obj_interface;
 
 
 	mapOrgY = obj_map_start.y;
