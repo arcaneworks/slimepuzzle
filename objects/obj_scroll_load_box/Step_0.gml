@@ -1,7 +1,7 @@
 event_inherited();
 
 var push;
-push = max(keyboard_check_released(vk_enter), keyboard_check_released(ord("Z")), mouse_check_button_pressed(mb_left), 0);
+push = max(keyboard_check_released(vk_enter), keyboard_check_released(ord("Z")), mouse_check_button_pressed(mb_left), gamepad_button_check(0,gp_face1), 0);
 // checks whether the user has (with keyboard or mouse) selected an object.
 
 if(obj_interface_editor.state != "load"){

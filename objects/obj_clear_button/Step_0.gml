@@ -4,7 +4,7 @@
 if(instance_position(mouse_x, mouse_y, id)){
 	image_index = 1;
 		
-	if(mouse_check_button_released(mb_left)){
+	if(mouse_check_button_released(mb_left) || gamepad_button_check(0,gp_face1)){
 		if(obj_interface_editor.selectedObj != noone){
 			instance_destroy(obj_interface_editor.selectedObj);
 			obj_interface_editor.selectedObj = noone;
