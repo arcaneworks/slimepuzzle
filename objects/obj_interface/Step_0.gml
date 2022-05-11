@@ -15,6 +15,10 @@ update_cursor_pos();
 			
 				if(selectedActor != noone){
 					
+					if(getMoves){
+						movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move)	
+					}
+					
 					mb_press_move();
 					select_other();
 					var aStruct = selectedActor.action;
@@ -40,7 +44,6 @@ update_cursor_pos();
 					getTargets = false;
 				}
 						
-				//key_press_act();
 				
 				select_other();
 				

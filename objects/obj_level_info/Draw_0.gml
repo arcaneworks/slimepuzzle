@@ -27,7 +27,7 @@ draw_set_color(c_white);
 
 
 draw_text_transformed(stringX, stringY, guiString, textScale, textScale, 0);
-guiString = global.gameObj.level;
+guiString = global.gameObj.levelString;
 
 y1 += height + 4;
 

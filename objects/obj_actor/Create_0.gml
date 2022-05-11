@@ -37,7 +37,7 @@ event_inherited(); //inherits most stuff from obj_component
 	portraitSpr = spr_portrait_noone;
 	invisible = false;
 	
-	finPush = false;
+	finShove = false;
 	selected = false;
 	hovered = false;
 
@@ -56,7 +56,7 @@ event_inherited(); //inherits most stuff from obj_component
 	statusCt = 0; // number of turns this status effects the actor. counts down at end of enemy turn
 	applyStatus = false; // boolean -- applies effect of status to actor. like applyDamage
 	
-	
+	waitForDeath = false;
 	actionNodes = ds_list_create();
 	queueWait = false;
 #endregion 

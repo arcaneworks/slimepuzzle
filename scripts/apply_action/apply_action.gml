@@ -3,19 +3,13 @@
 function apply_action(){
 	if(instance_exists(target) && target != noone && target.component && !miss){
 		if(target.hitable){ //if the target is able to be hit (not a node)
-			if(target.defending){
-				target.damage = 0;
-			}else{
-				target.damage = action.damage.damage; //assign damage
+			
+			apply_damage_class(target, action);
+			
+			if(target.hp <= 0){
+				waitForDeath = true;	
 			}
 			
-			if(action.damage.damageType != action.damage.tempDamageType){
-				target.damageType = action.damage.tempDamageType; //assign damage type
-			}else{
-				target.damageType = action.damage.damageType; //assign damage type
-			}
-			target.applyDamage = true;
-				
 			if(is_string(action.effect.status)){ // give status
 				target.status = giveStatus;
 			}

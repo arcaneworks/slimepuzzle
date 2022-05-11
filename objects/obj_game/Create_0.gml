@@ -1,8 +1,11 @@
 //this is where most of the game is initialized, and where the interface and camera objects are created.
 
 global.gameObj = id;
-
-levelString = "level" + string(global.currentLevel);
+if(room_last == level_editor_room){
+	levelString = global.testTarget
+}else{
+	levelString = "level" + string(global.currentLevel);
+}
  
 debugMode = false;
 matt = 0;
@@ -41,7 +44,8 @@ enum dir {
 	
 	// height of entire map at the beginning of gameplay
 
-	
+#endregion
+
 loadThresh = map_height - 1;
 dataThresh = map_height;
 	screenHeight = 12;
@@ -50,7 +54,8 @@ dataThresh = map_height;
 turnList = ds_list_create(); //list of all actors in order. gets populated/sorted in initialize
 turnPos = 0; //position in turn list to make currActor
 currActor = noone;//actor whose turn it is
-actionQueue = ds_queue_create(); //queue of components waiting to act. 
+global.actionQueue = ds_queue_create(); //queue of components waiting to act. 
+global.deathQueue = ds_queue_create(); //queue of components waiting to die.
 standbyActor = noone;
 
 initialize = true; 

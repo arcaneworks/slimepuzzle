@@ -1,8 +1,14 @@
 event_inherited();
 
 
+//colors actor gray if it can't move && can't act
+if(canAct || canMove){
+	color = c_white;
+}else{
+	color = c_gray;
+	outlineCol = c_gray;
+}
 
-//draw_text(x + 40, y, actState);
 if(defending){
 	draw_set_alpha(.75);
 	draw_sprite(spr_defend, -1,x, y);
@@ -10,7 +16,12 @@ if(defending){
 	
 }
 
-draw_set_color(c_white);
+//if(ds_list_size(targetList > 0)){
+	
+//draw_text( x + 20, y, ds_list_size(targetList));	
+	
+//}
+
 
 
 

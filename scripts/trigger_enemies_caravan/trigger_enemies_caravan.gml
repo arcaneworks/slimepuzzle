@@ -6,7 +6,7 @@ function trigger_enemies_caravan() {
 					var node = map[xx, other.advanceNumber];
 					if(ds_list_find_index(reactList, node) != -1){ //if the node that the actor is standing in is in the reactList
 
-						ds_queue_enqueue(global.gameObj.actionQueue, id);
+						ds_queue_enqueue(global.actionQueue, id);
 				
 						for(var ii = 0; ii < ds_list_size(reactList); ii++){
 					
@@ -35,7 +35,7 @@ function trigger_enemies_caravan() {
 				for(var xx = 0; xx < map_width; xx++){
 						var node = map[xx, other.advanceNumber];
 					if(ds_list_find_index(reactList, node) != -1){ //if the node that the actor is standing in is in the reactLis
-						ds_queue_enqueue(global.gameObj.actionQueue, id);
+						ds_queue_enqueue(global.actionQueue, id);
 						ds_list_add(targetList,node);
 						actState = "action standby";
 						reaction = true;

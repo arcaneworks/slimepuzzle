@@ -3,7 +3,7 @@ apply_terrain(id, map[gridX, gridY]);
 trigger_enemies();
 trigger_effect_node(); 
 
-if(ds_queue_size(global.gameObj.actionQueue) > 0){
+if(ds_queue_size(global.actionQueue) > 0){
 	global.gameObj.actionState = "standby";
 }	
 
@@ -27,7 +27,7 @@ for(var gg = 0; gg < instance_number(obj_enemy); gg++){
 	}
 
 }
-if(ds_queue_empty(global.gameObj.actionQueue)){
+if(ds_queue_empty(global.actionQueue)){
 	if(global.cursor.selectedActor == id){	
 		if(canAct){
 			global.cursor.state = "action target";

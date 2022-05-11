@@ -16,7 +16,7 @@ function get_reaction(){
 			if(ds_list_size(reactList) > 0){
 				var tNode = ds_list_find_value(reactList, 0);
 				if(tNode.occupant != noone){
-					ds_queue_enqueue(global.gameObj.actionQueue, id); 
+					ds_queue_enqueue(global.actionQueue, id); 
 					ds_list_add(targetList, tNode.occupant);	
 					
 					if(tNode.occupant.vehicle){

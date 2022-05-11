@@ -23,7 +23,7 @@
     {"id":{"name":"obj_title_menu","path":"objects/obj_title_menu/obj_title_menu.yy",},"order":3,},
     {"id":{"name":"button_arrow_up","path":"sprites/button_arrow_up/button_arrow_up.yy",},"order":3,},
     {"id":{"name":"apply_shove","path":"scripts/apply_shove/apply_shove.yy",},"order":9,},
-    {"id":{"name":"obj_interface","path":"objects/obj_interface/obj_interface.yy",},"order":9,},
+    {"id":{"name":"obj_interface","path":"objects/obj_interface/obj_interface.yy",},"order":12,},
     {"id":{"name":"spr_error0","path":"sprites/spr_error0/spr_error0.yy",},"order":4,},
     {"id":{"name":"ds_list_destroy_inner_lists","path":"scripts/ds_list_destroy_inner_lists/ds_list_destroy_inner_lists.yy",},"order":2,},
     {"id":{"name":"mb_press_act","path":"scripts/mb_press_act/mb_press_act.yy",},"order":0,},

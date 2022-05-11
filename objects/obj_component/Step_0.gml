@@ -1,7 +1,3 @@
-if(applyDamage){ //APPLY DAMAGE	
-	apply_damage_class();
-	applyDamage = false;
-}
 
 if(shake){
 	shakeTimer --;
@@ -29,26 +25,25 @@ if(displayHp && damaged){
 	
 }
 
+//if this actor died and is in the death queue
 if(actor){
-	if(maxHp > 0){ //IF ACTOR DIES
-		if(hp <= 0){ // if that component has 0 or less hp		
-			if(global.gameObj.currActor == id){ //if this actor is the current actor
-				global.gameObj.currActor = noone;	
-				global.cursor.selectedActor = noone; 
-				global.cursor.state = "idle";
-			}
-			map[gridX, gridY].occupant = noone; //clear occupancy of node
-			if(ds_queue_head(global.gameObj.actionQueue) == id){
-				ds_queue_dequeue(global.gameObj.actionQueue)	
-			}
-			if(alpha > 0){
-				alpha -= .03;
-			}else{
-				instance_destroy();		
-				exit;
-			}
+	if(!ds_queue_empty(global.deathQueue)){
+		if(ds_queue_head(global.deathQueue) == id){
+			
+				if(ds_queue_head(global.actionQueue) == id){
+					ds_queue_dequeue(global.actionQueue)	
+				}
+				if(alpha > 0){
+					alpha -= .03;
+				}else{
+					map[gridX, gridY].occupant = noone; //clear occupancy of node
+					ds_queue_dequeue(global.deathQueue);
+					instance_destroy();	
+					exit;
+				}
 		}
 	}
+
 }
 
 //if(rotatable){

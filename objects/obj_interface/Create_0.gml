@@ -28,7 +28,7 @@ eventNodes = ds_list_create();
 ds_list_add(dirNodes, ds_list_create(), ds_list_create(), ds_list_create(), ds_list_create());
 
 getTargets = false;
-
+getMoves =false;
 actableNodes = noone;
 selectedActor = noone;
 target = noone;
@@ -39,7 +39,7 @@ actorsMoved = 0;
 //debug stuff
 occupantText = "error";
 componentsMoved = 0;
-debugText = global.gameObj.actionQueue;
+debugText = "nothing";
 timer = 0;
 
 prevKey = noone;

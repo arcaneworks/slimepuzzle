@@ -45,7 +45,6 @@ execChoice = false; /* "execution choice" - whether this character
 				   
 actTurn = false; 
 myTurn = false;
-
 canMove = false;
 canAct = false;
 // whether the actor can move/act in the current declaration suphase.
@@ -63,7 +62,7 @@ prevNode = noone;
 // to allow the user to retracvt a movement they had made with an actor (before committing)
 
 
-
+deathWait = true;
 moveToNode = noone; 
 collision = false;
 

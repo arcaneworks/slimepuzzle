@@ -9,7 +9,7 @@ function key_press_act(){
 	var tempDir = noone;
 	var tempTarget = noone;
 	var fState = "action standby"; //state that the actor goes into;
-	var encQueue = global.gameObj.actionQueue;
+	var encQueue = global.actionQueue;
 	var execute = false;
 	
 	var lBound = 0; //boundry on left side of map

@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "00 - GAME",
-    "path": "folders/00 - GAME.yy",
+    "name": "01 - LEVEL EDITOR",
+    "path": "folders/01 - LEVEL EDITOR.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_interface",
