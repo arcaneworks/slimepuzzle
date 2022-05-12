@@ -9,6 +9,7 @@ global.tempTarget = "temp level";
 global.cursor = obj_interface_menu;
 global.gameObj = noone;
 global.cursorSensitivity = 5;
+global.lastRoom = room;
 componentCodes = ds_map_create(); // decoding key for CG data files
 set_action_db();
 set_component_info_db();

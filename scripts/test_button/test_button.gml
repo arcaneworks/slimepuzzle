@@ -5,6 +5,8 @@ function test_button(){
 	
 				save_CG_set(global.testTarget);
 				global.cursor = noone;
+				
+				global.lastRoom = room;
 				room_goto(test_room);
 
 	}

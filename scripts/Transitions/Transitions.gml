@@ -29,6 +29,7 @@ function TransitionPlaceSequence(_type)
 //Called as a moment at the end of an "Out" transition sequence
 function TransitionChangeRoom()
 {
+	global.lastRoom = room;
 	room_goto(global.roomTarget);
 }
 

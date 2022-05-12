@@ -1,7 +1,7 @@
 //this is where most of the game is initialized, and where the interface and camera objects are created.
 
 global.gameObj = id;
-if(room_last == level_editor_room){
+if(global.lastRoom == level_editor_room){
 	levelString = global.testTarget
 }else{
 	levelString = "level" + string(global.currentLevel);
