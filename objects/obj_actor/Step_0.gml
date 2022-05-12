@@ -103,10 +103,10 @@ event_inherited();
 		
 		
 		case "wait":
-			var actQueue = global.actionQueue
+			var actQueue = global.actionQueue;
 			var headActor = ds_queue_head(actQueue);
 				
-			//If this action is the head of the action queue, dequeue it. 
+			//If this actor is the head of the action queue (and finished applying action), dequeue it. 
 			//the actor loses action
 			if(headActor == id){
 				ds_queue_dequeue(actQueue);
@@ -114,21 +114,36 @@ event_inherited();
 				actTurn = false;
 			}
 			
-			//if there are no other actions queued
+			//if there are no actor's queued
 			if(ds_queue_empty(actQueue)){
-				//IF THIS actor is the cursor's selected Actor
+				//&&  THIS actor is the cursor's selected Actor
 				if(global.cursor.selectedActor == id){
+					//&& there is nobody that is still waiting to die
 					if(ds_queue_empty(global.deathQueue)){
-						if(canMove){
 						
-							global.cursor.getMoves = true;
-							global.cursor.state = "move";
+						//if you can act, then go to action target
+						if(canAct){
+							global.cursor.getTargets = true;
+							global.cursor.state = "action target";
+							actState = "idle";
 						}else{
-							global.cursor.selectedActor = noone; 
-							global.cursor.state = "idle";
+							//if i can't act, but can move
+							if(canMove){
+					
+								global.cursor.getMoves = true;
+								global.cursor.state = "move";
+								actState = "idle";
+							}else{
+								//if i can't act OR move
+								global.cursor.selectedActor = noone; 
+								global.cursor.state = "idle";
+								actState = "idle";
+							}
 						}	
 					}
-				}	
+				}else{
+					actState = "idle";	
+				}
 			
 			}
 			
@@ -136,31 +151,6 @@ event_inherited();
 		break;	
 		
 	}
-	
-	
-	//if this actor is being targeted by a reaction && is the selectedActor
-	// it waits until the action queue is resolved.
-	//then it puts the interface back into "action target" mode and shows action nodes;
-	if(queueWait){ 
-		if(ds_queue_empty(global.actionQueue)){
-			if(global.cursor.selectedActor == id){	
-				if(canAct){
-					if(incapacitated){
-						global.cursor.getTargets = false; 
-					}else{
-						global.cursor.getTargets = true;	
-					}
-					global.cursor.state = "action target";
-					
-				}else{
-					global.cursor.selectedActor = noone;
-					global.cursor.state = "idle";
-				}
-			}	
-			queueWait = false;
-		}
-		
-		
-	}
+
 
 #endregion 

@@ -17,17 +17,19 @@ function set_action_db(){
 	}
 	
 	//creates struct containing range and targetType
-	function targeting_struct(_range = 1, _targetType = "melee") constructor {
+	function targeting_struct(_range = 1, _targetType = "melee", _targetAll = false) constructor {
 		range = _range; 
 		targetType = _targetType; 	
+		targetAll = _targetAll;
 	}
 	
 	//creats struct containing effect information (shove, rotate)
-	function effect_struct(_shove = false, _rotate = false, _status = noone, _rejuvenate = false) constructor {
+	function effect_struct(_shove = false, _rotate = false, _status = noone, _rejuvenate = false, _stun = false) constructor {
 		shove = _shove;
 		rotate = _rotate;	
 		status = _status;
 		rejuvenate = _rejuvenate;
+		stun = _stun;
 	}
 	
 	//creates struct containing vfx and sfx information

@@ -34,7 +34,7 @@ if(actor){
 					ds_queue_dequeue(global.actionQueue)	
 				}
 				if(alpha > 0){
-					alpha -= .03;
+					alpha -= .08;
 				}else{
 					map[gridX, gridY].occupant = noone; //clear occupancy of node
 					ds_queue_dequeue(global.deathQueue);
@@ -68,7 +68,6 @@ if(actor){
 
 if(react){
 	//get_reaction();	
-	global.gameObj.actionState = "standby";
 	react = false; 
 }
 
@@ -153,12 +152,7 @@ switch(moveState){
 					path_add_point(movementPath, x, y, 100);
 					
 					//moveActor.applyDamage = true;
-					
-					
-					
-					
-			
-			
+
 				}else{ //there is no occupant to move 
 			
 					movementPath =  path_add(); //add path of movementPath
@@ -181,21 +175,6 @@ switch(moveState){
 					//begin moving along path
 		
 				}
-
-					
-					//if(agent){
-					//	if(!push){
-					//		if(prevNode.gridY > currNode.gridY){ // if the agent moves south
-					//			obj_caravan.slack += prevNode.gridY - currNode.gridY;
-							
-					//		}
-						
-					//		if(prevNode.gridY < currNode.gridY){ // if the agent moves north
-					//			obj_caravan.slack -= currNode.gridY - prevNode.gridY; // lessen slack
-							
-					//		}
-					//	}
-					//}
 					
 			}
 			

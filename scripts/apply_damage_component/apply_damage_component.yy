@@ -6,7 +6,7 @@
     "path": "folders/00 - GAME/2 - Scripts/Components.yy",
   },
   "resourceVersion": "1.0",
-  "name": "apply_damage_class",
+  "name": "apply_damage_component",
   "tags": [],
   "resourceType": "GMScript",
 }

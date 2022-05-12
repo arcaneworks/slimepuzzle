@@ -48,7 +48,7 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
+				
 			}
 		
 			//if shot from below, aim left
@@ -86,7 +86,7 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
+			
 			}
 			
 		break;
@@ -130,7 +130,6 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
 				
 				
 			}
@@ -171,8 +170,6 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
-				
 			}
 		
 		
@@ -216,7 +213,6 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
 			}
 			
 			
@@ -255,7 +251,6 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
 			}
 				
 		break;
@@ -297,7 +292,6 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
 			}
 			
 			
@@ -336,7 +330,6 @@ if(targetedBy != noone &&  applyDamage){
 				global.cursor.state = "nothing";
 				actState = "action standby";
 				ds_queue_enqueue(global.actionQueue, id);
-				global.gameObj.actionState = "standby";
 				
 			}
 		

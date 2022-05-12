@@ -45,7 +45,6 @@ function enemy_reaction(enemy){
 					enemy.actState = "action standby";
 					enemy.canAct = false;
 					ds_queue_enqueue(global.actionQueue, enemy);
-					global.gameObj.actionState = "standby";
 			}
 		}
 	}
