@@ -1,10 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function apply_action(){
-	if(instance_exists(target) && target != noone && target.component && !miss){
+	if(instance_exists(target) && target != noone && target.component){
 		if(target.hitable){ //if the target is able to be hit (not a node)
 			
-			apply_damage_class(target, action);
+			apply_damage_class(target);
 			
 			if(target.hp <= 0){
 				waitForDeath = true;	
@@ -22,7 +22,8 @@ function apply_action(){
 			if(action.sfx.endSfx != noone && !action.effect.shove){
 				audio_play_sound(action.sfx.endSfx, 0, false);
 			}
-		
+			
+
 		}
 	}else{
 		if(instance_exists(target) && target.terrain){

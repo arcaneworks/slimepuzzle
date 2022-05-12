@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function apply_damage_class(target, action){
+function apply_damage_class(target){
 	
 	switch(target.damageClass){
 		case "default":
@@ -11,8 +11,8 @@ function apply_damage_class(target, action){
 		
 
 		case "fire weak":
-			if(action.damage.damageType == "fire"){
-				target.hp -= action.damage.damage;
+			if(action.damage.tempDamageType == "fire"){
+				target.hp -= action.damage.tempDamageType;
 				target.damaged = true;
 				target.shake = true;
 				
@@ -21,14 +21,13 @@ function apply_damage_class(target, action){
 		
 		case "bomb":
 			if(hp > 0){
-				if(damageType == "fire"){
-					find_bomb_targets();
-					shake = true;
-				
-					ds_queue_enqueue(global.actionQueue, id);
-					global.gameObj.state = "standby";
-					actState = "action standby";
-					damageClass = "default";
+				if(action.damage.tempDamageType == "fire"){
+					find_bomb_targets(target);
+					target.shake = true;
+					target.damaged = true;
+					ds_queue_enqueue(global.actionQueue, target);
+					target.actState = "action standby";
+					target.damageClass = "default";
 				
 				}
 			}

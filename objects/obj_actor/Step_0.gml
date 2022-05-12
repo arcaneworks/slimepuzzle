@@ -125,6 +125,7 @@ event_inherited();
 							global.cursor.state = "move";
 						}else{
 							global.cursor.selectedActor = noone; 
+							global.cursor.state = "idle";
 						}	
 					}
 				}	
