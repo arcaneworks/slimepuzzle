@@ -13,7 +13,7 @@ function apply_action(){
 				}
 			}
 		}else{ 
-			//if the target is a terrain
+			//if the target is a terrain and NOT a component
 			if(target.terrain){
 				apply_damage_terrain(target);	
 			}

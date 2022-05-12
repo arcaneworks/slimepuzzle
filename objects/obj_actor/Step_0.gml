@@ -45,7 +45,7 @@ event_inherited();
 		break;
 		
 		case "apply action":
-			//once the vfx has finished, apply the action to the target
+			//once the vfx has finished (and shove is completed if necessary), apply the action to the target
 			if(!instance_exists(vfx)){ 
 				//if there is a target in the targetlist
 				if(ds_list_size(targetList) > 0){ 
@@ -70,9 +70,7 @@ event_inherited();
 					}		
 					actState = "wait"; 
 				}	
-				
-				
-			
+
 			break;
 		
 		case "shove target":

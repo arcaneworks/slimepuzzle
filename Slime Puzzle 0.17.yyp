@@ -430,7 +430,7 @@
     {"id":{"name":"uc_get_mouse_shooter_acceleration","path":"scripts/uc_get_mouse_shooter_acceleration/uc_get_mouse_shooter_acceleration.yy",},"order":1,},
     {"id":{"name":"uc_init_mouse_drag","path":"scripts/uc_init_mouse_drag/uc_init_mouse_drag.yy",},"order":0,},
     {"id":{"name":"uc_set_mouse_drag_button","path":"scripts/uc_set_mouse_drag_button/uc_set_mouse_drag_button.yy",},"order":1,},
-    {"id":{"name":"apply_terrain","path":"scripts/apply_terrain/apply_terrain.yy",},"order":0,},
+    {"id":{"name":"apply_terrain","path":"scripts/apply_terrain/apply_terrain.yy",},"order":9,},
     {"id":{"name":"uc_get_mouse_drag_acceleration","path":"scripts/uc_get_mouse_drag_acceleration/uc_get_mouse_drag_acceleration.yy",},"order":0,},
     {"id":{"name":"uc_get_mouse_drag_button","path":"scripts/uc_get_mouse_drag_button/uc_get_mouse_drag_button.yy",},"order":1,},
     {"id":{"name":"uc_shake","path":"scripts/uc_shake/uc_shake.yy",},"order":0,},
