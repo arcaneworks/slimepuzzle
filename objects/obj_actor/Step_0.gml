@@ -8,8 +8,9 @@ event_inherited();
 	switch(actState){
 		
 		case "action standby":
-			
+			if(actTurn){
 				actState = "create effect";
+			}
 
 		break;
 		
@@ -35,6 +36,7 @@ event_inherited();
 				
 				if(action.effect.shove){
 					actState = "shove target";
+					target = noone;
 				}else{
 					actState = "apply action"; 
 				}
@@ -68,6 +70,7 @@ event_inherited();
 							apply_action();
 						}		
 					}		
+					ds_list_clear(targetList);
 					actState = "wait"; 
 				}	
 
@@ -79,23 +82,32 @@ event_inherited();
 			if(!instance_exists(vfx) && !finShove){ 	
 				if(ds_list_size(targetList) > 0){
 					for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
-						target = ds_list_find_value(targetList, j); 
+						var tempTarget = ds_list_find_value(targetList, j); 
+						
+						if(tempTarget.component){
+							target = tempTarget;	
+						}else{
+							if(tempTarget.node){
+								if(tempTarget.occupant != noone){
+									target = tempTarget.occupant	
+								}	
+							}
+						}
+						
 						apply_shove();
-						finShove = true;
-					}		
+							
+					}
 				}
-			}					
+					finShove = true;
+			}
+			
 			//if i've shoved my target(s) and waited for them to finish moving,
 			//apply the action
-			if(instance_exists(target) && target.component){
-				if(finShove && target.moveState == "idle"){
+				if(target != noone && finShove && target.moveState == "idle"){
 					finShove = false;
 					actState = "apply action";
-				
 				}
-			}else{
-				actState = "wait";
-			}
+
 		
 		break;
 		
@@ -140,7 +152,9 @@ event_inherited();
 						}	
 					}
 				}else{
+					
 					actState = "idle";	
+					
 				}
 			
 			}

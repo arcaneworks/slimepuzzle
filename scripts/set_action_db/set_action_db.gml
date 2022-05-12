@@ -17,10 +17,12 @@ function set_action_db(){
 	}
 	
 	//creates struct containing range and targetType
-	function targeting_struct(_range = 1, _targetType = "melee", _targetAll = false) constructor {
+	function targeting_struct(_range = 1, _targetType = "melee", _targetAll = false, _reaction = false, _reactionType = "melee") constructor {
 		range = _range; 
 		targetType = _targetType; 	
 		targetAll = _targetAll;
+		reaction = _reaction; 
+		reactionType = _reactionType;
 	}
 	
 	//creats struct containing effect information (shove, rotate)
@@ -59,8 +61,7 @@ function set_action_db(){
 		_targeting = new damage_struct(), 
 		_effect = new effect_struct(),
 		_vfx = new vfx_struct(),
-		_sfx = new sfx_struct(),
-		_event = new event_struct()
+		_sfx = new sfx_struct()
 		
 	) constructor {
 	
@@ -70,7 +71,7 @@ function set_action_db(){
 		effect = _effect;
 		vfx = _vfx; 
 		sfx = _sfx
-		actionEvent = _event;
+	
 					
 	}
 	
@@ -81,7 +82,6 @@ function set_action_db(){
 	//effect - shove, rotate, status
 	//vfx - vfxSprite, vfxType,
 	//sfx -  startSfx, endSfx
-	//event - eventType
 	
 	
 	#region Action Database
@@ -96,7 +96,6 @@ function set_action_db(){
 		damage.damage = 1;
 		damage.damageType = "physical";
 		targeting.targetType = "melee";
-		actionEvent.eventType = "sidebar";
 	}
 	
 	slime = new act_struct();
@@ -115,10 +114,9 @@ function set_action_db(){
 		info.instructText = "Hold 'Z' and release to shoot!";
 		info.iconSpr = spr_shoot_sm;
 		effect.rotate = true;
-		effect.shove = false;
-		actionEvent.eventType = "bar";
 		targeting.range = 8; 
 		targeting.targetType = "bow";
+		targeting.targetAll = false;
 		vfx.vfxType = "projectile";
 		vfx.vfxSprite = spr_arrow;
 		damage.damage = 1;
@@ -135,7 +133,6 @@ function set_action_db(){
 		damage.tempDamageType = "fire";
 		targeting.range = 1; 
 		targeting.targetType = "diagonal";
-		actionEvent.eventType = "QTE";
 		vfx.vfxSprite = spr_vfx_fire;
 		sfx.startSfx = s_fire;
 		sfx.endSfx = noone;
@@ -150,6 +147,8 @@ function set_action_db(){
 		damage.damageType = "physical";
 		targeting.range = 1; 
 		targeting.targetType = "melee";
+		targeting.reactionType = "melee";
+		targeting.targetAll = true;
 	}
 	
 	thump = new act_struct();
@@ -159,6 +158,8 @@ function set_action_db(){
 		damage.damage = 1;	
 		targeting.range = 1; 
 		targeting.targetType = "melee";
+		targeting.reactionType = "melee";
+		targeting.targetAll = true;
 		effect.shove = true;
 	}
 	
@@ -185,6 +186,7 @@ function set_action_db(){
 		info.iconSpr = spr_shoot_sm;
 		targeting.targetType = "line";
 		targeting.range = 3; 
+		targeting.targetAll = false;
 		damage.damage = 1;
 		vfx.vfxSprite = spr_arrow;
 		vfx.vfxType = "projectile";
@@ -202,6 +204,7 @@ function set_action_db(){
 		sfx.startSfx = s_explode;		
 		targeting.targetType = "melee";
 		targeting.range = "1";		
+		targeting.targetAll = true;
 	}
 	stun = new act_struct();
 	with (stun){
@@ -209,11 +212,13 @@ function set_action_db(){
 		info.infoText = "Prevents any actors within the targeting cone from taking their action.";
 		damage.damageType = "fire";
 		damage.damage = 0;
+		effect.stun = true;
 		vfx.vfxSprite = spr_nuke_explode;
 		vfx.vfxType = "target node";
 		sfx.startSfx = s_explode;
 		targeting.targetType = "cone";
 		targeting.range = "4";
+		targeting.targetAll = false;
 	}
 	
 	global.actionDB = {
