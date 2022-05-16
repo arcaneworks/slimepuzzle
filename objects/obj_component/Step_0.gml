@@ -1,19 +1,27 @@
 if(faces){
 	switch(facingDir){
 		case dir.north:
-			var sprite = asset_get_index("spr_" + class + 
+			image_xscale = 1;
+			var sprite = asset_get_index("spr_" + class + "_n");
+			sprite_index = sprite;
 		break;
 	
 		case dir.east:
-	
+			image_xscale = 1;
+			var sprite = asset_get_index("spr_" + class + "e");
+			sprite_index = sprite;
 		break;
 	
 		case dir.south:
-	
+			image_xscale = 1;
+			var sprite = asset_get_index("spr_" + class + "_n");
+			sprite_index = sprite;
 		break;
 	
 		case dir.west:
-	
+			image_xscale = -1;
+			var sprite = asset_get_index("spr_" + class + "e");
+			sprite_index = sprite;
 		break;
 
 	}

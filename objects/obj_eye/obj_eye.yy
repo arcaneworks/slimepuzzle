@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_eye",
-    "path": "sprites/spr_eye/spr_eye.yy",
+    "name": "spr_eye_s",
+    "path": "sprites/spr_eye_s/spr_eye_s.yy",
   },
   "solid": false,
   "visible": true,

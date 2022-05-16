@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_thumper",
-    "path": "sprites/spr_thumper/spr_thumper.yy",
+    "name": "spr_thumper_s",
+    "path": "sprites/spr_thumper_s/spr_thumper_s.yy",
   },
   "solid": false,
   "visible": true,

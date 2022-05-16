@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fighter3_s",
-    "path": "sprites/spr_fighter3_s/spr_fighter3_s.yy",
+    "name": "spr_fighter_s",
+    "path": "sprites/spr_fighter_s/spr_fighter_s.yy",
   },
   "solid": false,
   "visible": true,
