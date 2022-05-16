@@ -553,6 +553,7 @@
     {"id":{"name":"obj_shooter_east","path":"objects/obj_shooter_east/obj_shooter_east.yy",},"order":2,},
     {"id":{"name":"obj_shooter_fire","path":"objects/obj_shooter_fire/obj_shooter_fire.yy",},"order":5,},
     {"id":{"name":"obj_crate","path":"objects/obj_crate/obj_crate.yy",},"order":3,},
+    {"id":{"name":"move_reaction_ui","path":"scripts/move_reaction_ui/move_reaction_ui.yy",},"order":13,},
     {"id":{"name":"obj_crate_particle","path":"objects/obj_crate_particle/obj_crate_particle.yy",},"order":4,},
     {"id":{"name":"obj_selected","path":"objects/obj_selected/obj_selected.yy",},"order":0,},
     {"id":{"name":"obj_bkg_dark","path":"objects/obj_bkg_dark/obj_bkg_dark.yy",},"order":3,},

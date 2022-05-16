@@ -12,6 +12,7 @@ global.cursorSensitivity = 5;
 global.lastRoom = room;
 componentCodes = ds_map_create(); // decoding key for CG data files
 set_action_db();
+
 set_component_info_db();
 
 if(!directory_exists("CGs")){

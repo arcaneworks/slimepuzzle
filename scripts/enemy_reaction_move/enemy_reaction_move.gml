@@ -4,9 +4,7 @@ function enemy_reaction_move(){
 	ds_list_clear(reactList);
 	var originNode =  map[gridX,gridY];
 	wipe_nodes();
-	
 	action_nodes(originNode, action.targeting.targetType, action.targeting.range);
-	
 	
 	with(obj_node){
 		if(actionNode || passNode){
@@ -15,10 +13,8 @@ function enemy_reaction_move(){
 	}
 	
 	if(!ds_list_empty(reactList)){
-		
 			//if this node I just moved in is in the react List (returns -1
-		var listIndex = ds_list_find_index(reactList, map[other.gridX, other.gridY]);
-			
+		var listIndex = ds_list_find_index(reactList, map[other.gridX, other.gridY]);		
 		if(listIndex > -1){ 
 			//if this action targets all reactNodes
 			if(action.targeting.targetAll){
@@ -32,12 +28,9 @@ function enemy_reaction_move(){
 			}else{
 				//if this action single targets
 				ds_list_add(targetList, other.id); 
-			}
-				
+			}	
 			ds_queue_enqueue(global.actionQueue, id); 
 			actState = "action standby";
-			
 		}
 	}
-
 }
