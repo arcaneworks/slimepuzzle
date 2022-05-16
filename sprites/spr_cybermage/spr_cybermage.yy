@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_cybermage","path":"sprites/spr_cybermage/spr_cybermage.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "spr_cybermage",
     "tags": [],
     "resourceType": "GMSequence",
   },
