@@ -1,10 +1,11 @@
 event_inherited();
 test = true; 
 hasTurn = true;
+hasReaction = true;
 moveState = "idle";
 actState = "idle";
 
-
+facingDir = dir.south; 
 class = "shooter";
 maxHp = 1; 
 hp = maxHp;

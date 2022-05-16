@@ -44,6 +44,7 @@ moveNode = false; // whether the selected character can move to this node
 targetNode = false; // whether the selected character can target this node
 actionNode = false; 
 executeNode = false;
+reactNode = false;
 potNode = false; 
 decNode = false;
 pushNode = false; //whether actor will be pushed forward during the caravan advance

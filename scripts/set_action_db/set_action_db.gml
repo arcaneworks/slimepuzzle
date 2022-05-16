@@ -187,6 +187,7 @@ function set_action_db(){
 		targeting.targetType = "line";
 		targeting.range = 3; 
 		targeting.targetAll = false;
+		targeting.reactionType = "bow";
 		damage.damage = 1;
 		vfx.vfxSprite = spr_arrow;
 		vfx.vfxType = "projectile";

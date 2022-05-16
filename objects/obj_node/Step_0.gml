@@ -3,6 +3,11 @@ if(moveNode){
 	color = c_aqua;	
 }
 
+if(reactNode){
+	alpha = .3;
+	color = c_orange;	
+}
+
 if(passNode){
 	alpha = .5;
 	color = c_yellow;

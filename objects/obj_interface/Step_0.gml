@@ -21,6 +21,7 @@ update_cursor_pos();
 					
 					mb_press_move();
 					select_other();
+					move_reaction_ui();
 					var aStruct = selectedActor.action;
 					
 					if(selectedActor.canAct && keyboard_check_released(aStruct.info.hotKey)){

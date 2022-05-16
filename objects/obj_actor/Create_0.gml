@@ -8,6 +8,7 @@ event_inherited(); //inherits most stuff from obj_component
 	initialize = true;
 	targetList = ds_list_create();
 	reactList = ds_list_create(); //if another actor steps in these nodes, react
+	displayReaction = false;
 	hitable = true; 
 	rotatable = true;
 	damagable = true;

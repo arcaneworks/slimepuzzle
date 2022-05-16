@@ -1,7 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function get_reaction(){
-	set_action_db()
 	
 	with(obj_enemy){
 		fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
