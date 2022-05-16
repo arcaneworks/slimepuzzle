@@ -7,5 +7,10 @@ function apply_action_effect(target){
 	if(action.effect.rejuvenate){
 		target.canAct = true; 
 		target.canMove = true;	
-	}	
+	}
+	
+	if(action.effect.stun){
+		target.canAct = false;	
+		
+	}
 }

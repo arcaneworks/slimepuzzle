@@ -13,7 +13,7 @@ beginY = noone;
 class = "eye";
 portraitSpr = spr_port_eye;
 initialize = true;
-
+faces = true;
 maxHp = 5;
 hp = maxHp;
 

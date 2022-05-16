@@ -77,7 +77,7 @@ if(global.cursor.selectedActor != noone && global.cursor.selectedActor == id){  
 	if(canAct){
 		outlineCol = c_lime;
 	}
-	draw_sprite_outlined(sprite_index, -1, spriteX, spriteY, sprXscale, sprYscale, image_angle, color, outlineCol, alpha) //draws outlined sprite when component is hovered
+	draw_sprite_outlined(sprite_index, -1, spriteX+ xOffset, spriteY, image_xscale, sprYscale, image_angle, color, outlineCol, alpha) //draws outlined sprite when component is hovered
 }else{
 	
 	
@@ -90,16 +90,16 @@ if(global.cursor.selectedActor != noone && global.cursor.selectedActor == id){  
 		}
 		
 	
-		draw_sprite_outlined(sprite_index, -1, spriteX, spriteY,  sprXscale, sprYscale, image_angle, color, outlineCol, alpha)
+		draw_sprite_outlined(sprite_index, -1, spriteX+ xOffset, spriteY,  image_xscale, sprYscale, image_angle, color, outlineCol, alpha)
 	}else{
 		if(global.gameObj.currActor == id && enemy){
 			
 			outlineCol = c_red;
 
-			draw_sprite_outlined(sprite_index, -1, spriteX, spriteY,  sprXscale, sprYscale, image_angle, color, outlineCol, alpha)
+			draw_sprite_outlined(sprite_index, -1, spriteX+ xOffset, spriteY,  image_xscale, sprYscale, image_angle, color, outlineCol, alpha)
 		}else{
 		//draw the sprite regularly
-		draw_sprite_ext(sprite_index, -1, spriteX, spriteY,  sprXscale, sprYscale, image_angle, color, alpha);
+		draw_sprite_ext(sprite_index, -1, spriteX+ xOffset, spriteY,  image_xscale, sprYscale, image_angle, color, alpha);
 		
 		}
 	}
@@ -110,5 +110,5 @@ if(global.cursor.selectedActor != noone && global.cursor.selectedActor == id){  
 draw_set_color(c_white)
 
 if(incapacitated){
-	draw_sprite_ext(sprite_index, -1, spriteX, spriteY, sprXscale, sprYscale, image_angle, c_black, .5);
+	draw_sprite_ext(sprite_index+ xOffset, -1, spriteX, spriteY, image_xscale, sprYscale, image_angle, c_black, .5);
 }

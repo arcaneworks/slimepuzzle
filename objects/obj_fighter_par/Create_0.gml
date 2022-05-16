@@ -9,7 +9,7 @@ hasReaction = true;
 vfx = noone;
 beginX = noone;
 beginY = noone;
-
+faces = true;
 class = "fighter";
 portraitSpr = spr_port_fighter_3;
 initialize = true;

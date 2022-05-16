@@ -10,8 +10,18 @@ function move_reaction_ui(){
 						reactNode = false;		
 					}	
 				}
-				displayReaction = true;
-				other.hoverNode.reactNode = true;	
+				
+				if(action.targeting.targetAll){
+					displayReaction = true;
+					for(var kk = 0; kk < ds_list_size(reactList);kk++){
+						var rNode = ds_list_find_value(reactList, kk); 
+						rNode.reactNode = true;
+					}
+					
+				}else{
+					displayReaction = true;
+					other.hoverNode.reactNode = true;	
+				}
 			}else{
 				displayReaction = false;
 			}
@@ -26,7 +36,6 @@ function move_reaction_ui(){
 			if(displayReaction){
 				displayReaction = false;			
 			}
-			
 		}
 		
 	}

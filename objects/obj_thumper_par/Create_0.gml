@@ -9,7 +9,7 @@ hasReaction = true;
 vfx = noone;
 beginX = noone;
 beginY = noone;
-
+faces = true;
 class = "thumper";
 portraitSpr = spr_port_thumper;
 initialize = true;

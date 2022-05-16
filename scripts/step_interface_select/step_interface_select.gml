@@ -35,8 +35,15 @@ function step_interface_select() {
 				wipe_nodes();
 				var enemy = hoverNode.occupant;
 				
-				action_nodes(map[enemy.gridX, enemy.gridY], enemy.action.targeting.targetType, enemy.action.targeting.range);
-			
+				if(enemy.hasReaction){
+					if(!ds_list_empty(enemy.reactList)){
+						for(var ii = 0; ii < ds_list_size(enemy.reactList); ii++){
+							var reactNode = ds_list_find_value(enemy.reactList, ii); 
+							reactNode.actionNode = true;
+						
+						}
+					}
+				}	
 			}
 		}
 	}else{

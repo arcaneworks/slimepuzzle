@@ -6,9 +6,9 @@ if(displayHp){
 	var barHeight = sprite_get_height(hpSec1);
 	
 	if(class != "slime"){
-		draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + .5 * sprite_width - .5 * barWidth , y  - barHeight , node_size/8, maxHp, hp, 0, c_white, .75,1);
+		draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + xOffset + .5 * sprite_width - .5 * barWidth , y  - barHeight , node_size/8, maxHp, hp, 0, c_white, .75,1);
 	}else{
-		draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + .5 * sprite_width - 4, y , node_size/8, maxHp, hp, 0, c_white, .75,1);
+		draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + xOffset + .5 * sprite_width - 4, y , node_size/8, maxHp, hp, 0, c_white, .75,1);
 	}
 }
 
@@ -20,7 +20,7 @@ if(displayReaction){
 	var textHeight = string_height(text) * textScale; 
 	var textWidth = string_width(text) * textScale;
 	draw_set_color(c_red);
-	draw_text_transformed(x + sprite_width - textWidth, y, text, textScale, textScale, 0);
+	draw_text_transformed(x + xOffset + sprite_width - textWidth, y, text, textScale, textScale, 0);
 	
 	
 	if(global.cursor.hoverNode != noone && global.cursor.hoverNode.reactNode){

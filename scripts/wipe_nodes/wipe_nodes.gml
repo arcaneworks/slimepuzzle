@@ -7,6 +7,7 @@ function wipe_nodes() {
 		placeNode = false;
 		targetNode = false;
 		potNode = false;
+		reactNode = false;
 		G = 0;
 		parent = noone;
 		passNode = false; 

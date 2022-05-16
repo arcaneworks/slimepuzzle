@@ -8,9 +8,7 @@ function apply_action(){
 				apply_damage_component(target); //apply damage based on target's damage class
 				apply_action_effect(target); //apply action effect to target
 			
-				if(action.sfx.endSfx != noone && !action.effect.shove){
-					audio_play_sound(action.sfx.endSfx, 0, false);
-				}
+				
 			}
 		}else{ 
 			//if the target is a terrain and NOT a component
@@ -19,7 +17,7 @@ function apply_action(){
 			}
 		}
 	}
-	
+	playEndSfx = true;
 	action.damage.tempDamageType = action.damage.damageType;
 }
 
