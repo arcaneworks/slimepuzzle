@@ -6,7 +6,10 @@ function cancel_key_check_idle(){
 		audio_play_sound(s_cancel, 0, false);
 		wipe_nodes();
 		ds_list_clear_inner_lists(dirNodes);
-		ds_list_clear_inner_lists(moveNodes)
+		ds_list_clear_inner_lists(moveNodes);
+		
+		
+		
 		selectedActor = noone;
 		state = "idle";
 	

@@ -4,7 +4,7 @@ hasTurn = true;
 hasReaction = true;
 moveState = "idle";
 actState = "idle";
-
+faces = true;
 facingDir = dir.south; 
 class = "shooter";
 maxHp = 1; 

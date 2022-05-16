@@ -60,35 +60,35 @@ ds_list_add(actorList, slime);
 shooter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 shooter.tabType = "actors";
 shooter.componentCode = "CS";
-shooter.sprite_index = spr_shooter4; 
+shooter.sprite_index = spr_shooter_s; 
 shooter.tool = true;
 ds_list_add(actorList, shooter);
 
 shooter2 = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 shooter2.tabType = "actors";
 shooter2.componentCode = "CP";
-shooter2.sprite_index = spr_shooter5; 
+shooter2.sprite_index = spr_shooter2_s; 
 shooter2.tool = true;
 ds_list_add(actorList, shooter2);
 
 fighter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 fighter.tabType = "actors";
 fighter.componentCode = "CF";
-fighter.sprite_index = spr_fighter3; 
+fighter.sprite_index = spr_fighter_s; 
 fighter.tool = true;
 ds_list_add(actorList, fighter);
 
 thumper = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 thumper.tabType = "actors";
 thumper.componentCode = "CT";
-thumper.sprite_index = spr_thumper; 
+thumper.sprite_index = spr_thumper_s; 
 thumper.tool = true;
 ds_list_add(actorList, thumper);
 
 eye = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 eye.tabType = "actors";
 eye.componentCode = "CE";
-eye.sprite_index = spr_eye; 
+eye.sprite_index = spr_eye_s; 
 eye.tool = true;
 ds_list_add(actorList, eye);
 

@@ -51,7 +51,7 @@ event_inherited(); //inherits most stuff from obj_component
 	nextNode = noone;
 	prevNode = noone;
 	applyDamage = false;
-	
+	playEndSfx = false
 	status = noone; // string of status e.g. "burning";
 	statusIns = noone; // instance holding status properties / visuals
 	statusCt = 0; // number of turns this status effects the actor. counts down at end of enemy turn

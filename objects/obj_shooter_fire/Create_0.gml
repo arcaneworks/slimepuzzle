@@ -4,8 +4,8 @@ hasTurn = true;
 moveState = "idle";
 actState = "idle";
 damageClass = "fire weak";
-
-class = "shooter";
+faces = true;
+class = "shooter2";
 maxHp = 1; 
 hp = maxHp;
 

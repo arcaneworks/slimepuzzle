@@ -1,5 +1,5 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//this script is meant to run when an actor steps into an enemy's reaction list 
+//
 function enemy_reaction_move(){
 	
 	if(!ds_list_empty(reactList)){
@@ -21,6 +21,7 @@ function enemy_reaction_move(){
 				ds_list_add(targetList, other.id); 
 			}	
 			
+			//changes direction to face actor that stepped in reactnodes
 			if(other.gridX > gridX){
 				facingDir = dir.east;	
 			}else{

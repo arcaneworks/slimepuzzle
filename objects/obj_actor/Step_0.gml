@@ -69,6 +69,11 @@ event_inherited();
 							}		
 							apply_action();
 						}		
+						if(playEndSfx){
+							audio_play_sound(action.sfx.endSfx, 1, false);
+							playEndSfx = false; 
+						}
+					
 					}		
 					ds_list_clear(targetList);
 					actState = "wait"; 
@@ -151,7 +156,12 @@ event_inherited();
 							}
 						}	
 					}
-				}else{
+				}else{ //if this actor isn't the selected actor
+					if(hasReaction && canAct){
+						fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
+						
+					}
+					
 					
 					actState = "idle";	
 					

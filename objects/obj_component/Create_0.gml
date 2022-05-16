@@ -9,6 +9,7 @@ component = true;
 obstacle = false; 
 changeDir = true;
 defending = false;
+faces = false; 
 facingDir = dir.south; //current facing direction. 
 dirStr = 1; //how many places component is getting rotated;
 bomb = false;
@@ -27,6 +28,7 @@ triggersReaction = true;
  
 targetedBy = noone;
  
+ xOffset = 0;
 sprXscale = 1;
 sprYscale = 1;
 // current position on grid
