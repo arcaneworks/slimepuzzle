@@ -41,9 +41,6 @@ function fill_reaction_list(list, reactionType, range){
 		break;
 		
 		case "bow":
-			
-			//NORTH
-			
 			switch(facingDir){
 				
 				case dir.north:
@@ -133,6 +130,81 @@ function fill_reaction_list(list, reactionType, range){
 			}	
 				
 		break;
+		
+		case "cone":
+			switch(facingDir){
+				case dir.south:
+					for(yy = oY - range; yy <= oY; yy++){
+						var diff = yy-oY;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(xx = oX -diff; xx<= oX + diff; xx++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
+							ds_list_add(list, map[xx,yy])
+						}
+					}
+					break;
+				case dir.east:
+				for(xx = oX + range; xx <= oX; xx--){
+						var diff = xx-oX;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(yy = oY -diff; yy<= oY + diff; yy++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
+							ds_list_add(list, map[xx,yy]) 
+						}
+					}
+				break;
+				case dir.north:
+				for(yy = oY + range; yy <= oY; yy--){
+						var diff = yy-oY;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(xx = oX -diff; xx<= oX + diff; xx++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
+							ds_list_add(list, map[xx,yy]) 
+						}
+					}
+				break;
+				case dir.west:
+				for(xx = oX - range; xx <= oX; xx++){
+						var diff = xx-oX;
+						if(diff <0){
+							diff *= -1;
+							
+							}
+							diff /= 2;
+						for(yy = oY -diff; yy<= oY + diff; yy++){
+							if(xx < lBound || xx > rBound)
+								 continue;
+							if(yy <bBound || yy > tBound)
+								continue;
+							
+							ds_list_add(list, map[xx,yy])
+							
+						}
+					}
+				break;
+			
+			}
 		
 	}
 	

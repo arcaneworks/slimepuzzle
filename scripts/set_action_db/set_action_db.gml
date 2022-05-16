@@ -148,7 +148,7 @@ function set_action_db(){
 		targeting.range = 1; 
 		targeting.targetType = "melee";
 		targeting.reactionType = "melee";
-		targeting.targetAll = true;
+		targeting.targetAll = false;
 	}
 	
 	thump = new act_struct();
@@ -204,6 +204,7 @@ function set_action_db(){
 		vfx.vfxType = "target node";
 		sfx.startSfx = s_explode;		
 		targeting.targetType = "melee";
+		targeting.reactionType = "melee";
 		targeting.range = "1";		
 		targeting.targetAll = true;
 	}
@@ -218,6 +219,7 @@ function set_action_db(){
 		vfx.vfxType = "target node";
 		sfx.startSfx = s_explode;
 		targeting.targetType = "cone";
+		targeting.reactionType = "cone";
 		targeting.range = "4";
 		targeting.targetAll = false;
 	}
