@@ -1,3 +1,24 @@
+if(faces){
+	switch(facingDir){
+		case dir.north:
+			var sprite = asset_get_index("spr_" + class + 
+		break;
+	
+		case dir.east:
+	
+		break;
+	
+		case dir.south:
+	
+		break;
+	
+		case dir.west:
+	
+		break;
+
+	}
+}
+
 
 if(shake){
 	shakeTimer --;
@@ -5,7 +26,6 @@ if(shake){
 		shake = false;	
 		shakeTimer = 15;
 	}
-	
 }
 
 if(global.cursor.hoverNode != noone && global.cursor.hoverNode.occupant == id && damaged == false){

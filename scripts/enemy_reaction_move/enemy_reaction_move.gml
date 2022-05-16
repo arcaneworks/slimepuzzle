@@ -1,16 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function enemy_reaction_move(){
-	ds_list_clear(reactList);
-	var originNode =  map[gridX,gridY];
-	wipe_nodes();
-	action_nodes(originNode, action.targeting.targetType, action.targeting.range);
-	
-	with(obj_node){
-		if(actionNode || passNode){
-			ds_list_add(other.reactList, id);
-		}
-	}
 	
 	if(!ds_list_empty(reactList)){
 			//if this node I just moved in is in the react List (returns -1
@@ -27,8 +17,26 @@ function enemy_reaction_move(){
 				}
 			}else{
 				//if this action single targets
+				
 				ds_list_add(targetList, other.id); 
 			}	
+			
+			if(other.gridX > gridX){
+				facingDir = dir.east;	
+			}else{
+				if(other.gridX < gridX){
+					facingDir = dir.west;	
+				}
+			}
+			
+			if(other.gridY > gridY){
+				facingDir = dir.north;	
+			}else{
+				if(other.gridY < gridY){
+					facingDir = dir.south;	
+				}
+			}
+			
 			ds_queue_enqueue(global.actionQueue, id); 
 			actState = "action standby";
 		}

@@ -344,7 +344,7 @@
     {"id":{"name":"reset_dialogue_defaults","path":"scripts/reset_dialogue_defaults/reset_dialogue_defaults.yy",},"order":2,},
     {"id":{"name":"script_execute_alt","path":"scripts/script_execute_alt/script_execute_alt.yy",},"order":3,},
     {"id":{"name":"f_battle_text_28","path":"fonts/f_battle_text_28/f_battle_text_28.yy",},"order":14,},
-    {"id":{"name":"spr_fighter3","path":"sprites/spr_fighter3/spr_fighter3.yy",},"order":13,},
+    {"id":{"name":"spr_fighter3_s","path":"sprites/spr_fighter3_s/spr_fighter3_s.yy",},"order":13,},
     {"id":{"name":"change_variable","path":"scripts/change_variable/change_variable.yy",},"order":4,},
     {"id":{"name":"create_instance_layer","path":"scripts/create_instance_layer/create_instance_layer.yy",},"order":5,},
     {"id":{"name":"uc_set_view_size","path":"scripts/uc_set_view_size/uc_set_view_size.yy",},"order":0,},
