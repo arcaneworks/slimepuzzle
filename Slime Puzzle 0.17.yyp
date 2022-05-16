@@ -341,6 +341,7 @@
     {"id":{"name":"place_component","path":"scripts/place_component/place_component.yy",},"order":6,},
     {"id":{"name":"valuebar_get_width","path":"scripts/valuebar_get_width/valuebar_get_width.yy",},"order":1,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":0,},
+    {"id":{"name":"spr_wizard1_n","path":"sprites/spr_wizard1_n/spr_wizard1_n.yy",},"order":12,},
     {"id":{"name":"create_dialogue","path":"scripts/create_dialogue/create_dialogue.yy",},"order":0,},
     {"id":{"name":"spr_saveas","path":"sprites/spr_saveas/spr_saveas.yy",},"order":4,},
     {"id":{"name":"create_textevent","path":"scripts/create_textevent/create_textevent.yy",},"order":1,},
