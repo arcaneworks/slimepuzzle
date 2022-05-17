@@ -1,4 +1,6 @@
-if(room_get_name(room) == "game_room" && instance_number(obj_enemy) == 0){ //if you've killed all the enemies
+var roomName = room_get_name(room);
+var enemy_number = instance_number(obj_enemy);
+if(roomName != "test_room" && enemy_number == 0){ //if you've killed all the enemies
 	if(!instance_exists(obj_gameover)){
 		instance_create_layer(x, y, "Gameover", obj_gameover);	
 	}	

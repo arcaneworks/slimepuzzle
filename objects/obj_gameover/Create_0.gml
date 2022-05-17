@@ -2,7 +2,7 @@
 oldString = global.gameObj.levelString; //find old level string
 instance_deactivate_all(true); //deactive all the objects
 instance_activate_object(obj_level); //except for the persistant level object
-
+instance_activate_object(obj_camera);
 newRoom = room_duplicate(room); //duplicate current room
 
 
