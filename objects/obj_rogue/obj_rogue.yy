@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_rogue",
-    "path": "sprites/spr_rogue/spr_rogue.yy",
+    "name": "spr_rogue_s",
+    "path": "sprites/spr_rogue_s/spr_rogue_s.yy",
   },
   "solid": false,
   "visible": true,

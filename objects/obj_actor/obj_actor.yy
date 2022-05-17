@@ -3,8 +3,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "spr_wizard1",
-    "path": "sprites/spr_wizard1/spr_wizard1.yy",
+    "name": "spr_wizard1_s",
+    "path": "sprites/spr_wizard1_s/spr_wizard1_s.yy",
   },
   "persistent": false,
   "parentObjectId": {
