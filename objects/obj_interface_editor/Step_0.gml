@@ -43,6 +43,8 @@ update_cursor_pos();
 		
 				step_object_place();
 				
+				step_object_rotate();
+				
 			break;
 			
 			case "delete":
