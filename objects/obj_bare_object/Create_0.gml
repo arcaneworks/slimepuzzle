@@ -10,3 +10,7 @@ component = false;
 hovered = false;
 tabType = noone;
 hoverable = false;
+
+faces = false;
+facingDir = 2;
+xOffset = 0;

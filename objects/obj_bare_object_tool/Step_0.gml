@@ -1,4 +1,3 @@
-	
 if(tool){
 	if(obj_sub_toolbar_write.visible == false){
 		visible = false;	
@@ -21,5 +20,42 @@ if(mouse_over() || obj_sub_toolbar_write.selectedObjTool == id){
 	hovered = true;
 }else{
 	hovered = false;
+	
+}
+
+if(class != noone){
+	if(faces){
+	switch(facingDir){
+		case dir.north:
+			image_xscale = 1;
+			var sprite = asset_get_index("spr_" + class + "_n");
+			sprite_index = sprite;
+			xOffset = 0;
+		break;
+	
+		case dir.east:
+			image_xscale = 1;
+			var sprite = asset_get_index("spr_" + class + "_e");
+			sprite_index = sprite;
+			xOffset = 0;
+		break;
+	
+		case dir.south:
+			image_xscale = 1;
+			var sprite = asset_get_index("spr_" + class + "_s");
+			sprite_index = sprite;
+			xOffset = 0;
+		break;
+	
+		case dir.west:
+			image_xscale = -1;
+			var sprite = asset_get_index("spr_" + class + "_e");
+			sprite_index = sprite;
+			xOffset = node_size;
+		break;
+
+	}
+}
+
 	
 }

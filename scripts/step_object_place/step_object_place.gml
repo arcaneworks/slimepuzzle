@@ -3,7 +3,7 @@
 function step_object_place(){
 	if(selectedObjTool != noone && hoverNode != noone){
 		
-		if(selectedObjTool.component){
+		if(selectedObjTool.component || selectedObjTool.element){
 			if(hoverNode.occupant == noone){
 				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
 					
@@ -24,27 +24,6 @@ function step_object_place(){
 			}
 		}
 		
-		if(selectedObjTool.element){
-			if(hoverNode.occupant == noone){
-				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
-					
-					var newInstance = instance_create_layer(hoverNode.x, hoverNode.y, "Instances", obj_bare_element);
-					newInstance.componentCode = selectedObjTool.componentCode;
-					newInstance.sprite_index = selectedObjTool.sprite_index;
-					newInstance.gridX = hoverNode.gridX;
-					newInstance.gridY = hoverNode.gridY;
-					get_component_info(newInstance, newInstance.componentCode)
-					hoverNode.occupant = newInstance;
-					
-					if(newInstance.faces){
-						hoverNode.componentCode = selectedObjTool.componentCode + string(selectedObjTool.facingDir);
-						
-					}else{
-						hoverNode.componentCode = selectedObjTool.componentCode;
-					}
-				}	
-			}
-		}
 		
 		if(selectedObjTool.terrain){
 			if(hoverNode.terrain == noone){

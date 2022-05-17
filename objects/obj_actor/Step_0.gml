@@ -104,14 +104,26 @@ event_inherited();
 					}
 				}
 					finShove = true;
+					if(instance_exists(target)){
+						if(target != noone && finShove && target.moveState == "idle"){
+							finShove = false;
+							actState = "apply action";
+						}
+					}else{
+						actState = "wait"; 	
+					}
 			}
 			
 			//if i've shoved my target(s) and waited for them to finish moving,
 			//apply the action
-				if(target != noone && finShove && target.moveState == "idle"){
-					finShove = false;
-					actState = "apply action";
-				}
+			//if(instance_exists(target)){
+			//	if(target != noone && finShove && target.moveState == "idle"){
+			//		finShove = false;
+			//		actState = "apply action";
+			//	}
+			//}else{
+			//	actState = "wait"; 	
+			//}
 
 		
 		break;

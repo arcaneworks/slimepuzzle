@@ -4,7 +4,7 @@
 
 function ds_list_position_within(list, xx, yy, buffer, boxWidth, boxHeight){
 	var inst = ds_list_find_value(list, 0);
-	var instSize = inst.sprite_width;
+	var instSize = node_size;
 	var listSize = ds_list_size(list);
 	var totalWidth = listSize * (buffer + instSize);
 
@@ -13,7 +13,7 @@ function ds_list_position_within(list, xx, yy, buffer, boxWidth, boxHeight){
 
 	for(var ii = 0; ii < ds_list_size(list); ii++){
 		var inst = ds_list_find_value(list, ii);	
-		var spriteWidth = inst.sprite_width;
+		var spriteWidth = node_size;
 		inst.x = xx + ii * (buffer + spriteWidth); 
 		inst.y = yy;	
 	}

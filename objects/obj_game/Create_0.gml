@@ -2,7 +2,7 @@
 
 global.gameObj = id;
 if(global.lastRoom == level_editor_room){
-	levelString = global.testTarget
+	levelString = global.editorTarget;
 }else{
 	levelString = "level" + string(global.currentLevel);
 }
