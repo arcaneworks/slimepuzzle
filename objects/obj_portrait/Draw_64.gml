@@ -32,7 +32,7 @@ if(pActor != noone && pActor.hpSec1 != noone){
 	
 	var barWidth = valuebar_get_width(hpSec1, hpSec2, hpSec3, maxHp);
 	var barHeight = sprite_get_height(hpSec1);
-	draw_valuebar_sectioned(hpSec1, hpSec2, hpSec3, fillSpr, x + portraitWidth , y +.5 * portraitHeight - barHeight , node_size/8, maxHp, hp, 0, c_white, 1,1);
+	draw_valuebar_sectioned(spr_valuebar_section1, spr_valuebar_section2, spr_valuebar_section3, spr_valuebar_fill_red, x + portraitWidth , y +.5 * portraitHeight - barHeight , node_size/8, maxHp, hp, 0, c_white, 1,1);
 	
 }
 var title = action1.info.title;

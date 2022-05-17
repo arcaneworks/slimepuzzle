@@ -1,4 +1,4 @@
-x = obj_level_editor.mapOrgX - node_size * 1.5;
+x = obj_level_editor.mapOrgX - nod5e_size * 1.5;
 y = obj_level_editor.mapOrgY + 2;
 
 width = node_size * (map_width + 3);
@@ -18,35 +18,35 @@ actorList = ds_list_create();
 knight = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 knight.componentCode = "CK";
 knight.tabType = "actors";
-knight.sprite_index = spr_knight1; 
+knight.sprite_index = spr_knight_s; 
 knight.tool = true;
 ds_list_add(actorList, knight);
 
 archer = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 archer.tabType = "actors";
 archer.componentCode = "CA";
-archer.sprite_index = spr_archer1; 
+archer.sprite_index = spr_archer_s; 
 archer.tool = true;
 ds_list_add(actorList, archer);
 
 wizard = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 wizard.tabType = "actors";
 wizard.componentCode = "CW";
-wizard.sprite_index = spr_wizard1; 
+wizard.sprite_index = spr_wizard_s; 
 wizard.tool = true;
 ds_list_add(actorList, wizard);
 
 rogue = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 rogue.tabType = "actors";
 rogue.componentCode = "CR";
-rogue.sprite_index = spr_rogue; 
+rogue.sprite_index = spr_rogue_s; 
 rogue.tool = true;
 ds_list_add(actorList, rogue);
 
 cleric = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 cleric.tabType = "actors";
 cleric.componentCode = "CC";
-cleric.sprite_index = spr_cleric; 
+cleric.sprite_index = spr_cleric_s; 
 cleric.tool = true;
 ds_list_add(actorList, cleric);
 
