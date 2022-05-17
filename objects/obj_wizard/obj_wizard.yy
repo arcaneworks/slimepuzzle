@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_wizard1_s",
-    "path": "sprites/spr_wizard1_s/spr_wizard1_s.yy",
+    "name": "spr_wizard_s",
+    "path": "sprites/spr_wizard_s/spr_wizard_s.yy",
   },
   "solid": false,
   "visible": true,

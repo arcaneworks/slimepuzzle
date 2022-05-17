@@ -1,7 +1,7 @@
 
 function set_component_info_db(){
 	
-	function component_info_struct(_class = "NO CLASS", _infoText = "NO ACTION TEXT", _sprite = spr_knight1 ,_portSpr = spr_portrait_efrin, _move = 0) constructor {
+	function component_info_struct(_class = "NO CLASS", _infoText = "NO ACTION TEXT", _sprite = spr_knight1_s ,_portSpr = spr_portrait_efrin, _move = 0) constructor {
 		class = _class; 
 		infoText = _infoText;
 		sprite = _sprite;
@@ -11,11 +11,11 @@ function set_component_info_db(){
 	
 
 	//actors 
-	knight = new component_info_struct("knight", "The knight damages and pushes moveable objects, as well as puts out fires.", spr_knight1, spr_port_knight, 1);
-	archer = new component_info_struct("archer", "The archer can shoot over gaps and through fire.", spr_archer1, spr_port_archer,1); 
-	wizard = new component_info_struct( "wizard", "The wizard uses fire to damage and ignite.", spr_wizard1, spr_port_wizard, 1);
-	cleric = new component_info_struct( "cleric", "The cleric rejuvenates allies, regaining their move and action.", spr_cleric, spr_port_wizard, 1);
-	rogue = new component_info_struct("rogue", "The rogue can move through enemy fields of attack without provoking a reaction", spr_rogue, spr_port_archer, 1);
+	knight = new component_info_struct("knight", "The knight damages and pushes moveable objects, as well as puts out fires.", spr_knight1_s, spr_port_knight, 1);
+	archer = new component_info_struct("archer", "The archer can shoot over gaps and through fire.", spr_archer1_s, spr_port_archer,1); 
+	wizard = new component_info_struct( "wizard", "The wizard uses fire to damage and ignite.", spr_wizard1_s, spr_port_wizard, 1);
+	cleric = new component_info_struct( "cleric", "The cleric rejuvenates allies, regaining their move and action.", spr_cleric_s, spr_port_wizard, 1);
+	rogue = new component_info_struct("rogue", "The rogue can move through enemy fields of attack without provoking a reaction", spr_rogue_s, spr_port_archer, 1);
 	
 	
 	//enemies 

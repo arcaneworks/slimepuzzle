@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_knight1_s",
-    "path": "sprites/spr_knight1_s/spr_knight1_s.yy",
+    "name": "spr_knight_s",
+    "path": "sprites/spr_knight_s/spr_knight_s.yy",
   },
   "solid": false,
   "visible": true,

@@ -1,7 +1,7 @@
 event_inherited();
 turnCt = 1;
 SPD = 15; 
-
+faces =true;
 name = "Tee"
 class = "cleric"
 move = 1;

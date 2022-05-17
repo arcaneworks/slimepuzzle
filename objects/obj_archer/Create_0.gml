@@ -1,7 +1,7 @@
 event_inherited();
 turnCt = 1;
 SPD = 6; 
- 
+ faces =true;
 name = "Mable"
 class = "archer"
 move = 1;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_archer1_s",
-    "path": "sprites/spr_archer1_s/spr_archer1_s.yy",
+    "name": "spr_archer_s",
+    "path": "sprites/spr_archer_s/spr_archer_s.yy",
   },
   "solid": false,
   "visible": true,

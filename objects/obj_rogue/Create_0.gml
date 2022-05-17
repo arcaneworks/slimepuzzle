@@ -7,6 +7,6 @@ class = "rogue"
 move = 2;
 triggersReaction = false;
 portraitSpr = spr_port_knight;
-
+faces =true;
 action = global.actionDB.bash;
 

@@ -5,7 +5,7 @@ canAct = true;
 name = "Efrin"
 class = "wizard"
 move = 1;
-
+faces =true;
 maxHp = 2;
 hp = maxHp;
 portraitSpr = spr_port_wizard;
