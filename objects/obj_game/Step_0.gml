@@ -10,15 +10,15 @@ switch(actionState){
 
 	case "standby": //initializes the standby queue of enemies to attack. 
 			
-		if(ds_queue_size(global.actionQueue) > 0){ //if the queue has any standbyActors in it
+		if(ds_priority_size(global.actionQueue) > 0){ //if the queue has any standbyActors in it
 					
-			standbyActor = ds_queue_head(global.actionQueue); //take the first standbyActor in the queue
+			standbyActor = ds_priority_find_max(global.actionQueue); //take the first standbyActor in the queue
 				
 			if(instance_exists(standbyActor)){
 				standbyActor.actTurn = true; //make it their turn 
 						
 			}else{
-				ds_queue_dequeue(global.actionQueue);
+				ds_priority_delete_max(global.actionQueue);
 			}					
 				
 		}

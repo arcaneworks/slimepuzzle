@@ -25,13 +25,13 @@ function apply_damage_component(component){
 					find_bomb_targets(component);
 					component.shake = true;
 					component.damaged = true;
-					ds_queue_enqueue(global.actionQueue, component);
+					ds_priority_add(global.actionQueue, component,component.SPD);
 					component.actState = "action standby";
 					component.damageClass = "default";
 				
 				}
 			}
-		
+		ds_priority_add(id,value,priority)
 		break;
 		
 		case "director":

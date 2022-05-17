@@ -22,7 +22,7 @@ function get_reaction(){
 					ds_list_add(targetList, other.id); 
 				}
 				
-				ds_queue_enqueue(global.actionQueue, id); 
+				ds_priority_add(global.actionQueue, id, SPD); 
 				actState = "action standby";
 			}
 		}
@@ -44,7 +44,7 @@ function get_reaction(){
 	//		if(ds_list_size(reactList) > 0){
 	//			var tNode = ds_list_find_value(reactList, 0);
 	//			if(tNode.occupant != noone){
-	//				ds_queue_enqueue(global.actionQueue, id); 
+	//				ds_priority_add(global.actionQueue, id, SPD); 
 	//				ds_list_add(targetList, tNode.occupant);	
 					
 	//				if(tNode.occupant.vehicle){

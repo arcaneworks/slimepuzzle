@@ -23,6 +23,8 @@ function save_CG_set(filename){
 					if(map[jj][ii].componentCode != noone){
 						
 						text = map[jj][ii].componentCode;
+						
+						
 					}
 					
 					

@@ -54,7 +54,7 @@ dataThresh = map_height;
 turnList = ds_list_create(); //list of all actors in order. gets populated/sorted in initialize
 turnPos = 0; //position in turn list to make currActor
 currActor = noone;//actor whose turn it is
-global.actionQueue = ds_queue_create(); //queue of components waiting to act. 
+global.actionQueue = ds_priority_create(); //queue of components waiting to act. 
 global.deathQueue = ds_queue_create(); //queue of components waiting to die.
 standbyActor = noone;
 

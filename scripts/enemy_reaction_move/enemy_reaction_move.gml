@@ -38,7 +38,7 @@ function enemy_reaction_move(){
 				}
 			}
 			
-			ds_queue_enqueue(global.actionQueue, id); 
+			ds_priority_add(global.actionQueue, id, SPD); 
 			actState = "action standby";
 		}
 	}

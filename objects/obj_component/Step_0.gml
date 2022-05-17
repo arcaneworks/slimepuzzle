@@ -62,8 +62,8 @@ if(actor){
 	if(!ds_queue_empty(global.deathQueue)){
 		if(ds_queue_head(global.deathQueue) == id){
 			
-				if(ds_queue_head(global.actionQueue) == id){
-					ds_queue_dequeue(global.actionQueue)	
+				if(ds_priority_find_max(global.actionQueue) == id){
+					ds_priority_delete_max(global.actionQueue);	
 				}
 				if(alpha > 0){
 					alpha -= .08;

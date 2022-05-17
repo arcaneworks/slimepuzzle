@@ -47,7 +47,7 @@ if(targetedBy != noone &&  applyDamage){
 				}
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 				
 			}
 		
@@ -85,7 +85,7 @@ if(targetedBy != noone &&  applyDamage){
 				}
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 			
 			}
 			
@@ -129,7 +129,7 @@ if(targetedBy != noone &&  applyDamage){
 				}
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 				
 				
 			}
@@ -169,7 +169,7 @@ if(targetedBy != noone &&  applyDamage){
 			
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 			}
 		
 		
@@ -212,7 +212,7 @@ if(targetedBy != noone &&  applyDamage){
 				}
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 			}
 			
 			
@@ -250,7 +250,7 @@ if(targetedBy != noone &&  applyDamage){
 				};
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 			}
 				
 		break;
@@ -291,7 +291,7 @@ if(targetedBy != noone &&  applyDamage){
 				}
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 			}
 			
 			
@@ -329,7 +329,7 @@ if(targetedBy != noone &&  applyDamage){
 				}
 				global.cursor.state = "nothing";
 				actState = "action standby";
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 				
 			}
 		

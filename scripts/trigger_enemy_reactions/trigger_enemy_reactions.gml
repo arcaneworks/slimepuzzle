@@ -9,7 +9,7 @@ function trigger_enemy_reactions(){
 					if(ds_list_find_index(reactList, map[other.gridX, other.gridY]) != -1){
 						
 						ds_list_add(targetList, other.id); 
-						ds_queue_enqueue(global.actionQueue, id);
+						ds_priority_add(global.actionQueue, id, SPD);
 						actState = "action standby";
 					
 					}
