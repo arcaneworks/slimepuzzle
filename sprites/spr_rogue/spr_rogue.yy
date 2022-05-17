@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_rogue","path":"sprites/spr_rogue/spr_rogue.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "spr_rogue",
     "tags": [],
     "resourceType": "GMSequence",
   },

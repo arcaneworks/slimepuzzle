@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_cleric",
-    "path": "sprites/spr_cleric/spr_cleric.yy",
+    "name": "spr_cleric_n",
+    "path": "sprites/spr_cleric_n/spr_cleric_n.yy",
   },
   "solid": false,
   "visible": true,
