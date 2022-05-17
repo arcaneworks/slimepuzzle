@@ -1,4 +1,4 @@
-x = obj_level_editor.mapOrgX - nod5e_size * 1.5;
+x = obj_level_editor.mapOrgX - node_size * 1.5;
 y = obj_level_editor.mapOrgY + 2;
 
 width = node_size * (map_width + 3);

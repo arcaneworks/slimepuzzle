@@ -7,8 +7,6 @@ function apply_action(){
 			
 				apply_damage_component(target); //apply damage based on target's damage class
 				apply_action_effect(target); //apply action effect to target
-			
-				
 			}
 		}else{ 
 			//if the target is a terrain and NOT a component

@@ -5,7 +5,7 @@ function trigger_enemies() {
 	
 			if(ds_list_find_index(reactList, map[other.gridX, other.gridY]) != -1){ //if the node that the actor is standing in is in the reactList
 
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 				
 				for(var ii = 0; ii < ds_list_size(reactList); ii++){
 					
@@ -30,7 +30,7 @@ function trigger_enemies() {
 			
 			if(ds_list_find_index(reactList, map[other.gridX, other.gridY]) != -1){ //if the node that the actor is standing in is in the reactList
 	
-				ds_queue_enqueue(global.actionQueue, id);
+				ds_priority_add(global.actionQueue, id, SPD);
 				ds_list_add(targetList, other.id);
 				actState = "action standby";
 				reaction = true;

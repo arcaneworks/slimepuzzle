@@ -14,7 +14,12 @@ function step_object_place(){
 					newInstance.gridY = hoverNode.gridY;
 					get_component_info(newInstance, newInstance.componentCode)
 					hoverNode.occupant = newInstance;
-					hoverNode.componentCode = selectedObjTool.componentCode;
+					if(newInstance.faces){
+						hoverNode.componentCode = selectedObjTool.componentCode + string(selectedObjTool.facingDir);
+					}else{
+						hoverNode.componentCode = selectedObjTool.componentCode;
+						
+					}
 				}	
 			}
 		}
@@ -30,7 +35,13 @@ function step_object_place(){
 					newInstance.gridY = hoverNode.gridY;
 					get_component_info(newInstance, newInstance.componentCode)
 					hoverNode.occupant = newInstance;
-					hoverNode.componentCode = selectedObjTool.componentCode;
+					
+					if(newInstance.faces){
+						hoverNode.componentCode = selectedObjTool.componentCode + string(selectedObjTool.facingDir);
+						
+					}else{
+						hoverNode.componentCode = selectedObjTool.componentCode;
+					}
 				}	
 			}
 		}

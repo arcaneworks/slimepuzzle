@@ -81,7 +81,8 @@ function get_component_info(component, componentCode){
 		component.infoText = tempStruct.infoText;
 		component.class = tempStruct.class;
 		component.sprite_index = tempStruct.sprite; 
-		component.portSpr = tempStruct.portSpr; 		component.move = tempStruct.move;
-		
+		component.portSpr = tempStruct.portSpr; 	
+		component.move = tempStruct.move;
+		component.faces = tempStruct.faces;
 	}
 }

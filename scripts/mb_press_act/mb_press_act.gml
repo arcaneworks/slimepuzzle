@@ -40,7 +40,7 @@ function mb_press_act(){
 				ds_stack_pop(obj_undo.moveStack);			
 			}
 			
-			ds_queue_enqueue(global.actionQueue, selectedActor);
+			ds_priority_add(global.actionQueue, selectedActor,selectedActor.SPD);
 			
 		
 		}

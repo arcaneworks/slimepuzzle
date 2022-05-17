@@ -44,7 +44,7 @@ function enemy_reaction(enemy){
 					state = "nothing";
 					enemy.actState = "action standby";
 					enemy.canAct = false;
-					ds_queue_enqueue(global.actionQueue, enemy);
+					ds_priority_add(global.actionQueue, enemy, enemy.SPD);
 			}
 		}
 	}

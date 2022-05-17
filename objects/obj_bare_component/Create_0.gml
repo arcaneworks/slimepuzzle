@@ -8,3 +8,6 @@ move = 0;
 infoText = "no infoText";
 class = "default";
 portSpr = spr_port_knight;
+xOffset = 0;
+faces = false;
+facingDir = 2;

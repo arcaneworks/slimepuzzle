@@ -119,18 +119,18 @@ event_inherited();
 		
 		case "wait":
 			var actQueue = global.actionQueue;
-			var headActor = ds_queue_head(actQueue);
+			var headActor = ds_priority_find_max(actQueue);
 				
 			//If this actor is the head of the action queue (and finished applying action), dequeue it. 
 			//the actor loses action
 			if(headActor == id){
-				ds_queue_dequeue(actQueue);
+				ds_priority_delete_max(actQueue);
 				canAct = false;
 				actTurn = false;
 			}
 			
 			//if there are no actor's queued
-			if(ds_queue_empty(actQueue)){
+			if(ds_priority_empty(actQueue)){
 				//&&  THIS actor is the cursor's selected Actor
 				if(global.cursor.selectedActor == id){
 					//&& there is nobody that is still waiting to die
@@ -157,6 +157,8 @@ event_inherited();
 						}	
 					}
 				}else{ //if this actor isn't the selected actor
+					
+					//if this actor isn't the selected actor 
 					if(hasReaction && canAct){
 						fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
 						
