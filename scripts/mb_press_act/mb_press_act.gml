@@ -14,21 +14,21 @@ function mb_press_act(){
 			
 			ds_list_add(selectedActor.targetList, selectedActor.target);
 			
-			//if(hoverNode.gridX > sComp.gridX){
-			//	sComp.facingDir = dir.east;	
-			//}else{
-			//	if(hoverNode.gridX < sComp.gridX){
-			//		sComp.facingDir = dir.west;	
-			//	}
-			//}
+			if(hoverNode.gridX > selectedActor.gridX){
+				selectedActor.facingDir = dir.east;	
+			}else{
+				if(hoverNode.gridX < selectedActor.gridX){
+					selectedActor.facingDir = dir.west;	
+				}
+			}
 			
-			//if(hoverNode.gridY > sComp.gridY){
-			//	sComp.facingDir = dir.north;	
-			//}else{
-			//	if(hoverNode.gridY < sComp.gridY){
-			//		sComp.facingDir = dir.south;	
-			//	}
-			//}
+			if(hoverNode.gridY > selectedActor.gridY){
+				selectedActor.facingDir = dir.north;	
+			}else{
+				if(hoverNode.gridY < selectedActor.gridY){
+					selectedActor.facingDir = dir.south;	
+				}
+			}
 			
 			//send selectedActor on its way 
 			wipe_nodes();

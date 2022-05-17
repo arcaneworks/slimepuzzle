@@ -10,6 +10,22 @@ function mb_press_move(){
 			sComp.prevNode = map[selectedActor.gridX, selectedActor.gridY];
 			selectedActor.moveToNode = hoverNode;
 			
+			var actX = selectedActor.gridX;
+			var actY = selectedActor.gridY;
+			var targX = hoverNode.gridX;
+			var targY = hoverNode.gridY;
+			var xDiff = actX - targX;
+			var yDiff = actY - targY;
+				
+				if(yDiff < 0)
+					sComp.facingDir = dir.north;
+				else 
+					sComp.facingDir = dir.south;
+					
+			if (xDiff > 0 )
+				sComp.facingDir = dir.west;
+			else if (xDiff < 0)
+				sComp.facingDir = dir.east;
 			
 			//send selectedActor on its way 
 			
