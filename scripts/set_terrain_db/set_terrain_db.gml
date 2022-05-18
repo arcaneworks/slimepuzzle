@@ -11,7 +11,7 @@ function set_terrain_db(){
 	flame = new terrain_info_struct("FLAME", "a fire.", spr_fire_loop4);
 	hole = new terrain_info_struct("HOLE", "a hole. actors within it cannot act. it can be filled with a rock.", spr_hole); 
 	web = new terrain_info_struct("WEB", "a web. actors within it cannot act. it can be destroyed by fire.", spr_web);
-	bonfire = new terrain_info_struct("BONfIRE", "a lit bonfire. eleminates actors within.", spr_bonfire_lit);
+	bonfire = new terrain_info_struct("BONFIRE", "a lit bonfire. eleminates actors within.", spr_bonfire_lit);
 	bonfireOff = new terrain_info_struct("BONFIRE OFF", "an unlit bonfire. It can be lit with fire.", spr_bonfire_off);
 	
 }

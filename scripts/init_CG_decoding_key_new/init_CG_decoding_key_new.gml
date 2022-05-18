@@ -47,7 +47,7 @@ function init_CG_decoding_key_new(){
 
 
 	terrainCodes = ds_map_create();
-	ds_map_add(terrainCodes, "L", asset_get_index("obj_flame"));
+	ds_map_add(terrainCodes, "F", asset_get_index("obj_flame"));
 	ds_map_add(terrainCodes, "H", asset_get_index("obj_hole"));
 	ds_map_add(terrainCodes, "W", asset_get_index("obj_web"));
 	ds_map_add(terrainCodes, "B", asset_get_index("obj_bonfire"));

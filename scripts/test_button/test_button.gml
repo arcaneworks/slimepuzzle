@@ -3,7 +3,8 @@
 function test_button(){
 	if(instance_exists(obj_bare_component)){
 	
-				save_CG_set(global.testTarget);
+				save_CG_set("test level");
+				global.testTarget = "test level";
 				global.lastRoom = room;
 				TransitionStart(test_room, sqSlideOutDiagonal, sqSlideInDiagonal);
 				//room_goto(test_room);

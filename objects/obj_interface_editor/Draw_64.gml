@@ -23,7 +23,7 @@ if(hoverTool != noone){
 }
 
 if(selectedObjTool != noone){
-	draw_sprite_ext(selectedObjTool.sprite_index, selectedObjTool.image_index, x + 20, y, 1, 1, 0, c_white, .75);
+	draw_sprite_ext(selectedObjTool.sprite_index, selectedObjTool.image_index, x + 20 + selectedObjTool.xOffset, y, selectedObjTool.image_xscale, 1, 0, c_white, .75);
 	
 }
 
