@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function apply_terrain(component, node){
+function apply_terrain_editor(component, node){
 	var terrain = node.terrain;
 	
 	if(terrain != noone){
