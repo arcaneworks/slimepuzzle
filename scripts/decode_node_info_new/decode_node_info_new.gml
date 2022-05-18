@@ -13,8 +13,8 @@ function decode_node_info_new(nodeInfo, nodeID){
 	//C,E,T - there is a component,element or terrain in node    
 	//? - code for object
 	//
-	
-	
+	if(is_undefined(nodeInfo))
+		return;
 	if (string_length(nodeInfo) >= 2) { // object info is in the first character position
 		
 		var char1 = string_char_at(nodeInfo, 1); // get first character
