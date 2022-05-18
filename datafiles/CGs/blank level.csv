@@ -1,8 +1,8 @@
-1,,,,,,,,,
-name,BLITZ,-,,,,,,,
-Fsrequency,1,-,,,,,,,
-rowCount,7,-,,,,,,,
-deFsTerrain,grass,-,,,,,,,
-mirrors,N,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+1,,
+name,blank level,-
+Frequency,1,-
+rowCount,7,-
+deFsTerrain,grass,-
+mirrors,N,-
+-,-,-
+-,-,-
