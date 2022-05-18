@@ -824,12 +824,12 @@
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/saves","resourceVersion":"1.0","name":"default.sav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/saves","resourceVersion":"1.0","name":"asd.sav","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"blank level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level1.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level2.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level3.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level4.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level5.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"blank level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level6.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level7.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level8.csv","resourceType":"GMIncludedFile",},

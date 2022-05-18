@@ -12,14 +12,17 @@ function step_object_place(){
 					newInstance.sprite_index = selectedObjTool.sprite_index;
 					newInstance.gridX = hoverNode.gridX;
 					newInstance.gridY = hoverNode.gridY;
-					get_component_info(newInstance, newInstance.componentCode)
-					hoverNode.occupant = newInstance;
-					if(newInstance.faces){
-						hoverNode.componentCode = selectedObjTool.componentCode + string(selectedObjTool.facingDir);
+					if(selectedObjTool.faces){
+						newInstance.faces = true;
+						newInstance.facingDir = selectedObjTool.facingDir;	
+						newInstance.componentCode = selectedObjTool.componentCode;
+						hoverNode.componentCode = newInstance.componentCode + string(newInstance.facingDir);		
 					}else{
-						hoverNode.componentCode = selectedObjTool.componentCode;
-						
+						newInstance.componentCode = selectedObjTool.componentCode;
+						hoverNode.componentCode = newInstance.componentCode;
 					}
+					hoverNode.occupant = newInstance;
+					get_component_info(newInstance, newInstance.componentCode)
 				}	
 			}
 		}
