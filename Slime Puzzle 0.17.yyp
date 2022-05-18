@@ -231,6 +231,7 @@
     {"id":{"name":"get_targets","path":"scripts/get_targets/get_targets.yy",},"order":8,},
     {"id":{"name":"s_impact6","path":"sounds/s_impact6/s_impact6.yy",},"order":5,},
     {"id":{"name":"s_impact7","path":"sounds/s_impact7/s_impact7.yy",},"order":6,},
+    {"id":{"name":"spr_cursor_move","path":"sprites/spr_cursor_move/spr_cursor_move.yy",},"order":12,},
     {"id":{"name":"spr_grabber","path":"sprites/spr_grabber/spr_grabber.yy",},"order":12,},
     {"id":{"name":"s_impact8","path":"sounds/s_impact8/s_impact8.yy",},"order":7,},
     {"id":{"name":"spr_move","path":"sprites/spr_move/spr_move.yy",},"order":2,},

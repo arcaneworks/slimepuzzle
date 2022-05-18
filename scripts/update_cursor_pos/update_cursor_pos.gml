@@ -12,10 +12,11 @@ function update_cursor_pos() {
 
 
 	if(mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0, gp_face1)){
-		if(state != "action target"){
+		if(sprite_index == spr_cursor){
 			cursorImg = 1;
 			timer = 8;
 		}
+	
 	}else{
 		if(timer > 0){
 			timer--;
@@ -47,6 +48,23 @@ function update_cursor_pos() {
 
 	}else{
 		hoverComp = noone;
+	}
+	
+	
+	if(hoverNode != noone){
+		if(hoverNode.actionNode){
+			sprite_index = spr_cursor_action;	
+		}else{
+			if(hoverNode.moveNode){
+				sprite_index = spr_cursor_move; 
+			}else{
+				sprite_index = spr_cursor;	
+			}
+			
+		}
+		
+	}else{
+		sprite_index = spr_cursor;	
 	}
 	
 	if(state == "action target"){
