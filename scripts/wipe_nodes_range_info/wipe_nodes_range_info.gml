@@ -3,7 +3,7 @@ function wipe_nodes_range_info() {
 	with(obj_node){
 		moveNode = false;
 		targetable = false;
-		actionNode = false;
+		//actionNode = false;
 		G = 0;
 		parent = noone;
 		if (ds_list_empty(targeted)) {

@@ -14,6 +14,9 @@ function select_other(){
 	
 			}else if(selectedActor.canMove){
 				state = "move";
+				if(selectedActor.canAct)
+							action_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.action.targeting.targetType, selectedActor.action.targeting.range);
+						
 				movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move);
 			}
 			

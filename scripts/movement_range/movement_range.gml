@@ -126,6 +126,8 @@ function movement_nodes(originNode, moveRange) {
 	for(ii = 0; ii < ds_list_size(destNodes); ii += 1){
 		current = ds_list_find_value(destNodes, ii);
 		if (current.occupant == noone) { // check whether this node is occupied (by an ally)
+			current.actionNode = false;
+			current.passNode = false;
 			current.moveNode = true;
 			color_move_node(current, argument1);
 		}

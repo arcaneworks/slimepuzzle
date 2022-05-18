@@ -16,10 +16,15 @@ update_cursor_pos();
 				if(selectedActor != noone){
 					
 					if(getMoves){
+						if(selectedActor.canAct)
+							action_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.action.targeting.targetType, selectedActor.action.targeting.range);
 						movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move)	
 					}
 					
-					mb_press_move();
+					if(hoverNode != noone && hoverNode.moveNode)
+						mb_press_move();
+					if(hoverNode != noone && hoverNode.actionNode)
+						mb_press_act();
 					select_other();
 					move_reaction_ui();
 					var aStruct = selectedActor.action;
