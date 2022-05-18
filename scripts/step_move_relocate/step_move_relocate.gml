@@ -9,7 +9,12 @@ function step_move_relocate(){
 						hoverNode.occupant = selectedObj;					
 						selectedObj.x = hoverNode.x;
 						selectedObj.y = hoverNode.y;
-						hoverNode.componentCode = selectedObj.componentCode;
+						if(selectedObj.faces){
+							hoverNode.componentCode = selectedObj.componentCode + string(selectedObj.facingDir);
+						}else{
+							hoverNode.componentCode = selectedObj.componentCode;
+						}
+						
 						selectedObj = noone;	
 						state = "move";
 						

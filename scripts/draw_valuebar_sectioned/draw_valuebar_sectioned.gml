@@ -6,7 +6,7 @@ bkgOffset, maxValue, value, img, color, alpha, scale) {
 
 	var startWidth = sprite_get_width(startSpr);
 	var endWidth = sprite_get_width(endSpr);
-	var midWidth = sprite_get_width(middleSpr);
+	var midWidth = 4;
 	var totalWidth = 0;
 
 if(maxValue == 1){

@@ -5,10 +5,13 @@ if(displayHp){
 	var barWidth = valuebar_get_width(hpSec1, hpSec2, hpSec3, maxHp);
 	var barHeight = sprite_get_height(hpSec1);
 	
-	if(class != "slime"){
-		draw_valuebar_sectioned(spr_valuebar_section1, spr_valuebar_section2, spr_valuebar_section3, spr_valuebar_fill_red, x + xOffset + .5 * sprite_width - .5 * barWidth , y  - barHeight , node_size/8, maxHp, hp, 0, c_white, .75,1);
+	
+	if(maxHp > 1){
+		//if this actor has more than one hp
+		draw_valuebar_sectioned(spr_valuebar_section1, spr_valuebar_section2, spr_valuebar_section3, spr_valuebar_fill_red, (x + .5 * sprite_width - .5 *  barWidth) + xOffset , y  - barHeight , node_size/8, maxHp, hp, 0, c_white, .75,1);
 	}else{
-		draw_valuebar_sectioned(spr_valuebar_section1, spr_valuebar_section2, spr_valuebar_section3, spr_valuebar_fill_red, x + xOffset + .5 * sprite_width - 4, y , node_size/8, maxHp, hp, 0, c_white, .75,1);
+		barWidth = sprite_get_width(spr_valuebar_1hp);
+		draw_valuebar_sectioned(spr_valuebar_section1, spr_valuebar_section2, spr_valuebar_section3, spr_valuebar_fill_red, x + .5 * sprite_width - .5 * barWidth + xOffset, y , node_size/8, maxHp, hp, 0, c_white, .75,1);
 	}
 }
 

@@ -132,12 +132,9 @@ fillSpr = spr_valuebar_fill_red;
 
 var valString = sprite_get_name(valSpr);
 
-hpSec1 = asset_get_index(valString) + "1";
-hpSec2 = asset_get_index(valString) + "2";
-hpSec3 = asset_get_index(valString) + "3";
-
-hpBarX = x - .5 * sprite_width;
-hpBarY = y - .5 * sprite_height;
+hpSec1 = spr_valuebar_section1;
+hpSec2 = spr_valuebar_section2;
+hpSec3 = spr_valuebar_section3;
 
 #endregion
 
