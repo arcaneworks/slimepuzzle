@@ -114,6 +114,7 @@
     {"id":{"name":"spr_fire_burst","path":"sprites/spr_fire_burst/spr_fire_burst.yy",},"order":1,},
     {"id":{"name":"spr_fire_burst_thrower","path":"sprites/spr_fire_burst_thrower/spr_fire_burst_thrower.yy",},"order":2,},
     {"id":{"name":"spr_fire_burst_thrower_sm","path":"sprites/spr_fire_burst_thrower_sm/spr_fire_burst_thrower_sm.yy",},"order":3,},
+    {"id":{"name":"apply_terrain_editor","path":"scripts/apply_terrain_editor/apply_terrain_editor.yy",},"order":10,},
     {"id":{"name":"spr_fire_burst_ball","path":"sprites/spr_fire_burst_ball/spr_fire_burst_ball.yy",},"order":4,},
     {"id":{"name":"spr_cleric_e","path":"sprites/spr_cleric_e/spr_cleric_e.yy",},"order":14,},
     {"id":{"name":"spr_fire_burst_ball_sm","path":"sprites/spr_fire_burst_ball_sm/spr_fire_burst_ball_sm.yy",},"order":5,},

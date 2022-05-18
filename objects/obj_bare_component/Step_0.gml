@@ -1,5 +1,12 @@
 event_inherited();
 
+if(incapacitated){
+	color = c_black;
+	alpha = .5;
+}else{
+	color = c_white;
+	alpha = 1;
+}
 
 if(gridX != noone && gridY != noone){
 	if(map[gridX, gridY].occupant == id){

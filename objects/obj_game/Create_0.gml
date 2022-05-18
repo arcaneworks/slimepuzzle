@@ -2,7 +2,7 @@
 
 global.gameObj = id;
 if(global.lastRoom == level_editor_room){
-	levelString = global.editorTarget;
+	levelString = global.testTarget;
 }else{
 	levelString = "level" + string(global.currentLevel);
 }
@@ -78,6 +78,8 @@ global.cursor = obj_interface;
 	init_populate_map(); // creates nodes based on CG set
 	populate_neighbors(); //makes neighbors for nodes
 	set_node_occupancy(); //sets occupancy for components 
+	
+	
 	
 
 

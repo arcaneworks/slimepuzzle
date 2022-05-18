@@ -8,4 +8,4 @@ infoText = "NOONE";
 gridX = noone;
 gridY = noone;
 hovered = false;
-depth = -10; 
+depth = -3; 

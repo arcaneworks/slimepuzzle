@@ -56,7 +56,7 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 		
 		if(string_length(nodeInfo) >= 4){
 			
-			if(component.faces){
+			if(component.faces && string_char_at(nodeInfo, 4) == "T"){
 				var terrChar1Pos = 4;
 				var terrChar2Pos = 5;
 			}else{
@@ -68,14 +68,14 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 			var terrChar1 = string_char_at(nodeInfo, terrChar1Pos);
 			var terrChar2 = string_char_at(nodeInfo, terrChar2Pos);
 			
-			if(terrChar1Pos == "T"){
+			if(terrChar1 == "T"){
 				var objectID = ds_map_find_value(terrainCodes,terrChar2); // decode character
 				var terrain = instance_create_layer(nodeID.x, nodeID.y, "Instances", obj_bare_terrain);
 				terrain.sprite_index = object_get_sprite(objectID);
 				terrain.gridX = nodeID.gridX; 
 				terrain.gridY = nodeID.gridY;
 				nodeID.terrain = terrain; 
-				nodeID.componentCode = char2;
+				nodeID.terrainCode = terrChar1 + terrChar2;
 			}	
 		}
 	} 

@@ -21,7 +21,7 @@ function set_component_info_db(){
 	
 	//enemies 
 	shooter = new component_info_struct("shooter", "The shooter doesn't have an action yet.", spr_shooter_s, spr_port_shooter_2, 1, true);
-	shooterFire = new component_info_struct("shooter", "A shooter that is vulerable to fire.", spr_shooter2_s, spr_port_shooter_2, 1, true);
+	shooterFire = new component_info_struct("shooter2", "A shooter that is vulerable to fire.", spr_shooter2_s, spr_port_shooter_2, 1, true);
 	fighter = new component_info_struct("fighter", "The fighter strikes the actor in front of it.", spr_fighter_s, spr_port_fighter_3, 1, true);
 	bomb = new component_info_struct("bomb", "the bomb explodes.", spr_bomb2, spr_port_bomb, ,false);
 	thumper = new component_info_struct("thumper", "the thumper knocks backs all components adjacent to it.", spr_thumper_s, spr_thumper_s, 1, true);
