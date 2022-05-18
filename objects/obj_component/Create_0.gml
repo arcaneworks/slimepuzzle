@@ -64,7 +64,7 @@ prevNode = noone;
 // to allow the user to retracvt a movement they had made with an actor (before committing)
 
 
-deathWait = true;
+deathWait = false;
 moveToNode = noone; 
 collision = false;
 

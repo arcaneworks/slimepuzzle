@@ -58,7 +58,7 @@ if(displayHp && damaged){
 }
 
 //if this actor died and is in the death queue
-if(actor){
+
 	if(!ds_queue_empty(global.deathQueue)){
 		if(ds_queue_head(global.deathQueue) == id){
 			
@@ -76,7 +76,6 @@ if(actor){
 		}
 	}
 
-}
 
 //if(rotatable){
 //	if(changeDir){ //runs once to assign sprite index when comp is created (based on facingDir)

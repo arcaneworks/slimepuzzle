@@ -31,7 +31,7 @@ function apply_damage_component(component){
 				
 				}
 			}
-		ds_priority_add(id,value,priority)
+	
 		break;
 		
 		case "director":
@@ -50,5 +50,6 @@ function apply_damage_component(component){
 	
 	if(component.hp <= 0){
 		ds_queue_enqueue(global.deathQueue, component);	
+		component.deathWait = true;
 	}
 }

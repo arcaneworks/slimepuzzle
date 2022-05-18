@@ -75,6 +75,7 @@ event_inherited();
 						}
 					
 					}		
+					
 					ds_list_clear(targetList);
 					actState = "wait"; 
 				}	
@@ -99,33 +100,29 @@ event_inherited();
 							}
 						}
 						
-						apply_shove();
-							
+						apply_shove();	
 					}
+					finShove = true; //finished applying shove to everyone
+				}		
+			}
+			//if there is a target, and the shove has been applied
+			if(target != noone && finShove){
+				//and that target exists
+				if(instance_exists(target)){
+					
+					//
+					if(target.moveState == "idle" && !target.deathWait){
+						finShove = false;
+						actState = "apply action";
+					}
+				}else{
+					finShove = false;
+					
+					actState = "wait";	
 				}
-					finShove = true;
-					if(instance_exists(target)){
-						if(target != noone && finShove && target.moveState == "idle"){
-							finShove = false;
-							actState = "apply action";
-						}
-					}else{
-						actState = "wait"; 	
-					}
 			}
 			
-			//if i've shoved my target(s) and waited for them to finish moving,
-			//apply the action
-			//if(instance_exists(target)){
-			//	if(target != noone && finShove && target.moveState == "idle"){
-			//		finShove = false;
-			//		actState = "apply action";
-			//	}
-			//}else{
-			//	actState = "wait"; 	
-			//}
 
-		
 		break;
 		
 		
@@ -183,7 +180,7 @@ event_inherited();
 			
 			}
 			
-						
+			var kk = 1;			
 		break;	
 		
 	}

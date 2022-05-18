@@ -24,7 +24,8 @@ function apply_terrain(component, node){
 					node.terrain = noone;	
 				}else{
 					if(component.actor){
-						instance_destroy(component);
+						ds_queue_enqueue(global.deathQueue, component);
+						component.deathWait = true;
 						node.occupant = noone;
 						
 					}
@@ -41,7 +42,8 @@ function apply_terrain(component, node){
 				}
 			
 				if(component.class == "rock"){
-					instance_destroy(component);	
+					ds_queue_enqueue(global.deathQueue, component);	
+					component.deathWait = true;
 					instance_destroy(terrain);
 					node.occupant = noone;
 					node.terrain = noone;

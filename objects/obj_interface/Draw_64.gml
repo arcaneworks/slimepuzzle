@@ -4,7 +4,7 @@ if(global.gameObj.debugMode){
 
 
 	ds_list_add(debugList, "interface state: " + state);
-	ds_list_add(debugList, "ACTION QUEUE SIZE: " + string(ds_queue_size(global.actionQueue)));
+	ds_list_add(debugList, "ACTION QUEUE SIZE: " + string(ds_priority_size(global.actionQueue)));
 		
 	if(hoverNode != noone){
 		if(hoverNode.onScreen){
@@ -31,6 +31,8 @@ if(global.gameObj.debugMode){
 			if(hoverNode.occupant.actor){
 				ds_list_add(debugList, "TARGET LIST SIZE : " + string(ds_list_size(hoverNode.occupant.targetList)));	
 				ds_list_add(debugList, "REACT LIST SIZE : " + string(ds_list_size(hoverNode.occupant.reactList)));	
+				ds_list_add(debugList, "ACTOR CAN MOVE : " + string(hoverNode.occupant.canMove));
+				ds_list_add(debugList, "ACTOR CAN ACT : " + string(hoverNode.occupant.canAct));
 			}
 		
 		if(hoverNode.occupant.incapacitated){
