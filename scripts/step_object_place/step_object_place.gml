@@ -21,7 +21,7 @@ function step_object_place(){
 						newInstance.componentCode = selectedObjTool.componentCode;
 						hoverNode.componentCode = newInstance.componentCode;
 					}
-					
+					hoverNode.occupant = newInstance;
 					get_component_info(newInstance, newInstance.componentCode)
 				}	
 			}
