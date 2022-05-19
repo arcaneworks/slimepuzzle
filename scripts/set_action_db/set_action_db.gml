@@ -163,8 +163,6 @@ function set_action_db(){
 		effect.shove = true;
 	}
 	
-	
-	
 	bless = new act_struct(); 
 	with(bless){
 		info.title = "BLESS"
@@ -239,7 +237,7 @@ function set_action_db(){
 	}
 
 
-#endregion
+	#endregion
 
 
 }

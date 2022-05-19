@@ -16,90 +16,51 @@ height = node_size * 1.7;
 actorList = ds_list_create();
 
 knight = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-knight.componentCode = "CK";
-knight.tabType = "actors";
-knight.class = "knight";
-knight.faces = true;
+set_component_info(global.componentDB.knight, knight);
 ds_list_add(actorList, knight);
 
 archer = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-archer.tabType = "actors";
-archer.componentCode = "CA";
-archer.class = "wizard";
-archer.faces = true;
+set_component_info(global.componentDB.archer, archer);
 ds_list_add(actorList, archer);
 
 wizard = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-wizard.tabType = "actors";
-wizard.componentCode = "CW";
-wizard.class = "wizard"; 
-wizard.faces = true;
+set_component_info(global.componentDB.wizard, wizard);
 ds_list_add(actorList, wizard);
 
 rogue = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-rogue.tabType = "actors";
-rogue.componentCode = "CR";
-rogue.class = "rogue"; 
-rogue.faces = true;
+set_component_info(global.componentDB.rogue, rogue);
 ds_list_add(actorList, rogue);
 
 cleric = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-cleric.tabType = "actors";
-cleric.componentCode = "CC";
-cleric.class = "cleric"; 
-cleric.tool = true;
-cleric.faces = true;
+set_component_info(global.componentDB.cleric, cleric);
 ds_list_add(actorList, cleric);
 
 slime = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-slime.tabType = "actors";
-slime.componentCode = "CX";
-slime.sprite_index = spr_slime; 
-slime.tool = true;
+set_component_info(global.componentDB.slime, slime);
 ds_list_add(actorList, slime);
 
 shooter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-shooter.tabType = "actors";
-shooter.componentCode = "CS";
-shooter.class = "shooter";
-shooter.faces = true;
+set_component_info(global.componentDB.shooter,shooter);
 ds_list_add(actorList, shooter);
 
 shooter2 = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-shooter2.tabType = "actors";
-shooter2.componentCode = "CP";
-shooter2.class = "shooter2";
-shooter2.faces = true;
+set_component_info(global.componentDB.shooter2, shooter2);
 ds_list_add(actorList, shooter2);
 
 fighter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-fighter.tabType = "actors";
-fighter.componentCode = "CF";
-fighter.class = "fighter"; 
-fighter.faces = true;
+set_component_info(global.componentDB.fighter, fighter);
 ds_list_add(actorList, fighter);
 
 thumper = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-thumper.tabType = "actors";
-thumper.componentCode = "CT";
-thumper.sprite_index = spr_thumper_s; 
-thumper.tool = true;
-thumper.faces = true;
+set_component_info(global.componentDB.thumper, thumper);
 ds_list_add(actorList, thumper);
 
 eye = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-eye.tabType = "actors";
-eye.componentCode = "CE";
-eye.sprite_index = spr_eye_s; 
-eye.tool = true;
-eye.faces = true;
+set_component_info(global.componentDB.eye, eye);
 ds_list_add(actorList, eye);
 
 bomb = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
-bomb.tabType = "actors";
-bomb.componentCode = "CB";
-bomb.sprite_index = spr_bomb2; 
-bomb.tool = true;
+set_component_info(global.componentDB.bomb, bomb);
 ds_list_add(actorList, bomb);
 
 
@@ -114,57 +75,24 @@ totalActorPages = 3;
 	elementList1 = ds_list_create();
 	elementList2 = ds_list_create();
 	
-	rock = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	rock.tabType = "elements";
-	rock.componentCode = "ER";
-	rock.sprite_index = spr_rock1;
-	rock.tool = true;
+	rock = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	set_component_info(global.componentDB.rock, rock);
 	ds_list_add(elementList1, rock);
 	
-	barrel = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	barrel.tabType = "elements";
-	barrel.componentCode = "EB";
-	barrel.sprite_index = spr_barrel1;
-	barrel.tool = true;
+	barrel = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	set_component_info(global.componentDB.barrel,barrel);
 	ds_list_add(elementList1, barrel);
 	
-	crate = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	crate.tabType = "elements";
-	crate.componentCode = "EP";
-	crate.sprite_index = spr_crate;
-	crate.tool = true;
+	crate = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	set_component_info(global.componentDB.crate, crate);
 	ds_list_add(elementList1, crate);
 	
-	directorLD = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	directorLD.tabType = "elements";
-	directorLD.componentCode = "EA";
-	directorLD.sprite_index = spr_directorLD;
-	directorLD.tool = true;
-	ds_list_add(elementList2, directorLD);
+	director = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	set_component_info(global.componentDB.director, director);
+	ds_list_add(elementList2, director);
 	
-	directorRD = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	directorRD.tabType = "elements";
-	directorRD.componentCode = "ES";
-	directorRD.sprite_index = spr_directorRD;
-	directorRD.tool = true;
-	ds_list_add(elementList2, directorRD);
-	
-	directorUL = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	directorUL.tabType = "elements";
-	directorUL.componentCode = "ED";
-	directorUL.sprite_index = spr_directorUL;
-	directorUL.tool = true;
-	ds_list_add(elementList2, directorUL);
-	
-	directorUR = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
-	directorUR.tabType = "elements";
-	directorUR.componentCode = "EF";
-	directorUR.sprite_index = spr_directorUR;
-	directorUR.tool = true;
-	ds_list_add(elementList2, directorUR);
-	
-
 	totalElementPages = 2; 
+	
 #endregion
 #region TERRAIN CREATOION AND LIST
 	
@@ -242,12 +170,12 @@ toolStartX = x + tabWidth
 buffer = 10;
 widthMinusTab = width - tabWidth; 
 
-ds_list_position_within(actorList1, toolStartX, y, buffer, widthMinusTab, height);
-ds_list_position_within(actorList2, toolStartX, y, buffer, widthMinusTab, height);
-ds_list_position_within(actorList3, toolStartX, y, buffer, widthMinusTab, height);
-ds_list_position_within(elementList1, toolStartX, y, buffer, widthMinusTab, height);
-ds_list_position_within(elementList2, toolStartX, y, buffer, widthMinusTab, height);
-ds_list_position_within(terrainList, toolStartX, y, buffer, widthMinusTab, height);
+ds_list_position_within(actorList1, toolStartX, y, buffer, widthMinusTab, height, "actors");
+ds_list_position_within(actorList2, toolStartX, y, buffer, widthMinusTab, height,"actors");
+ds_list_position_within(actorList3, toolStartX, y, buffer, widthMinusTab, height,"actors");
+ds_list_position_within(elementList1, toolStartX, y, buffer, widthMinusTab, height,"elements");
+ds_list_position_within(elementList2, toolStartX, y, buffer, widthMinusTab, height,"elements");
+ds_list_position_within(terrainList, toolStartX, y, buffer, widthMinusTab, height,"terrains");
 
 #endregion
 

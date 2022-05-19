@@ -1,4 +1,4 @@
-if(tool){
+
 	if(obj_sub_toolbar_write.visible == false){
 		visible = false;	
 		hoverable = false;
@@ -14,7 +14,7 @@ if(tool){
 			solid = false;	
 		}
 	}
-}
+
 
 if(mouse_over() || obj_sub_toolbar_write.selectedObjTool == id){
 	hovered = true;

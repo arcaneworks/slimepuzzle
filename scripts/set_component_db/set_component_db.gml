@@ -58,6 +58,7 @@ function set_component_info_db(){
 		with(knight){
 			info.class = "knight";
 			info.infoText = "The knight damages and pushes moveable objects, as well as puts out fires.";
+			info.componentCode = "CK";
 			stats.maxHp = 3;
 			visuals.sprite = spr_knight_s;
 			visuals.portraitSpr = spr_port_knight; 
@@ -68,6 +69,7 @@ function set_component_info_db(){
 		with(archer){
 			info.class = "archer"; 
 			info.infoText = "The archer can shoot over gaps and through fire.";
+			info.componentCode = "CA";
 			visuals.sprite = spr_archer_s;
 			visuals.portraitSpr = spr_port_archer;
 			action = global.actionDB.shoot;
@@ -77,6 +79,7 @@ function set_component_info_db(){
 		with(wizard){
 			info.class = "wizard"; 
 			info.infoText = "The wizard uses fire to damage and ignite.";
+			info.componentCode = "CW";
 			visuals.sprite = spr_wizard_s;
 			visuals.portraitSpr = spr_port_wizard;
 			action = global.actionDB.fire;
@@ -86,6 +89,7 @@ function set_component_info_db(){
 		with(cleric){
 			info.class = "cleric"; 
 			info.infoText = "The cleric rejuvenates allies, regaining their move and action.";
+			info.componentCode = "CC";
 			visuals.sprite = spr_cleric_s;
 			visuals.portraitSpr = spr_port_wizard;
 			action = global.actionDB.bless;
@@ -95,6 +99,7 @@ function set_component_info_db(){
 		with(rogue){
 			info.class = "rogue"; 
 			info.infoText = "The rogue can move through enemy fields of attack without provoking a reaction";
+			info.componentCode = "CC";
 			visuals.sprite = spr_rogue_s;
 			visuals.portraitSpr = spr_port_archer;
 			feats.triggersReaction = false;
@@ -109,6 +114,7 @@ function set_component_info_db(){
 		with(shooter){
 			info.class = "shooter"; 
 			info.infoText = "The shooter fires at actors in front of it.";
+			info.componentCode = "CS"
 			visuals.sprite = spr_shooter_s;
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
@@ -120,6 +126,7 @@ function set_component_info_db(){
 			info.class = "shooter2"; 
 			info.damageClass = "fire weak";
 			info.infoText = "The shooter fires at actors in front of it. Blue shooters are weak to fire.";
+			info.componentCode = "CP";
 			visuals.sprite = spr_shooter_s;
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
@@ -130,6 +137,7 @@ function set_component_info_db(){
 		with(fighter){
 			info.class = "fighter"; 
 			info.infoText = "The fighter strikes the actor that moves in front of it.";
+			info.componentCode = "CF";
 			stats.SPD = 2;
 			visuals.sprite = spr_fighter_s;
 			visuals.portraitSpr = spr_port_fighter;
@@ -142,6 +150,7 @@ function set_component_info_db(){
 			info.class = "bomb"; 
 			info.damageClass = "bomb";
 			info.infoText = "The bomb explodes when exposed to fire, damaging adjacent units.";
+			info.componentCode = "CB";
 			stats.SPD = 1;
 			feats.faces = false;
 			visuals.sprite = spr_bomb2;
@@ -153,6 +162,7 @@ function set_component_info_db(){
 		with(thumper){
 			info.class = "thumper"; 
 			info.infoText = "the thumper knocks backs all components adjacent to it.";
+			info.componentCode = "CT";
 			stats.SPD = 2;
 			visuals.sprite = spr_thumper_s;
 			visuals.portraitSpr = spr_port_thumper;
@@ -164,6 +174,7 @@ function set_component_info_db(){
 		with(eye){
 			info.class = "eye"; 
 			info.infoText = "the eye freezes all actors in its field of vision";
+			info.componentCode = "CE";
 			stats.SPD = 10;
 			visuals.sprite = spr_eye_s;
 			visuals.portraitSpr = spr_port_eye;
@@ -175,6 +186,7 @@ function set_component_info_db(){
 		with(slime){
 			info.class = "slime"; 
 			info.infoText = "A useless little slime. Squish it, slash it, or stomp it. It deserves to die.";
+			info.componentCode = "CX";
 			feats.faces = false;
 			visuals.sprite = spr_slime;
 			visuals.portraitSpr = spr_port_slime;
@@ -189,6 +201,7 @@ function set_component_info_db(){
 		with(rock){
 			info.class = "rock"; 
 			info.infoText = "Rocks can be pushed and fill holes.";
+			info.componentCode = "ER";
 			feats.faces = false;
 			feats.damagable = false;
 			visuals.sprite = spr_rock1;
@@ -199,6 +212,7 @@ function set_component_info_db(){
 		with(barrel){
 				info.class = "breakable"; 
 				info.infoText = "barrels can be destroyed.";
+				info.componentCode = "EB";
 				feats.faces = false;
 				visuals.sprite = spr_barrel1;
 				visuals.portraitSpr = spr_barrel1;
@@ -208,6 +222,7 @@ function set_component_info_db(){
 		with(crate){
 				info.class = "breakable"; 
 				info.infoText = "crates can be pushed and destroyed";
+				info.componentCode = "EC";
 				feats.faces = false;
 				visuals.sprite = spr_barrel1;
 				visuals.portraitSpr = spr_barrel1;
@@ -217,6 +232,7 @@ function set_component_info_db(){
 		with(director){
 				info.class = "director"; 
 				info.infoText = "redirects arrows.";
+				info.componentCode = "ED";
 				feats.damagable = false;
 				visuals.sprite = spr_directorLD;
 				visuals.portraitSpr = spr_barrel1;
