@@ -832,9 +832,9 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level5.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"blank level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level6.csv","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level7.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level8.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"test level.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level7.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.3.0.625",

@@ -13,11 +13,13 @@ function enemy_reaction_move(){
 					if(tempTarget.occupant){
 						tempTarget = tempTarget.occupant;	
 					}
+					if(tempTarget.triggersReaction)
 					ds_list_add(targetList, tempTarget); 
 				}
 			}else{
 				//if this action single targets
 				
+				if(other.triggersReaction)
 				ds_list_add(targetList, other.id); 
 			}	
 			
