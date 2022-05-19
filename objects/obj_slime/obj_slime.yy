@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Actors",
-    "path": "folders/00 - GAME/1 - Objects/Components/Actors.yy",
+    "name": "Enemies",
+    "path": "folders/00 - GAME/1 - Objects/Components/Actors/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_slime",

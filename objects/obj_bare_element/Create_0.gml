@@ -8,4 +8,4 @@ componentCode = noone;
 move = 0; 
 infoText = "no infoText";
 class = "default";
-portSpr = spr_port_knight;
+portraitSpr = spr_port_knight;

@@ -1,45 +1,233 @@
 
 function set_component_info_db(){
 	
-	function component_info_struct(_class = "NO CLASS", _infoText = "NO ACTION TEXT", _sprite = spr_knight_s ,_portSpr = spr_portrait_efrin, _move = 0, _faces = false) constructor {
-		class = _class; 
-		infoText = _infoText;
-		sprite = _sprite;
-		portSpr = _portSpr;
-		move = _move;
-		faces = _faces;
+	#region constructors of structs within each component struct
+		function component_info_struct(_class = "NO CLASS", _damageClass = "default", _infoText = "NO ACTION TEXT", _componentCode = "NONE", _name = "Osama") constructor{
+			class = _class;
+			damageClass = _damageClass;
+			infoText = _infoText;
+			componentCode = _componentCode;
+			name = _name;
+		}
+	
+		function component_stats_struct(_maxHp = 2, _move = 1, _SPD = 1) constructor{
+			maxHp = _maxHp;
+			move = _move;
+			SPD = _SPD;
+		}
+	
+		function component_feats_struct(_triggersReaction = false, _faces = true, _damagable = true, _movable = true, _reacts = false) constructor{
+			triggersReaction = _triggersReaction;
+			faces = _faces;
+			damagable = _damagable; 
+			movable = _movable;
+			reacts = _reacts;
+		}
+	
+		function component_visuals_struct(_sprite = spr_error0, _portraitSpr = spr_portrait_noone) constructor{
+			sprite = _sprite;
+			portraitSpr = _portraitSpr
+		}
+	
+	#endregion
+	
+	function component_struct(
+		_info = new component_info_struct(),
+		_stats = new component_stats_struct(),
+		_feats = new component_feats_struct(), 
+		_visuals = new component_visuals_struct(),
+		_action = noone
+		
+	) constructor {
+		info = _info;
+		stats = _stats;
+		feats = _feats; 
+		visuals = _visuals;
+		action = _action;
 	}
 	
+	//info - class ("NO CLASS"), damageClass (DEFAULT), infoText "no action text", componentCode, name "osama"
+	//stats - maxHp (2), move (1), SPD (4
+	//feats - triggersReaction (true), faces (true), damagable (true), movable (true)
+	//visuals - sprite spr_knight, portraitSprite 
+	//action (global.actionDB.(action)) - defaults to noone
 
-	//actors 
-	knight = new component_info_struct("knight", "The knight damages and pushes moveable objects, as well as puts out fires.", spr_knight_s, spr_port_knight, 1, true);
-	archer = new component_info_struct("archer", "The archer can shoot over gaps and through fire.", spr_archer_s, spr_port_archer,1, true); 
-	wizard = new component_info_struct( "wizard", "The wizard uses fire to damage and ignite.", spr_wizard_s, spr_port_wizard, 1, true);
-	cleric = new component_info_struct( "cleric", "The cleric rejuvenates allies, regaining their move and action.", spr_cleric_s, spr_port_wizard, 1, true);
-	rogue = new component_info_struct("rogue", "The rogue can move through enemy fields of attack without provoking a reaction", spr_rogue_s, spr_port_archer, 1, true);
+	#region AGENTS (player controlled actors)
 	
+		knight = new component_struct();
+		with(knight){
+			info.class = "knight";
+			info.infoText = "The knight damages and pushes moveable objects, as well as puts out fires.";
+			stats.maxHp = 3;
+			visuals.sprite = spr_knight_s;
+			visuals.portraitSpr = spr_port_knight; 
+			action = global.actionDB.bash;			
+		}
+		
+		archer = new component_struct(); 
+		with(archer){
+			info.class = "archer"; 
+			info.infoText = "The archer can shoot over gaps and through fire.";
+			visuals.sprite = spr_archer_s;
+			visuals.portraitSpr = spr_port_archer;
+			action = global.actionDB.shoot;
+		}
 	
-	//enemies 
-	shooter = new component_info_struct("shooter", "The shooter doesn't have an action yet.", spr_shooter_s, spr_port_shooter_2, 1, true);
-	shooterFire = new component_info_struct("shooter2", "A shooter that is vulerable to fire.", spr_shooter2_s, spr_port_shooter_2, 1, true);
-	fighter = new component_info_struct("fighter", "The fighter strikes the actor in front of it.", spr_fighter_s, spr_port_fighter_3, 1, true);
-	bomb = new component_info_struct("bomb", "the bomb explodes.", spr_bomb2, spr_port_bomb, ,false);
-	thumper = new component_info_struct("thumper", "the thumper knocks backs all components adjacent to it.", spr_thumper_s, spr_thumper_s, 1, true);
-	eye = new component_info_struct("eye", "the eye freezes all actors in its field of vision", spr_eye_s, spr_eye_s, 1, true);
-	slime = new component_info_struct("slime", "A useless little slime. Squish it, slash it, or stomp it. It deserves to die.", spr_slime, spr_port_slime, 1,false);
-	//elements 
+		wizard = new component_struct();
+		with(wizard){
+			info.class = "wizard"; 
+			info.infoText = "The wizard uses fire to damage and ignite.";
+			visuals.sprite = spr_wizard_s;
+			visuals.portraitSpr = spr_port_wizard;
+			action = global.actionDB.fire;
+		}
 	
-	rock = new component_info_struct("rock", "Rocks can be pushed and fill holes.", spr_rock1, spr_rock1, 1,false);
-	barrel = new component_info_struct("breakable", "barrels can be destroyed.", spr_barrel1, spr_barrel1, 1,false);
-	crate = new component_info_struct("breakable", "crates can be destroyed.", spr_crate1, spr_crate1, 1,false);
+		cleric = new component_struct();
+		with(cleric){
+			info.class = "cleric"; 
+			info.infoText = "The cleric rejuvenates allies, regaining their move and action.";
+			visuals.sprite = spr_cleric_s;
+			visuals.portraitSpr = spr_port_wizard;
+			action = global.actionDB.bless;
+		}
 	
-	directorLD = new component_info_struct("director", "redirects arrows", spr_directorLD, spr_directorLD, 1,false);
-	directorRD = new component_info_struct("director", "redirects arrows", spr_directorRD, spr_directorRD, 1,false);
-	directorUL = new component_info_struct("director", "redirects arrows", spr_directorUL, spr_directorUL, 1,false);
-	directorUR = new component_info_struct("director", "redirects arrows", spr_directorUR, spr_directorUR, 1,false);
+		rogue = new component_struct();
+		with(rogue){
+			info.class = "rogue"; 
+			info.infoText = "The rogue can move through enemy fields of attack without provoking a reaction";
+			visuals.sprite = spr_rogue_s;
+			visuals.portraitSpr = spr_port_archer;
+			feats.triggersReaction = false;
+			action = global.actionDB.bash;
+		}
+		
+	#endregion
 	
+	#region ENEMIES
 	
+		shooter = new component_struct();
+		with(shooter){
+			info.class = "shooter"; 
+			info.infoText = "The shooter fires at actors in front of it.";
+			visuals.sprite = spr_shooter_s;
+			visuals.portraitSpr = spr_port_shooter;
+			feats.reacts = true;
+			action = global.actionDB.shoot;
+		}
+	
+		shooter2 = new component_struct();
+		with(shooter2){
+			info.class = "shooter2"; 
+			info.damageClass = "fire weak";
+			info.infoText = "The shooter fires at actors in front of it. Blue shooters are weak to fire.";
+			visuals.sprite = spr_shooter_s;
+			visuals.portraitSpr = spr_port_shooter;
+			feats.reacts = true;
+			action = global.actionDB.shoot;
+		}
+	
+		fighter = new component_struct();
+		with(fighter){
+			info.class = "fighter"; 
+			info.infoText = "The fighter strikes the actor that moves in front of it.";
+			stats.SPD = 2;
+			visuals.sprite = spr_fighter_s;
+			visuals.portraitSpr = spr_port_fighter;
+			feats.reacts = true;
+			action = global.actionDB.counter;
+		}
+			
+		bomb = new component_struct();
+		with(bomb){
+			info.class = "bomb"; 
+			info.damageClass = "bomb";
+			info.infoText = "The bomb explodes when exposed to fire, damaging adjacent units.";
+			stats.SPD = 1;
+			feats.faces = false;
+			visuals.sprite = spr_bomb2;
+			visuals.portraitSpr = spr_port_bomb;
+			action = global.actionDB.explode;
+		}
+		
+		thumper = new component_struct();
+		with(thumper){
+			info.class = "thumper"; 
+			info.infoText = "the thumper knocks backs all components adjacent to it.";
+			stats.SPD = 2;
+			visuals.sprite = spr_thumper_s;
+			visuals.portraitSpr = spr_port_thumper;
+			feats.reacts = true;
+			action = global.actionDB.thump;
+		}
+	
+		eye = new component_struct();
+		with(eye){
+			info.class = "eye"; 
+			info.infoText = "the eye freezes all actors in its field of vision";
+			stats.SPD = 10;
+			visuals.sprite = spr_eye_s;
+			visuals.portraitSpr = spr_port_eye;
+			feats.reacts = true;
+			action = global.actionDB.stun;
+		}
+		
+		slime = new component_struct();
+		with(slime){
+			info.class = "slime"; 
+			info.infoText = "A useless little slime. Squish it, slash it, or stomp it. It deserves to die.";
+			feats.faces = false;
+			visuals.sprite = spr_slime;
+			visuals.portraitSpr = spr_port_slime;
+			action = global.actionDB.slime;
+		}
+	
+	#endregion
+
+	#region ELEMENTS 
+	
+		rock = new component_struct();
+		with(rock){
+			info.class = "rock"; 
+			info.infoText = "Rocks can be pushed and fill holes.";
+			feats.faces = false;
+			feats.damagable = false;
+			visuals.sprite = spr_rock1;
+			visuals.portraitSpr = spr_rock1;
+		}
+	
+		barrel = new component_struct();
+		with(barrel){
+				info.class = "breakable"; 
+				info.infoText = "barrels can be destroyed.";
+				feats.faces = false;
+				visuals.sprite = spr_barrel1;
+				visuals.portraitSpr = spr_barrel1;
+			}
+		
+		crate = new component_struct();
+		with(crate){
+				info.class = "breakable"; 
+				info.infoText = "crates can be pushed and destroyed";
+				feats.faces = false;
+				visuals.sprite = spr_barrel1;
+				visuals.portraitSpr = spr_barrel1;
+			}
+	
+		director = new component_struct();
+		with(director){
+				info.class = "director"; 
+				info.infoText = "redirects arrows.";
+				feats.damagable = false;
+				visuals.sprite = spr_directorLD;
+				visuals.portraitSpr = spr_barrel1;
+				action = global.actionDB.shoot;
+			}
+	
+	#endregion
+	
+	//fills global struct with component structs
 	global.componentDB = {
+		
 		knight : other.knight,
 		archer : other.archer, 
 		wizard : other.wizard, 
@@ -47,7 +235,7 @@ function set_component_info_db(){
 		rogue : other.rogue,
 		
 		shooter : other.shooter, 
-		shooterFire : other.shooterFire, 
+		shooter2 : other.shooter2, 
 		fighter : other.fighter, 
 		bomb : other.bomb,
 		thumper : other.thumper,
@@ -57,14 +245,8 @@ function set_component_info_db(){
 		rock : other.rock, 
 		barrel : other.barrel,
 		crate : other.crate,
-		directorLD : other.directorLD, 
-		directorRD : other.directorRD,
-		directorUL : other.directorUL,
-		directorUR : other.directorUR,
-		
+		director : other.director
+	
 	}
-
-
-
-
+		
 }

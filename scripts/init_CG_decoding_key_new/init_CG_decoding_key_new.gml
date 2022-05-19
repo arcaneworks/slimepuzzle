@@ -38,10 +38,7 @@ function init_CG_decoding_key_new(){
 	elementCodes = ds_map_create();
 	ds_map_add(elementCodes, "R", asset_get_index("obj_rock"));
 	ds_map_add(elementCodes, "C", asset_get_index("obj_chest"));
-	ds_map_add(elementCodes, "A", asset_get_index("obj_directorLD"));
-	ds_map_add(elementCodes, "S", asset_get_index("obj_directorRD"));
-	ds_map_add(elementCodes, "D", asset_get_index("obj_directorUL"));
-	ds_map_add(elementCodes, "F", asset_get_index("obj_directorUR"));
+	ds_map_add(elementCodes, "D", asset_get_index("obj_director"));
 	ds_map_add(elementCodes, "B", asset_get_index("obj_barrel"));
 	ds_map_add(elementCodes, "P", asset_get_index("obj_crate"));
 
@@ -54,9 +51,4 @@ function init_CG_decoding_key_new(){
 	ds_map_add(terrainCodes, "O", asset_get_index("obj_bonfire_off"));
 	
 	
-	//directionCodes = ds_map_create();
-	//ds_map_add(directionCodes, "n", dir.north);
-	//ds_map_add(directionCodes, "e", dir.east);
-	//ds_map_add(directionCodes, "s", dir.south);
-	//ds_map_add(directionCodes, "w", dir.west);
 }

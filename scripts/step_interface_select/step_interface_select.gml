@@ -41,7 +41,7 @@ function step_interface_select() {
 				wipe_nodes();
 				var enemy = hoverNode.occupant;
 				
-				if(enemy.hasReaction){
+				if(enemy.reacts){
 					if(!ds_list_empty(enemy.reactList)){
 						for(var ii = 0; ii < ds_list_size(enemy.reactList); ii++){
 							var reactNode = ds_list_find_value(enemy.reactList, ii); 

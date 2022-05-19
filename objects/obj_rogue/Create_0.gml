@@ -1,12 +1,3 @@
 event_inherited();
-turnCt = 1;
-SPD = 15; 
-
-name = "Parker"
-class = "rogue"
-move = 2;
-triggersReaction = false;
-portraitSpr = spr_port_knight;
-faces =true;
-action = global.actionDB.bash;
-
+componentStruct = global.componentDB.rogue;
+set_component_info(componentStruct, id);

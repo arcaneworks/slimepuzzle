@@ -4,7 +4,7 @@ function set_react_list(){
 	
 	with(obj_actor){
 		
-			if(hasReaction){
+			if(reacts){
 				
 				switch(class){
 					

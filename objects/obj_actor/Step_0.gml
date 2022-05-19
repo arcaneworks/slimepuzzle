@@ -168,7 +168,7 @@ event_inherited();
 				}else{ //if this actor isn't the selected actor
 					
 					//if this actor isn't the selected actor 
-					if(hasReaction && canAct){
+					if(reacts && canAct){
 						fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
 						
 					}

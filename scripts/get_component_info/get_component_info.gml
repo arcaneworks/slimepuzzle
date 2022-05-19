@@ -30,7 +30,7 @@ function get_component_info(component, componentCode){
 		break;
 		
 		case "CP":
-			tempStruct = global.componentDB.shooterFire; 
+			tempStruct = global.componentDB.shooter2; 
 		break;
 		
 		case "CF":
@@ -78,11 +78,6 @@ function get_component_info(component, componentCode){
 	}
 	
 	if(tempStruct != noone){
-		component.infoText = tempStruct.infoText;
-		component.class = tempStruct.class;
-		component.sprite_index = tempStruct.sprite; 
-		component.portSpr = tempStruct.portSpr; 	
-		component.move = tempStruct.move;
-		component.faces = tempStruct.faces;
+		set_component_info(tempStruct, component);
 	}
 }

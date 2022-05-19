@@ -16,7 +16,7 @@ event_inherited(); //inherits most stuff from obj_component
 	targeted = false;
 	poob = false;
 	weakness = false;
-	hasReaction = false;
+	reacts = false;
 	actState = "idle";
 	moveState = "idle";
 	defending = false;

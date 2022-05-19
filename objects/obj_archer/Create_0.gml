@@ -1,17 +1,3 @@
 event_inherited();
-turnCt = 1;
-SPD = 6; 
- faces =true;
-name = "Mable"
-class = "archer"
-move = 1;
-
-portraitSpr = spr_port_archer;
-
-
-infoText =  name + ", the " + class + "."
-
-maxHp = 2;
-hp = maxHp;
-action = global.actionDB.shoot;
-
+componentStruct = global.componentDB.archer;
+set_component_info(componentStruct, id);

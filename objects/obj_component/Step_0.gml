@@ -90,7 +90,7 @@ if(displayHp && damaged){
 //		var s = asset_get_index("spr_" + class + string(facingDir));	
 //		sprite_index = s;
 		
-//		if(hasReaction){
+//		if(reacts){
 //			react = true;
 //		}
 //		rotate = false;	

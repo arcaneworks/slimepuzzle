@@ -1,5 +1,27 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function set_component_info(){
+
+function set_component_info(compDBstruct, comp){
+	var s = compDBstruct; // the component struct (within the database) to copy info from
+	
+	comp.class = s.info.class;
+	comp.damageClass = s.info.damageClass; 
+	comp.infoText = s.info.infoText;
+	comp.name = s.info.name;
+	
+	comp.maxHp = s.stats.maxHp;
+	comp.hp = s.stats.maxHp;
+	comp.move = s.stats.move; 
+	comp.SPD = s.stats.SPD;
+	
+	
+	comp.triggersReaction = s.feats.triggersReaction;
+	comp.faces = s.feats.faces;
+	comp.damagable = s.feats.damagable;
+	comp.movable = s.feats.movable;
+	comp.reacts = s.feats.reacts;
+	
+	comp.sprite_index = s.visuals.sprite; 
+	comp.portraitSpr = s.visuals.portraitSpr;
+	
+	comp.action = s.action;
 
 }

@@ -4,7 +4,7 @@ function move_reaction_ui(){
 	if(hoverNode != noone && hoverNode.moveNode){
 		//and that hovernode is within an enemy's react list
 		with(obj_enemy){
-			if(hasReaction && !ds_list_empty(reactList) && ds_list_find_index(reactList, other.hoverNode) > -1){
+			if(reacts && !ds_list_empty(reactList) && ds_list_find_index(reactList, other.hoverNode) > -1){
 				with(obj_node){
 					if(reactNode){
 						reactNode = false;		
