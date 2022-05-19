@@ -112,7 +112,7 @@ function set_component_info_db(){
 			visuals.sprite = spr_shooter_s;
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
-			action = global.actionDB.shoot;
+			action = global.actionDB.spit;
 		}
 	
 		shooter2 = new component_struct();
@@ -123,7 +123,7 @@ function set_component_info_db(){
 			visuals.sprite = spr_shooter_s;
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
-			action = global.actionDB.shoot;
+			action = global.actionDB.spit;
 		}
 	
 		fighter = new component_struct();
