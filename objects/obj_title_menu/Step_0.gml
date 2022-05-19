@@ -106,7 +106,7 @@ if(accept_key > 0){
 			}
 			break;
 		case 1:
-			if(pos > op_length)
+			if(pos == op_length -1)
 				{
 					menu_level = 0;
 					
