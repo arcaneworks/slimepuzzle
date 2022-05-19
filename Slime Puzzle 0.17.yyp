@@ -490,6 +490,7 @@
     {"id":{"name":"apply_weakness","path":"scripts/apply_weakness/apply_weakness.yy",},"order":4,},
     {"id":{"name":"obj_level","path":"objects/obj_level/obj_level.yy",},"order":7,},
     {"id":{"name":"uc_wave","path":"scripts/uc_wave/uc_wave.yy",},"order":3,},
+    {"id":{"name":"set_component_info","path":"scripts/set_component_info/set_component_info.yy",},"order":3,},
     {"id":{"name":"uc_wrap","path":"scripts/uc_wrap/uc_wrap.yy",},"order":4,},
     {"id":{"name":"uc_error_message","path":"scripts/uc_error_message/uc_error_message.yy",},"order":0,},
     {"id":{"name":"uc_set_debug_mode","path":"scripts/uc_set_debug_mode/uc_set_debug_mode.yy",},"order":1,},
@@ -832,9 +833,9 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level5.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"blank level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level6.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level7.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level8.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"test level.csv","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level7.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.3.0.625",
