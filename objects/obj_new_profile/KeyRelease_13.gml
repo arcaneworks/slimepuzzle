@@ -15,11 +15,7 @@ if(confirmDec){
 
 if(file_exists("saves\\" + message + ".sav")){
 		create_confirm_box(x + 200, y, "A file with this name already exists. Would you like to overwrite it?", true);
-	}else{
-		global.playerProfile = message;
-		TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
-	}
-	
-	
-
-
+		}else{
+			global.playerProfile = message;
+			TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
+		}
