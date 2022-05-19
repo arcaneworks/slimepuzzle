@@ -30,7 +30,7 @@ if(decision){
 	draw_rectangle_color(decBoxX, decBoxY, decBoxX + decBoxW - 2, decBoxY + decBoxH + 4, 
 	decBoxColor,decBoxColor,decBoxColor,decBoxColor,false);
 	draw_resizable_ext(spr_frame, decBoxX, decBoxY, decBoxW, decBoxH, 0, 0);
-	draw_text_transformed(decBox2X + .5 * decBoxW - .5 * string_width(dec) * textScale, decBox2Y + .5 * decBoxH,
+	draw_text_transformed(decBoxX + .5 * decBoxW - .5 * string_width(dec) * textScale, decBoxY + .5 * decBoxH,
 	dec, textScale, textScale, 0);
 	
 }
