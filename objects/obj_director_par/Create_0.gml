@@ -1,6 +1,3 @@
 event_inherited();
-shootDir = "leftdown";
-action = global.actionDB.shoot;
-damagable = false;
-damageClass = "director";
-class = "director";
+componentStruct = global.componentDB.director
+set_component_info(componentStruct, id);
