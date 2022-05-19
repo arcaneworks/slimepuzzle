@@ -79,7 +79,12 @@ if(accept_key > 0){
 			case 2:
 				//load last autosave
 				global.cursor = noone;
-				load_player_data(global.playerProfile);
+				var saves = get_save_file_list();
+				if(global.playerProfile != "default")
+					load_player_data(global.playerProfile);
+				else if(array_length(saves ) > 1){
+					load_player_data(saves[0]);
+				}
 				TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
 				break;
 			case 3:
@@ -101,7 +106,7 @@ if(accept_key > 0){
 			}
 			break;
 		case 1:
-			if(pos == op_length)
+			if(pos > op_length)
 				{
 					menu_level = 0;
 					

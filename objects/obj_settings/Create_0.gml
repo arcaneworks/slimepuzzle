@@ -3,6 +3,7 @@ global.playerProfile = "default";
 global.currentLevel = 1;
 global.undoneMoves = 0;
 global.resets = 0;
+global.saves = 0;
 global.editorTarget = "blank level";
 global.testTarget = "temp level";
 global.tempTarget = "temp level";

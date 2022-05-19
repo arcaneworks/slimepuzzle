@@ -11,6 +11,7 @@ function save_player_data(){
 			currentLevel : global.currentLevel,
 			resets : global.resets,
 			undoneMoves : global.undoneMoves,
+			saveDate : date_current_datetime(),
 		}
 		//turn the data into a JSON string and save it via buffer
 		var _string = json_stringify(_saveEntity);

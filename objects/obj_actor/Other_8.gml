@@ -14,7 +14,6 @@ with(obj_enemy){
 		enemy_reaction_move(); 
 	}
 }
-
 //for(var gg = 0; gg < instance_number(obj_enemy); gg++){
 //	var tempEnemy = instance_find(obj_enemy, gg); 
 	

@@ -11,5 +11,28 @@ function get_save_file_list(){
 		fileCount++;
 	}
 	file_find_close();
+	
+	var priorityList = ds_priority_create();
+	for(xx = 0; xx < array_length(fArray); xx++){
+		fileName = fArray[xx];
+			var tempName = "saves\\" + fileName;
+	if(file_exists(tempName)){
+		var _buffer = buffer_load(tempName);
+		var _string = buffer_read(_buffer, buffer_string);
+		buffer_delete( _buffer);
+		var _loadData = json_parse(_string);
+		var priority = _loadData.saveDate;
+		ds_priority_add(priorityList, fileName, priority);
+	}
+	}
+	
+	
+	for(xx = 0; xx < array_length(fArray); xx++){
+		var tempFile = ds_priority_find_max(priorityList);
+		fArray[xx] = tempFile;
+		ds_priority_delete_max(priorityList);
+	}
+	ds_priority_destroy(priorityList);
+	
 	return fArray;
 }
