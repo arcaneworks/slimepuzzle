@@ -9,6 +9,7 @@ function save_player_data(){
 		{
 			playerName : global.playerProfile,
 			currentLevel : global.currentLevel,
+			currentStage : global.currentStage,
 			resets : global.resets,
 			undoneMoves : global.undoneMoves,
 			saveDate : date_current_datetime(),

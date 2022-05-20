@@ -12,7 +12,7 @@ function set_component_info(compDBstruct, comp){
 	comp.hp = s.stats.maxHp;
 	comp.move = s.stats.move; 
 	comp.SPD = s.stats.SPD;
-	
+	comp.diagonal = s.stats.diagonal;
 	
 	comp.triggersReaction = s.feats.triggersReaction;
 	comp.faces = s.feats.faces;

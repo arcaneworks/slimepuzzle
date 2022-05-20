@@ -310,6 +310,7 @@
     {"id":{"name":"set_terrain_db","path":"scripts/set_terrain_db/set_terrain_db.yy",},"order":2,},
     {"id":{"name":"obj_agent","path":"objects/obj_agent/obj_agent.yy",},"order":4,},
     {"id":{"name":"spr_hole","path":"sprites/spr_hole/spr_hole.yy",},"order":5,},
+    {"id":{"name":"load_stage_set","path":"scripts/load_stage_set/load_stage_set.yy",},"order":6,},
     {"id":{"name":"populate_neighbors","path":"scripts/populate_neighbors/populate_neighbors.yy",},"order":2,},
     {"id":{"name":"action_nodes","path":"scripts/action_nodes/action_nodes.yy",},"order":3,},
     {"id":{"name":"set_node_occupancy","path":"scripts/set_node_occupancy/set_node_occupancy.yy",},"order":0,},
@@ -836,6 +837,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"test level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level9.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level10.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"stages.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.3.0.625",

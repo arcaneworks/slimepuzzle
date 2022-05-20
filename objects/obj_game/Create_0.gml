@@ -4,7 +4,9 @@ global.gameObj = id;
 if(global.lastRoom == level_editor_room){
 	levelString = global.testTarget;
 }else{
-	levelString = "level" + string(global.currentLevel);
+	var stagenum = global.currentStage;
+	var stageString = global.stages[stagenum];
+	levelString = stageString + string(global.currentLevel);
 }
  
 debugMode = false;

@@ -10,10 +10,11 @@ function set_component_info_db(){
 			name = _name;
 		}
 	
-		function component_stats_struct(_maxHp = 2, _move = 1, _SPD = 1) constructor{
+		function component_stats_struct(_maxHp = 2, _move = 1, _SPD = 1, _Diagonal = false) constructor{
 			maxHp = _maxHp;
 			move = _move;
 			SPD = _SPD;
+			diagonal = _Diagonal;
 		}
 	
 		function component_feats_struct(_triggersReaction = false, _faces = true, _damagable = true, _movable = true, _reacts = false) constructor{
@@ -104,6 +105,7 @@ function set_component_info_db(){
 			visuals.portraitSpr = spr_port_archer;
 			feats.triggersReaction = false;
 			action = global.actionDB.bash;
+			stats.move = 2;
 		}
 		
 	#endregion
@@ -115,6 +117,7 @@ function set_component_info_db(){
 			info.class = "shooter"; 
 			info.infoText = "The shooter fires at actors in front of it.";
 			info.componentCode = "CS"
+			stats.maxHp = 1;
 			visuals.sprite = spr_shooter_s;
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
@@ -153,6 +156,7 @@ function set_component_info_db(){
 			info.componentCode = "CB";
 			stats.SPD = 1;
 			feats.faces = false;
+			stats.maxHp = 1;
 			visuals.sprite = spr_bomb2;
 			visuals.portraitSpr = spr_port_bomb;
 			action = global.actionDB.explode;

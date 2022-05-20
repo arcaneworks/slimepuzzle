@@ -10,6 +10,7 @@ function load_player_data(fileName){
 		
 		global.playerProfile = _loadData.playerName;
 		global.currentLevel = _loadData.currentLevel;
+		global.currentStage = _loadData.currentStage;
 		global.resets = _loadData.resets;
 		global.undoneMoves = _loadData.undoneMoves;
 	}
