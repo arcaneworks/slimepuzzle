@@ -52,5 +52,16 @@ function apply_damage_component(component){
 			ds_queue_enqueue(global.deathQueue, component);	
 			component.deathWait = true;
 		}
+	}else{
+		switch(component.damageClass){
+			case "director":
+				component.targetedBy = id;
+				component.redirect = true;
+			
+			break;
+			
+			
+		}
+		
 	}
 }

@@ -235,6 +235,7 @@ function set_component_info_db(){
 		director = new component_struct();
 		with(director){
 				info.class = "director"; 
+				info.damageClass = "director";
 				info.infoText = "redirects arrows.";
 				info.componentCode = "ED";
 				feats.damagable = false;

@@ -1,7 +1,7 @@
 
 function set_component_info(compDBstruct, comp){
 	var s = compDBstruct; // the component struct (within the database) to copy info from
-	comp.componentStruct = compDBstruct;
+	comp.componentStruct = s;
 	comp.class = s.info.class;
 	comp.damageClass = s.info.damageClass; 
 	comp.infoText = s.info.infoText;

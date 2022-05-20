@@ -1,4 +1,5 @@
-if(targetedBy != noone &&  applyDamage){
+if(targetedBy != noone &&  redirect){
+	
 	if(targetedBy.class == "archer" || targetedBy.class == "director"){
 	
 	var range = action.targeting.range;
