@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_forest_tilesheet",
-    "path": "sprites/spr_forest_tilesheet/spr_forest_tilesheet.yy",
+    "name": "spr_desert_tilesheet",
+    "path": "sprites/spr_desert_tilesheet/spr_desert_tilesheet.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
