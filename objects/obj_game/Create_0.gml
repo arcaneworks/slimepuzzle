@@ -1,14 +1,23 @@
 //this is where most of the game is initialized, and where the interface and camera objects are created.
 
 global.gameObj = id;
+var stagenum = global.currentStage;
+var stageString = global.stages[stagenum];
+if(layer_exists(stageString + "Trees"))
+	layer_set_visible(stageString + "Trees", true);
+if(layer_exists(stageString + "Grass"))
+	layer_set_visible(stageString + "Grass", true);
+if(layer_exists(stageString + "GrassDrk"))
+	layer_set_visible(stageString + "GrassDrk", true);
+if(layer_exists(stageString + "Dirt"))
+	layer_set_visible(stageString + "Dirt", true);
+
 if(global.lastRoom == level_editor_room){
 	levelString = global.testTarget;
 }else{
-	var stagenum = global.currentStage;
-	var stageString = global.stages[stagenum];
 	levelString = stageString + string(global.currentLevel);
 }
- 
+instance_activate_layer(stageString);
 debugMode = false;
 matt = 0;
 actionState = "standby";

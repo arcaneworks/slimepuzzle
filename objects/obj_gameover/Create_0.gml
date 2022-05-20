@@ -35,10 +35,10 @@ if(file_exists("CGs\\" + newString + ".csv")){
 	if(file_exists("CGs\\" + newString + ".csv")){
 		global.currentStage++;
 		global.currentLevel = 1;
-		
-	text = "VICTORY";
-	subtext = "PRESS SPACE-BAR TO ADVANCE TO THE NEXT LEVEL.";
-	nextLevel = true;
+		save_player_data();
+		text = "VICTORY";
+		subtext = "PRESS SPACE-BAR TO ADVANCE TO THE NEXT STAGE.";
+		nextLevel = true;
 	}
 	else{
 		//if not, allow escape to menu

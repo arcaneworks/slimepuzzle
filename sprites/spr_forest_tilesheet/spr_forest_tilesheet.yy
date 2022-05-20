@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_forest_tilesheet","path":"sprites/spr_forest_tilesheet/spr_forest_tilesheet.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "spr_forest_tilesheet",
     "tags": [],
     "resourceType": "GMSequence",
   },
