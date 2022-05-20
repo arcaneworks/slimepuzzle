@@ -82,7 +82,7 @@ if(accept_key > 0){
 				var saves = get_save_file_list();
 				if(global.playerProfile != "default")
 					load_player_data(global.playerProfile);
-				else if(array_length(saves ) > 1){
+				else if(array_length(saves ) > 0){
 					load_player_data(saves[0]);
 				}
 				TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
