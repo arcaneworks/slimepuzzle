@@ -238,8 +238,8 @@ function set_component_info_db(){
 				info.infoText = "redirects arrows.";
 				info.componentCode = "ED";
 				feats.damagable = false;
-				visuals.sprite = spr_directorLD;
-				visuals.portraitSpr = spr_barrel1;
+				visuals.sprite = spr_director_s;
+				visuals.portraitSpr = spr_director_s;
 				action = global.actionDB.shoot;
 			}
 	

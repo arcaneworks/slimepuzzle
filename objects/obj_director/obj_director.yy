@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_directorUR",
-    "path": "sprites/spr_directorUR/spr_directorUR.yy",
+    "name": "spr_director_s",
+    "path": "sprites/spr_director_s/spr_director_s.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_director_par",
-    "path": "objects/obj_director_par/obj_director_par.yy",
+    "name": "obj_actor",
+    "path": "objects/obj_actor/obj_actor.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,6 +25,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +34,7 @@
     "path": "folders/00 - GAME/1 - Objects/Components/Elements.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_directorUR",
+  "name": "obj_director",
   "tags": [],
   "resourceType": "GMObject",
 }

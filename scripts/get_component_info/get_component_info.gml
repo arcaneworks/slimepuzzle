@@ -57,24 +57,12 @@ function get_component_info(component, componentCode){
 		case "ER":
 			tempStruct = global.componentDB.rock; 
 		break;
-		
-		case "EA":
-			tempStruct = global.componentDB.directorLD;
-		break;
-		
-		case "ES":
-			tempStruct = global.componentDB.directorRD;
-		break;
-		
+	
 		case "ED":
-			tempStruct = global.componentDB.directorUL;
+			tempStruct = global.componentDB.director;
 		break;
 		
-		case "EF":
-			tempStruct = global.componentDB.directorUR;
-		break;
-		
-		
+
 	}
 	
 	if(tempStruct != noone){

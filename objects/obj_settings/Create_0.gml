@@ -13,7 +13,8 @@ global.gameObj = noone;
 global.cursorSensitivity = 5;
 global.lastRoom = room;
 componentCodes = ds_map_create(); // decoding key for CG data files
-global.stages = load_stage_set("stages");
+
+//global.stages = load_stage_set("stages");
 set_action_db();
 
 set_component_info_db();

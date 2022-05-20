@@ -51,10 +51,17 @@ if(faces){
 		break;
 	
 		case dir.west:
-			image_xscale = -1;
-			var sprite = asset_get_index("spr_" + class + "_e");
-			sprite_index = sprite;
-			xOffset = node_size;
+			var sprite = asset_get_index("spr_" + class + "_w");
+			
+			if(sprite > -1){
+				sprite_index = sprite;
+				xOffset = 0;
+			}else{
+				image_xscale = -1;
+				var sprite = asset_get_index("spr_" + class + "_e");
+				sprite_index = sprite;
+				xOffset = node_size;
+			}
 		break;
 
 	}

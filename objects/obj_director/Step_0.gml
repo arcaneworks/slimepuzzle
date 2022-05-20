@@ -7,9 +7,9 @@ if(targetedBy != noone &&  applyDamage){
 	var bBound = 0; //bottom side
 	var tBound = map_height - 1; //top side
 	
-	switch(shootDir){
+	switch(facingDir){
 		
-		case "leftdown":
+		case dir.south:
 			//if shot from the left, aim down
 			if(targetedBy.gridX < gridX){	
 				for(var yy = gridY - 1; yy > gridY - range; yy--){ // start from closest node in range
@@ -92,7 +92,7 @@ if(targetedBy != noone &&  applyDamage){
 		break;
 		
 		
-		case "rightdown":
+		case dir.east:
 		
 			//if shot from the right, aim down 
 			if(targetedBy.gridX > gridX){
@@ -176,7 +176,7 @@ if(targetedBy != noone &&  applyDamage){
 		break;
 		
 		
-		case "upleft":
+		case dir.west:
 			//if shot from the left, aim up
 			if(targetedBy.gridX < gridX){
 				for(var yy = gridY + 1; yy < gridY + range; yy++){ // start from closest node in range
@@ -256,7 +256,7 @@ if(targetedBy != noone &&  applyDamage){
 		break;
 		
 		
-		case "upright":
+		case dir.north:
 			//if shot from the right, aim up
 			if(targetedBy.gridX > gridX){
 				for(var yy = gridY + range; yy > gridY + 1; yy--){ // start from closest node in range
