@@ -17,7 +17,7 @@ function set_component_info_db(){
 			diagonal = _Diagonal;
 		}
 	
-		function component_feats_struct(_triggersReaction = false, _faces = true, _damagable = true, _movable = true, _reacts = false) constructor{
+		function component_feats_struct(_triggersReaction = true, _faces = true, _damagable = true, _movable = true, _reacts = false) constructor{
 			triggersReaction = _triggersReaction;
 			faces = _faces;
 			damagable = _damagable; 
@@ -63,7 +63,8 @@ function set_component_info_db(){
 			stats.maxHp = 3;
 			visuals.sprite = spr_knight_s;
 			visuals.portraitSpr = spr_port_knight; 
-			action = global.actionDB.bash;			
+			action = global.actionDB.bash;		
+			feats.triggersReaction = true;
 		}
 		
 		archer = new component_struct(); 
@@ -95,12 +96,12 @@ function set_component_info_db(){
 			visuals.portraitSpr = spr_port_wizard;
 			action = global.actionDB.bless;
 		}
-	
+			
 		rogue = new component_struct();
 		with(rogue){
 			info.class = "rogue"; 
 			info.infoText = "The rogue can move through enemy fields of attack without provoking a reaction";
-			info.componentCode = "CC";
+			info.componentCode = "CR";
 			visuals.sprite = spr_rogue_s;
 			visuals.portraitSpr = spr_port_archer;
 			feats.triggersReaction = false;

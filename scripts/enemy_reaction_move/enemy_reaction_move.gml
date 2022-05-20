@@ -12,9 +12,9 @@ function enemy_reaction_move(){
 					var tempTarget = ds_list_find_value(reactList, ii); 
 					if(tempTarget.occupant){
 						tempTarget = tempTarget.occupant;	
-					}
 					if(tempTarget.triggersReaction)
 					ds_list_add(targetList, tempTarget); 
+					}
 				}
 			}else{
 				//if this action single targets
