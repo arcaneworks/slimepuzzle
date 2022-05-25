@@ -8,6 +8,16 @@ function set_component_info_db(){
 			infoText = _infoText;
 			componentCode = _componentCode;
 			name = _name;
+			xPos = 0; 
+			yPos = 0; 
+			gridX = 0;
+			gridY = 0;
+			canMove = true;
+			canAct = true;
+			dead = false;
+			facingDir = dir.south;
+			incapacitated = false;
+			
 		}
 	
 		function component_stats_struct(_maxHp = 2, _move = 1, _SPD = 1, _Diagonal = false) constructor{
@@ -245,6 +255,8 @@ function set_component_info_db(){
 				visuals.portraitSpr = spr_director_s;
 				action = global.actionDB.shoot;
 			}
+			
+		def = new component_struct();
 	
 	#endregion
 	

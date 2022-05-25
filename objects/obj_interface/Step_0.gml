@@ -26,7 +26,7 @@ update_cursor_pos();
 					if(hoverNode != noone && hoverNode.actionNode)
 						mb_press_act();
 					select_other();
-					move_reaction_ui();
+					//move_reaction_ui();
 					var aStruct = selectedActor.action;
 					
 					if(selectedActor.canAct && keyboard_check_released(aStruct.info.hotKey)){
@@ -54,6 +54,8 @@ update_cursor_pos();
 				select_other();
 				
 				mb_press_act();
+				
+				//action_target_ui();
 				
 				if(selectedActor.canMove){
 					cancel_key_check_move();

@@ -1,3 +1,9 @@
+if(dead){
+	x = -10000;
+	y = -10000;
+}
+
+
 if(faces){
 	switch(facingDir){
 		case dir.north:
@@ -77,7 +83,7 @@ if(displayHp && damaged){
 				}else{
 					map[gridX, gridY].occupant = noone; //clear occupancy of node
 					ds_queue_dequeue(global.deathQueue);
-					instance_destroy();	
+					dead = true;
 					exit;
 				}
 		}

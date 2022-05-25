@@ -32,12 +32,22 @@ function decode_node_info_new(nodeInfo, nodeID){
 			var component = instance_create_layer(nodeID.x, nodeID.y, "Instances", objectID); // create instance
 			component.gridX = nodeID.gridX; 
 			component.gridY = nodeID.gridY; 
+			
+			//sets infostruct variables;
+			var infoStruct = component.componentStruct.info;
+			infoStruct.gridX = component.gridX;
+			infoStruct.gridY = component.gridY; 
+			infoStruct.xPos = nodeID.x;
+			infoStruct.yPos = nodeID.y;
+			
+			
 			nodeID.occupant = component; 
 			
 			if(component.faces){
 				var dirStr = string_char_at(nodeInfo, 3);
 				if(dirStr != "T" && dirStr != ""){
 					component.facingDir = real(string_char_at(nodeInfo, 3));
+					infoStruct.facingDir = real(string_char_at(nodeInfo, 3));
 				}else{
 					component.facingDir = dir.south;	
 				}

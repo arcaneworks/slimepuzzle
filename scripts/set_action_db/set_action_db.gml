@@ -206,6 +206,7 @@ function set_action_db(){
 		targeting.range = "1";		
 		targeting.targetAll = true;
 	}
+		
 	stun = new act_struct();
 	with (stun){
 		info.title = "STUN";

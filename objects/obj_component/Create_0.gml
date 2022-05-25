@@ -27,7 +27,7 @@ gameState = "player turn";
 triggersReaction = true;
  
 targetedBy = noone;
- 
+ undoList = ds_priority_create(); //list of structs to undo
  xOffset = 0;
 sprXscale = 1;
 sprYscale = 1;
@@ -35,16 +35,6 @@ sprYscale = 1;
 gridX = 0;
 gridY = 0;
 				  
-execChoice = false; /* "execution choice" - whether this character 
-					/ has an additional choice to make during the execution 
-					/ phase. E.g. a knight declares an intention to attack 
-					/ an adjacent square during his declaration phase, but 
-					/ gets to decide which adjacent square to attack during 
-					/ the execution phase. In this case, 
-					/ execChoice would be set to ‘true’ as soon as he committed 
-					/ to that action.
-				   */ 
-				   
 actTurn = false; 
 myTurn = false;
 canMove = false;
@@ -94,7 +84,7 @@ hitable = true;
 timer = 15;
 shake = false;
 shakeTimer = 5;
-invisible = false;
+
 alpha = 1;
 
 hitSfx = s_impact_hit;
@@ -120,6 +110,7 @@ canStatus = false;
 
 maxHp = 0; 
 hp = 0; 
+dead = false;
 displayTime = 25;
 hpTimer = displayTime; 
 

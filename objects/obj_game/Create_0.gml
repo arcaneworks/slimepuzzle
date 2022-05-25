@@ -67,6 +67,7 @@ turnPos = 0; //position in turn list to make currActor
 currActor = noone;//actor whose turn it is
 global.actionQueue = ds_priority_create(); //queue of components waiting to act. 
 global.deathQueue = ds_queue_create(); //queue of components waiting to die.
+global.totalMoves = 0;
 standbyActor = noone;
 
 initialize = true; 
@@ -89,11 +90,6 @@ global.cursor = obj_interface;
 	init_populate_map(); // creates nodes based on CG set
 	populate_neighbors(); //makes neighbors for nodes
 	set_node_occupancy(); //sets occupancy for components 
-	
-	
-	
-
-
 
 turnAnimations = false;
 

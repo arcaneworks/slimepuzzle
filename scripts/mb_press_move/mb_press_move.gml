@@ -5,9 +5,15 @@ function mb_press_move(){
 		
 		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
 			
+			
+			 var tempStruct = snap_deep_copy(selectedActor.componentStruct);
+			
+			copy_component_struct(selectedActor, tempStruct);
+			global.totalMoves++;
+			ds_priority_add(selectedActor.undoList, tempStruct, global.totalMoves);
+			
 			var sComp = selectedActor;
-		
-			sComp.prevNode = map[selectedActor.gridX, selectedActor.gridY];
+			
 			selectedActor.moveToNode = hoverNode;
 			
 			var actX = selectedActor.gridX;
@@ -26,13 +32,9 @@ function mb_press_move(){
 				sComp.facingDir = dir.west;
 			else if (xDiff < 0)
 				sComp.facingDir = dir.east;
-			
-			//send selectedActor on its way 
-			
+
 			state= "nothing";
 			sComp.moveState = "start path";
-			ds_stack_push(obj_undo.moveStack, sComp);
-			//sComp.changeDir = true;
 			wipe_nodes();
 		
 		}

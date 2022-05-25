@@ -1,17 +1,9 @@
-if(ds_stack_empty(moveStack)){
-	clickable = false;	
+if(global.totalMoves > 0){
+	clickable = true;	
 	
 }else{
-	clickable = true;
-	headActor = ds_stack_top(moveStack)
+	clickable = false;
 	
-	if(instance_exists(headActor)){
-		 if(!headActor.canMove && !headActor.canAct){
-			ds_stack_pop(moveStack);
-		 }
-	}else{
-		ds_stack_pop(moveStack)		
-	}
 }
 
 
@@ -22,36 +14,36 @@ if(clickable){
 			image_index = 1;
 		
 			if(mouse_check_button_released(mb_left) || gamepad_button_check(0,gp_face1)){
+				
 				audio_play_sound(s_cancel, 1, false);
-				global.undoneMoves++;
-				wipe_nodes();
-				headActor = ds_stack_top(moveStack);
-				headActor.canMove = true; 
-				map[headActor.gridX, headActor.gridY].occupant = noone;
-				headActor.gridX = headActor.prevNode.gridX;
-				headActor.gridY = headActor.prevNode.gridY;
-				headActor.x = headActor.prevNode.x;
-				headActor.y = headActor.prevNode.y;
-				headActor.prevNode.occupant = headActor;
-				headActor.prevNode = noone;	
-				ds_list_clear_inner_lists(global.cursor.dirNodes);
-				ds_list_clear_inner_lists(global.cursor.moveNodes)
-				global.cursor.selectedActor = headActor;
-				headActor.selected = true;
-				movement_nodes(map[headActor.gridX, headActor.gridY]);
-				global.cursor.state = "move";
-				global.cursor.getMoves = true;
-				if(map[headActor.gridX, headActor.gridY].terrain == "HOLE"){
-					headActor.incapacitated = true;
-					
-				}else{
-					headActor.incapacitated = false;	
+				
+				with(obj_component){
+
+				    //if they have a struct within their undo list
+				    if(!ds_priority_empty(undoList)){
+				        //find the head of the list (sorted by priority)
+				        var head = ds_priority_find_max(undoList);
+
+				        //and if the priority of the matches the global.totalMoves
+				        //(it was the last movement or action)
+				        if(ds_priority_find_priority(undoList, head) == global.totalMoves){
+				            //revert that component to its last saved struct
+				            set_component_info(head, id, true);
+				            ds_priority_delete_max(undoList);
+							
+							var kk = 0
+				        }
+				    }
 				}
 				
-				ds_stack_pop(moveStack);
+				global.totalMoves--
+				global.undoneMoves++;
 				
+				wipe_nodes();
+				obj_interface.selectedActor = noone;
+				obj_interface.state = "idle";
 			}
-	
+		
 		}else{
 			image_index = 0;
 		}

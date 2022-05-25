@@ -1,12 +1,27 @@
 
-function set_component_info(compDBstruct, comp){
-	var s = compDBstruct; // the component struct (within the database) to copy info from
+function set_component_info(struct, comp, setPos = false){
+	
+	if(setPos){
+		if(map[comp.gridX,comp.gridY].occupant == id){
+			map[comp.gridX, comp.gridY].occupant = noone;
+		}
+	}
+	
+	var s = struct; // the component struct (within the database) to copy info from
 	comp.componentStruct = s;
 	comp.class = s.info.class;
 	comp.damageClass = s.info.damageClass; 
 	comp.infoText = s.info.infoText;
 	comp.componentCode = s.info.componentCode;
 	comp.name = s.info.name;
+	comp.xPos = s.info.xPos; 
+	comp.yPos = s.info.yPos; 
+	comp.gridX = s.info.gridX; 
+	comp.gridY = s.info.gridY
+	comp.canAct = s.info.canAct; 
+	comp.canMove = s.info.canMove;
+	comp.dead = s.info.dead;
+	comp.facingDir = s.info.facingDir;
 	
 	comp.maxHp = s.stats.maxHp;
 	comp.hp = s.stats.maxHp;
@@ -22,7 +37,16 @@ function set_component_info(compDBstruct, comp){
 	
 	comp.sprite_index = s.visuals.sprite; 
 	comp.portraitSpr = s.visuals.portraitSpr;
-	
 	comp.action = s.action;
+	
+	if(setPos){
+		
+		var node = map[gridX, gridY];
+		node.occupant = comp;
+		comp.x = node.x;
+		comp.y = node.y; 
+
+		
+	}
 
 }

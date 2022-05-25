@@ -2,12 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function apply_terrain(component, node){
 	var terrain = node.terrain;
-	
+	var infoStruct = component.componentStruct.info;
 	if(terrain != noone){
 		switch(terrain.terrainString){
 		
 			case "GROUND":
 				component.incapacitated = false; 
+				infoStruct.incapacitated = false;
 			break;
 			
 			case "FIRE":
@@ -26,16 +27,15 @@ function apply_terrain(component, node){
 					if(component.actor){
 						ds_queue_enqueue(global.deathQueue, component);
 						component.deathWait = true;
-						node.occupant = noone;
-						
-					}
 					
+					}	
 				}
 				 
 			break;
-		
+			
 			case "HOLE":
-				component.incapacitated = true;			
+				component.incapacitated = true;		
+				infoStruct.incapacitated = false;
 			
 				if(component.class == "rock"){
 					ds_queue_enqueue(global.deathQueue, component);	

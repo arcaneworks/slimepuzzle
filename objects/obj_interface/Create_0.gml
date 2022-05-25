@@ -16,7 +16,7 @@ state = "idle"; //see Step Events & Cursor Scripts
 nextState = "idle";
 cursorType = "selection";
 clickAble = true;
-
+tempStruct = noone;
 deselectKey = ord("X");
 endKey = ord("E");
 
