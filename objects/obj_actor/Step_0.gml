@@ -27,6 +27,8 @@ event_inherited();
 				for(var j = 0; j < ds_list_size(targetList); j++){ 
 					target = ds_list_find_value(targetList, j); 
 					create_action_vfx();
+					snapshot_target_struct();
+					
 				}
 
 				//play startSfx

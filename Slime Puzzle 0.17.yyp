@@ -234,6 +234,7 @@
     {"id":{"name":"spr_cursor_move","path":"sprites/spr_cursor_move/spr_cursor_move.yy",},"order":12,},
     {"id":{"name":"spr_grabber","path":"sprites/spr_grabber/spr_grabber.yy",},"order":12,},
     {"id":{"name":"s_impact8","path":"sounds/s_impact8/s_impact8.yy",},"order":7,},
+    {"id":{"name":"snapshot_target_struct","path":"scripts/snapshot_target_struct/snapshot_target_struct.yy",},"order":16,},
     {"id":{"name":"spr_move","path":"sprites/spr_move/spr_move.yy",},"order":2,},
     {"id":{"name":"save_CG_set","path":"scripts/save_CG_set/save_CG_set.yy",},"order":6,},
     {"id":{"name":"s_impact9","path":"sounds/s_impact9/s_impact9.yy",},"order":8,},

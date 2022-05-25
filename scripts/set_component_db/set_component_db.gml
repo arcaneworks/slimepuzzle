@@ -207,6 +207,7 @@ function set_component_info_db(){
 			visuals.sprite = spr_slime;
 			visuals.portraitSpr = spr_port_slime;
 			action = global.actionDB.slime;
+			stats.maxHp = 1;
 		}
 	
 	#endregion

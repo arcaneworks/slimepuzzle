@@ -84,21 +84,7 @@
 					break;
 						
 				}
-
-	
-		if(target.node){
-			if(target.occupant){
-				if(target.occupant.incapacitated == false){
-					target = target.occupant;	
-				}
-			}else{
-				if(target.terrain != noone){
-					target = target.terrain; 
-					
-				}
-			}
-		}
-		
+				
 		targetNode = noone;
 		
 	}
