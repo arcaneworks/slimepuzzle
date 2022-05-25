@@ -540,6 +540,7 @@
     {"id":{"name":"spr_bless_sm","path":"sprites/spr_bless_sm/spr_bless_sm.yy",},"order":9,},
     {"id":{"name":"uc_fnt_dpcomic","path":"fonts/uc_fnt_dpcomic/uc_fnt_dpcomic.yy",},"order":0,},
     {"id":{"name":"obj_bare_element","path":"objects/obj_bare_element/obj_bare_element.yy",},"order":2,},
+    {"id":{"name":"snap_deep_copy","path":"scripts/snap_deep_copy/snap_deep_copy.yy",},"order":0,},
     {"id":{"name":"obj_info","path":"objects/obj_info/obj_info.yy",},"order":0,},
     {"id":{"name":"spr_reset","path":"sprites/spr_reset/spr_reset.yy",},"order":10,},
     {"id":{"name":"spr_crate","path":"sprites/spr_crate/spr_crate.yy",},"order":4,},
@@ -821,6 +822,7 @@
     {"folderPath":"folders/Objects.yy","order":26,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/gui scripts.yy","order":28,"resourceVersion":"1.0","name":"gui scripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/gui scripts/Helpers.yy","order":0,"resourceVersion":"1.0","name":"Helpers","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/00 - GAME/2 - Scripts/SNAP.yy","order":15,"resourceVersion":"1.0","name":"SNAP","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
