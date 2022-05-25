@@ -22,6 +22,7 @@ function set_component_info(struct, comp, setPos = false){
 	comp.canMove = s.info.canMove;
 	comp.dead = s.info.dead;
 	comp.facingDir = s.info.facingDir;
+	comp.alpha = s.info.alpha;
 	
 	comp.maxHp = s.stats.maxHp;
 	comp.hp = s.stats.maxHp;

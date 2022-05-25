@@ -24,7 +24,7 @@ actionState = "standby";
 phase = "main";
 completed = false; // used to keep track of whether 
 actTimer = 20;
-
+levelComplete = false;
 enum dir {
 		north,
 		east,

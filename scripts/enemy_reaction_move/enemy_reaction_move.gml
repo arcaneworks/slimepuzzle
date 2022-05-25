@@ -7,6 +7,10 @@ function enemy_reaction_move(){
 		var listIndex = ds_list_find_index(reactList, map[other.gridX, other.gridY]);		
 		if(listIndex > -1){ 
 			//if this action targets all reactNodes
+			var tempStruct = snap_deep_copy(id.componentStruct);
+			copy_component_struct(id, tempStruct);
+			ds_priority_add(undoList, tempStruct, global.totalMoves);
+			
 			if(action.targeting.targetAll){
 				for(var ii = 0; ii < ds_list_size(reactList); ii++){
 					var tempTarget = ds_list_find_value(reactList, ii); 

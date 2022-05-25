@@ -111,7 +111,7 @@ event_inherited();
 			//if there is a target, and the shove has been applied
 			if(target != noone && finShove){
 				//and that target exists
-				if(instance_exists(target)){
+				if(!target.dead){
 					
 					//
 					if(target.moveState == "idle" && !target.deathWait){
@@ -134,14 +134,18 @@ event_inherited();
 		
 		
 		case "wait":
+			ds_list_clear(targetList);
 			var actQueue = global.actionQueue;
 			var headActor = ds_priority_find_max(actQueue);
 				
 			//If this actor is the head of the action queue (and finished applying action), dequeue it. 
 			//the actor loses action
 			if(headActor == id){
+				
 				ds_priority_delete_max(actQueue);
+				
 				canAct = false;
+				
 				actTurn = false;
 			}
 			

@@ -49,8 +49,7 @@ function apply_terrain(component, node){
 			break;
 			
 			case "HOLE":
-				component.incapacitated = true;		
-				infoStruct.incapacitated = false;
+				
 			
 				if(component.class == "rock"){
 					ds_queue_enqueue(global.deathQueue, component);	
@@ -59,6 +58,8 @@ function apply_terrain(component, node){
 					node.occupant = noone;
 					node.terrain = noone;
 				
+				}else{
+					component.incapacitated = true;		
 				}
 		
 			break;

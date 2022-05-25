@@ -39,7 +39,7 @@ function mb_press_act(){
 			wipe_nodes();
 			state = "nothing";
 			selectedActor.actState = "action standby";
-	
+			selectedActor.canAct = false;
 			//selectedActor.changeDir = true;
 			if(ds_stack_top(obj_undo.moveStack) == id){
 				ds_stack_pop(obj_undo.moveStack);			

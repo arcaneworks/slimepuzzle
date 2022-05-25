@@ -20,7 +20,7 @@ if(global.gameObj.debugMode){
 			var a = hoverNode.occupant;
 			var s = " ";
 		
-			ds_list_add(debugList,"object:" + s + a.class, "actState" + s + a.actState, "game action state" + s + global.gameObj.actionState,);
+			ds_list_add(debugList,"hover component:" + s + a.class, "actState" + s + a.actState);
 		
 			if(hoverNode.occupant == global.gameObj.currActor){
 			
@@ -31,8 +31,10 @@ if(global.gameObj.debugMode){
 			if(hoverNode.occupant.actor){
 				ds_list_add(debugList, "TARGET LIST SIZE : " + string(ds_list_size(hoverNode.occupant.targetList)));	
 				ds_list_add(debugList, "REACT LIST SIZE : " + string(ds_list_size(hoverNode.occupant.reactList)));	
+				ds_list_add(debugList, "ACTOR UNDOLIST SIZE : " + string(ds_priority_size(hoverNode.occupant.undoList)));
 				ds_list_add(debugList, "ACTOR CAN MOVE : " + string(hoverNode.occupant.canMove));
 				ds_list_add(debugList, "ACTOR CAN ACT : " + string(hoverNode.occupant.canAct));
+				
 			}
 		
 		if(hoverNode.occupant.incapacitated){

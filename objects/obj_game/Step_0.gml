@@ -1,8 +1,22 @@
-if(room_get_name(room) != "test_room" && instance_number(obj_enemy) == 0){ //if you've killed all the enemies
-	if(!instance_exists(obj_gameover)){
-		instance_create_layer(x, y, "Gameover", obj_gameover);	
-	}	
+if(room_get_name(room) != "test_room"){
+	//if you've killed all the enemies
+	for(var ii = 0; ii < instance_number(obj_enemy); ii++){
+		var tempEnemy = instance_find(obj_enemy, ii); 	
+		//if there is an enemy that is alive, break out of for loop
+		if(!tempEnemy.dead){
+			break;	
+		}else{
+			//if you reach the end of the enemy total 
+			if(ii == instance_number(obj_enemy) - 1){
+				levelComplete = true;
+			}	
+		}
+	}
 }
+
+if(levelComplete && !instance_exists(obj_gameover)){
+	instance_create_layer(x, y, "Gameover", obj_gameover);	
+}	
 
 
 

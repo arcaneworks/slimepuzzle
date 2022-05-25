@@ -17,7 +17,8 @@ function copy_component_struct(component, struct){
 		s.info.canMove = comp.canMove;
 		s.info.dead = comp.dead;
 		s.info.facingDir = comp.facingDir ;
-	
+		s.info.alpha = comp.alpha;
+		
 		s.stats.maxHp = comp.maxHp;
 		s.stats.maxHp = comp.hp;
 		s.stats.move = comp.move; 

@@ -17,7 +17,7 @@ function set_component_info_db(){
 			dead = false;
 			facingDir = dir.south;
 			incapacitated = false;
-			
+			alpha = 1;
 		}
 	
 		function component_stats_struct(_maxHp = 2, _move = 1, _SPD = 1, _Diagonal = false) constructor{
