@@ -42,6 +42,7 @@ function enemy_reaction_move(){
 			
 			ds_priority_add(global.actionQueue, id, SPD); 
 			actState = "action standby";
+			global.cursorState = "idle";
 		}
 	}
 }

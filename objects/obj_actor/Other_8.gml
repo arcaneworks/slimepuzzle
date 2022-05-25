@@ -24,6 +24,7 @@ with(obj_enemy){
 //}
 
 //wait until potential reactions occur, then action target if canAct
+if(!enemy)
 actState = "wait";
 
 	
