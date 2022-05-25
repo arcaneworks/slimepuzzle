@@ -143,6 +143,7 @@ function set_component_info_db(){
 			info.infoText = "The fighter strikes the actor that moves in front of it.";
 			info.componentCode = "CF";
 			stats.SPD = 2;
+			stats.maxHp = 1;
 			visuals.sprite = spr_fighter_s;
 			visuals.portraitSpr = spr_port_fighter;
 			feats.reacts = true;

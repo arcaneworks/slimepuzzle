@@ -89,8 +89,8 @@ event_inherited();
 				if(ds_list_size(targetList) > 0){
 					for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
 						var tempTarget = ds_list_find_value(targetList, j); 
-						
-						if(tempTarget.component){
+						if(instance_exists(tempTarget)){
+						if( tempTarget.component){
 							target = tempTarget;	
 						}else{
 							if(tempTarget.node){
@@ -98,6 +98,7 @@ event_inherited();
 									target = tempTarget.occupant	
 								}	
 							}
+						}
 						}
 						
 						apply_shove();	
@@ -121,6 +122,10 @@ event_inherited();
 					actState = "wait";	
 				}
 			}
+			else if(target == noone && finShove){
+				finShove = false;
+				actState = "wait";
+			}
 			
 
 		break;
@@ -138,8 +143,8 @@ event_inherited();
 				actTurn = false;
 			}
 			
-			//if there are no actor's queued
-			if(ds_priority_empty(actQueue)){
+			//if there are no actos queued
+			if(ds_priority_size(actQueue)==0){
 				//&&  THIS actor is the cursor's selected Actor
 				if(global.cursor.selectedActor == id){
 					//&& there is nobody that is still waiting to die
