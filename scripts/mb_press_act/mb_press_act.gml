@@ -41,7 +41,9 @@ function mb_press_act(){
 			}
 			
 			ds_priority_add(global.actionQueue, selectedActor,selectedActor.SPD);
-			
+			with(obj_enemy){
+					canAct = true;
+			}
 		
 		}
 	
