@@ -122,6 +122,10 @@ event_inherited();
 					actState = "wait";	
 				}
 			}
+			else if(target == noone && finShove){
+				finShove = false;
+				actState = "wait";
+			}
 			
 
 		break;
@@ -139,8 +143,8 @@ event_inherited();
 				actTurn = false;
 			}
 			
-			//if there are no actor's queued
-			if(ds_priority_size(actQueue)>0){
+			//if there are no actos queued
+			if(ds_priority_size(actQueue)==0){
 				//&&  THIS actor is the cursor's selected Actor
 				if(global.cursor.selectedActor == id){
 					//&& there is nobody that is still waiting to die
