@@ -25,10 +25,25 @@ function apply_terrain(component, node){
 					node.terrain = noone;	
 				}else{
 					if(component.actor){
-						ds_queue_enqueue(global.deathQueue, component);
-						component.deathWait = true;
+						if(component.damageClass == "bomb"){
+							find_bomb_targets(component);
+							component.shake = true;
+							component.damaged = true;
+							ds_priority_add(global.actionQueue, component,component.SPD);
+							component.actState = "action standby";
+							//component.damageClass = "default";
+							
+						}
+						else {
+						component.hp -= component.hp;
+						component.damaged = true;
+						component.shake = true;
+				
+								
+						}
+						
+					}
 					
-					}	
 				}
 				 
 			break;
