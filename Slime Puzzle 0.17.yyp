@@ -220,6 +220,7 @@
     {"id":{"name":"snd_moveselect","path":"sounds/snd_moveselect/snd_moveselect.yy",},"order":3,},
     {"id":{"name":"s_impact1","path":"sounds/s_impact1/s_impact1.yy",},"order":0,},
     {"id":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"order":7,},
+    {"id":{"name":"copy_component_struct","path":"scripts/copy_component_struct/copy_component_struct.yy",},"order":11,},
     {"id":{"name":"step_tab_select","path":"scripts/step_tab_select/step_tab_select.yy",},"order":5,},
     {"id":{"name":"s_impact2","path":"sounds/s_impact2/s_impact2.yy",},"order":1,},
     {"id":{"name":"s_impact3","path":"sounds/s_impact3/s_impact3.yy",},"order":2,},
