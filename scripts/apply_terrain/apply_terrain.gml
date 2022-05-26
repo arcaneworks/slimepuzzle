@@ -52,9 +52,12 @@ function apply_terrain(component, node){
 				
 			
 				if(component.class == "rock"){
+					var tempStruct = snap_deep_copy(terrain.terrainStruct);
+					copy_terrain_to_struct(terrain, tempStruct);
+					ds_priority_add(terrain.undoList, tempStruct, global.totalMoves);
 					ds_queue_enqueue(global.deathQueue, component);	
 					component.deathWait = true;
-					instance_destroy(terrain);
+					terrain.dead = true;
 					node.occupant = noone;
 					node.terrain = noone;
 				

@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-function copy_component_struct(component, struct){
+function copy_component_to_struct(component, struct){
 		var comp = component;
 		var s = struct;
 		s.info.class = comp.class;

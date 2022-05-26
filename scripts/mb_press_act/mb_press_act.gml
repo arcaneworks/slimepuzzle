@@ -6,7 +6,7 @@ function mb_press_act(){
 		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
 			
 			var tempStruct = snap_deep_copy(selectedActor.componentStruct);
-			copy_component_struct(selectedActor, tempStruct);
+			copy_component_to_struct(selectedActor, tempStruct);
 			global.totalMoves++;
 			ds_priority_add(selectedActor.undoList, tempStruct, global.totalMoves);
 			

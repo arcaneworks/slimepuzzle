@@ -27,13 +27,13 @@ function snapshot_target_struct(){
 				if(tempPriority != global.totalMoves){
 					//then add that struct to the ds list
 					var tempStruct = snap_deep_copy(target.componentStruct);
-					copy_component_struct(target, tempStruct);
+					copy_component_to_struct(target, tempStruct);
 					ds_priority_add(uList, tempStruct, global.totalMoves);
 				}		
 			}else{
 				//if there is no struct within the undo List already	
 				var tempStruct = snap_deep_copy(target.componentStruct);
-				copy_component_struct(target, tempStruct);
+				copy_component_to_struct(target, tempStruct);
 				ds_priority_add(uList, tempStruct, global.totalMoves);
 			}
 	}

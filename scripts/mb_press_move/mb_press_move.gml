@@ -8,7 +8,7 @@ function mb_press_move(){
 			
 			 var tempStruct = snap_deep_copy(selectedActor.componentStruct);
 			
-			copy_component_struct(selectedActor, tempStruct);
+			copy_component_to_struct(selectedActor, tempStruct);
 			global.totalMoves++;
 			ds_priority_add(selectedActor.undoList, tempStruct, global.totalMoves);
 			

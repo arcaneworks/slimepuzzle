@@ -1,5 +1,4 @@
-
 event_inherited();
 
-terrainString = "HOLE";
-
+terrainStruct = snap_deep_copy(global.terrainDB.hole);
+set_terrain_info(terrainStruct, id);

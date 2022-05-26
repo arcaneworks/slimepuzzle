@@ -36,6 +36,25 @@ if(clickable){
 				    }
 				}
 				
+				with(obj_terrain){
+
+				    //if they have a struct within their undo list
+				    if(!ds_priority_empty(undoList)){
+				        //find the head of the list (sorted by priority)
+				        var head = ds_priority_find_max(undoList);
+
+				        //and if the priority of the matches the global.totalMoves
+				        //(it was the last movement or action)
+				        if(ds_priority_find_priority(undoList, head) == global.totalMoves){
+				            //revert that component to its last saved struct
+				            set_terrain_info(head, id, true);
+				            ds_priority_delete_max(undoList);
+							
+							var kk = 0
+				        }
+				    }
+				}
+				
 				global.totalMoves--
 				global.undoneMoves++;
 				

@@ -5,7 +5,7 @@ function set_terrain_db(){
 		terrainString = _terrainString; 
 		infoText = _infoText;
 		sprite = _sprite;
-		effect = noone;
+		terrainCode = "NO TERRAIN CODE IN DATABASE";
 		cost = 1;
 		gridX = 0; 
 		gridY = 0;
@@ -35,6 +35,7 @@ function set_terrain_db(){
 		info.terrainString = "FLAME";
 		info.infoText = "a fire.";
 		info.sprite = spr_fire_loop4;
+		info.terrainCode = "TF"; 
 	}
 	
 	hole = new terrain_struct();
@@ -42,6 +43,7 @@ function set_terrain_db(){
 		info.terrainString = "HOLE";
 		info.infoText = "a hole. actors within it are disabled. it can be filled with a rock";
 		info.sprite = spr_hole;	
+		info.terrainCode = "TH";
 	}
 	
 	web = new terrain_struct();
@@ -49,6 +51,7 @@ function set_terrain_db(){
 		info.terrainString = "WEB";
 		info.infoText = "a web. actors within it cannot act. it can be destroyed by fire.";
 		info.sprite = spr_web;	
+		info.terrainCode = "TW";
 	}
 	
 	bonfire = new terrain_struct();
@@ -56,6 +59,8 @@ function set_terrain_db(){
 		info.terrainString = "BONFIRE";
 		info.infoText = "a lit bonfire. eleminates actors within.";
 		info.sprite = spr_bonfire_lit;	
+		info.terrainCode = "TB";
+		
 	}
 	
 	bonfireOff = new terrain_struct();
@@ -63,6 +68,17 @@ function set_terrain_db(){
 		info.terrainString = "BONFIRE OFF";
 		info.infoText = "an unlit bonfire. It can be lit with fire.";
 		info.sprite = spr_bonfire_off;	
+		info.terrainCode = "TO";
+	}
+		
+	global.terrainDB = {
+		flame : other.flame,
+		hole : other.hole, 
+		web : other.web,
+		bonfire : other.bonfire,
+		bonfireOff : other.bonfireOff
+			
+			
 	}
 	
 }

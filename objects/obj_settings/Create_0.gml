@@ -16,7 +16,7 @@ componentCodes = ds_map_create(); // decoding key for CG data files
 
 global.stages = load_stage_set("stages");
 set_action_db();
-
+set_terrain_db();
 set_component_info_db();
 
 if(!directory_exists("CGs")){

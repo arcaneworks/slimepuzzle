@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Slime Puzzle 0.17",
-    "path": "Slime Puzzle 0.17.yyp",
+    "name": "Level Editor Scripts",
+    "path": "folders/01 - LEVEL EDITOR/Level Editor Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "copy_component_struct",
+  "name": "set_terrain_info",
   "tags": [],
   "resourceType": "GMScript",
 }

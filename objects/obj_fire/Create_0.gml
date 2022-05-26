@@ -1,5 +1,5 @@
-
 event_inherited();
 
-terrainString = "FIRE";
+terrainStruct = snap_deep_copy(global.terrainDB.flame);
+set_terrain_info(terrainStruct, id);
 

@@ -8,7 +8,7 @@ function enemy_reaction_move(){
 		if(listIndex > -1){ 
 			//if this action targets all reactNodes
 			var tempStruct = snap_deep_copy(id.componentStruct);
-			copy_component_struct(id, tempStruct);
+			copy_component_to_struct(id, tempStruct);
 			ds_priority_add(undoList, tempStruct, global.totalMoves);
 			
 			if(action.targeting.targetAll){
