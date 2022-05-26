@@ -10,10 +10,10 @@ if(global.totalMoves > 0){
 
 
 if(clickable){
-	if(instance_position(mouse_x, mouse_y, id)){
+	if(instance_position(mouse_x, mouse_y, id) || undo_pressed()){
 			image_index = 1;
 		
-			if(select_pressed()){
+			if(select_pressed() || undo_pressed()){
 				
 				audio_play_sound(s_cancel, 1, false);
 				

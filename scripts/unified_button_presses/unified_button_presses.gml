@@ -6,3 +6,6 @@ function select_pressed(){
 function cancel_pressed(){
 	return mouse_check_button_pressed(mb_right) || gamepad_button_check(0,gp_face2)
 }
+function undo_pressed(){
+	return (keyboard_check(vk_control) && keyboard_check_pressed(ord("Z")))|| gamepad_button_check(0,gp_select);
+}
