@@ -3,7 +3,7 @@
 function step_delete(){
 	if(hoverNode != noone){
 		if(hoverNode.occupant != noone){
-			if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+			if(select_pressed()){
 				
 				instance_destroy(hoverNode.occupant);
 				hoverNode.occupant = noone;
@@ -13,7 +13,7 @@ function step_delete(){
 			
 		}else{
 			if(hoverNode.terrain != noone){
-				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+				if(select_pressed()){
 					hoverNode.terrainCode = noone; 
 					
 					instance_destroy(hoverNode.terrain);

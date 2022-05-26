@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function cancel_key_check_idle(){
 	
-	if(keyboard_check_pressed(deselectKey) || mouse_check_button_pressed(mb_right)){
+	if(cancel_pressed()){
 		audio_play_sound(s_cancel, 0, false);
 		wipe_nodes();
 		ds_list_clear_inner_lists(dirNodes);

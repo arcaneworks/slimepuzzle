@@ -24,7 +24,7 @@ var cancelBox = collision_rectangle(x + width/2 , y + height , x + width, y + he
 
 	if(saveBox){
 		saveColor = c_green;
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed()){
 			if(file_exists("CGs\\" + message + ".csv")){
 				create_confirm_box(x  + 100, y, "A file with this name already exists. Would you like to overwrite it?", true);
 			}else{
@@ -40,7 +40,7 @@ var cancelBox = collision_rectangle(x + width/2 , y + height , x + width, y + he
 
 	if(cancelBox){
 		cancelColor = c_maroon;	
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed()){
 			instance_destroy(id);	
 			obj_interface_editor.state = "move";
 			obj_interface_editor.selectedTool = noone;

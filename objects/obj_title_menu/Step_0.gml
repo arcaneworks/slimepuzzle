@@ -15,7 +15,7 @@ if(stick_cooldown <= 0 && leftstick > 0.5){
 down_key = 1;
 stick_cooldown = 0.2;
 }
-accept_key = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space) + keyboard_check_pressed(vk_enter) + gamepad_button_check_pressed(0, gp_face1);
+accept_key = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space) + keyboard_check_pressed(vk_enter) + select_pressed();
 //move through the menu
 pos += down_key - up_key;
 

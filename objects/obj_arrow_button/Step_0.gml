@@ -10,7 +10,7 @@ if(obj_sub_toolbar_write.visible){
 if(active){
 	if(mouse_over(id)){
 		image_index = 1; 
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed()){
 			obj_sub_toolbar_write.currPage += pageDir;
 			
 		}

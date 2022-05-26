@@ -5,7 +5,7 @@ function step_object_select(){
 		if(instance_position(x, y, obj_bare_object_tool).hoverable){
 		 hoverObjTool = instance_position(x, y, obj_bare_object_tool);				
 			if(hoverObjTool != noone && hoverObjTool.hoverable){
-				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+				if(select_pressed()){
 					selectedObjTool =  hoverObjTool;
 					obj_sub_toolbar_write.selectedObjTool = hoverObjTool;			
 				}			

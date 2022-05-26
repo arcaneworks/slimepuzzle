@@ -7,7 +7,7 @@ function step_move_components_assign(){
 	if(hoverNode != noone){ // if a hover node exists 
 		if(hoverNode.occupant != noone){ //and it has an occupant
 			if(selectedObj == noone){  //if there isn't a selected Comp
-				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+				if(select_pressed()){
 					selectedObj = hoverNode.occupant; // make that component the selectedComp		
 					prevNode = hoverNode;
 					prevNode.occupant = noone;
@@ -18,7 +18,7 @@ function step_move_components_assign(){
 		}else{// IF THE NODE DOES NOT HAVE AN OCCUPANT
 			if(hoverNode.terrain != noone){
 				if(selectedObj == noone){
-					if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+					if(select_pressed()){
 						if(hoverNode.terrain != noone){
 							selectedObj = hoverNode.terrain;
 							prevNode = hoverNode; 
