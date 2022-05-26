@@ -21,11 +21,7 @@ event_inherited(); //inherits most stuff from obj_component
 	moveState = "idle";
 	defending = false;
 	SPD = 1;
-	miss = false; 
-	defendKey = "Z";
-	defendTimer = 0;
-	defendTime = 30; 
-	defendBuffer = 0;
+	//miss = false; 
 	
 	depth = -3;
 	name = "NAME"
@@ -44,7 +40,6 @@ event_inherited(); //inherits most stuff from obj_component
 
 	maxHp = 4; 
 	hp = maxHp;
-	defaultTimer = 20;
 	timer = 20;
 
 	actorDest = y;
@@ -59,22 +54,22 @@ event_inherited(); //inherits most stuff from obj_component
 	
 	waitForDeath = false;
 	actionNodes = ds_list_create();
-	queueWait = false;
+	//queueWait = false;
 #endregion 
 
 #region HealthBar draw variables
 
-valSpr = spr_valuebar_section;
-fillSpr = spr_valuebar_fill_red;
+//valSpr = spr_valuebar_section;
+//fillSpr = spr_valuebar_fill_red;
 
-var valString = sprite_get_name(valSpr)
+//var valString = sprite_get_name(valSpr)
 
-hpSec1 = asset_get_index(valString) + "1";
-hpSec2 = asset_get_index(valString) + "2";
-hpSec3 = asset_get_index(valString) + "3";
+//hpSec1 = asset_get_index(valString) + "1";
+//hpSec2 = asset_get_index(valString) + "2";
+//hpSec3 = asset_get_index(valString) + "3";
 
-hpBarX = x - .5 * sprite_width;
-hpBarY = y - .5 * sprite_height;
+//hpBarX = x - .5 * sprite_width;
+//hpBarY = y - .5 * sprite_height;
 
 vfx = noone;
 

@@ -65,15 +65,15 @@
 								target = other.targetNode; //assigns cursor target variable to projectile
 								sprite_index = other.action.vfx.vfxSprite;					
 								depth = other.depth - 1; 
-								if(other.miss){
-									var endX = target.x + node_size;
-									var endY = target.y + node_radius;
-								}else{
+								//if(other.miss){
+								//	var endX = target.x + node_size;
+								//	var endY = target.y + node_radius;
+								//}else{
 									
 									var endX = target.x + node_radius;
 									var endY = target.y + node_radius;
 								
-								}
+								//}
 								
 								path_add_point(movementPath, other.startX, other.startY, 50);
 								path_add_point(movementPath, endX, endY, 50);
