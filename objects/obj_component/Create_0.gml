@@ -10,7 +10,6 @@ faces = false;
 facingDir = dir.south; //current facing direction. 
 dirStr = 1; //how many places component is getting rotated;
 bomb = false;
-react = false;
 rotate = false; 
 initialize = false; 
 damagable = false;
@@ -82,14 +81,6 @@ movable = true;
 push = false;
 shoved = false;
 damaged = false;
-
-inc = 0; 
-inc2 = 0; 
-inc3 = 0; 
-inc4 = 0; 
-inc5 = 0; 
-
-
 applyDamage = false;
 damage = 1;
 damageType = "nothing";
@@ -108,9 +99,6 @@ displayHp = false;
 
 valSpr = spr_valuebar_section;
 fillSpr = spr_valuebar_fill_red;
-
-var valString = sprite_get_name(valSpr);
-
 hpSec1 = spr_valuebar_section1;
 hpSec2 = spr_valuebar_section2;
 hpSec3 = spr_valuebar_section3;

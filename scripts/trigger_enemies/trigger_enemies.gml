@@ -20,7 +20,6 @@ function trigger_enemies() {
 				
 			
 				actState = "action standby";
-				reaction = true;
 			}
 	
 		}
@@ -33,7 +32,6 @@ function trigger_enemies() {
 				ds_priority_add(global.actionQueue, id, SPD);
 				ds_list_add(targetList, other.id);
 				actState = "action standby";
-				reaction = true;
 	
 			}
 		}
