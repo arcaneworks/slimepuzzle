@@ -325,7 +325,6 @@
     {"id":{"name":"spr_shooter_n","path":"sprites/spr_shooter_n/spr_shooter_n.yy",},"order":21,},
     {"id":{"name":"spr_error2","path":"sprites/spr_error2/spr_error2.yy",},"order":6,},
     {"id":{"name":"mb_press_move","path":"scripts/mb_press_move/mb_press_move.yy",},"order":2,},
-    {"id":{"name":"action_nodes_dir","path":"scripts/action_nodes_dir/action_nodes_dir.yy",},"order":4,},
     {"id":{"name":"f_battle_text_huge","path":"fonts/f_battle_text_huge/f_battle_text_huge.yy",},"order":8,},
     {"id":{"name":"spr_elements_tab","path":"sprites/spr_elements_tab/spr_elements_tab.yy",},"order":1,},
     {"id":{"name":"obj_tab","path":"objects/obj_tab/obj_tab.yy",},"order":3,},

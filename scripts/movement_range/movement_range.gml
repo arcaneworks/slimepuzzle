@@ -11,7 +11,7 @@ function movement_nodes(originNode, moveRange) {
 	wipe_nodes_range_info();
 
 
-	var processing, destNodes, throughNodes;
+	var processing, destNodes;
 	var start, current, neighbor;
 	var tempG, range, costMod;
 
