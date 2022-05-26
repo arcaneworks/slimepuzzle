@@ -5,13 +5,64 @@ function set_terrain_db(){
 		terrainString = _terrainString; 
 		infoText = _infoText;
 		sprite = _sprite;
+		effect = noone;
+		cost = 1;
+		gridX = 0; 
+		gridY = 0;
+		xPos = 0;
+		yPos = 0; 
+		dead = false;
 	}
 	
+	function terrain_effect_struct() constructor {
+		slippery = false;
+		flamable = false; 
+		spreadsFire = false; 
+		
+	}
 	
-	flame = new terrain_info_struct("FLAME", "a fire.", spr_fire_loop4);
-	hole = new terrain_info_struct("HOLE", "a hole. actors within it cannot act. it can be filled with a rock.", spr_hole); 
-	web = new terrain_info_struct("WEB", "a web. actors within it cannot act. it can be destroyed by fire.", spr_web);
-	bonfire = new terrain_info_struct("BONFIRE", "a lit bonfire. eleminates actors within.", spr_bonfire_lit);
-	bonfireOff = new terrain_info_struct("BONFIRE OFF", "an unlit bonfire. It can be lit with fire.", spr_bonfire_off);
+	function terrain_struct(
+		_info = new terrain_info_struct(),
+		_effect = new terrain_effect_struct()
+	
+	) constructor {
+		info = _info;
+		effect = _effect;
+	}
+	
+	flame = new terrain_struct();
+	with(flame){
+		info.terrainString = "FLAME";
+		info.infoText = "a fire.";
+		info.sprite = spr_fire_loop4;
+	}
+	
+	hole = new terrain_struct();
+	with(hole){
+		info.terrainString = "HOLE";
+		info.infoText = "a hole. actors within it are disabled. it can be filled with a rock";
+		info.sprite = spr_hole;	
+	}
+	
+	web = new terrain_struct();
+	with(web){
+		info.terrainString = "WEB";
+		info.infoText = "a web. actors within it cannot act. it can be destroyed by fire.";
+		info.sprite = spr_web;	
+	}
+	
+	bonfire = new terrain_struct();
+	with(bonfire){
+		info.terrainString = "BONFIRE";
+		info.infoText = "a lit bonfire. eleminates actors within.";
+		info.sprite = spr_bonfire_lit;	
+	}
+	
+	bonfireOff = new terrain_struct();
+	with(bonfireOff){
+		info.terrainString = "BONFIRE OFF";
+		info.infoText = "an unlit bonfire. It can be lit with fire.";
+		info.sprite = spr_bonfire_off;	
+	}
 	
 }

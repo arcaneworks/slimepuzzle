@@ -1,5 +1,5 @@
 event_inherited();
 
-componentStruct = global.componentDB.bomb;
+componentStruct = snap_deep_copy(global.componentDB.bomb);
 set_component_info(componentStruct, id);
 

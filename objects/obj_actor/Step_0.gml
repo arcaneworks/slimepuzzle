@@ -92,15 +92,15 @@ event_inherited();
 					for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
 						var tempTarget = ds_list_find_value(targetList, j); 
 						if(instance_exists(tempTarget)){
-						if( tempTarget.component){
-							target = tempTarget;	
-						}else{
-							if(tempTarget.node){
-								if(tempTarget.occupant != noone){
-									target = tempTarget.occupant	
-								}	
+							if( tempTarget.component){
+								target = tempTarget;	
+							}else{
+								if(tempTarget.node){
+									if(tempTarget.occupant != noone){
+										target = tempTarget.occupant	
+									}	
+								}
 							}
-						}
 						}
 						
 						apply_shove();	

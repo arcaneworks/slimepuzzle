@@ -1,4 +1,4 @@
 event_inherited();
-componentStruct = global.componentDB.cleric;
+componentStruct = snap_deep_copy(global.componentDB.cleric);
 set_component_info(componentStruct, id);
 

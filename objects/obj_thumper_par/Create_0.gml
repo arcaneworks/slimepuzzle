@@ -1,3 +1,3 @@
 event_inherited();
-componentStruct = global.componentDB.thumper;
+componentStruct = snap_deep_copy(global.componentDB.thumper);
 set_component_info(componentStruct, id);

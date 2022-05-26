@@ -1,3 +1,3 @@
 event_inherited(); 
-componentStruct = global.componentDB.slime;
+componentStruct = snap_deep_copy(global.componentDB.slime);
 set_component_info(componentStruct, id);

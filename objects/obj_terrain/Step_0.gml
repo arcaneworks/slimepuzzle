@@ -1,3 +1,10 @@
+
+if(dead){
+	x = -100000;
+	y = -100000;
+	
+}
+
 switch(terrainString){
 	case "FIRE":
 		depth = obj_actor.depth - 1;
