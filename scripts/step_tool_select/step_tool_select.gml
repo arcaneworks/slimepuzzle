@@ -3,7 +3,7 @@
 function step_tool_select(){
 
 	if(hoverTool != noone){
-		if( mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if( select_pressed()){
 			
 			if(selectedTool == hoverTool){
 				selectedTool = noone; 

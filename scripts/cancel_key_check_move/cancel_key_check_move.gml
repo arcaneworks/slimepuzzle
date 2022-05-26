@@ -5,7 +5,7 @@ function cancel_key_check_move() {
 	///cursor idles and instance variables are cleared.
 	
 	if(selectedActor.canMove){
-		if(keyboard_check_pressed(deselectKey) || mouse_check_button_pressed(mb_right)){
+		if(cancel_pressed()){
 			audio_play_sound(s_cancel, 0, false);
 			wipe_nodes();
 			ds_list_clear_inner_lists(dirNodes);

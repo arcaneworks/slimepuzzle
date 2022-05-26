@@ -59,7 +59,7 @@ if (state != VisualState.active) exit;
 if(script != noone && position_meeting(mouse_gui_x,mouse_gui_y,id))
 {	//Moused Over with an existing script
 	image_index=1;
-	if(mouse_check_button_pressed(mb_left))
+	if(select_pressed())
 	{	//Left button is being pressed
 		script_execute(script,aspect_argument);		
 	}

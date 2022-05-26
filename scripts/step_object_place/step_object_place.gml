@@ -5,7 +5,7 @@ function step_object_place(){
 		
 		if(selectedObjTool.component || selectedObjTool.element){
 			if(hoverNode.occupant == noone){
-				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+				if(select_pressed()){
 					
 					var newInstance = instance_create_layer(hoverNode.x, hoverNode.y, "Instances", obj_bare_component);
 					
@@ -27,7 +27,7 @@ function step_object_place(){
 		
 		if(selectedObjTool.terrain){
 			if(hoverNode.terrain == noone){
-				if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+				if(select_pressed()){
 					
 					var newInstance = instance_create_layer(hoverNode.x, hoverNode.y, "Instances", obj_bare_terrain);
 						newInstance.terrainCode = selectedObjTool.terrainCode;

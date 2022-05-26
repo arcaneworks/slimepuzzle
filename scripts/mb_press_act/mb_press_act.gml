@@ -1,9 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function mb_press_act(){
-	if(hoverNode != noone && hoverNode.actionNode){			
-		
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+	// check if the mouse is currently over a node, and that it can be acted on.
+	if(hoverNode != noone && hoverNode.actionNode){	
+		// check for button press
+		if(select_pressed()){
 			
 			var tempStruct = snap_deep_copy(selectedActor.componentStruct);
 			copy_component_to_struct(selectedActor, tempStruct);

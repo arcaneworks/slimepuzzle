@@ -3,7 +3,7 @@
 function step_move_relocate(){
 	if(hoverNode != noone){
 		if(selectedObj != noone){
-			if( mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+			if( select_pressed()){
 				if(selectedObj.component){
 					if(hoverNode.occupant == noone){
 						hoverNode.occupant = selectedObj;					

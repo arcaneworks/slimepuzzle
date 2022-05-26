@@ -18,7 +18,7 @@ if(decision){
 	
 	if(colBox1){
 		decBox1Color = c_green;
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed()){
 			if(caller != noone){
 				caller.confirmDec = true;	
 			}
@@ -30,7 +30,7 @@ if(decision){
 	
 	if(colBox2){
 		decBox2Color = c_green; 
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed()){
 				
 			caller.confirmDec = false; 
 			instance_destroy(id);
@@ -48,7 +48,7 @@ if(decision){
 	
 	if(colBox){
 		decBoxColor = c_green; 
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){	
+		if(select_pressed()){	
 			instance_destroy(id);	
 		}	
 	}else{

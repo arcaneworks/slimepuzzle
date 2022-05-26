@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function select_other(){
 	if(hoverNode != noone && hoverNode.occupant != noone && hoverNode.occupant.agent && hoverNode.occupant != selectedActor && !hoverNode.actionNode){
-		if(mouse_check_button_released(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed()){
 			audio_play_sound(s_select, 1, false);
 			wipe_nodes();
 			ds_list_clear_inner_lists(dirNodes);

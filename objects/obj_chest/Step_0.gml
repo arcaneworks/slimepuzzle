@@ -2,7 +2,7 @@ event_inherited();
 
 if(position_meeting(mouse_x,mouse_y, self) && global.cursor.clickAble == true){
 	hoverChest = true
-	if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1) && opened == false && canOpen){
+	if(select_pressed() && opened == false && canOpen){
 		opened = true;
 		chestState = "open";
 	}

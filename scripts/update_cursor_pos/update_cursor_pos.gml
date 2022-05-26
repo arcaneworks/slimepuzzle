@@ -11,7 +11,7 @@ function update_cursor_pos() {
 	y = mouse_y + y_offset;
 
 
-	if(mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0, gp_face1)){
+	if(select_pressed()){
 		if(sprite_index == spr_cursor){
 			cursorImg = 1;
 			timer = 8;
