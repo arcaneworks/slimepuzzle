@@ -7,7 +7,7 @@ function apply_terrain_editor(component, node){
 		switch(terrain.terrainString){
 		
 			case "GROUND":
-				component.incapacitated = false; 
+				component.disabled = false; 
 			break;
 			
 			case "FIRE":
@@ -48,7 +48,7 @@ function apply_terrain_editor(component, node){
 			break;
 		
 			case "HOLE":
-				component.incapacitated = true;
+				component.disabled = true;
 			
 				
 			
@@ -65,7 +65,7 @@ function apply_terrain_editor(component, node){
 			
 			
 			case "WEB":
-				component.incapacitated = true;
+				component.disabled = true;
 			
 			break;
 		
@@ -73,7 +73,7 @@ function apply_terrain_editor(component, node){
 		
 		
 	}else{
-		component.incapacitated = false;	
+		component.disabled = false;	
 		
 	}
 	

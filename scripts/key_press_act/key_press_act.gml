@@ -88,7 +88,6 @@ function key_press_act(){
 		if(tempDir >= 0){
 			prevDir = actor.facingDir;
 			actor.facingDir = tempDir; 
-			actor.changeDir = true;	
 		}
 		
 	

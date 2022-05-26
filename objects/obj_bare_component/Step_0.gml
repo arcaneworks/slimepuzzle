@@ -1,6 +1,6 @@
 event_inherited();
 
-if(incapacitated){
+if(disabled){
 	color = c_black;
 	alpha = .5;
 }else{

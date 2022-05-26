@@ -10,21 +10,21 @@ if(shoved){
 }
 
 with(obj_enemy){
-	if(hp > 0 && !other.incapacitated ){
+	if(hp > 0 && !other.disabled ){
 		enemy_reaction_move(); 
 	}
 }
 //for(var gg = 0; gg < instance_number(obj_enemy); gg++){
 //	var tempEnemy = instance_find(obj_enemy, gg); 
 	
-//	if(tempEnemy.hp > 0 && !incapacitated){
+//	if(tempEnemy.hp > 0 && !disabled){
 //		enemy_reaction(tempEnemy);
 //	}
 
 //}
 
 //wait until potential reactions occur, then action target if canAct
-if(!enemy)
+
 actState = "wait";
 
 	

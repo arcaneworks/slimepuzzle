@@ -20,7 +20,7 @@ function step_interface_select() {
 					//... on an component who can act/move in the current suphase... 
 					audio_play_sound(s_select, 1, false);
 					selectedActor = hoverNode.occupant; // make that dude the selected component
-					selectedActor.selected = true;
+					//selectedActor.selected = true;
 				
 					if(!selectedActor.canMove && selectedActor.canAct){
 						state = "action target";
@@ -37,7 +37,7 @@ function step_interface_select() {
 				}
 			}
 		}else{
-			if(hoverNode.occupant != noone && hoverNode.occupant.enemy){
+			if(hoverNode.occupant != noone && hoverNode.occupant.object_index == obj_enemy){
 				wipe_nodes();
 				var enemy = hoverNode.occupant;
 				

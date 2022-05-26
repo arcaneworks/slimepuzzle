@@ -5,7 +5,7 @@ gridX = noone;
 gridY = noone;
 xOffset = 0;
 facingDir = 2;
-incapacitated = false;
+disabled = false;
 
 class = noone;
 damageClass = "none"; 

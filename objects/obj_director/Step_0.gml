@@ -18,7 +18,7 @@ if(targetedBy != noone &&  redirect){
 						
 						var tempTarget = map[gridX, yy]; 
 							
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -58,7 +58,7 @@ if(targetedBy != noone &&  redirect){
 					if(xx >= 0){
 						var tempTarget = map[xx, gridY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -102,7 +102,7 @@ if(targetedBy != noone &&  redirect){
 						
 						var tempTarget = map[gridX, yy]; 
 							
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -141,7 +141,7 @@ if(targetedBy != noone &&  redirect){
 					if(xx <= rBound){
 						var tempTarget = map[xx, gridY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -185,7 +185,7 @@ if(targetedBy != noone &&  redirect){
 						
 						var tempTarget = map[gridX, yy]; 
 							
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -223,7 +223,7 @@ if(targetedBy != noone &&  redirect){
 					if(xx >= 0){
 						var tempTarget = map[xx, gridY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -265,7 +265,7 @@ if(targetedBy != noone &&  redirect){
 						
 						var tempTarget = map[gridX, yy]; 
 							
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}
@@ -277,7 +277,7 @@ if(targetedBy != noone &&  redirect){
 						if(xx <= rBound){
 							var tempTarget = map[xx, gridY]; 
 						
-							if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+							if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 								ds_list_add(targetList, tempTarget);
 								break;// get out of for loop
 							}
@@ -302,7 +302,7 @@ if(targetedBy != noone &&  redirect){
 					if(xx <= rBound){
 						var tempTarget = map[xx, gridY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.incapacitated){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
 							ds_list_add(targetList, tempTarget);
 							break;// get out of for loop
 						}

@@ -14,9 +14,9 @@ function trigger_enemies_caravan() {
 					
 							if(target.occupant != noone){
 								target = target.occupant; 	
-								if(target.vehicle){
-									target.vfxNode = ds_list_find_value(reactList,ii);
-								}
+								//if(target.vehicle){
+								//	target.vfxNode = ds_list_find_value(reactList,ii);
+								//}
 							}
 					
 							ds_list_add(targetList, target); 				

@@ -16,8 +16,8 @@ event_inherited();
 		
 		case "create effect":
 
-			//if incapacitated, clear targets 		
-			if(incapacitated){
+			//if disabled, clear targets 		
+			if(disabled){
 				ds_list_clear(targetList);		
 			}
 				//if there are any targets in the targetlist

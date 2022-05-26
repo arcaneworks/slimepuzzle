@@ -133,7 +133,6 @@ function key_press_move(){
 		
 		if(tempDir >= 0){
 			actor.facingDir = tempDir; 
-			actor.changeDir = true;	
 		}
 	
 	}

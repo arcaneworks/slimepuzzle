@@ -16,7 +16,7 @@ function set_component_info_db(){
 			canAct = true;
 			dead = false;
 			facingDir = dir.south;
-			incapacitated = false;
+			disabled = false;
 			alpha = 1;
 		}
 	

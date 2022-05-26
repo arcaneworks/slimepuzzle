@@ -6,26 +6,19 @@ infoText = " this is a component. a component is an object that occupies a node.
 class = "no class";
 agent = false;
 component = true;
-obstacle = false; 
-changeDir = true;
-defending = false;
 faces = false; 
 facingDir = dir.south; //current facing direction. 
 dirStr = 1; //how many places component is getting rotated;
 bomb = false;
-reaction = false;
 react = false;
-rotatable = true;
 rotate = false; 
 initialize = false; 
 damagable = false;
-isTerrain = false;
-incapacitated = false;
+disabled = false;
 moveState = "idle";
 actState = "idle";
-gameState = "player turn";
 triggersReaction = true;
- 
+
 targetedBy = noone;
  undoList = ds_priority_create(); //list of structs to undo
  xOffset = 0;
@@ -36,14 +29,11 @@ gridX = 0;
 gridY = 0;
 				  
 actTurn = false; 
-myTurn = false;
 canMove = false;
 canAct = false;
 // whether the actor can move/act in the current declaration suphase.
 // used for movement and movement dec period and action in action dec period. 
 
-actionSpent = false; 
-// whether the actor has already acted/moved during the current period
 
 currNode = noone; 
 // the node this actor is currently occupying
@@ -63,16 +53,15 @@ movementPath = path_add();
 path_set_kind(movementPath, 2);
 path_set_closed(movementPath, false);
 
-endPath = "idle";
 actor = false;
-enemy = false;
-vehicle = false; 
+//enemy = false;
+//vehicle = false; 
 node = false;
 move = 0;
 diagonal = false;
 moveSpeed = 4;
 
-selected = false;
+//selected = false;
 hovered = false; 
 
 type = "default";
@@ -106,7 +95,6 @@ damage = 1;
 damageType = "nothing";
 damageClass = "default";
 applyStatus = false; 
-canStatus = false; 
 
 maxHp = 0; 
 hp = 0; 

@@ -3,11 +3,11 @@
 			var aStruct = action; //action struct of actor
 			
 			
-			if(target.vehicle){			
-				targetNode = target.vfxNode;
-			}else{
+			//if(target.vehicle){			
+			//	targetNode = target.vfxNode;
+			//}else{
 				targetNode = map[target.gridX, target.gridY]; //animation goes to node, not node occupant (helps with components taking up multiple nodes)		
-			}
+			//}
 			
 			//if(target.node){
 			//	if(target.occupant != noone && target.occupant.hitable){

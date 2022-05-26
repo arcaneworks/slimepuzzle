@@ -63,7 +63,10 @@ function movement_nodes(originNode, moveRange) {
 				
 					//give neighbor the appropriate parent
 					neighbor.parent = current;
-				
+					if(neighbor.terrain){
+						//TODO activate this once info is implemented
+						//costMod = neighbor.terrain.info.cost;
+					}
 					//if node is diagonal, create appropriate costMod
 					if(neighbor.gridX != current.gridX && neighbor.gridY != current.gridY){
 						if(diagonal)

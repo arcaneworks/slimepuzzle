@@ -140,7 +140,7 @@ function key_press_move_old(){
 		
 		if(tempDir >= 0){
 			actor.facingDir = tempDir; 
-			actor.changeDir = true;	
+			//actor.changeDir = true;	
 		}
 	
 	}

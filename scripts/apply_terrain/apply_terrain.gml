@@ -7,8 +7,8 @@ function apply_terrain(component, node){
 		switch(terrain.terrainString){
 		
 			case "GROUND":
-				component.incapacitated = false; 
-				infoStruct.incapacitated = false;
+				component.disabled = false; 
+				infoStruct.disabled = false;
 			break;
 			
 			case "FIRE":
@@ -59,14 +59,14 @@ function apply_terrain(component, node){
 					node.terrain = noone;
 				
 				}else{
-					component.incapacitated = true;		
+					component.disabled = true;		
 				}
 		
 			break;
 			
 			
 			case "WEB":
-				component.incapacitated = true;
+				component.disabled = true;
 			
 			break;
 		
@@ -74,7 +74,7 @@ function apply_terrain(component, node){
 		
 		
 	}else{
-		component.incapacitated = false;	
+		component.disabled = false;	
 		
 	}
 	

@@ -36,9 +36,9 @@ if(executeNode){
 }
 
 if(instance_exists(occupant)){
-	if(occupant != noone && selected == true){
-		occupant.selected = true;	
-	}
+	//if(occupant != noone && selected == true){
+	//	occupant.selected = true;	
+	//}
 
 	
 }

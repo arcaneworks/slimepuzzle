@@ -11,6 +11,7 @@ if(instance_exists(obj_confirm)){
 if(confirmDec){
 	global.playerProfile = message;
 	global.currentLevel = 1;
+	global.currentStage = 0;
 	room_goto_next();
 }
 
@@ -19,5 +20,6 @@ if(file_exists("saves\\" + message + ".sav")){
 		}else{
 			global.playerProfile = message;
 			global.currentLevel = 1;
+			global.currentStage = 0;
 			TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
 		}

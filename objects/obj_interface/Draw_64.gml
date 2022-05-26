@@ -37,10 +37,10 @@ if(global.gameObj.debugMode){
 				
 			}
 		
-		if(hoverNode.occupant.incapacitated){
-				ds_list_add(debugList, "incapacitated");	
+		if(hoverNode.occupant.disabled){
+				ds_list_add(debugList, "disabled");	
 			}else{
-				ds_list_add(debugList, "not incapacitated");
+				ds_list_add(debugList, "not disabled");
 			}
 		
 		

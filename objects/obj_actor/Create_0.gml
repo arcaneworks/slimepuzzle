@@ -1,7 +1,7 @@
 event_inherited(); //inherits most stuff from obj_component
 
 #region Actor specific instance Variables
-	enemy = false;
+	//enemy = false;
 	actor = true; 
 	bomb = false;
 	advancing = false;
@@ -39,7 +39,7 @@ event_inherited(); //inherits most stuff from obj_component
 	invisible = false;
 	
 	finShove = false;
-	selected = false;
+	//selected = false;
 	hovered = false;
 
 	maxHp = 4; 

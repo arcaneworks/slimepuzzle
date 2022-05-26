@@ -123,11 +123,11 @@ if(applyStatus){ //APPLY STATUS
 
 #region sets "selected" and "hovered" variables based on global.cursor.selectedActor and hoverNode.occupant
 
-		if(global.cursor.selectedActor != noone && global.cursor.selectedActor == id){
-			selected = true;
-		}else{
-			selected = false;
-		}
+		//if(global.cursor.selectedActor != noone && global.cursor.selectedActor == id){
+		//	selected = true;
+		//}else{
+		//	selected = false;
+		//}
 
 		if(global.cursor.hoverNode != noone && global.cursor.hoverNode.occupant == id){
 			hovered = true;

@@ -7,7 +7,7 @@ function clear_node(nodeID){
 		depth = 1
 		dark = false; 
 		
-		if (occupant != noone && occupant != obj_vehicle) {
+		if (occupant != noone ) {
 			instance_destroy(occupant); // destroy occupant, if there is one
 		}
 
