@@ -43,13 +43,14 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 			if(char1 == "T"){
 				var objectID = ds_map_find_value(terrainCodes, char2); // decode character
 				var terrain = instance_create_layer(nodeID.x, nodeID.y, "Instances", obj_bare_terrain);
-				
 				terrain.terrainCode = char1 + char2;
-				terrain.sprite_index = object_get_sprite(objectID);
+				get_terrain_info(terrain, terrain.terrainCode);
 				terrain.gridX = nodeID.gridX; 
 				terrain.gridY = nodeID.gridY;
 				nodeID.terrain = terrain; 
 				nodeID.terrainCode = char1 + char2;
+			
+				
 			}
 
 		}
@@ -69,13 +70,14 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 			var terrChar2 = string_char_at(nodeInfo, terrChar2Pos);
 			
 			if(terrChar1 == "T"){
-				var objectID = ds_map_find_value(terrainCodes,terrChar2); // decode character
+				var objectID = ds_map_find_value(terrainCodes, char2); // decode character
 				var terrain = instance_create_layer(nodeID.x, nodeID.y, "Instances", obj_bare_terrain);
-				terrain.sprite_index = object_get_sprite(objectID);
+				terrain.terrainCode = char1 + char2;
+				get_terrain_info(terrain, terrain.terrainCode);
 				terrain.gridX = nodeID.gridX; 
 				terrain.gridY = nodeID.gridY;
 				nodeID.terrain = terrain; 
-				nodeID.terrainCode = terrChar1 + terrChar2;
+				nodeID.terrainCode = char1 + char2;
 			}	
 		}
 	} 

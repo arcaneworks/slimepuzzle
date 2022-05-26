@@ -1,11 +1,25 @@
 
 event_inherited();
-visible = true;
-tool = false;
+component = false;
+node = false;
 terrain = true;
-terrainString = "NONE";
+depth = -2; 
+sprite_index = spr_error0;
+terrainStruct = noone;
+sprite = sprite_index;
+terrainString = "GROUND";
+terrainCode = "NO TERRAINCODE FOUND";
 infoText = "NOONE";
 gridX = noone;
 gridY = noone;
+dead = false;
+xPos = 0;
+yPos = 0; 
+cost = 1;
+
+slippery = false; 
+flamable = false;
+spreadsFire = false;
+
 hovered = false;
-depth = -3; 
+visible = true;

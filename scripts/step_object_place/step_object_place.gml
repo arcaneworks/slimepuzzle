@@ -31,8 +31,7 @@ function step_object_place(){
 					
 					var newInstance = instance_create_layer(hoverNode.x, hoverNode.y, "Instances", obj_bare_terrain);
 						newInstance.terrainCode = selectedObjTool.terrainCode;
-						newInstance.terrainString = selectedObjTool.terrainString; 
-						newInstance.sprite_index = selectedObjTool.sprite_index;
+						get_terrain_info(newInstance, newInstance.terrainCode);
 						newInstance.gridX = hoverNode.gridX;
 						newInstance.gridY = hoverNode.gridY;
 					
@@ -44,6 +43,7 @@ function step_object_place(){
 						}
 					
 					hoverNode.terrain = newInstance;
+					
 					hoverNode.terrainCode = selectedObjTool.terrainCode
 				}
 			}	
