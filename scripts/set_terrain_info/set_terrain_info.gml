@@ -1,7 +1,11 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//sets a terrain's instance variables based on a struct.
+//used in the create event of every child of obj_terrain.
+//set setPos = true if you want to reposition the terrain based on the struct.
+
+//copy_terrain_to_struct is the inverse of this script (sets struct based on terrain instance variables)
+
 function set_terrain_info(terrainStruct, terrain, setPos = false){
-		var s = terrainStruct;
+	var s = terrainStruct;
 	var t = terrain;
 
 	

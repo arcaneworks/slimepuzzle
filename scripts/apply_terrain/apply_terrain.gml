@@ -13,7 +13,12 @@ function apply_terrain(component, node){
 			
 			case "FIRE":
 				if(component.class == "rock"){
-					instance_destroy(terrain);
+					
+					var tempStruct = snap_deep_copy(terrain.terrainStruct);
+					copy_terrain_to_struct(terrain, tempStruct);
+					ds_priority_add(terrain.undoList, tempStruct, global.totalMoves);
+					terrain.dead = true;
+					
 					node.terrain = noone;	
 				}
 				 
@@ -21,7 +26,10 @@ function apply_terrain(component, node){
 			
 			case "BONFIRE":
 				if(component.class == "rock"){
-					instance_destroy(terrain);
+					var tempStruct = snap_deep_copy(terrain.terrainStruct);
+					copy_terrain_to_struct(terrain, tempStruct);
+					ds_priority_add(terrain.undoList, tempStruct, global.totalMoves);
+					terrain.dead = true;;
 					node.terrain = noone;	
 				}else{
 					if(component.actor){
@@ -55,9 +63,11 @@ function apply_terrain(component, node){
 					var tempStruct = snap_deep_copy(terrain.terrainStruct);
 					copy_terrain_to_struct(terrain, tempStruct);
 					ds_priority_add(terrain.undoList, tempStruct, global.totalMoves);
+					terrain.dead = true;
+					
 					ds_queue_enqueue(global.deathQueue, component);	
 					component.deathWait = true;
-					terrain.dead = true;
+					
 					node.occupant = noone;
 					node.terrain = noone;
 				

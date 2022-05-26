@@ -1,6 +1,8 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//sets a struct's variables based on the instance variables of obj_terrain.
+//used to take a snapshot of a terrain's variables for the undoList
 
+
+//set_terrain_info is the inverse of this script
 function copy_terrain_to_struct(terrain, struct){
 		var t = terrain;
 		var s = struct;
