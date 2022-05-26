@@ -7,16 +7,10 @@ newRoom = room_duplicate(room); //duplicate current room
 
 
 global.currentLevel++;
-//oldLevelNumber = real(string_char_at(oldString, 6)); //finds current level number
-//newLevelNumber = oldLevelNumber + 1; //next level number
 var stageString = global.stages[global.currentStage];
 newString = stageString + string(global.currentLevel); //creates new level string 
 save_player_data();
 
-//obj_level.levelString = newString;	
-
-
-//sets text x, y, width, height
 cam = obj_camera;
 cx = cam.x;
 cy = cam.y - 20;

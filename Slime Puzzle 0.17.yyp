@@ -174,7 +174,6 @@
     {"id":{"name":"update_neighbors","path":"scripts/update_neighbors/update_neighbors.yy",},"order":5,},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":1,},
     {"id":{"name":"spr_thunder_burst_sm","path":"sprites/spr_thunder_burst_sm/spr_thunder_burst_sm.yy",},"order":5,},
-    {"id":{"name":"get_reaction","path":"scripts/get_reaction/get_reaction.yy",},"order":6,},
     {"id":{"name":"sqSlideInDiagonal","path":"sequences/sqSlideInDiagonal/sqSlideInDiagonal.yy",},"order":3,},
     {"id":{"name":"spr_glow","path":"sprites/spr_glow/spr_glow.yy",},"order":0,},
     {"id":{"name":"uc_spr_Camera","path":"sprites/uc_spr_Camera/uc_spr_Camera.yy",},"order":0,},
