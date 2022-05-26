@@ -26,43 +26,8 @@ if(targetNode){
 
 if(terrain != noone){
 	//infotext state machine
-	switch(terrain.terrainString){
-	
-		case "GROUND":
-			infoText = "No effect.";
-	
-		break;
-	
-		case "CRACK":
-			infoText = "This is a NODE with a CRACK in it. It can be filled with a ROCK or an ENEMY."
-
-		break;
-	
-		case "HOLE":
-			infoText = "ACTORs within HOLES cannot ACT. It can be filled with a ROCK."
-
-		break;
-	
-		case "FIRE":
-			infoText = "ACTORs within FIRE are destroyed immediately."
-
-		break;
-		
-		case "WEB":
-			infoText = "Actors in webs cannot act. Webs can be destroyed with fire or a slashing weapon."
-
-		break;
-		
-		case "BONFIRE":
-			infoText = "Actors within bonfires are destroyed immediately. They can be put out by rocks or melee attacks."
-
-		break;
-		
-		case "BONFIRE OFF":
-			infoText = "Unlit bonfires can be lit by fire based actions."
-
-		break;
-	
+	if(terrain.terrainStruct != noone){
+		infoText = terrain.terrainStruct.info.infoText; 
 	}
 }else{
 	infoText = "No effect.";
