@@ -1,8 +1,11 @@
 //this is where most of the game is initialized, and where the interface and camera objects are created.
 
 global.gameObj = id;
+//get the index/name for the current stage the player is in
 var stagenum = global.currentStage;
 var stageString = global.stages[stagenum];
+
+//make stage art assets visible
 if(layer_exists(stageString + "Trees"))
 	layer_set_visible(stageString + "Trees", true);
 if(layer_exists(stageString + "Grass"))
@@ -12,25 +15,24 @@ if(layer_exists(stageString + "GrassDrk"))
 if(layer_exists(stageString + "Dirt"))
 	layer_set_visible(stageString + "Dirt", true);
 
+// get name for target room/current level
 if(global.lastRoom == level_editor_room){
 	levelString = global.testTarget;
 }else{
 	levelString = stageString + string(global.currentLevel);
 }
-instance_activate_layer(stageString);
-debugMode = false;
-matt = 0;
-actionState = "standby";
-phase = "main";
+
+// initialize game instance variables
+debugMode = false; //toggles debug info display
+actionState = "standby"; // string used as a switch for tracking current game state
 completed = false; // used to keep track of whether 
-actTimer = 20;
-levelComplete = false;
-enum dir {
+levelComplete = false; //flag for tracking when the level is completed
+enum dir { //enum used for tracking component direction
 		north,
 		east,
 		south,
 		west		
-	}
+	} 
 
 //audio_play_sound(track1, 1, true)
 
@@ -46,7 +48,7 @@ enum dir {
 	
 	#macro node_radius node_size/2
 	
-	#macro NOTHING -1
+	//#macro NOTHING -1
 
 	#macro map_width 7
 	// width of entire map at the beginning of gameplay
@@ -57,26 +59,26 @@ enum dir {
 
 #endregion
 
-loadThresh = map_height - 1;
-dataThresh = map_height;
-	screenHeight = 12;
+	loadThresh = map_height - 1; //threshold for for checks involving map height
+	dataThresh = map_height; //threshold for setting the data array size
+	screenHeight = 12; // used to set on screen node size
 	
-	actorTurnCt = 2; //total amount of turns each actor gets per phase
+	actorTurnCt = 2; // total amount of turns each actor gets per phase
 turnList = ds_list_create(); //list of all actors in order. gets populated/sorted in initialize
 turnPos = 0; //position in turn list to make currActor
 currActor = noone;//actor whose turn it is
 global.actionQueue = ds_priority_create(); //queue of components waiting to act. 
 global.deathQueue = ds_queue_create(); //queue of components waiting to die.
-global.totalMoves = 0;
-standbyActor = noone;
+global.totalMoves = 0; //current number of queued moves.
+standbyActor = noone; // character who is currently acting
 
-initialize = true; 
+initialize = true; // flag marking that the game is currently initializing
 
 instance_create_layer(x, y, "Instances", obj_interface); //create the cursor
-global.cursor = obj_interface;
+	global.cursor = obj_interface; //set the cursor global to the game interface
 
 
-	mapOrgY = obj_map_start.y;
+	mapOrgY = obj_map_start.y; //set map origin variables
 	mapOrgX = obj_map_start.x;
 	
 	init_CG_decoding_key_new(); // filled out here
@@ -90,6 +92,3 @@ global.cursor = obj_interface;
 	init_populate_map(); // creates nodes based on CG set
 	populate_neighbors(); //makes neighbors for nodes
 	set_node_occupancy(); //sets occupancy for components 
-
-turnAnimations = false;
-

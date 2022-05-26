@@ -13,7 +13,7 @@ if(room_get_name(room) != "test_room"){
 		}
 	}
 }
-
+// load level end object if level is complete
 if(levelComplete && !instance_exists(obj_gameover)){
 	instance_create_layer(x, y, "Gameover", obj_gameover);	
 }	
