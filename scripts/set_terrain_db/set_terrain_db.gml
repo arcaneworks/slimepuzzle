@@ -71,13 +71,15 @@ function set_terrain_db(){
 		info.terrainCode = "TO";
 	}
 		
+	bareStruct = new terrain_struct();
+		
 	global.terrainDB = {
 		flame : other.flame,
 		hole : other.hole, 
 		web : other.web,
 		bonfire : other.bonfire,
-		bonfireOff : other.bonfireOff
-			
+		bonfireOff : other.bonfireOff,
+		bareStruct : other.bareStruct
 			
 	}
 	

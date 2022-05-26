@@ -122,6 +122,7 @@
     {"id":{"name":"sqFadeOutMenu","path":"sequences/sqFadeOutMenu/sqFadeOutMenu.yy",},"order":1,},
     {"id":{"name":"obj_component_info","path":"objects/obj_component_info/obj_component_info.yy",},"order":2,},
     {"id":{"name":"spr_director_n","path":"sprites/spr_director_n/spr_director_n.yy",},"order":3,},
+    {"id":{"name":"get_terrain_info","path":"scripts/get_terrain_info/get_terrain_info.yy",},"order":8,},
     {"id":{"name":"spr_fire_loop2","path":"sprites/spr_fire_loop2/spr_fire_loop2.yy",},"order":2,},
     {"id":{"name":"spr_fire_loop3","path":"sprites/spr_fire_loop3/spr_fire_loop3.yy",},"order":3,},
     {"id":{"name":"spr_fire_loop4","path":"sprites/spr_fire_loop4/spr_fire_loop4.yy",},"order":4,},
