@@ -6,12 +6,10 @@ function wipe_nodes() {
 		actionNode = false;
 		placeNode = false;
 		targetNode = false;
-		potNode = false;
 		reactNode = false;
 		G = 0;
 		parent = noone;
 		passNode = false; 
-		executeNode = false;
 		color = c_white;
 	}
 	

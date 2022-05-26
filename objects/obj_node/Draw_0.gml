@@ -1,3 +1,4 @@
+//draw node sprite
 draw_set_alpha(.33)
 draw_rectangle_color(x,y, x + node_size - 1, y + node_size - 1, c_black, c_black, c_black, c_black, true)
 draw_set_alpha(1)

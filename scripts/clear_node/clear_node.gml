@@ -5,7 +5,6 @@ function clear_node(nodeID){
 	with (nodeID) {
 		infoText = "its just a regular node, dawg";
 		depth = 1
-		dark = false; 
 		
 		if (occupant != noone ) {
 			instance_destroy(occupant); // destroy occupant, if there is one
@@ -13,14 +12,13 @@ function clear_node(nodeID){
 
 		// the nodes that are adjacent to this node
 		ds_list_clear(neighbors);
-		ds_list_clear(actorsNear);
 		
 		onScreen = false;
 		color = c_white;
 		occupant = noone;
 		effect = noone;
 		passable = true;
-		selected = false;
+		//selected = false;
 		canAct = false;
 		gridX = 0;
 		gridY = 0;
@@ -32,13 +30,8 @@ function clear_node(nodeID){
 
 		/// TERRAIN VARIABLES
 		terrain = "GROUND";
-		t_img = 0;
-		t_alpha = 1;
 
 		/// EFFECT VARIABLES
-		nodeAnim = "GROUND"
-		a_img = 0;
-		a_alpha = 0;
 
 		img = 0; 
 		//pathfinding variables ----------------------
@@ -46,24 +39,13 @@ function clear_node(nodeID){
 		parent = noone;
 		moveNode = false; // whether the selected character can move to this node
 		targetNode = false; // whether the selected character can target this node
-		actionNode = false; 
-		decNode = false;
+		actionNode = false; // whether the selected character can act on this node
 		pushNode = false; //whether actor will be pushed forward during the caravan advance
 
-		applyDamage = false;
-		ds_list_clear(targeted);
-		hitable = false;
-		movable = false;
-		// list containing all of the actors who have targeted this node
-		// used in wipenodes to keep targeted nodes yellow even when nodes
-		// are wiped of path/range-finding information
+		applyDamage = false; // is damage being applied
+		hitable = false; //can this node be hit
+		//movable = false;
 
-		inCaravanPath = false;
-		displayCaravanPath = false;
-
-		//AURA VARIABLES 
-		inAura = false;
-		
 		
 	}
 	

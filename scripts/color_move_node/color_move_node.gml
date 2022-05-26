@@ -8,15 +8,15 @@ function color_move_node(argument0, argument1) {
 	node = argument0;
 	move = argument1; 
 
-	if (ds_list_empty(node.targeted)) {
+	//if (ds_list_empty(node.targeted)) {
 	
-		node.color = c_aqua;
+	node.color = c_aqua;
 	
-	} else {
+	//} else {
 	
-		node.color = c_purple;
+	//	node.color = c_purple;
 	
-	}
+	//}
 
 
 

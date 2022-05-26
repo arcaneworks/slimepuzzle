@@ -1,24 +1,22 @@
 
 depth = 1
-dark = false; 
-onScreen = true; 
+onScreen = true; // tracks whether the node is currently on screen
 // the nodes that are adjacent to this node
-neighbors = ds_list_create();
-actorsNear = ds_list_create();
-node = true;
+neighbors = ds_list_create(); //initialize neighbor list 
+node = true; // identifying flags
 component = false;
 agent = false; 
 enemy = false;
-color = c_white;
-occupant = noone;
-effect = noone;
-passable = true;
+color = c_white; // current color
+occupant = noone; // the current occupant
+effect = noone; //current effect
+passable = true; // can the node be moved through
 //selected = false;
-canAct = true;
+//canAct = true; 
 gridX = 0;
 gridY = 0;
-cost = 1;
-G = 0;
+cost = 1; //movement cost 
+G = 0; //current g score for pathfinding
 alpha = .3;
 
 //draws the terrain type and effect type within switch statements
@@ -26,15 +24,9 @@ alpha = .3;
 
 /// TERRAIN VARIABLES
 terrain = noone;
-t_img = 0;
-t_alpha = 1;
 infoText = "No effect";
 
 
-/// EFFECT VARIABLES
-nodeAnim = "GROUND";
-a_img = 0;
-a_alpha = 0;
 
 img = 0; 
 //pathfinding variables ----------------------
@@ -42,28 +34,14 @@ img = 0;
 parent = noone;
 moveNode = false; // whether the selected character can move to this node
 targetNode = false; // whether the selected character can target this node
-actionNode = false; 
-executeNode = false;
-reactNode = false;
-potNode = false; 
-decNode = false;
+actionNode = false; // whether the selected character can use their action on this node
+reactNode = false; // can someone do a reaction to this node
 pushNode = false; //whether actor will be pushed forward during the caravan advance
-passNode = false;
-vehicle = false;
-applyDamage = false;
-targeted = ds_list_create();
-hitable = false;
-movable = false;
-// list containing all of the actors who have targeted this node
-// used in wipenodes to keep targeted nodes yellow even when nodes
-// are wiped of path/range-finding information
+passNode = false; // Whether an actor's projectile will pass through the tile
+applyDamage = false; // Is damage being applied to the node?
+hitable = false;	// Is the node hittable?
+//movable = false;	// Is the node movable?
 
-inCaravanPath = false;
-displayCaravanPath = false;
-
-//AURA VARIABLES 
-inAura = false;
-
-componentCode = noone; 
+componentCode = noone; // codes for map loading	
 terrainCode = noone;
 

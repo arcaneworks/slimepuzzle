@@ -1,3 +1,4 @@
+//set the tile tint based on current status
 if(moveNode){
 	alpha = .3;
 	color = c_aqua;	
@@ -23,27 +24,8 @@ if(targetNode){
 	color = c_aqua;
 }
 
-
-
-if(potNode){
-	alpha = .3;
-	color = c_red;	
-}
-
-if(executeNode){
-	alpha = .3;
-	color = c_red;
-}
-
-if(instance_exists(occupant)){
-	//if(occupant != noone && selected == true){
-	//	occupant.selected = true;	
-	//}
-
-	
-}
-
 if(terrain != noone){
+	//infotext state machine
 	switch(terrain.terrainString){
 	
 		case "GROUND":

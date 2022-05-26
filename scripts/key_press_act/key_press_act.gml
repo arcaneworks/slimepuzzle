@@ -34,7 +34,7 @@ function key_press_act(){
 			tempDir = dir.north;
 			for(var kk = 0; kk < ds_list_size(actableNodes); kk++){
 				var tNode = ds_list_find_value(actableNodes, kk);
-				tNode.potNode = true;
+				//tNode.potNode = true;
 			} 
 		}	 
 		
@@ -44,7 +44,7 @@ function key_press_act(){
 			tempDir = dir.south;
 			for(var kk = 0; kk < ds_list_size(actableNodes); kk++){
 				var tNode = ds_list_find_value(actableNodes, kk);
-				tNode.potNode = true;
+				//tNode.potNode = true;
 			} 	
 		}
 
@@ -54,7 +54,7 @@ function key_press_act(){
 			tempDir = dir.west;
 			for(var kk = 0; kk < ds_list_size(actableNodes); kk++){
 				var tNode = ds_list_find_value(actableNodes, kk);
-				tNode.potNode = true;
+				//tNode.potNode = true;
 			} 
 		}
 
@@ -65,7 +65,7 @@ function key_press_act(){
 			tempDir = dir.east;
 			for(var kk = 0; kk < ds_list_size(actableNodes); kk++){
 				var tNode = ds_list_find_value(actableNodes, kk);
-				tNode.potNode = true;
+				//tNode.potNode = true;
 			} 
 		}
 			

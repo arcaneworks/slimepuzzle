@@ -6,15 +6,8 @@ function wipe_nodes_range_info() {
 		//actionNode = false;
 		G = 0;
 		parent = noone;
-		if (ds_list_empty(targeted)) {
+		color = c_white;
 		
-			color = c_white;
-		
-		} else {
-		
-			color = c_yellow;
-		
-		}	
 	
 	}
 
