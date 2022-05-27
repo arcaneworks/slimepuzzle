@@ -9,7 +9,7 @@ function step_interface_select() {
 				if(hoverNode.occupant.canAct)
 							action_nodes(map[hoverNode.occupant.gridX, hoverNode.occupant.gridY], hoverNode.occupant.action.targeting.targetType, hoverNode.occupant.action.targeting.range);
 						
-				movement_nodes(map[gridX, gridY], hoverNode.occupant.move);
+				movement_nodes(map[hoverNode.occupant.gridX, hoverNode.occupant.gridY], hoverNode.occupant.move);
 				
 			}else{
 				wipe_nodes();	
