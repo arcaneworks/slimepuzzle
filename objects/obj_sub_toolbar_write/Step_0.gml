@@ -23,32 +23,52 @@ if(obj_interface_editor.state == "write"){
 	}
 	if(right_shoulder_pressed()){
 		currPage++;
-		//var pageCount = 0;
-		//switch(selectedTab.tabType){
-		//	case "actors":
-		//		pageCount = totalActorPages;
-		//		break;
-		//	case "elements":
-		//		pageCount = totalElementPages;
-		//		break;
-		//	case "terrains":
-		//		pageCount = totalTerrainPages;
-		//		break;
-		//}
 		if(currPage >= totalPages){
 			currPage = 0;
 		}
 	}
 	if(left_shoulder_pressed()){
-		if(currPage<0)
+		if(currPage<= 0)
 			currPage = totalPages -1;	
 		else
 			currPage --;
+	}
+	for(var ii = 0; ii< tabSize; ii ++){
+		if(keyboard_check_pressed(ord(ii+1))){
+			var currList;
+			var subIndex = ii + (currPage * tabSize);
+			switch(selectedTab.tabType){
+				case "actors":
+					currList = actorList;
+					//with(obj_bare_component_tool){
+						
+					//}
+				break;
+				case "elements":
+					currList = elementList;
+					//with(obj_bare_element_tool){
+						
+					//}
+				break;
+				case "terrains":
+					currList = terrainList;
+					//with(obj_bare_terrain_tool){
+						
+					//}
+				break;
+			}
+			
+			if(subIndex < ds_list_size(currList))
+				step_object_select(true, ds_list_find_value(currList, subIndex));
+			
+		}
 	}
 #endregion
 
 if(obj_sub_toolbar_write.visible){
 	pageText = string(currPage + 1) + " / " + string(totalPages);
+	var pageMin = currPage * tabSize;
+	var pageMax = (currPage + 1) * tabSize;
 	switch(selectedTab.tabType){
 	
 		case "actors":
@@ -57,64 +77,16 @@ if(obj_sub_toolbar_write.visible){
 			instance_deactivate_object(obj_bare_element_tool);
 			instance_deactivate_object(obj_bare_terrain_tool);
 			
-			switch(currPage){
-				case 0:
-					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
-						var actor = ds_list_find_value(actorList1, ii);	
-						instance_activate_object(actor);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(actorList3); ii++){
-						var actor = ds_list_find_value(actorList3, ii);	
-						instance_deactivate_object(actor);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(actorList2); ii++){
-						var actor = ds_list_find_value(actorList2, ii);		
-						instance_deactivate_object(actor);		
-					}
-				
-				break;
-				
-				
-				case 1:
-					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
-						var actor = ds_list_find_value(actorList1, ii);	
-						instance_deactivate_object(actor);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(actorList3); ii++){
-						var actor = ds_list_find_value(actorList3, ii);	
-						instance_deactivate_object(actor);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(actorList2); ii++){
-						var actor = ds_list_find_value(actorList2, ii)		
-						instance_activate_object(actor);		
-					}
-				
-				break;
-				
-				case 2:
-					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
-						var actor = ds_list_find_value(actorList1, ii);	
-						instance_deactivate_object(actor);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(actorList2); ii++){
-						var actor = ds_list_find_value(actorList2, ii);		
-						instance_deactivate_object(actor);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(actorList3); ii++){
-						var actor = ds_list_find_value(actorList3, ii)		
-						instance_activate_object(actor);		
-					}
-				
-				break; 
-				
+			for(var ii = 0; ii <ds_list_size(actorList); ii++){
+				var actor = ds_list_find_value(actorList, ii);
+				if(ii < pageMin || ii >= pageMax){
+					instance_deactivate_object(actor);
+				}else{
+					instance_activate_object(actor);
+				}
 				
 			}
+			
 	
 		break;
 	
@@ -123,38 +95,17 @@ if(obj_sub_toolbar_write.visible){
 			totalPages = totalElementPages;
 			instance_deactivate_object(obj_bare_component_tool);
 			instance_deactivate_object(obj_bare_terrain_tool);
-
-			switch(currPage){
-				case 0:
-					for(var ii = 0; ii < ds_list_size(elementList1); ii++){
-						var element = ds_list_find_value(elementList1, ii);	
-						instance_activate_object(element);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(elementList2); ii++){
-						var element = ds_list_find_value(elementList2, ii);		
-						
-						instance_deactivate_object(element);		
-					}
-				
-				break;
-				
-				
-				case 1:
-					for(var ii = 0; ii < ds_list_size(elementList1); ii++){
-						var element = ds_list_find_value(elementList1, ii);	
-						instance_deactivate_object(element);		
-					}
-					
-					for(var ii = 0; ii < ds_list_size(elementList2); ii++){
-						var element = ds_list_find_value(elementList2, ii)		
-						instance_activate_object(element);		
-					}
-				
-				break; 
-				
+			
+			for(var ii = 0; ii <ds_list_size(elementList); ii++){
+				var element = ds_list_find_value(elementList, ii);
+				if(ii < pageMin || ii >= pageMax){
+					instance_deactivate_object(element);
+				}else{
+					instance_activate_object(element);
+				}
 				
 			}
+			
  			
 	
 	
@@ -165,7 +116,17 @@ if(obj_sub_toolbar_write.visible){
 			instance_deactivate_object(obj_bare_component_tool);
 			instance_deactivate_object(obj_bare_element_tool);
 			instance_activate_object(obj_bare_terrain_tool);
-
+			
+			for(var ii = 0; ii <ds_list_size(terrainList); ii++){
+				var terrain = ds_list_find_value(terrainList, ii);
+				if(ii < pageMin || ii >= pageMax){
+					instance_deactivate_object(terrain);
+				}else{
+					instance_activate_object(terrain);
+				}
+				
+			}
+			
 	
 		break;
 	}

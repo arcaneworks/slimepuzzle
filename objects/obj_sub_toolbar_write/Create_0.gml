@@ -66,35 +66,32 @@ set_component_info(global.componentDB.bomb, bomb);
 ds_list_add(actorList, bomb);
 
 
-sort_actor_pages();
 
-totalActorPages = 3; 
 totalActorPages = ceil(ds_list_size(actorList)/5);
 
 
 #endregion
 #region ELEMENT CREATION AND LIST
 
-	elementList1 = ds_list_create();
-	elementList2 = ds_list_create();
+	elementList = ds_list_create();
 	
 	rock = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
 	set_component_info(global.componentDB.rock, rock);
-	ds_list_add(elementList1, rock);
+	ds_list_add(elementList, rock);
 	
 	barrel = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
 	set_component_info(global.componentDB.barrel,barrel);
-	ds_list_add(elementList1, barrel);
+	ds_list_add(elementList, barrel);
 	
 	crate = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
 	set_component_info(global.componentDB.crate, crate);
-	ds_list_add(elementList1, crate);
+	ds_list_add(elementList, crate);
 	
 	director = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
 	set_component_info(global.componentDB.director, director);
-	ds_list_add(elementList2, director);
+	ds_list_add(elementList, director);
 	
-	totalElementPages = 2; 
+	totalElementPages = ceil(ds_list_size(elementList)/5);
 	
 #endregion
 #region TERRAIN CREATOION AND LIST
@@ -144,7 +141,7 @@ totalActorPages = ceil(ds_list_size(actorList)/5);
 	
 	
 	
-	totalTerrainPages = 1;
+	totalTerrainPages = ceil(ds_list_size(terrainList)/5);
 
 #endregion
 #region TAB CREATION
@@ -173,11 +170,11 @@ toolStartX = x + tabWidth
 buffer = 10;
 widthMinusTab = width - tabWidth; 
 
-ds_list_position_within(actorList1, toolStartX, y, buffer, widthMinusTab, height, "actors");
-ds_list_position_within(actorList2, toolStartX, y, buffer, widthMinusTab, height,"actors");
-ds_list_position_within(actorList3, toolStartX, y, buffer, widthMinusTab, height,"actors");
-ds_list_position_within(elementList1, toolStartX, y, buffer, widthMinusTab, height,"elements");
-ds_list_position_within(elementList2, toolStartX, y, buffer, widthMinusTab, height,"elements");
+ds_list_position_within(actorList, toolStartX, y, buffer, widthMinusTab, height, "actors");
+//ds_list_position_within(actorList2, toolStartX, y, buffer, widthMinusTab, height,"actors");
+//ds_list_position_within(actorList3, toolStartX, y, buffer, widthMinusTab, height,"actors");
+ds_list_position_within(elementList, toolStartX, y, buffer, widthMinusTab, height,"elements");
+//ds_list_position_within(elementList2, toolStartX, y, buffer, widthMinusTab, height,"elements");
 ds_list_position_within(terrainList, toolStartX, y, buffer, widthMinusTab, height,"terrains");
 
 #endregion
