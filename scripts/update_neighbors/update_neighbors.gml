@@ -52,7 +52,7 @@ function update_neighbors() {
 	
 		#region ROW SOUTH OF TOP-MOST ROW REPOPULATE 
 	
-			var yy = loadThresh;
+			var yy = loadThresh -1;
 			var node = map[xx, yy];
 	
 			//add NORTH neighbor
@@ -111,7 +111,7 @@ function update_neighbors() {
 			ds_list_clear(node.neighbors); 
 			
 			//add N, NE, NW neighbors
-			if(yy < loadThresh - 1){ 
+			if(yy < loadThresh){ 
 				
 				//add NORTH neighbor
 				ds_list_add(node.neighbors, map[xx, yy + 1]);

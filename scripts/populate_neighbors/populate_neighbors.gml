@@ -3,8 +3,8 @@ function populate_neighbors() {
 
 			
 	// re populate neighbor lists, bottom to top
-	for(var xx = 0; xx < map_height; xx += 1){
-		for(var yy = 0; yy < loadThresh; yy++) {
+	for(var xx = 0; xx < map_width; xx += 1){
+		for(var yy = 0; yy < map_height; yy++) {
 		var node = map[xx, yy];
 		
 		

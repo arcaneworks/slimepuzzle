@@ -9,7 +9,7 @@ function create_nodes_NEW(){
 
 	// creates all the nodes that make up the map
 	for(var xx = liveMapWidth - 1; xx >= 0; xx--){
-		for(var yy = loadThresh - 1; yy >= 0; yy--){
+		for(var yy = loadThresh; yy >= 0; yy--){
 			
 			if (xx <= dataThresh && xx > loadThresh) { // for map positions in the 'partially loaded' zone
 				
@@ -35,12 +35,14 @@ function create_nodes_NEW(){
 	
 		}
 	}
-	repopulate_neighbors()
+	//repopulate_neighbors()
 
 	//populate node neighbor lists!
 	for(var xx = 0; xx < liveMapWidth; xx += 1){
-		for(var yy = 0; yy < loadThresh; yy += 1){
-	
+		for(var yy = 0; yy < loadThresh + 1; yy += 1){
+		
+		if(yy == loadThresh)
+			show_debug_message("at top o' the ceiling");
 		node = map[xx, yy];
 	
 			//add left neighbor
