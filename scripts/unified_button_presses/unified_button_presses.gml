@@ -38,4 +38,12 @@ function saveas_hotkey_pressed(){
 function load_hotkey_pressed(){
 	return !keyboard_check(vk_shift) && keyboard_check(vk_control) && keyboard_check_pressed(ord("L"));	
 }
-
+function switch_tab_hotkey_pressed(){
+	return keyboard_check_pressed(vk_tab) || gamepad_button_check(0,gp_face4);	
+}
+function right_shoulder_pressed(){
+	return keyboard_check_pressed(ord("E")) || gamepad_button_check(0,gp_shoulderr);
+}
+function left_shoulder_pressed(){
+	return keyboard_check_pressed(ord("Q")) || gamepad_button_check(0, gp_shoulderl);	
+}

@@ -8,8 +8,47 @@ if(obj_interface_editor.state == "write"){
 	visible = false; 
 }	
 
+#region hotkey navigation
+	if(switch_tab_hotkey_pressed()){
+		tabIndex ++;
+		if(tabIndex >= array_length(writeTabs))
+			tabIndex = 0;
+		selectedObjTool = noone;
+		with(obj_tab){
+			if(tabType == other.writeTabs[other.tabIndex])
+				other.selectedTab = self;
+			
+		}
+		currPage = 0;
+	}
+	if(right_shoulder_pressed()){
+		currPage++;
+		//var pageCount = 0;
+		//switch(selectedTab.tabType){
+		//	case "actors":
+		//		pageCount = totalActorPages;
+		//		break;
+		//	case "elements":
+		//		pageCount = totalElementPages;
+		//		break;
+		//	case "terrains":
+		//		pageCount = totalTerrainPages;
+		//		break;
+		//}
+		if(currPage >= totalPages){
+			currPage = 0;
+		}
+	}
+	if(left_shoulder_pressed()){
+		if(currPage<0)
+			currPage = totalPages -1;	
+		else
+			currPage --;
+	}
+#endregion
+
 if(obj_sub_toolbar_write.visible){
-	pageText = string(currPage) + " / " + string(totalPages);
+	pageText = string(currPage + 1) + " / " + string(totalPages);
 	switch(selectedTab.tabType){
 	
 		case "actors":
@@ -19,7 +58,7 @@ if(obj_sub_toolbar_write.visible){
 			instance_deactivate_object(obj_bare_terrain_tool);
 			
 			switch(currPage){
-				case 1:
+				case 0:
 					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
 						var actor = ds_list_find_value(actorList1, ii);	
 						instance_activate_object(actor);		
@@ -38,7 +77,7 @@ if(obj_sub_toolbar_write.visible){
 				break;
 				
 				
-				case 2:
+				case 1:
 					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
 						var actor = ds_list_find_value(actorList1, ii);	
 						instance_deactivate_object(actor);		
@@ -56,7 +95,7 @@ if(obj_sub_toolbar_write.visible){
 				
 				break;
 				
-				case 3:
+				case 2:
 					for(var ii = 0; ii < ds_list_size(actorList1); ii++){
 						var actor = ds_list_find_value(actorList1, ii);	
 						instance_deactivate_object(actor);		
@@ -86,7 +125,7 @@ if(obj_sub_toolbar_write.visible){
 			instance_deactivate_object(obj_bare_terrain_tool);
 
 			switch(currPage){
-				case 1:
+				case 0:
 					for(var ii = 0; ii < ds_list_size(elementList1); ii++){
 						var element = ds_list_find_value(elementList1, ii);	
 						instance_activate_object(element);		
@@ -101,7 +140,7 @@ if(obj_sub_toolbar_write.visible){
 				break;
 				
 				
-				case 2:
+				case 1:
 					for(var ii = 0; ii < ds_list_size(elementList1); ii++){
 						var element = ds_list_find_value(elementList1, ii);	
 						instance_deactivate_object(element);		

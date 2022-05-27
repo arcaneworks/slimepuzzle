@@ -4,6 +4,7 @@ y = obj_level_editor.mapOrgY + 2;
 width = node_size * (map_width + 3);
 height = node_size * 1.7;
 
+tabSize = 5;
 
 //when a new component (actors or elements) gets added a few different things need to be updated. 
 //1. create instance of bare component within the object and assign instance variables, add to ds_list (see below);
@@ -12,7 +13,8 @@ height = node_size * 1.7;
 
 //the same applies to new terrain
 #region ACTOR CREATION AND LIST
-
+writeTabs = ["actors", "elements", "terrains"];
+tabIndex = 0;
 actorList = ds_list_create();
 
 knight = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
@@ -67,6 +69,7 @@ ds_list_add(actorList, bomb);
 sort_actor_pages();
 
 totalActorPages = 3; 
+totalActorPages = ceil(ds_list_size(actorList)/5);
 
 
 #endregion
@@ -184,11 +187,11 @@ ds_list_position_within(terrainList, toolStartX, y, buffer, widthMinusTab, heigh
 leftArrow = instance_create_layer(x + tabWidth + textBuffer + 2, y + 3, "Instances", obj_arrow_button_left);
 rightArrow = instance_create_layer(x + width - 22, y + 3, "Instances", obj_arrow_button_right);
 
-currPage = 1; 
+currPage = 0; 
 
 totalPages = 1; 
 
-pageText = string(currPage) + " / " + string(totalPages);
+pageText = string((currPage + 1)) + " / " + string(totalPages);
 pageTextWidth = string_width(pageText);
 
 

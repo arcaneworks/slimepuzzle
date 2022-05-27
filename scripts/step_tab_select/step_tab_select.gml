@@ -4,7 +4,7 @@ function step_tab_select(){
 	if(instance_position(x, y, obj_tab)){
 		hoverTab = instance_position(x, y, obj_tab);				
 		if(hoverTab != noone && hoverTab != obj_sub_toolbar_write.selectedTab){
-			if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+			if(select_pressed()){
 				selectedObjTool = noone;
 				obj_sub_toolbar_write.selectedObjTool = noone;
 				obj_sub_toolbar_write.selectedTab = hoverTab;	
