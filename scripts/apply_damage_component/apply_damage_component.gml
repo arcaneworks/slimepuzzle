@@ -12,7 +12,7 @@ function apply_damage_component(component){
 
 			case "fire weak":
 				if(action.damage.tempDamageType == "fire"){
-					component.hp -= action.damage.tempDamageType;
+					component.hp -= action.damage.damage;
 					component.damaged = true;
 					component.shake = true;
 				
