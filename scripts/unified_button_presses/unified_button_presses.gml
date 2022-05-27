@@ -1,5 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+global.gamePadSelect = gp_face1;
+global.gamePadCancel = gp_face2;
+global.gamePadUndo = gp_select;
+global.gamePadPaused = gp_start;
+
+
 function select_pressed(){
 	return mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1);
 }
@@ -9,3 +15,7 @@ function cancel_pressed(){
 function undo_pressed(){
 	return (keyboard_check(vk_control) && keyboard_check_pressed(ord("Z")))|| gamepad_button_check(0,gp_select);
 }
+function pause_pressed(){
+	return(keyboard_check_pressed(vk_escape) || gamepad_button_check(0,gp_start));	
+}
+

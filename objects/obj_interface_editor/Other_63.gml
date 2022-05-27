@@ -15,7 +15,11 @@ if i_d == input {
 
             input = get_string_async("You didn't enter anything! Gimme something: ", "")
 
-        } else if (file_exists("CGs\\" + mapName + ".csv")) {
+        }else if(string_count("\\",mapName)){
+			input = get_string_async("You cannot include the character // in your filename");
+
+		}		
+		else if (file_exists("CGs\\" + mapName + ".csv")) {
 
             input = get_string_async("A map with that name already exists. Try a different one: ", auto_gen_mapname(, "level"));
 
