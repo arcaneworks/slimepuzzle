@@ -3,7 +3,7 @@ if(initialize){
 	selectedTool = obj_toolbar.move; 
 	initialize = false; 
 }
-
+update_cursor_pos();
 	#region mode set functions
 	function set_mode_move(check = false){
 		cursorSprite = spr_move_cursor;
@@ -74,10 +74,22 @@ if(initialize){
 		hoverTool = obj_toolbar.deleteTool;
 		set_mode_delete(true);
 	}
+	if(save_hotkey_pressed()){
+		hoverTool = obj_toolbar.save;
+		state = "save";
+		step_tool_select(true);
+		set_mode_save();
+	}
+	if(saveas_hotkey_pressed()){
+		hoverTool = obj_toolbar.saveas;
+		set_mode_save_as(true);
+	}
+	if(load_hotkey_pressed()){
+		hoverTool = obj_toolbar.load;
+		set_mode_load(true);	
+	}
 	#endregion
-update_cursor_pos();
-	
-	
+
 	#region	CUSTORSTATE SWITCH STATEMENT
 
 		switch(state){

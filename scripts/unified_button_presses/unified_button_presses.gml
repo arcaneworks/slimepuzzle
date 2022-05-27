@@ -28,3 +28,14 @@ function move_hotkey_pressed(){
 function delete_hotkey_pressed(){
 	return keyboard_check_pressed(ord("D")) || gamepad_button_check(0,gp_padd);	
 }
+function save_hotkey_pressed(){
+	return !keyboard_check(vk_shift) && keyboard_check(vk_control) && keyboard_check_pressed(ord("S"));	
+}
+
+function saveas_hotkey_pressed(){
+	return keyboard_check(vk_shift) && keyboard_check(vk_control) && keyboard_check_pressed(ord("S"));	
+}
+function load_hotkey_pressed(){
+	return !keyboard_check(vk_shift) && keyboard_check(vk_control) && keyboard_check_pressed(ord("L"));	
+}
+

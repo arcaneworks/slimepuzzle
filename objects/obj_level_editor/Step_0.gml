@@ -1,4 +1,7 @@
 if(pause_pressed()){
-	TransitionStart(rm_title_screen, sqFadeOut, sqFadeInMenu);	
+	if(obj_interface_editor.state != "load")
+		TransitionStart(rm_title_screen, sqFadeOut, sqFadeInMenu);	
+	else
+		obj_interface_editor.state = "move";
 }
 
