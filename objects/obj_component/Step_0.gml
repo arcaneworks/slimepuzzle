@@ -128,7 +128,8 @@ switch(moveState){
 		if(instance_exists(moveToNode)){
 			if(actor || element){
 				if(moveToNode.occupant != noone){ // IF THERE IS A COLLISION BETWEEN ACTORS movementPath =  path_add(); //add path of movementPath
-					path_set_kind(movementPath, 2);
+					movementPath =  path_add();
+					path_set_kind(movementPath,2);
 					path_set_closed(movementPath, false);
 			
 					var xDif = noone;
@@ -145,9 +146,14 @@ switch(moveState){
 					}else{
 						yDif = (moveToNode.y - y) / 2;	
 					}
-			
+					if(!path_exists(movementPath))
+						show_debug_message("first try");
 					path_add_point(movementPath, x, y, 100);
+					if(!path_exists(movementPath))
+						show_debug_message("second try");
 					path_add_point(movementPath, x + xDif, y + yDif, 100);
+					if(!path_exists(movementPath))
+						show_debug_message("third try");
 					path_add_point(movementPath, x, y, 100);
 					if(path_exists(movementPath)){
 						draw_path(movementPath,x,y, false);
@@ -160,7 +166,7 @@ switch(moveState){
 				}else{ //there is no occupant to move 
 			
 					movementPath =  path_add(); //add path of movementPath
-					path_set_kind(movementPath, 2);
+					path_set_kind(movementPath, 1);
 					path_set_closed(movementPath, false);
 					path_add_point(movementPath, x, y, 100);
 					path_add_point(movementPath, moveToNode.x, moveToNode.y, 100);
