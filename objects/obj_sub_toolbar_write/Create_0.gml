@@ -19,49 +19,62 @@ actorList = ds_list_create();
 
 knight = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.knight, knight);
+knight.tabType = "actors";
 ds_list_add(actorList, knight);
 
 archer = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.archer, archer);
+archer.tabType = "actors";
 ds_list_add(actorList, archer);
 
 wizard = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.wizard, wizard);
+wizard.tabType = "actors";
 ds_list_add(actorList, wizard);
 
 rogue = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.rogue, rogue);
+rogue.tabType = "actors";
 ds_list_add(actorList, rogue);
 
 cleric = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.cleric, cleric);
+cleric.tabType = "actors";
 ds_list_add(actorList, cleric);
 
 slime = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.slime, slime);
+slime.tabType = "actors";
 ds_list_add(actorList, slime);
 
 shooter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.shooter,shooter);
+shooter.tabType = "actors";
 ds_list_add(actorList, shooter);
 
 shooter2 = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+shooter2.tabType = "actors";
 set_component_info(global.componentDB.shooter2, shooter2);
 ds_list_add(actorList, shooter2);
 
 fighter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+fighter.tabType = "actors";
 set_component_info(global.componentDB.fighter, fighter);
 ds_list_add(actorList, fighter);
 
 thumper = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+thumper.tabType = "actors";
 set_component_info(global.componentDB.thumper, thumper);
 ds_list_add(actorList, thumper);
 
 eye = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+eye.tabType = "actors";
+
 set_component_info(global.componentDB.eye, eye);
 ds_list_add(actorList, eye);
 
 bomb = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+bomb.tabType = "actors";
 set_component_info(global.componentDB.bomb, bomb);
 ds_list_add(actorList, bomb);
 
@@ -75,20 +88,24 @@ totalActorPages = ceil(ds_list_size(actorList)/5);
 
 	elementList = ds_list_create();
 	
-	rock = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	rock = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
 	set_component_info(global.componentDB.rock, rock);
+	rock.tabType = "elements";
 	ds_list_add(elementList, rock);
 	
-	barrel = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	barrel = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	barrel.tabType = "elements";
 	set_component_info(global.componentDB.barrel,barrel);
 	ds_list_add(elementList, barrel);
 	
-	crate = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	crate = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	crate.tabType = "elements";
 	set_component_info(global.componentDB.crate, crate);
 	ds_list_add(elementList, crate);
 	
-	director = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
+	director = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
 	set_component_info(global.componentDB.director, director);
+	director.tabType = "elements";
 	ds_list_add(elementList, director);
 	
 	totalElementPages = ceil(ds_list_size(elementList)/5);
