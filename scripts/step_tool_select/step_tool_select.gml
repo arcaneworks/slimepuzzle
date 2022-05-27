@@ -1,9 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function step_tool_select(){
+function step_tool_select(check = false){
 
 	if(hoverTool != noone){
-		if( select_pressed()){
+		if(check || select_pressed()){
 			
 			if(selectedTool == hoverTool){
 				selectedTool = noone; 

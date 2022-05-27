@@ -18,4 +18,13 @@ function undo_pressed(){
 function pause_pressed(){
 	return(keyboard_check_pressed(vk_escape) || gamepad_button_check(0,gp_start));	
 }
+function write_hotkey_pressed(){
+	return keyboard_check_pressed(ord("W")) || gamepad_button_check(0,gp_padr);
+}
+function move_hotkey_pressed(){
+	return keyboard_check_pressed(ord("M")) || gamepad_button_check(0, gp_padu);
+}
 
+function delete_hotkey_pressed(){
+	return keyboard_check_pressed(ord("D")) || gamepad_button_check(0,gp_padd);	
+}

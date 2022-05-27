@@ -3,6 +3,8 @@
 function sort_actor_pages(){
 	var pageSize = 5; 
 	var listSize = ds_list_size(actorList); 
+	
+
 	actorList1 = ds_list_create();
 	actorList2 = ds_list_create();
 	actorList3 = ds_list_create();
@@ -33,5 +35,4 @@ function sort_actor_pages(){
 		
 	}
 	
-	var tempy = 1;
 }

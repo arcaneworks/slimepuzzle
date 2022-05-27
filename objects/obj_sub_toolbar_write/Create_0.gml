@@ -201,6 +201,3 @@ textStartY = y + 6;
 nextTab = noone;
 selectedObjTool = noone;
 
-ds_list_destroy(actorList1);
-ds_list_destroy(actorList2);
-ds_list_destroy(actorList3);
