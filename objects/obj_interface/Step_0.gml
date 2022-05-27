@@ -23,9 +23,10 @@ update_cursor_pos();
 					
 					if(hoverNode != noone && hoverNode.moveNode)
 						mb_press_move();
-					if(hoverNode != noone && hoverNode.actionNode)
+					else if(hoverNode != noone && hoverNode.actionNode)
 						mb_press_act();
-					select_other();
+					else
+						select_other();
 					//move_reaction_ui();
 					var aStruct = selectedActor.action;
 					
