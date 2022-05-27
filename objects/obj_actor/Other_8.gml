@@ -10,8 +10,11 @@ if(shoved){
 }
 
 with(obj_enemy){
-	if(hp > 0 && !other.disabled ){
-		enemy_reaction_move(); 
+	if(hp > 0 && !other.disabled){
+		if(componentStruct.feats.reacts){
+			fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);	
+			enemy_reaction_move(); 
+		}
 	}
 }
 //for(var gg = 0; gg < instance_number(obj_enemy); gg++){
