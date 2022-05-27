@@ -12,7 +12,7 @@ if(shoved){
 with(obj_enemy){
 	if(hp > 0 && !other.disabled){
 		if(componentStruct.feats.reacts){
-			fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);	
+			fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
 			enemy_reaction_move(); 
 		}
 	}
@@ -23,11 +23,10 @@ with(obj_enemy){
 //	if(tempEnemy.hp > 0 && !disabled){
 //		enemy_reaction(tempEnemy);
 //	}
-
 //}
 
 //wait until potential reactions occur, then action target if canAct
-
-actState = "wait";
+if(!enemy)
+	actState = "wait";
 
 	

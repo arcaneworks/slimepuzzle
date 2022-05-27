@@ -20,6 +20,7 @@ event_inherited(); //inherits most stuff from obj_component
 	actState = "idle";
 	moveState = "idle";
 	defending = false;
+	enemy = false
 	SPD = 1;
 	//miss = false; 
 	

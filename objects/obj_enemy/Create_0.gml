@@ -13,3 +13,4 @@ initialize = true;
 maxHp = 3; 
 hp = maxHp;
 SPD = 3; 
+enemy = true;
