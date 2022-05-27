@@ -110,5 +110,5 @@ if(global.cursor.selectedActor != noone && global.cursor.selectedActor == id){  
 draw_set_color(c_white)
 
 if(disabled){
-	draw_sprite_ext(sprite_index+ xOffset, -1, spriteX, spriteY, image_xscale, sprYscale, image_angle, c_black, .5);
+	draw_sprite_ext(sprite_index, -1, spriteX + xOffset, spriteY, image_xscale, sprYscale, image_angle, c_black, .5);
 }

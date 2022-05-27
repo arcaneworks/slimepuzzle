@@ -145,6 +145,7 @@ function set_component_info_db(){
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
 			action = global.actionDB.spit;
+			stats.maxHp = 1;
 		}
 	
 		fighter = new component_struct();
