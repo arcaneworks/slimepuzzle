@@ -23,6 +23,9 @@ activeCGset = -1; // set of all CGs being used to update map live
 largestCG = 0; // the height of the largest CG in our active CG set. used to determine
 				// when we need to preload a new CG
 level = global.editorTarget;
+if(global.editorTarget = "test level"){
+	levelString = global.tempTarget;
+}else
 levelString = global.editorTarget;
 load_CG_set(level); 
 init_populate_map_editor(); // creates nodes based on CG set

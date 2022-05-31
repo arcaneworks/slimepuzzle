@@ -23,7 +23,7 @@ draw_set_color(c_yellow);
 draw_rectangle(x1, y1, x2, y2, true);
 
 draw_set_color(c_white);
-
+var gameobj = global.gameObj;
 
 
 draw_text_transformed(stringX, stringY, guiString, textScale, textScale, 0);

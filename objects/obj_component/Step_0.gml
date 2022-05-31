@@ -146,21 +146,9 @@ switch(moveState){
 					}else{
 						yDif = (moveToNode.y - y) / 2;	
 					}
-					if(!path_exists(movementPath))
-						show_debug_message("first try");
 					path_add_point(movementPath, x, y, 100);
-					if(!path_exists(movementPath))
-						show_debug_message("second try");
 					path_add_point(movementPath, x + xDif, y + yDif, 100);
-					if(!path_exists(movementPath))
-						show_debug_message("third try");
 					path_add_point(movementPath, x, y, 100);
-					if(path_exists(movementPath)){
-						draw_path(movementPath,x,y, false);
-					}
-					else{
-						show_debug_message("this path you're feedin me ain't real!!!!")	
-					}
 					//moveActor.applyDamage = true;
 
 				}else{ //there is no occupant to move 

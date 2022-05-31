@@ -2,8 +2,8 @@
 
 global.gameObj = id;
 
-levelString = global.testTarget;
- level = global.testTarget;
+levelString = global.tempTarget;
+level = global.testTarget;
 debugMode = false;
 matt = 0;
 actionState = "standby";

@@ -17,9 +17,10 @@ if(layer_exists(stageString + "Dirt"))
 
 // get name for target room/current level
 if(global.lastRoom == level_editor_room){
-	levelString = global.testTarget;
+	level = global.testTarget;
+	levelString = global.tempTarget;
 }else{
-	levelString = stageString + string(global.currentLevel);
+	level = levelString = stageString + string(global.currentLevel);
 }
 
 // initialize game instance variables
@@ -86,7 +87,7 @@ instance_create_layer(x, y, "Instances", obj_interface); //create the cursor
 	activeCGset = -1; // set of all CGs being used to update map live
 	largestCG = 0; // the height of the largest CG in our active CG set. used to determine
 				   // when we need to preload a new CG
-	load_CG_set(levelString); 
+	load_CG_set(level); 
 	//set_action_db(); //creates structs containing action information (damage, targeting info, ect)
 
 	init_populate_map(); // creates nodes based on CG set

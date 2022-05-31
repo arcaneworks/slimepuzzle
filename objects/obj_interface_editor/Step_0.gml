@@ -30,8 +30,10 @@ update_cursor_pos();
 		}
 		function set_mode_save(){
 			if(confirmDec == true){
-				save_CG_set(obj_level_editor.level);
-				
+				if(global.editorTarget != "test level")
+					save_CG_set(obj_level_editor.level);
+				else
+					save_CG_set(global.tempTarget);
 				state = "move";
 				selectedTool = noone;
 				confirmDec = noone;
