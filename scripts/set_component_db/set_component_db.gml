@@ -12,6 +12,7 @@ function set_component_info_db(){
 			yPos = 0; 
 			gridX = 0;
 			gridY = 0;
+			
 			canMove = true;
 			canAct = true;
 			dead = false;
@@ -225,6 +226,18 @@ function set_component_info_db(){
 			visuals.sprite = spr_rock1;
 			visuals.portraitSpr = spr_rock1;
 		}
+		
+		wall = new component_struct();
+		with(wall){
+			info.class = "wall"; 
+			info.infoText = "walls cannot be moved or damaged.";
+			info.componentCode = "EW";
+			feats.faces = false;
+			feats.damagable = false;
+			feats.movable = false;
+			visuals.sprite = spr_wall;
+			visuals.portraitSpr = spr_wall;
+		}
 	
 		barrel = new component_struct();
 		with(barrel){
@@ -242,8 +255,8 @@ function set_component_info_db(){
 				info.infoText = "crates can be pushed and destroyed";
 				info.componentCode = "EC";
 				feats.faces = false;
-				visuals.sprite = spr_barrel1;
-				visuals.portraitSpr = spr_barrel1;
+				visuals.sprite = spr_crate1;
+				visuals.portraitSpr = spr_crate1;
 			}
 	
 		director = new component_struct();
@@ -282,7 +295,8 @@ function set_component_info_db(){
 		rock : other.rock, 
 		barrel : other.barrel,
 		crate : other.crate,
-		director : other.director
+		director : other.director,
+		wall : other.wall
 	
 	}
 		

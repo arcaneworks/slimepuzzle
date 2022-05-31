@@ -41,6 +41,7 @@ function init_CG_decoding_key_new(){
 	ds_map_add(elementCodes, "D", asset_get_index("obj_director"));
 	ds_map_add(elementCodes, "B", asset_get_index("obj_barrel"));
 	ds_map_add(elementCodes, "P", asset_get_index("obj_crate"));
+	ds_map_add(elementCodes, "W", asset_get_index("obj_wall"));
 
 
 	terrainCodes = ds_map_create();
