@@ -7,6 +7,7 @@ newRoom = room_duplicate(room); //duplicate current room
 
 
 global.currentLevel++;
+
 var stageString = global.stages[global.currentStage];
 newString = stageString + string(global.currentLevel); //creates new level string 
 save_player_data();
@@ -23,6 +24,15 @@ if(file_exists("CGs\\" + newString + ".csv")){
 	subtext = "PRESS SPACE-BAR TO ADVANCE TO THE NEXT LEVEL.";
 	nextLevel = true;
 }else{
+	var stageNum = global.currentStage + 1;
+	var stageCount = array_length(global.stages);
+	if(stageCount <= stageNum){
+			text = "VICTORY";
+			subtext = "YOU HAVE COMPLETED ALL THE LEVELS. PRESS ESCAPE TO RETURN TO THE MAIN MENU.";
+			nextLevel = false;
+			alpha = 0;
+			return;
+			}
 
 	stageString = global.stages[global.currentStage +1];
 	newString = stageString + string(1);
