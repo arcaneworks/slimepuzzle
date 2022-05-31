@@ -25,8 +25,8 @@ if i_d == input {
 
         } else {
                 // directory_create("maps/" + mapName); 
-
-                save_CG_set(mapName);
+			
+			save_CG_set(mapName);
 
             // reset everything
             show_message(mapName + " saved!");
