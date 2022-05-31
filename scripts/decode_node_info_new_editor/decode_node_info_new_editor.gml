@@ -9,6 +9,8 @@ function decode_node_info_new_editor(nodeInfo, nodeID){
 	var component = noone;
 	var terrain = noone;
 	
+	if(is_undefined(nodeInfo))
+		return;
 	if (string_length(nodeInfo) >= 2) { // object info is in the first character position
 		
 		var char1 = string_char_at(nodeInfo, 1); // get first character

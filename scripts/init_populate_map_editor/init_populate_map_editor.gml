@@ -29,6 +29,8 @@ function init_populate_map_editor(){
 												 obj_node);
 				node.gridX = col; 
 				node.gridY = masterRowCt;
+				if(dataStr == NULL)
+					continue;
 				decode_node_info_new_editor(dataStr, node); // decodes string, loads info into node
 				map[col, masterRowCt] = node; // put that node in the map
 				
@@ -41,7 +43,6 @@ function init_populate_map_editor(){
 		} // end of loading up to the load threshold 
 			
 	} // end of node creation + node info load
-	
 	
 	// if the entire CG could not fit under the load threshold, we need to
 	// load in the encoded info for the remaining rows just above the load threshold

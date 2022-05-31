@@ -90,12 +90,12 @@ instance_create_layer(x, y, "Instances", obj_interface); //create the cursor
 				   // when we need to preload a new CG
 	
 	if(file_exists("CGS\\" + levelString + ".csv")){
-	load_CG_set(level); 
-	//set_action_db(); //creates structs containing action information (damage, targeting info, ect)
+		load_CG_set(level); 
+		//set_action_db(); //creates structs containing action information (damage, targeting info, ect)
 
-	init_populate_map(); // creates nodes based on CG set
-	populate_neighbors(); //makes neighbors for nodes
-	set_node_occupancy(); //sets occupancy for components 
-	}else{
-	levelComplete = true;	
+		init_populate_map(); // creates nodes based on CG set
+		populate_neighbors(); //makes neighbors for nodes
+		set_node_occupancy(); //sets occupancy for components 
+		}else{
+		levelComplete = true;	
 	}

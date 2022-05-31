@@ -29,6 +29,7 @@ function init_populate_map(){
 												 obj_node);
 				node.gridX = col; 
 				node.gridY = masterRowCt;
+				
 				decode_node_info_new(dataStr, node); // decodes string, loads info into node
 				map[col, masterRowCt] = node; // put that node in the map
 				
