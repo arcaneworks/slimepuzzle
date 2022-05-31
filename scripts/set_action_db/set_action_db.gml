@@ -183,7 +183,7 @@ function set_action_db(){
 		info.infoText =  "SPIT shoots a projectile up to three nodes in their facing direction. Deals one damage."
 		info.iconSpr = spr_shoot_sm;
 		targeting.targetType = "line";
-		targeting.range = 3; 
+		targeting.range = 4; 
 		targeting.targetAll = false;
 		targeting.reactionType = "bow";
 		damage.damage = 1;
