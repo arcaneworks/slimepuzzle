@@ -1,6 +1,7 @@
 //this script is meant to run when an actor steps into an enemy's reaction list 
 //
 function enemy_reaction_move(){
+	wipe_nodes();
 	if(canAct)
 	if(!ds_list_empty(reactList)){
 			//if this node I just moved in is in the react List (returns -1

@@ -8,7 +8,7 @@ function fill_reaction_list(list, reactionType, range){
 	var bBound = 0; //bottom side
 	var tBound = map_height - 1; //top side
 	ds_list_clear(list);
-	
+	wipe_nodes();
 	switch(reactionType){
 		
 		case "melee":
