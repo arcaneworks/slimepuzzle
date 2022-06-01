@@ -2,7 +2,7 @@
  
  beadX = x + sprite_width/2; // origin of bead sprite is middle top
  beadY = y + sprite_height/10; // assumed that bead is ~1/10 as tall as the bar
-
+bar_height = sprite_height;
 
 bead = instance_create_layer(beadX, beadY, layer, obj_scroll_bead);
 
@@ -16,3 +16,4 @@ bead.bottomLimit = y + (sprite_height * (1 - beadGap)) - bead.sprite_height; // 
 
 bead.y = bead.topLimit;
 bead.depth = depth - 1;
+scroll_amount = 10;
