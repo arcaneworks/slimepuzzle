@@ -37,11 +37,11 @@ update_cursor_pos();
 					//move_reaction_ui();
 					var aStruct = selectedActor.action;
 					
-					if(selectedActor.canAct && keyboard_check_released(aStruct.info.hotKey)){
+					if(selectedActor.canAct && keyboard_check_released(aStruct.info.hotKey) || gamepad_button_check_pressed(0, gp_shoulderrb)){
 						wipe_nodes();
 						action_nodes(map[selectedActor.gridX, selectedActor.gridY], aStruct.targeting.targetType, aStruct.targeting.range);
 						state = "action target";	
-					}	
+					}
 					
 					cancel_key_check_idle();
 				}
@@ -58,6 +58,12 @@ update_cursor_pos();
 					getTargets = false;
 				}
 						
+						
+					if(selectedActor.canMove && state == "action target" &&  gamepad_button_check_pressed(0, gp_shoulderrb)){
+						state = "move";
+						getMoves = true;
+						return;
+					}
 				set_hovernode_char_select();
 				set_hovernode_movement();
 				select_other();

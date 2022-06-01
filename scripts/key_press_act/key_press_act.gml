@@ -69,7 +69,7 @@ function key_press_act(){
 			} 
 		}
 			
-		if(keyboard_check_pressed(ord("Z"))){
+		if(keyboard_check_pressed(ord("Z")) || gamepad_button_check_pressed(0, gp_shoulderrb)){
 			if(actableNodes != noone && ds_list_size(actableNodes) > 0){
 					
 				with(instance_create_layer(x, y, "Instances", obj_actionevent)){
