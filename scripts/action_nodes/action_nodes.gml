@@ -12,7 +12,7 @@ function action_nodes(originNode, targetType, range) {
 	var bBound = 0; //bottom side
 	var tBound = map_height - 1; //top side
 	var dirNodes = global.cursor.dirNodes;
-	var facingDir = originNode.occupant.facingDir;
+	//var facingDir = originNode.occupant.facingDir;
 	ds_list_clear_inner_lists(dirNodes);
 
 	switch(targetType){

@@ -65,6 +65,14 @@ function get_component_info(component, componentCode){
 		case "EW":
 			tempStruct = global.componentDB.wall;
 		break;
+		
+		case "EP":
+			tempStruct = global.componentDB.crate;
+		break;
+		
+		case "EB":
+			tempStruct = global.componentDB.barrel;
+		break;
 
 	}
 	

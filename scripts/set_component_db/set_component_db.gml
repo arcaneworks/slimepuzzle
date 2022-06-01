@@ -253,7 +253,7 @@ function set_component_info_db(){
 		with(crate){
 				info.class = "breakable"; 
 				info.infoText = "crates can be pushed and destroyed";
-				info.componentCode = "EC";
+				info.componentCode = "EP";
 				feats.faces = false;
 				visuals.sprite = spr_crate1;
 				visuals.portraitSpr = spr_crate1;
