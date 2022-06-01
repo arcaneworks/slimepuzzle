@@ -18,6 +18,7 @@ function set_node_occupancy() {
 			occupant = instance_position(x + (.5 * node_size), y + (.5 * node_size), obj_component);
 			occupant.gridX = gridX;
 			occupant.gridY = gridY;
+			occupant.currNode = map[gridX, gridY];
 			apply_terrain(occupant, map[occupant.gridX, occupant.gridY]);
 			}
 				

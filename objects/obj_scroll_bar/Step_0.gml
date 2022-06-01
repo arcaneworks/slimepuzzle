@@ -6,9 +6,8 @@ y = obj_scroll_load_box.y;
 
 scroll_percent = beadY/bar_height;
 
-//if (bead.active == false) // not dragging with mouse
-	//{
-	if (mouse_wheel_up () || mouse_wheel_down()){
+if (mouse_wheel_up () || mouse_wheel_down())
+{
 	if mouse_wheel_up()
 		{
 		if mouse_x < x // if our mouse is to the left of our scrollbar
@@ -28,11 +27,8 @@ scroll_percent = beadY/bar_height;
 	bead.moved = true;
 	bead.yy = beadY - bead.topLimit;	
 	bead.percentage = clamp(round((bead.yy/(bead.bottomLimit - bead.topLimit)) * 100),0,100);
-	}
-	//}
-	
+}	
 //else if active == true // dragging with mouse
 //	{
 //	beadY = mouse_y - y;
-//	}
-	
+//	}	

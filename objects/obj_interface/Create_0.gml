@@ -4,7 +4,6 @@ depth = -200; //draws above everything
 global.cursor = id;
 
 cursorSprite = sprite_index;
-
 cursorImg = 0;
 gridX = 0; // grid position (node) the cursor is over
 gridY = 0; // grid position (node) the cursor is over

@@ -46,7 +46,7 @@ function set_component_info(struct, comp, setPos = false){
 		node.occupant = comp;
 		comp.x = node.x;
 		comp.y = node.y; 
-
+		comp.currNode = node;
 		
 	}
 

@@ -3,7 +3,7 @@
 function mb_press_move(){
 	if(hoverNode != noone && hoverNode.occupant == noone &&  hoverNode.moveNode){			
 		
-		if(mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1)){
+		if(select_pressed() || movement_pressed()){
 			
 			
 			 var tempStruct = snap_deep_copy(selectedActor.componentStruct);

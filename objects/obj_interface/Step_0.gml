@@ -8,11 +8,13 @@ update_cursor_pos();
 		switch(state){
 			
 			case "idle":
+				set_hovernode_char_select();
 				step_interface_select();
 			break;
 
 			case "move":	
-			
+				set_hovernode_char_select();
+				set_hovernode_movement();
 				if(selectedActor != noone){
 					
 					if(getMoves){
@@ -21,10 +23,15 @@ update_cursor_pos();
 						movement_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.move)	
 					}
 					
-					if(hoverNode != noone && hoverNode.moveNode)
+					if(hoverNode != noone && hoverNode.moveNode){
+						
 						mb_press_move();
-					else if(hoverNode != noone && hoverNode.actionNode)
+						}
+					else if(hoverNode != noone && hoverNode.actionNode && !shoulder_pressed()){
+					
 						mb_press_act();
+						
+					}
 					else
 						select_other();
 					//move_reaction_ui();
@@ -51,7 +58,8 @@ update_cursor_pos();
 					getTargets = false;
 				}
 						
-				
+				set_hovernode_char_select();
+				set_hovernode_movement();
 				select_other();
 				
 				mb_press_act();

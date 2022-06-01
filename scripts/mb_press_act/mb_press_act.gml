@@ -4,7 +4,7 @@ function mb_press_act(){
 	// check if the mouse is currently over a node, and that it can be acted on.
 	if(hoverNode != noone && hoverNode.actionNode){	
 		// check for button press
-		if(select_pressed()){
+		if(select_pressed() || movement_pressed() ){
 			
 			var tempStruct = snap_deep_copy(selectedActor.componentStruct);
 			copy_component_to_struct(selectedActor, tempStruct);
