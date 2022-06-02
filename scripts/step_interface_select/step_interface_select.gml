@@ -128,8 +128,11 @@ function set_hovernode_movement(){
 			if( axisH != 0|| axisV != 0){
 				var startX = selectedActor.gridX;
 				var startY = selectedActor.gridY;
-				hoverNode = map[startX + axisH, startY + axisV];
+				
+				if(startX + axisH >=0 && startX + axisH < map_width&& startY + axisV >= 0 && startY + axisV < map_height)
+					hoverNode = map[startX + axisH, startY + axisV];
 				var i = 1;
+				if(hoverNode != noone)
 				while( !hoverNode.actionNode && !hoverNode.moveNode){
 					var tempAxisH = i * axisH;
 					var tempAxisY = i * axisV;
