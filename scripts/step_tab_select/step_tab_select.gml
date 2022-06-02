@@ -8,7 +8,7 @@ function step_tab_select(){
 				selectedObjTool = noone;
 				obj_sub_toolbar_write.selectedObjTool = noone;
 				obj_sub_toolbar_write.selectedTab = hoverTab;	
-				obj_sub_toolbar_write.currPage = 1;
+				obj_sub_toolbar_write.currPage = 0;
 				
 			}			
 		}
