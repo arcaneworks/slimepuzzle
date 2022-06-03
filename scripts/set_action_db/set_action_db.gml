@@ -93,7 +93,7 @@ function set_action_db(){
 		info.actionText = "Deals 1 damage and pushes target 1 node.";
 		effect.shove = true;
 		targeting.range = 1;
-		targeting.reactionType = "melee";
+		targeting.reactionType = "facing";
 		damage.damage = 1;
 		damage.damageType = "physical";
 		targeting.targetType = "melee";
@@ -185,7 +185,7 @@ function set_action_db(){
 		info.infoText =  "SPIT shoots a projectile up to three nodes in their facing direction. Deals one damage."
 		info.iconSpr = spr_shoot_sm;
 		targeting.targetType = "line";
-		targeting.range = 4; 
+		targeting.range = 3; 
 		targeting.targetAll = false;
 		targeting.reactionType = "bow";
 		damage.damage = 1;

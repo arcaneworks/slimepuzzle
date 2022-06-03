@@ -41,16 +41,12 @@ function fill_reaction_list(list, reactionType, range){
 		break;
 		
 		case "facing":
-		
-		
-		break;
-		
-		case "bow":
+	
 			switch(facingDir){
 				
 				case dir.north:
 				
-					for(var yy = oY + 1; yy < oY + range; yy++){ //searches tempTargets for occupants
+					for(var yy = oY + 1; yy <= oY + range; yy++){ //searches tempTargets for occupants
 						if(yy <= tBound){ //if y pos is in boundry of map
 						
 							var tempTarget = map[oX,yy];
@@ -72,7 +68,7 @@ function fill_reaction_list(list, reactionType, range){
 		
 				case dir.east:
 				
-					for(var xx = oX + 1; xx < oX + range; xx++){
+					for(var xx = oX + 1; xx <= oX + range; xx++){
 						if(xx <= rBound){
 							var tempTarget = map[xx, oY];
 							if(instance_exists(tempTarget)){
@@ -91,7 +87,7 @@ function fill_reaction_list(list, reactionType, range){
 				
 				case dir.south:
 	
-					for(var yy = oY - 1; yy > oY - range; yy--){ // start from closest node in range
+					for(var yy = oY - 1; yy >= oY - range; yy--){ // start from closest node in range
 						if(yy >= bBound){// if that node is on map
 						
 							var tempTarget = map[oX, yy]; 
@@ -114,7 +110,98 @@ function fill_reaction_list(list, reactionType, range){
 				
 				case dir.west:
 				
-					for(var xx = oX - 1; xx > oX - range; xx--){
+					for(var xx = oX - 1 ; xx >= oX - range; xx--){
+						if(xx >= 0){
+							var tempTarget = map[xx, oY]; 
+						
+							if(instance_exists(tempTarget)){
+								if(tempTarget.occupant){
+									ds_list_add(list, tempTarget);
+									break;
+								}else{
+									ds_list_add(list, tempTarget);	
+									
+								}
+							}
+						}		
+					}
+				
+				break;
+				
+			}
+		
+		break;
+		
+		case "bow":
+			switch(facingDir){
+				
+				case dir.north:
+				
+					for(var yy = oY + 1; yy <= oY + range; yy++){ //searches tempTargets for occupants
+						if(yy <= tBound){ //if y pos is in boundry of map
+						
+							var tempTarget = map[oX,yy];
+				
+							if(instance_exists(tempTarget)){
+								if(tempTarget.occupant){
+									ds_list_add(list, tempTarget);
+									break;
+								}else{
+									ds_list_add(list, tempTarget);	
+									
+								}
+							}
+						}
+					}
+				
+				break;
+					
+		
+				case dir.east:
+				
+					for(var xx = oX + 1; xx <= oX + range; xx++){
+						if(xx <= rBound){
+							var tempTarget = map[xx, oY];
+							if(instance_exists(tempTarget)){
+								if(tempTarget.occupant){
+									ds_list_add(list, tempTarget);
+									break;
+								}else{
+									ds_list_add(list, tempTarget);	
+									
+								}
+							}
+						}				
+					}
+					
+				break;
+				
+				case dir.south:
+	
+					for(var yy = oY - 1; yy >= oY - range; yy--){ // start from closest node in range
+						if(yy >= bBound){// if that node is on map
+						
+							var tempTarget = map[oX, yy]; 
+							
+							if(instance_exists(tempTarget)){
+								if(tempTarget.occupant){
+									ds_list_add(list, tempTarget);
+									break;
+								}else{
+									ds_list_add(list, tempTarget);	
+									
+								}
+							}
+						}
+					}	
+					
+				break;
+				
+			
+				
+				case dir.west:
+				
+					for(var xx = oX - 1; xx >= oX - range; xx--){
 						if(xx >= 0){
 							var tempTarget = map[xx, oY]; 
 						
