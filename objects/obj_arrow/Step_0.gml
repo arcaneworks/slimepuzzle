@@ -9,9 +9,14 @@
 			actor.action.damage.tempDamageType = "fire";
 			
 	}	
-	
+	var collided_director = collision_point(x, y, obj_director, false, false);
+	if(collided_director && damageType == "fire"){
+		collided_director.fire = true;
+		
+	}	
 	
 	if(damageType == "fire"){
+		
 		if(collision_point(x, y, obj_bonfire_off, false, false)){
 			var burnable = collision_point(x, y, obj_bonfire_off, false, false);
 			var newBonfire = instance_create_layer(burnable.x, burnable.y, "Instances", obj_bonfire);

@@ -26,7 +26,7 @@
 						vfx.sprite = action.vfx.vfxSprite;
 						//destroys self on sprite animation completion
 						 //asigns the sprite
-		
+			
 		
 					break;
 		
@@ -38,11 +38,19 @@
 						startY =  y +  node_radius + lengthdir_y(15, attackDir);
 				
 						vfx = instance_create_layer(startX, startY, "Instances", obj_arrow);
-					
+						
 						with(vfx){
 						
 							target = other.targetNode; //assigns cursor target variable to projectile
-							sprite_index = other.action.vfx.vfxSprite;		
+							if (other.damageClass == "director" && other.fire){
+								sprite_index = spr_arrow_fire;
+								damageType = "fire";
+								giveStatus = "burning";
+								other.action.damage.tempDamageType = "fire";
+								
+							}else{
+								sprite_index = other.action.vfx.vfxSprite;		
+							}
 							direction = point_direction(other.startX, other.startY, target.x, target.y);
 							actor = other.id;
 						
