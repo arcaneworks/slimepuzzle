@@ -114,8 +114,8 @@ totalActorPages = ceil(ds_list_size(actorList)/5);
 	director.tabType = "elements";
 	ds_list_add(elementList, director);
 	
-	wall = instance_create_layer(x, y, "Instances", obj_bare_component_tool);
-	director.tabType = "elements"
+	wall = instance_create_layer(x, y, "Instances", obj_bare_element_tool);
+	wall.tabType = "elements";
 	set_component_info(global.componentDB.wall, wall);
 	ds_list_add(elementList, wall); 
 	
