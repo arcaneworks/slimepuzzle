@@ -1,11 +1,30 @@
 event_inherited(); 
 component = true;
-
 depth = -4;
 gridX = noone; 
 gridY = noone;
-componentCode = noone; 
-move = 0; 
-infoText = "no infoText";
-class = "default";
-portraitSpr = spr_port_knight;
+xOffset = 0;
+facingDir = 2;
+disabled = false;
+
+class = noone;
+damageClass = "none"; 
+infoText = "none";
+name = "noname";
+maxHp = 0;
+hp = 0;
+move = 0 ;
+SPD = 0;
+
+triggersReaction = false;
+faces = false
+damagable = false;
+movable = false;
+reacts = false;
+
+sprite_index = spr_error0;
+portraitSpr = spr_portraitframe;
+
+action = noone;
+component = true;
+

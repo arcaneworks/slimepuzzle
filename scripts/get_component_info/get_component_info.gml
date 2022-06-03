@@ -53,6 +53,10 @@ function get_component_info(component, componentCode){
 		case "CX":
 			tempStruct = global.componentDB.slime;
 		break;
+		
+		case "CQ":
+			tempStruct = global.componentDB.brawler;
+		break;
 			
 		case "ER":
 			tempStruct = global.componentDB.rock; 
@@ -73,6 +77,9 @@ function get_component_info(component, componentCode){
 		case "EB":
 			tempStruct = global.componentDB.barrel;
 		break;
+		
+		
+		
 
 	}
 	

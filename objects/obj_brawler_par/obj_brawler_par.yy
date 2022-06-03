@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_brawler_s",
+    "path": "sprites/spr_brawler_s/spr_brawler_s.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_bare_object_tool",
-    "path": "objects/obj_bare_object_tool/obj_bare_object_tool.yy",
+    "name": "obj_enemy",
+    "path": "objects/obj_enemy/obj_enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Bare Objects",
-    "path": "folders/01 - LEVEL EDITOR/Level Editor Objects/Bare Objects.yy",
+    "name": "Enemies",
+    "path": "folders/00 - GAME/1 - Objects/Components/Actors/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_bare_element_tool",
+  "name": "obj_brawler_par",
   "tags": [],
   "resourceType": "GMObject",
 }
