@@ -62,6 +62,12 @@ fighter.tabType = "actors";
 set_component_info(global.componentDB.fighter, fighter);
 ds_list_add(actorList, fighter);
 
+brawler = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+brawler.tabType = "actors";
+set_component_info(global.componentDB.brawler, brawler);
+ds_list_add(actorList, brawler);
+
+
 thumper = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 thumper.tabType = "actors";
 set_component_info(global.componentDB.thumper, thumper);

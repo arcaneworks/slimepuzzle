@@ -38,12 +38,18 @@ function step_interface_select() {
 				}
 			}
 		}else{
-			if(hoverNode.occupant != noone && hoverNode.occupant.object_index == obj_enemy){
+			
+		
+			var inst = hoverNode.occupant;
+			var index = object_get_name(hoverNode.occupant.object_index);
+		
+			if(object_get_parent(hoverNode.occupant.object_index) == obj_enemy){
 				wipe_nodes();
 				var enemy = hoverNode.occupant;
 				
 				if(enemy.reacts){
 					if(!ds_list_empty(enemy.reactList)){
+						
 						for(var ii = 0; ii < ds_list_size(enemy.reactList); ii++){
 							var reactNode = ds_list_find_value(enemy.reactList, ii); 
 							reactNode.actionNode = true;

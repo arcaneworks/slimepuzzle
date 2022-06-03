@@ -40,6 +40,11 @@ function fill_reaction_list(list, reactionType, range){
 			
 		break;
 		
+		case "facing":
+		
+		
+		break;
+		
 		case "bow":
 			switch(facingDir){
 				

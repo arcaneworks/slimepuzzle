@@ -93,9 +93,11 @@ function set_action_db(){
 		info.actionText = "Deals 1 damage and pushes target 1 node.";
 		effect.shove = true;
 		targeting.range = 1;
+		targeting.reactionType = "melee";
 		damage.damage = 1;
 		damage.damageType = "physical";
 		targeting.targetType = "melee";
+		targeting.targetAll = false;
 	}
 	
 	slime = new act_struct();

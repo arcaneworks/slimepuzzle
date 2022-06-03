@@ -30,6 +30,7 @@ function init_CG_decoding_key_new(){
 	ds_map_add(componentCodes, "S", asset_get_index("obj_shooter_par"))
 	ds_map_add(componentCodes, "P", asset_get_index("obj_shooter_fire"));
 	ds_map_add(componentCodes, "F", asset_get_index("obj_fighter_par"));  
+	ds_map_add(componentCodes, "Q", asset_get_index("obj_brawler_par")); 
 	ds_map_add(componentCodes, "T", asset_get_index("obj_thumper_par")); 
 	ds_map_add(componentCodes, "E", asset_get_index("obj_eye")); 
 	ds_map_add(componentCodes, "X", asset_get_index("obj_slime")); 
@@ -50,6 +51,7 @@ function init_CG_decoding_key_new(){
 	ds_map_add(terrainCodes, "W", asset_get_index("obj_web"));
 	ds_map_add(terrainCodes, "B", asset_get_index("obj_bonfire"));
 	ds_map_add(terrainCodes, "O", asset_get_index("obj_bonfire_off"));
+	
 	
 	
 }
