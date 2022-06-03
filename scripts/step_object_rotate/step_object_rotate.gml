@@ -9,6 +9,16 @@ function step_object_rotate(){
 					var tempPos = selectedObjTool.facingDir + 1;
 					selectedObjTool.facingDir = tempPos mod 4;	
 				}
+				
+				if(keyboard_check_pressed(vk_left)){
+					
+					var tempPos = selectedObjTool.facingDir - 1;
+					
+					if(tempPos < 0){
+						tempPos = 3;	
+					}
+					selectedObjTool.facingDir = tempPos mod 4;	
+				}
 			
 		}
 		
