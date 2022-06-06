@@ -3,7 +3,7 @@
 function mb_press_move(){
 	if(hoverNode != noone && hoverNode.occupant == noone &&  hoverNode.moveNode){			
 		
-		if(select_pressed() || movement_pressed()){
+		if(select_pressed() ){
 			
 			
 			 var tempStruct = snap_deep_copy(selectedActor.componentStruct);

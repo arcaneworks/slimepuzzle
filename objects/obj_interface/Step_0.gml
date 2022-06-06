@@ -13,10 +13,10 @@ update_cursor_pos();
 			break;
 
 			case "move":	
-				set_hovernode_char_select();
-				set_hovernode_movement();
 				if(selectedActor != noone){
 					
+					set_hovernode_char_select();
+					set_hovernode_movement();
 					if(getMoves){
 						if(selectedActor.canAct)
 							action_nodes(map[selectedActor.gridX, selectedActor.gridY], selectedActor.action.targeting.targetType, selectedActor.action.targeting.range);
@@ -34,6 +34,7 @@ update_cursor_pos();
 					}
 					else
 						select_other();
+						
 					//move_reaction_ui();
 					var aStruct = selectedActor.action;
 					

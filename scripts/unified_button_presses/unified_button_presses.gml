@@ -9,28 +9,46 @@ global.gamePad = false;
 function movement_pressed(){
 	return up_pressed() || right_pressed() || down_pressed()|| left_pressed();	
 }
-function up_pressed(){
-	return keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up) || gamepad_button_check(0, gp_padu);
+function movement_released(){
+	return up_released() || right_released() || down_released()|| left_released();	
 }
+function up_pressed(){
+	return keyboard_check(ord("W")) || keyboard_check(vk_up) || gamepad_button_check(0, gp_padu);
+}
+function up_released(){
+	return keyboard_check_released(ord("W")) || keyboard_check_released(vk_up) || gamepad_button_check_released(0, gp_padu);
+}
+
 
 function right_pressed(){
-	return keyboard_check_pressed(ord("D")) || keyboard_check_pressed(vk_right) || gamepad_button_check(0, gp_padr);
+	return keyboard_check(ord("D")) || keyboard_check(vk_right) || gamepad_button_check(0, gp_padr);
 }
+function right_released(){
+	return keyboard_check_released(ord("D")) || keyboard_check_released(vk_right) || gamepad_button_check_released(0, gp_padr);
+}
+
 
 function down_pressed(){
-	return keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down) || gamepad_button_check(0, gp_padd);
+	return keyboard_check(ord("S")) || keyboard_check(vk_down) || gamepad_button_check(0, gp_padd);
 }
 
 
+function down_released(){
+	return keyboard_check_released(ord("S")) || keyboard_check_released(vk_down) || gamepad_button_check_released(0, gp_padd);
+}
+
 function left_pressed(){
-	return keyboard_check_pressed(ord("A")) || keyboard_check_pressed(vk_left) || gamepad_button_check(0, gp_padl);
+	return keyboard_check(ord("A")) || keyboard_check(vk_left) || gamepad_button_check(0, gp_padl);
+}
+function left_released(){
+	return keyboard_check_released(ord("A")) || keyboard_check_released(vk_left) || gamepad_button_check_released(0, gp_padl);
 }
 
 function select_pressed(){
-	return mouse_check_button_pressed(mb_left) || gamepad_button_check(0,gp_face1);
+	return mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1);
 }
 function cancel_pressed(){
-	return mouse_check_button_pressed(mb_right) || gamepad_button_check(0,gp_face2)
+	return mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_face2)
 }
 function undo_pressed(){
 	return (keyboard_check(vk_control) && keyboard_check_pressed(ord("Z")))|| gamepad_button_check_pressed(0,gp_select);
