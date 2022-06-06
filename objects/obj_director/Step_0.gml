@@ -1,6 +1,6 @@
 if(targetedBy != noone &&  redirect){
 	
-	if(targetedBy.class == "archer" || targetedBy.class == "director"){
+	if(string_pos("archer", targetedBy.class)!= -1 || string_pos("director", targetedBy.class)!= -1 || string_pos("shooter", targetedBy.class)!= -1){
 	
 	var range = action.targeting.range;
 	var lBound = 0; //boundry on left side of map
