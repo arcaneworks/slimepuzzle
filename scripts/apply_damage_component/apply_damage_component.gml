@@ -55,9 +55,10 @@ function apply_damage_component(component){
 	}else{
 		switch(component.damageClass){
 			case "director":
-				component.targetedBy = id;
-				component.redirect = true;
-			
+				if(action.targeting.range > 1){
+					component.targetedBy = id;
+					component.redirect = true;
+				}
 			break;
 			
 			

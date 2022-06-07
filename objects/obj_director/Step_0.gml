@@ -1,6 +1,6 @@
 if(targetedBy != noone &&  redirect){
-	
-	if(string_pos("archer", targetedBy.class)!= -1 || string_pos("director", targetedBy.class)!= -1 || string_pos("shooter", targetedBy.class)!= -1){
+	var archer = string_pos("archer", targetedBy.class);
+	if(string_pos("archer", targetedBy.class)!= 0 || string_pos("director", targetedBy.class)!= 0  || string_pos("shooter", targetedBy.class)!= 0){
 	
 	var range = action.targeting.range;
 	var lBound = 0; //boundry on left side of map
@@ -173,7 +173,6 @@ if(targetedBy != noone &&  redirect){
 				ds_priority_add(global.actionQueue, id, SPD);
 			}
 		
-		
 		break;
 		
 		
@@ -273,15 +272,16 @@ if(targetedBy != noone &&  redirect){
 				}
 				
 				if(ds_list_empty(targetList)){
-					for(var xx = gridX + 1; xx < gridX + range; xx++){
-						if(xx <= rBound){
-							var tempTarget = map[xx, gridY]; 
+					for(var yy = gridY + range; yy > gridY; yy--){ // start from closest node in range
+						if(yy <= tBound){// if that node is on map
 						
-							if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
+							var tempTarget = map[gridX, yy]; 
+							
+							if(instance_exists(tempTarget)){// and that node has an occupant
 								ds_list_add(targetList, tempTarget);
 								break;// get out of for loop
 							}
-						}		
+						}
 					}
 				}
 				
