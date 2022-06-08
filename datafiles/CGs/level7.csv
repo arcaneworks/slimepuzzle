@@ -1,6 +1,8 @@
 1,,,,,,,,
-name,BLITZ,-,,,,,,
-Fsrequency,1,-,,,,,,
-rowCount,7,-,,CW,CK,,,
-deFsTerrain,grass,-,,ER,,,CX,TH
-mirrors,N,-,CX,,CK,ER,TH,CK
+name,level8,-,,,,,,
+Frequency,1,-,,,,CX,,
+rowCount,7,-,,,,,,
+deFsTerrain,grass,-,,CK,ER,ER,ER,
+mirrors,N,-,,,CK,,,CK
+-,-,-,,,,CA,,
+-,-,-,,,,,,

@@ -167,7 +167,7 @@ function set_component_info_db(){
 			info.class = "brawler"; 
 			info.infoText = "The brawler strikes the actor that moves in front of it.";
 			info.componentCode = "CQ";
-			stats.SPD = 2;
+			stats.SPD = 1;
 			stats.maxHp = 2;
 			visuals.sprite = spr_brawler_s;
 			visuals.portraitSpr = spr_port_fighter;
