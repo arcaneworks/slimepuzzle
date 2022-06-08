@@ -259,7 +259,7 @@ if(targetedBy != noone &&  redirect){
 		case dir.north:
 			//if shot from the right, aim up
 			if(targetedBy.gridX > gridX){
-				for(var yy = gridY + range; yy > gridY + 1; yy--){ // start from closest node in range
+				for(var yy = gridY + 1; yy <= gridY + range; yy++){ // start from closest node in range
 					if(yy <= tBound){// if that node is on map
 						
 						var tempTarget = map[gridX, yy]; 
@@ -272,7 +272,7 @@ if(targetedBy != noone &&  redirect){
 				}
 				
 				if(ds_list_empty(targetList)){
-					for(var yy = gridY + range; yy > gridY; yy--){ // start from closest node in range
+					for(var yy = gridY + 1; yy <= gridY + range; yy++){ // start from closest node in range
 						if(yy <= tBound){// if that node is on map
 						
 							var tempTarget = map[gridX, yy]; 
@@ -298,7 +298,7 @@ if(targetedBy != noone &&  redirect){
 			
 			//if shot from above, aim right
 			if(targetedBy.gridY > gridY){
-				for(var xx = gridX + range; xx > gridX; xx--){
+				for(var xx = gridX + 1; xx <= gridX+ range; xx++){
 					if(xx <= rBound){
 						var tempTarget = map[xx, gridY]; 
 						

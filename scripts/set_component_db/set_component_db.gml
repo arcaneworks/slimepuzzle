@@ -232,7 +232,7 @@ function set_component_info_db(){
 		rock = new component_struct();
 		with(rock){
 			info.class = "rock"; 
-			info.infoText = "Rocks can be pushed and fill holes.";
+			info.infoText = "Large stone. Can be pushed and fill holes. That we could all be so sturdy.";
 			info.componentCode = "ER";
 			feats.faces = false;
 			feats.damagable = false;
@@ -255,7 +255,7 @@ function set_component_info_db(){
 		barrel = new component_struct();
 		with(barrel){
 				info.class = "breakable"; 
-				info.infoText = "barrels can be destroyed.";
+				info.infoText = "Used to hold various goods. Can be destroyed for a chance at loot. Far more trade than one would expect for such a remote and dangerous area.";
 				info.componentCode = "EB";
 				feats.faces = false;
 				visuals.sprite = spr_barrel1;
@@ -265,7 +265,7 @@ function set_component_info_db(){
 		crate = new component_struct();
 		with(crate){
 				info.class = "breakable"; 
-				info.infoText = "crates can be pushed and destroyed";
+				info.infoText = "Used to ship objects to faraway lands. Can be destroyed for loot. Strangely, it has no markings. Who was sending things here, and why?";
 				info.componentCode = "EP";
 				feats.faces = false;
 				visuals.sprite = spr_crate1;

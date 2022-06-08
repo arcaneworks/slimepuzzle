@@ -41,15 +41,15 @@ function set_terrain_db(){
 	hole = new terrain_struct();
 	with(hole){
 		info.terrainString = "HOLE";
-		info.infoText = "a hole. actors within it are disabled. it can be filled with a rock";
-		info.sprite = spr_hole;	
+		info.infoText = "A hole in the ground. Cannot be moved through. In the legions, preparing these sorts of defensive measures is tactically critical.";
+		info.sprite = spr_hole;
 		info.terrainCode = "TH";
 	}
 	
 	web = new terrain_struct();
 	with(web){
 		info.terrainString = "WEB";
-		info.infoText = "a web. actors within it cannot act. it can be destroyed by fire.";
+		info.infoText = "Large, thick webs. Prevents movement, but can be destroyed by fire. Be very wary, the creatures who spun all of this silk might still be in the area.";
 		info.sprite = spr_web;	
 		info.terrainCode = "TW";
 	}
@@ -57,7 +57,7 @@ function set_terrain_db(){
 	bonfire = new terrain_struct();
 	with(bonfire){
 		info.terrainString = "BONFIRE";
-		info.infoText = "a lit bonfire. eleminates actors within.";
+		info.infoText = "A roaring campfire, a large open flame. Can be used to burn enemies or light arrows. Fire consumes everything, and erases all mistakes.";
 		info.sprite = spr_bonfire_lit;	
 		info.terrainCode = "TB";
 		
@@ -66,8 +66,8 @@ function set_terrain_db(){
 	bonfireOff = new terrain_struct();
 	with(bonfireOff){
 		info.terrainString = "BONFIRE OFF";
-		info.infoText = "an unlit bonfire. It can be lit with fire.";
-		info.sprite = spr_bonfire_off;	
+		info.infoText = "An unlit campfire, can be lit with fire. Travelers have passed through here recently, although it is impossible to know exactly when.";
+		info.sprite = spr_bonfire_off;
 		info.terrainCode = "TO";
 	}
 		
