@@ -116,7 +116,7 @@ function set_component_info_db(){
 			visuals.sprite = spr_rogue_s;
 			visuals.portraitSpr = spr_port_archer;
 			feats.triggersReaction = false;
-			action = global.actionDB.bash;
+			action = global.actionDB.stab;
 			stats.move = 2;
 		}
 		

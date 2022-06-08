@@ -100,6 +100,19 @@ function set_action_db(){
 		targeting.targetAll = false;
 	}
 	
+	stab = new act_struct();
+	with(stab){
+		info.title = "STAB";
+		info.instructText = "Use precision and press 'Z' to strike!"
+		info.actionText = "Deals 1 damage and pushes target 1 node.";
+		targeting.range = 1;
+		targeting.reactionType = "facing";
+		damage.damage = 1;
+		damage.damageType = "physical";
+		targeting.targetType = "melee";
+		targeting.targetAll = false;
+	}
+	
 	slime = new act_struct();
 	with(slime){
 		effect.shove = true;
@@ -229,6 +242,7 @@ function set_action_db(){
 		
 		shoot : other.shoot,
 		bash : other.bash,
+		stab: other.stab,
 		fire : other.fire,
 		counter: other.counter,
 		spit: other.spit,
