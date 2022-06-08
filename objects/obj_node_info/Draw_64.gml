@@ -22,7 +22,9 @@ var titleY = y + .5 * string_height(title) * fontScale + 5;
 draw_set_color(c_white);
 var iconBufferY = y + .5 * boxHeight - .5 * iconSize;
 var maxText = 550;
-var sep = string_height(title);
+//var sep = string_height(title);
+
+var sep = 32;
 draw_set_font(font);
 
 draw_text_transformed(titleX, titleY, title, fontScale, fontScale, 0);  

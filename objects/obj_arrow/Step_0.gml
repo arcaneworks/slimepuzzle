@@ -7,6 +7,7 @@
 			damageType = "fire";
 			giveStatus = "burning";
 			actor.action.damage.tempDamageType = "fire";
+			damage = damage + 1;
 			
 	}	
 	var collided_director = collision_point(x, y, obj_director, false, false);

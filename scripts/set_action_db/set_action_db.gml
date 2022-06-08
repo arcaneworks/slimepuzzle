@@ -121,7 +121,7 @@ function set_action_db(){
 		targeting.targetAll = false;
 		vfx.vfxType = "projectile";
 		vfx.vfxSprite = spr_arrow;
-		damage.damage = 1;
+		damage.damage = 2;
 	}
 		
 	fire = new act_struct(); 

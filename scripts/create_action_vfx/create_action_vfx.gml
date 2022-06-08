@@ -56,7 +56,7 @@
 						
 							path_add_point(movementPath, other.startX, other.startY, 100);
 							path_add_point(movementPath, target.x + node_radius, target.y + node_radius, 100);
-							path_start(movementPath, speed/2, true, true);
+							path_start(movementPath, speed, true, true);
 						}
 				
 					break;	

@@ -48,7 +48,7 @@ if(abs(yDif) > 0 && xDif == 0){ //if there is no change in X position but there 
 		
 		dest = tNodeY + 1;
 		
-		if(dest <= tBound){
+		if(dest < tBound){
 			pushNode = map[tNodeX, dest];
 		}
 	}
