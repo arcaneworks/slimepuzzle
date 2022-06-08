@@ -861,6 +861,11 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"forest4.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"forest5.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"forest6.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level12.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level11.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level13.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level14.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"level15.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.3.0.625",
