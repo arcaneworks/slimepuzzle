@@ -158,9 +158,9 @@ var hoveringObj = false;
 if (!hoveringBar) {
 	
 	for(ii = 0; ii < ds_list_size(visObjs); ii ++){
-		var menuXL = x + objHeight;
+		var menuXL = x + borderX;
 		var menuXR = x + width * .75;
-		var menuYtop = y + (ii * objHeight);    
+		var menuYtop = y + borderY + (ii * objHeight);    
 		var menuYbot = menuYtop + objHeight;
 				
 		if(collision_rectangle(menuXL, menuYtop, menuXR, menuYbot, obj_interface_editor, true, false)){
