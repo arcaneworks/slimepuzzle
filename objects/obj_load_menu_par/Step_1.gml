@@ -19,9 +19,8 @@ if(initialize){
 			var obj = ds_list_find_value(objs, ii);
 			ds_list_add(visObjs, obj);
 		}
+		
 	#endregion
-	
-	
 	
 	initialize = false;	
 }

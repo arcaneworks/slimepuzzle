@@ -35,7 +35,7 @@
     "path": "folders/01 - LEVEL EDITOR/Scroll.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_scroll_window",
+  "name": "obj_load_menu_par",
   "tags": [],
   "resourceType": "GMObject",
 }

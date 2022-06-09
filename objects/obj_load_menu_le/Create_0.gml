@@ -1,8 +1,8 @@
 event_inherited();
 depth = -100;
-x = 150; 
-y = 100;
-height = 200; 
+x = 50; 
+y = 80;
+height = 250; 
 width = 100;
 
 

@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_scroll_window",
-    "path": "objects/obj_scroll_window/obj_scroll_window.yy",
+    "name": "obj_load_menu_par",
+    "path": "objects/obj_load_menu_par/obj_load_menu_par.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
