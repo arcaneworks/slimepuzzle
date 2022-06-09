@@ -55,8 +55,8 @@ update_cursor_pos();
 			
 		}
 		function set_mode_load(check = false){
-					if(!instance_exists(obj_scroll_load_box)){
-						instance_create_layer(x, y, "Instances", obj_scroll_load_box);	
+					if(!instance_exists(obj_load_menu_le)){
+						instance_create_layer(x, y, "Instances", obj_load_menu_le);	
 					}
 				
 					step_tool_select(check);

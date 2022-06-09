@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_scroll_window_file",
-    "path": "objects/obj_scroll_window_file/obj_scroll_window_file.yy",
+    "name": "obj_scroll_window",
+    "path": "objects/obj_scroll_window/obj_scroll_window.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,7 +26,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -35,7 +34,7 @@
     "path": "folders/01 - LEVEL EDITOR/Scroll.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_load_box",
+  "name": "obj_load_menu_le",
   "tags": [],
   "resourceType": "GMObject",
 }
