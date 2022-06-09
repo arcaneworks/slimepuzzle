@@ -66,6 +66,9 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.director;
 		break;
 		
+		case "EF":
+			tempStruct = global.componentDB.firedirector;
+		break;
 		case "EW":
 			tempStruct = global.componentDB.wall;
 		break;

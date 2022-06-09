@@ -7,12 +7,18 @@
 			damageType = "fire";
 			giveStatus = "burning";
 			actor.action.damage.tempDamageType = "fire";
-			damage = damage + 1;
+		    damage ++; 
 			
 	}	
 	var collided_director = collision_point(x, y, obj_director, false, false);
 	if(collided_director && damageType == "fire"){
-		collided_director.fire = true;
+			var burnable = collided_director;
+			var newBonfire = instance_create_layer(burnable.x, burnable.y, "Instances", obj_director_fire);
+			audio_play_sound(s_fire4, 1, false);
+			newBonfire.gridX = burnable.gridX;
+			newBonfire.gridY = burnable.gridY;
+			map[burnable.gridX, burnable.gridY].occupant = newBonfire; 
+			instance_destroy(collided_director); 
 		
 	}	
 	

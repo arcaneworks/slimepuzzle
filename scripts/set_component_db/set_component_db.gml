@@ -284,6 +284,18 @@ function set_component_info_db(){
 				visuals.portraitSpr = spr_director_s;
 				action = global.actionDB.shoot;
 			}
+				firedirector = new component_struct();
+		with(firedirector){
+				info.class = "director_fire"; 
+				info.damageClass = "director";
+				info.infoText = "redirects arrows.";
+				info.componentCode = "EF";
+				feats.damagable = false;
+				feats.faces = true;
+				visuals.sprite = spr_director_fire_s;
+				visuals.portraitSpr = spr_director_fire_s;
+				action = global.actionDB.shoot;
+			}
 			
 		def = new component_struct();
 	
@@ -311,6 +323,7 @@ function set_component_info_db(){
 		barrel : other.barrel,
 		crate : other.crate,
 		director : other.director,
+		firedirector : other.firedirector,
 		wall : other.wall
 	
 	}
