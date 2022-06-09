@@ -23,9 +23,8 @@ for(ii = 0; ii < ds_list_size(visObjs); ii ++){
 	draw_set_color(c_white);
 	if (mpos != -1) {
 		draw_sprite(spr_selection_arrow, 0, x + sprite_get_width(spr_selection_arrow) * 1.1, y + sprite_get_height(spr_selection_arrow)  * .5 + 2 + mpos * objHeight);
-	}
-	
-	if(selected != noone){
+		
+		if(selected != noone){
 		
 		draw_set_color(c_aqua);
 		draw_set_alpha(.05);
@@ -33,6 +32,9 @@ for(ii = 0; ii < ds_list_size(visObjs); ii ++){
 		draw_set_alpha(1);
 		draw_set_color(c_white);
 	}
+	}
+	
+	
 }
 
 draw_default();/// @description Insert description here
