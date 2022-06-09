@@ -152,26 +152,34 @@ if (updateScrollPos) {
 
  
 
-var hoveringBar = position_meeting(obj_interface_editor.x, obj_interface_editor.y, bar);
+var hoveringBar = position_meeting(global.cursor.x, global.cursor.y, bar);
 var hoveringObj = false;
 
 if (!hoveringBar) {
-	
+
 	for(ii = 0; ii < ds_list_size(visObjs); ii ++){
 		var menuXL = x + borderX;
 		var menuXR = x + width * .75;
 		var menuYtop = y + borderY + (ii * objHeight);    
 		var menuYbot = menuYtop + objHeight;
-				
-		if(collision_rectangle(menuXL, menuYtop, menuXR, menuYbot, obj_interface_editor, true, false)){
-			mpos = ii;
-			hoveringObj= true;
 		
-		}else{
-			textColor = c_white;	
+		var menuHover = collision_rectangle(x, y, x + width, y + height, global.cursor, true, false);
+		
+			if(menuHover){
+				if(collision_rectangle(menuXL, menuYtop, menuXR, menuYbot, global.cursor, true, false)){
+					mpos = ii;
+					hoveringObj= true;
+		
+				}else{
+					textColor = c_white;	
+				}
+			}else{
+				mpos = -1;	
+				selected = noone; 
+			}
 		}
 	}
-}
+
 // if the user has the cursor over an object, set the selector position (mpos)
 // to the position of that object.
 

@@ -5,9 +5,6 @@ title = "LOAD MENU";
 selected = noone;
 font = f_battle_text_28;
 textScale = .3;
-
-
-
 width = 125; 
 height = 255;
 borderY = 5;
@@ -15,10 +12,9 @@ borderX = 20;
 displaySpace = height - borderY * 2;
 
 var tempString = "test";
-draw_set_font(font);
-objHeight = string_height(tempString) * textScale;
-tweenSpace = 2;
-maxVisObjs = floor((displaySpace + tweenSpace) / objHeight );
+objHeight = 0;
+tweenSpace = 0;
+maxVisObjs = 0;
 
 objs = ds_list_create(); // the list of all objects the user can view by scrolling
 visObjs = ds_list_create(); // the list of all displayed objects
@@ -44,12 +40,6 @@ textColor = c_white;
 // in objs list will be displayed. 
 // This function should be incorporated into 
 // the create event of every child of this object.
-
-
-
-
-
-
 
 
  //Proof of numVisObjs calculation:

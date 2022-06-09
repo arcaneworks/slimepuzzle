@@ -1,7 +1,9 @@
 event_inherited();
 depth = -100;
-x = 32; 
-y = 85;
+x = 150; 
+y = 100;
+height = 200; 
+width = 100;
 
 
 var levelFile = file_find_first(working_directory + "CGs/*", 0);
@@ -16,11 +18,6 @@ while (levelFile != ""){
 file_find_close();
 // loads all the character/team files into a single list, objs
 
-
-for (ii = 0; ii < maxVisObjs && ii < ds_list_size(objs); ii++) {
-	var obj = ds_list_find_value(objs, ii);
-	ds_list_add(visObjs, obj);
-}
 // initializes the visible objects list; the first [maxVisObjs] objects
 // in objs list will be displayed. 
 
