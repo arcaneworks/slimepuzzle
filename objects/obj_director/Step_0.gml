@@ -1,5 +1,4 @@
 if(targetedBy != noone &&  redirect){
-	var archer = string_pos("archer", targetedBy.class);
 	if(string_pos("archer", targetedBy.class)!= 0 || string_pos("director", targetedBy.class)!= 0  || string_pos("shooter", targetedBy.class)!= 0){
 	
 	var range = action.targeting.range;

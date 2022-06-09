@@ -79,6 +79,7 @@ event_inherited();
 					}		
 					
 					ds_list_clear(targetList);
+					redirect = false;
 					actState = "wait"; 
 				}	
 
