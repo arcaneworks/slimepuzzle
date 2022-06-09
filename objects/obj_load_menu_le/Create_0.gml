@@ -1,5 +1,5 @@
 event_inherited();
-depth = -100;
+
 x = 50; 
 y = 80;
 height = 250; 
