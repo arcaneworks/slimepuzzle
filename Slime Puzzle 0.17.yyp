@@ -665,12 +665,12 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"stage_room","path":"rooms/stage_room/stage_room.yy",},},
     {"roomId":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
     {"roomId":{"name":"game_room","path":"rooms/game_room/game_room.yy",},},
     {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
     {"roomId":{"name":"test_room","path":"rooms/test_room/test_room.yy",},},
     {"roomId":{"name":"level_editor_room","path":"rooms/level_editor_room/level_editor_room.yy",},},
-    {"roomId":{"name":"stage_room","path":"rooms/stage_room/stage_room.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/00 - GAME/3 - Sprites.yy","order":4,"resourceVersion":"1.0","name":"3 - Sprites","tags":[],"resourceType":"GMFolder",},
