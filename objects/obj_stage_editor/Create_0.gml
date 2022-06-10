@@ -12,8 +12,8 @@ maxLevelW = 5;
 
 width =  maxLevelW * levelBoxSize * xBuffer; 
 height =  maxLevels/maxLevelW * yBuffer * levelBoxSize;
-
 selectedBox = noone;
+levelList = ds_list_create();
 
 for(var ii = 1; ii <= maxLevels ; ii++){
 	
@@ -22,5 +22,9 @@ for(var ii = 1; ii <= maxLevels ; ii++){
 	
 	var levelBox = instance_create_layer(levelX, levelY, "Instances", obj_level_box);
 	levelBox.levelSlot = ii;
+	ds_list_add(levelList, string(levelBox.levelSlot) + "-" + levelBox.level);
 	
 }
+
+
+var kk = 0;

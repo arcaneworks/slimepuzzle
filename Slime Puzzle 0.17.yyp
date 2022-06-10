@@ -213,6 +213,7 @@
     {"id":{"name":"init_populate_map","path":"scripts/init_populate_map/init_populate_map.yy",},"order":2,},
     {"id":{"name":"obj_map_start","path":"objects/obj_map_start/obj_map_start.yy",},"order":6,},
     {"id":{"name":"spr_delete_cursor","path":"sprites/spr_delete_cursor/spr_delete_cursor.yy",},"order":1,},
+    {"id":{"name":"save_stage","path":"scripts/save_stage/save_stage.yy",},"order":8,},
     {"id":{"name":"spr_rain_frg","path":"sprites/spr_rain_frg/spr_rain_frg.yy",},"order":8,},
     {"id":{"name":"agent_turn_order","path":"scripts/agent_turn_order/agent_turn_order.yy",},"order":4,},
     {"id":{"name":"spr_rain_bkg","path":"sprites/spr_rain_bkg/spr_rain_bkg.yy",},"order":7,},
