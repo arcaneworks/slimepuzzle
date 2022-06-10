@@ -1,9 +1,20 @@
 if(selected || hovered){
-	image_index = 1;	
+	
+		image_index = 1;	
+
 }else{
-	image_index = 0;	
+	if(level != "empty"){
+		hasLevel = true;
+		image_index = 2;
+	}else{
+		hasLevel = false;
+		image_index = 0;	
+	}
 }
 
+if(hasLevel){
+	image_index = 2;
+}
 
 if(mouse_over()){
 	hovered = true; 	

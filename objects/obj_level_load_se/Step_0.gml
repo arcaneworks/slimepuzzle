@@ -8,7 +8,9 @@ if(push == 1 && selected != noone){
 	
 	if(obj_stage_editor.selectedBox != noone){
 		obj_stage_editor.selectedBox.level = selected; 
-	
+		with(obj_level_box){
+			selected = false;	
+		}
 	}
 
 }	
