@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+depth = -10;
+
 initialize = true;
 title = "LOAD MENU";
 selected = noone;
@@ -10,8 +10,6 @@ height = 255;
 borderY = 5;
 borderX = 20;
 displaySpace = height - borderY * 2;
-
-var tempString = "test";
 objHeight = 0;
 tweenSpace = 0;
 maxVisObjs = 0;
