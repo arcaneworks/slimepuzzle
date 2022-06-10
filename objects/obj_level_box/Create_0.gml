@@ -1,6 +1,8 @@
+depth = -10
 levelSlot = 20;
 level = "empty";
 hovered = false; 
+selected = false;
 textScale = .5;
 font = f_battle_text_28;
 

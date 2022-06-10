@@ -4,8 +4,8 @@ frameHeight = 10;
 
 levelBoxSize = 32; 
 
-xBuffer = 1.5; 
-yBuffer = 1.5;
+xBuffer = 2; 
+yBuffer = 2;
 maxLevels = 20;
 maxLevelW = 5; 
 
@@ -13,6 +13,7 @@ maxLevelW = 5;
 width =  maxLevelW * levelBoxSize * xBuffer; 
 height =  maxLevels/maxLevelW * yBuffer * levelBoxSize;
 
+selectedBox = noone;
 
 for(var ii = 1; ii <= maxLevels ; ii++){
 	

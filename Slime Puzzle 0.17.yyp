@@ -440,6 +440,7 @@
     {"id":{"name":"create_confirm_box","path":"scripts/create_confirm_box/create_confirm_box.yy",},"order":9,},
     {"id":{"name":"spr_scroll_bar","path":"sprites/spr_scroll_bar/spr_scroll_bar.yy",},"order":5,},
     {"id":{"name":"twerp","path":"scripts/twerp/twerp.yy",},"order":0,},
+    {"id":{"name":"obj_interface_stage","path":"objects/obj_interface_stage/obj_interface_stage.yy",},"order":4,},
     {"id":{"name":"spr_port_bomb","path":"sprites/spr_port_bomb/spr_port_bomb.yy",},"order":7,},
     {"id":{"name":"spr_nodecolor","path":"sprites/spr_nodecolor/spr_nodecolor.yy",},"order":3,},
     {"id":{"name":"uc_add_instance_following_list","path":"scripts/uc_add_instance_following_list/uc_add_instance_following_list.yy",},"order":2,},

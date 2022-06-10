@@ -1,6 +1,6 @@
 event_inherited();
 
-x = 50; 
+x = obj_stage_editor.x + obj_stage_editor.width;  
 y = 80;
 height = 250; 
 width = 100;
