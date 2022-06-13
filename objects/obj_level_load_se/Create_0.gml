@@ -1,9 +1,9 @@
 event_inherited();
-
-x = obj_stage_editor.x + obj_stage_editor.width + 10;  
-y = 70;
 height = 250; 
 width = 100;
+x = obj_stage_editor.x + obj_stage_editor.width + 10 + width;  
+y = 70;
+
 
 title = "LEVELS"
 var levelFile = file_find_first(working_directory + "CGs/*", 0);

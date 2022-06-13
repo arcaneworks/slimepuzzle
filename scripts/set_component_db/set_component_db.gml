@@ -257,6 +257,7 @@ function set_component_info_db(){
 				info.class = "breakable"; 
 				info.infoText = "Used to hold various goods. Can be destroyed for a chance at loot. Far more trade than one would expect for such a remote and dangerous area.";
 				info.componentCode = "EB";
+				info.damageClass = "breakable";
 				feats.faces = false;
 				visuals.sprite = spr_barrel1;
 				visuals.portraitSpr = spr_barrel1;
@@ -267,6 +268,7 @@ function set_component_info_db(){
 				info.class = "breakable"; 
 				info.infoText = "Used to ship objects to faraway lands. Can be destroyed for loot. Strangely, it has no markings. Who was sending things here, and why?";
 				info.componentCode = "EP";
+				info.damageClass = "breakable";
 				feats.faces = false;
 				visuals.sprite = spr_crate1;
 				visuals.portraitSpr = spr_crate1;

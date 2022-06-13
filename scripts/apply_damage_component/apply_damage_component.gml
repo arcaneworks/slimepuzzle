@@ -40,9 +40,9 @@ function apply_damage_component(component){
 		
 			case "breakable":
 		
-				 breaking = true; 
-			 
-				 shake = true;
+				component.hp -= 1;
+				component.damaged = true;
+				component.shake = true;	
 		
 			break;
 		
