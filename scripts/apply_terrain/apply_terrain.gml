@@ -12,9 +12,12 @@ function apply_terrain(component, node){
 			break;
 			
 			case "Ice":
-				if(component.shoved){
-					
-				}
+				
+					var tempNode = 	push_to_node(component.prevNode, node);
+					component.moveToNode = tempNode; // set the target's push to node as that node
+					component.moveState = "start path";
+					component.shoved = true;	
+				
 			break;
 			case "FIRE":
 				if(component.class == "rock"){

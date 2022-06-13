@@ -1,7 +1,7 @@
 path_delete(movementPath);
+moveState = "idle";
 apply_terrain(id, map[gridX, gridY]); 
 
-moveState = "idle";
 
 if(shoved){
 	shoved = false;	

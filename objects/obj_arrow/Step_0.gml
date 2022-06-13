@@ -34,6 +34,13 @@
 			map[burnable.gridX, burnable.gridY].terrain = newBonfire; 
 			
 			instance_destroy(burnable); 
+		}
+		if(collision_point(x, y, obj_fire, false, false)){
+			var burnable = collision_point(x, y, obj_fire, false, false);
+			audio_play_sound(s_fire4, 1, false);
+			map[burnable.gridX, burnable.gridY].terrain = noone; 
+			
+			instance_destroy(burnable); 
 			
 			
 			

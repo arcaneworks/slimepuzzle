@@ -2,6 +2,7 @@
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_wizard_s",
     "path": "sprites/spr_wizard_s/spr_wizard_s.yy",
