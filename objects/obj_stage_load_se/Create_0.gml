@@ -1,7 +1,5 @@
 event_inherited();
 
-x = 50; 
-y = 80;
 height = 250; 
 width = 100;
 

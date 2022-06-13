@@ -1,6 +1,7 @@
 draw_set_font(font);
-strHeight = string_height(level) * textScale;
-strWidth = string_width(level) * textScale;
+strScale = .5;
+strHeight = string_height(level) * strScale;
+strWidth = string_width(level) * strScale;
 
 numString = string(levelSlot);
 
@@ -13,13 +14,11 @@ numWidth = string_width(numString) * textScale;
 if(levelSlot > -1){
 	draw_self();
 
-	if(hovered){
+	if(hovered || selected){
 		var textX = x + .5 * sprite_width - .5 * strWidth;
 		var textY = y - strHeight - 3;
-		draw_text_transformed_color(textX + 1, textY + 1, level, textScale, textScale, 0, c_black,c_black,c_black,c_black,1);
-		draw_text_transformed(textX, textY, level, textScale, textScale, 0);
-		
-	
+		draw_text_transformed_color(textX + 1, textY + 1, level, strScale, strScale, 0, c_black,c_black,c_black,c_black,1);
+		draw_text_transformed(textX, textY, level, strScale, strScale, 0);
 	}
 	
 	var numX = x + .5 * sprite_width - .5 * numWidth;

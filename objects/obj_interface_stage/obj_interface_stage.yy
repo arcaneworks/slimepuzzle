@@ -1,21 +1,17 @@
 {
   "spriteId": {
-    "name": "spr_load_box",
-    "path": "sprites/spr_load_box/spr_load_box.yy",
+    "name": "spr_cursor",
+    "path": "sprites/spr_cursor/spr_cursor.yy",
   },
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_load_menu_par",
-    "path": "objects/obj_load_menu_par/obj_load_menu_par.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -27,6 +23,8 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -35,7 +33,7 @@
     "path": "folders/04 - STAGE EDITOR.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_level_load_se",
+  "name": "obj_interface_stage",
   "tags": [],
   "resourceType": "GMObject",
 }

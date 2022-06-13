@@ -18,8 +18,8 @@
 			newBonfire.gridX = burnable.gridX;
 			newBonfire.gridY = burnable.gridY;
 			newBonfire.facingDir = burnable.facingDir;
-			newBonfire.redirect = burnable.redirect;
-			newBonfire.targetedBy = burnable.targetedBy;
+            newBonfire.redirect = burnable.redirect;
+            newBonfire.targetedBy = burnable.targetedBy;
 			map[burnable.gridX, burnable.gridY].occupant = newBonfire; 
 			instance_destroy(collided_director); 
 		

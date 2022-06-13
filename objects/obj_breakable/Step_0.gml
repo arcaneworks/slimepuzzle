@@ -2,7 +2,7 @@ event_inherited();
 
 
 
-if(hp == maxHp - 1){
+if(hp <= 1){
 	image_index = 1;	
 }
 

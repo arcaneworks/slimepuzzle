@@ -1,11 +1,11 @@
 event_inherited();
-
-x = 50; 
-y = 80;
 height = 250; 
 width = 100;
+x = obj_stage_editor.x + obj_stage_editor.width + 10 + width;  
+y = 70;
 
 
+title = "LEVELS"
 var levelFile = file_find_first(working_directory + "CGs/*", 0);
 while (levelFile != ""){
 	var extNum = string_last_pos(".csv", levelFile)
