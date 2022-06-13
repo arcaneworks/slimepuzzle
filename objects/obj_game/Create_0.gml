@@ -99,3 +99,4 @@ instance_create_layer(x, y, "Instances", obj_interface); //create the cursor
 		}else{
 		levelComplete = true;	
 	}
+instance_create_layer(x + 25, y + 25, "Instances", obj_level_info);
