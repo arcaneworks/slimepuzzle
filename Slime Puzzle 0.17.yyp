@@ -184,7 +184,6 @@
     {"id":{"name":"sqSlideInDiagonal","path":"sequences/sqSlideInDiagonal/sqSlideInDiagonal.yy",},"order":3,},
     {"id":{"name":"spr_glow","path":"sprites/spr_glow/spr_glow.yy",},"order":0,},
     {"id":{"name":"uc_spr_Camera","path":"sprites/uc_spr_Camera/uc_spr_Camera.yy",},"order":0,},
-    {"id":{"name":"spr_box1","path":"sprites/spr_box1/spr_box1.yy",},"order":0,},
     {"id":{"name":"obj_new_profile","path":"objects/obj_new_profile/obj_new_profile.yy",},"order":2,},
     {"id":{"name":"find_thumper_reaction_nodes","path":"scripts/find_thumper_reaction_nodes/find_thumper_reaction_nodes.yy",},"order":8,},
     {"id":{"name":"spr_grass1","path":"sprites/spr_grass1/spr_grass1.yy",},"order":1,},
