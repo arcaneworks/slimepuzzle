@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fire_loop4",
-    "path": "sprites/spr_fire_loop4/spr_fire_loop4.yy",
+    "name": "spr_ice_sm",
+    "path": "sprites/spr_ice_sm/spr_ice_sm.yy",
   },
   "solid": false,
   "visible": true,

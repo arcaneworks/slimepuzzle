@@ -5,8 +5,8 @@ function assign_terrain_string(char){
 		
 	switch(char){
 		
-		case "L":
-			tempTerrain = "FLAME";
+		case "F":
+			tempTerrain = "Ice";
 		break;
 		
 		case "H":

@@ -143,7 +143,7 @@ totalActorPages = ceil(ds_list_size(actorList)/5);
 	fire.tabType = "terrains";
 	fire.terrainString = "FIRE";
 	fire.terrainCode = "TF";
-	fire.sprite_index = spr_fire_loop4;
+	fire.sprite_index = spr_ice_sm;
 	fire.tool = true;
 	ds_list_add(terrainList, fire);
 	

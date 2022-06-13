@@ -32,9 +32,9 @@ function set_terrain_db(){
 	
 	flame = new terrain_struct();
 	with(flame){
-		info.terrainString = "FLAME";
+		info.terrainString = "Ice";
 		info.infoText = "a fire.";
-		info.sprite = spr_fire_loop4;
+		info.sprite = spr_ice_sm;
 		info.terrainCode = "TF"; 
 	}
 	

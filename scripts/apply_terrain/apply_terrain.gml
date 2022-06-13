@@ -11,6 +11,11 @@ function apply_terrain(component, node){
 				infoStruct.disabled = false;
 			break;
 			
+			case "Ice":
+				if(component.shoved){
+					
+				}
+			break;
 			case "FIRE":
 				if(component.class == "rock"){
 					

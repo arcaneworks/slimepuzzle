@@ -52,7 +52,7 @@ if(targetedBy != noone &&  redirect){
 			}
 		
 			//if shot from below, aim left
-			if(targetedBy.gridY < gridY){
+			else if(targetedBy.gridY < gridY){
 				for(var xx = gridX - 1; xx > gridX - range; xx--){
 					if(xx >= 0){
 						var tempTarget = map[xx, gridY]; 
@@ -88,6 +88,8 @@ if(targetedBy != noone &&  redirect){
 				ds_priority_add(global.actionQueue, id, SPD);
 			
 			}
+			else
+				redirect = false;
 			
 		break;
 		
@@ -135,7 +137,7 @@ if(targetedBy != noone &&  redirect){
 			}
 			
 			//if shot from below, aim right
-			if(targetedBy.gridY < gridY){
+			else if(targetedBy.gridY < gridY){
 				for(var xx = gridX + 1; xx < gridX + range; xx++){
 					if(xx <= rBound){
 						var tempTarget = map[xx, gridY]; 
@@ -171,6 +173,8 @@ if(targetedBy != noone &&  redirect){
 				actState = "action standby";
 				ds_priority_add(global.actionQueue, id, SPD);
 			}
+			else
+				redirect = false;
 		
 		break;
 		
@@ -216,7 +220,7 @@ if(targetedBy != noone &&  redirect){
 			
 			
 			//if shot from above, aim left
-			if(targetedBy.gridY > gridY){
+			else if(targetedBy.gridY > gridY){
 				for(var xx = gridX - 1; xx > gridX - range; xx--){
 					if(xx >= 0){
 						var tempTarget = map[xx, gridY]; 
@@ -251,6 +255,8 @@ if(targetedBy != noone &&  redirect){
 				actState = "action standby";
 				ds_priority_add(global.actionQueue, id, SPD);
 			}
+			else
+				redirect = false;
 				
 		break;
 		
@@ -296,7 +302,7 @@ if(targetedBy != noone &&  redirect){
 			
 			
 			//if shot from above, aim right
-			if(targetedBy.gridY > gridY){
+			else if(targetedBy.gridY > gridY){
 				for(var xx = gridX + 1; xx <= gridX+ range; xx++){
 					if(xx <= rBound){
 						var tempTarget = map[xx, gridY]; 
@@ -332,6 +338,8 @@ if(targetedBy != noone &&  redirect){
 				ds_priority_add(global.actionQueue, id, SPD);
 				
 			}
+			else
+				redirect = false;
 		
 		break; 
 
