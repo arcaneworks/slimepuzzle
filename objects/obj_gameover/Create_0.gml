@@ -1,4 +1,4 @@
-skipGameOver = false;
+skipGameOver = true;
 
 //obj_level.visible = false; //make level UI invisible
 oldString = global.gameObj.levelString; //find old level string
