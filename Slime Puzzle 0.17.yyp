@@ -259,6 +259,7 @@
     {"id":{"name":"s_impact_hit","path":"sounds/s_impact_hit/s_impact_hit.yy",},"order":4,},
     {"id":{"name":"s_impact13","path":"sounds/s_impact13/s_impact13.yy",},"order":12,},
     {"id":{"name":"s_impact14","path":"sounds/s_impact14/s_impact14.yy",},"order":13,},
+    {"id":{"name":"shove_reaction","path":"scripts/shove_reaction/shove_reaction.yy",},"order":5,},
     {"id":{"name":"s_impactfunny","path":"sounds/s_impactfunny/s_impactfunny.yy",},"order":14,},
     {"id":{"name":"obj_bonfire","path":"objects/obj_bonfire/obj_bonfire.yy",},"order":5,},
     {"id":{"name":"s_arrow","path":"sounds/s_arrow/s_arrow.yy",},"order":3,},
