@@ -58,7 +58,7 @@ event_inherited();
 						target = ds_list_find_value(targetList, j); 
 							
 							// if the target is a node and has an occupant
-							if(target.node){ 
+							if(instance_exists(target) && target.node){ 
 								if(target.occupant){
 										target = target.occupant;
 								}else{

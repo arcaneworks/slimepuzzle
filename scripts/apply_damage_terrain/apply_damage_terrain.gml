@@ -23,7 +23,14 @@ function apply_damage_terrain(terrain){
 						
 					}	
 				break;
-				
+				case "Ice":
+					if(action.damage.damageType == "fire" || action.damage.tempDamageType == "fire"){
+						
+						map[terrain.gridX,terrain.gridY].terrain = noone;
+						instance_destroy(terrain);
+						
+					}	
+				break;
 				case "BONFIRE":
 					if(action.damage.damageType == "physical" || action.damage.tempDamageType == "physical"){
 						var newInst = instance_create_layer(terrain.x, terrain.y, "Instances", obj_bonfire_off);
