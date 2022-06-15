@@ -49,5 +49,9 @@ function set_component_info(struct, comp, setPos = false){
 		comp.currNode = node;
 		
 	}
+	
+	if(comp.dead = false){
+		comp.deathWait = false; 	
+	}
 
 }

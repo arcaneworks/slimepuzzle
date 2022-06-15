@@ -49,10 +49,7 @@ function apply_damage_component(component){
 		
 		}
 	
-		if(component.hp <= 0){
-			ds_queue_enqueue(global.deathQueue, component);	
-			component.deathWait = true;
-		}
+		
 	}else{
 		switch(component.damageClass){
 			case "director":

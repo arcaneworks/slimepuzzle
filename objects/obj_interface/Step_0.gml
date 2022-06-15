@@ -56,7 +56,8 @@ update_cursor_pos();
 					var aStruct = selectedActor.action;
 					wipe_nodes();
 					action_nodes(map[selectedActor.gridX, selectedActor.gridY], aStruct.targeting.targetType, aStruct.targeting.range);	
-					getTargets = false;
+					
+				
 				}
 						
 						

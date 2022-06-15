@@ -31,7 +31,7 @@ if(clickable && ds_priority_size( global.actionQueue) == 0){
 				            set_component_info(head, id, true);
 				            ds_priority_delete_max(undoList);
 							
-							var kk = 0
+						
 				        }
 				    }
 				}
@@ -54,7 +54,11 @@ if(clickable && ds_priority_size( global.actionQueue) == 0){
 				        }
 				    }
 				}
-				
+				with(obj_enemy){
+					if(componentStruct.feats.reacts){
+						fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
+					}
+				}
 				global.totalMoves--
 				global.undoneMoves++;
 				

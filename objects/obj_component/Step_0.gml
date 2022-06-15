@@ -137,6 +137,7 @@ switch(moveState){
 			
 					if(x > moveToNode.x){
 						xDif = -(x - moveToNode.x) / 2;
+						xDif = -(x - moveToNode.x) / 2;
 					}else{
 						xDif = (moveToNode.x - x) / 2;	
 					}
