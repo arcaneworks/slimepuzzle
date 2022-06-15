@@ -9,7 +9,7 @@ if(global.totalMoves > 0){
 
 
 
-if(clickable){
+if(clickable && ds_priority_size( global.actionQueue) == 0){
 	if(instance_position(mouse_x, mouse_y, id) || undo_pressed()){
 			image_index = 1;
 		
