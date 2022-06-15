@@ -39,10 +39,11 @@ function apply_damage_component(component){
 			break;
 		
 			case "breakable":
-		
-				component.hp -= 1;
-				component.damaged = true;
-				component.shake = true;	
+				if(action.damage.damage > 0){
+					component.hp -= 1;
+					component.damaged = true;
+					component.shake = true;	
+				}
 		
 			break;
 		
