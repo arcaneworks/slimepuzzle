@@ -52,8 +52,11 @@ function apply_terrain(component, node){
 						}
 						else {
 						component.hp -= component.hp;
-						component.damaged = true;
-						component.shake = true;
+						
+						ds_queue_enqueue(global.deathQueue, component);	
+						component.deathWait = true;
+						//component.damaged = true;
+						//component.shake = true;
 				
 								
 						}

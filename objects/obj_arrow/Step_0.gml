@@ -13,8 +13,18 @@
 	var collided_director = collision_point(x, y, obj_director, false, false);
 	if(collided_director && collided_director.class != "director_fire" && damageType == "fire"){
 			var burnable = collided_director;
-			var newBonfire = instance_create_layer(burnable.x, burnable.y, "Instances", obj_director_fire);
+ 			var newBonfire = instance_create_layer(burnable.x, burnable.y, "Instances", obj_director_fire);
 			audio_play_sound(s_fire4, 1, false);
+			newBonfire.dead = true;
+			var tempStruct = snap_deep_copy(newBonfire.componentStruct);
+			
+			copy_component_to_struct(newBonfire,tempStruct);
+			ds_priority_add(newBonfire.undoList, tempStruct, global.totalMoves);
+			newBonfire.dead = false;
+			
+			
+			copy_component_to_struct(burnable,tempStruct);
+			ds_priority_add(burnable.undoList, tempStruct, global.totalMoves);
 			newBonfire.gridX = burnable.gridX;
 			newBonfire.gridY = burnable.gridY;
 			newBonfire.facingDir = burnable.facingDir;
@@ -24,7 +34,7 @@
 			ds_list_add(actor.targetList, newBonfire);
 			//actor.target = newBonfire;
 			map[burnable.gridX, burnable.gridY].occupant = newBonfire; 
-			instance_destroy(burnable); 
+			burnable.dead = true;
 		
 	}	
 	
@@ -35,15 +45,27 @@
 			var newBonfire = instance_create_layer(burnable.x, burnable.y, "Instances", obj_bonfire);
 			audio_play_sound(s_fire4, 1, false);
 			map[burnable.gridX, burnable.gridY].terrain = newBonfire; 
+			newBonfire.dead = true;
 			
-			instance_destroy(burnable); 
+			var tempStruct = snap_deep_copy(newBonfire.terrainStruct);
+			
+			copy_terrain_to_struct(newBonfire,tempStruct);
+			ds_priority_add(newBonfire.undoList, tempStruct, global.totalMoves);
+			newBonfire.dead = false;
+			tempStruct = snap_deep_copy(burnable.terrainStruct);
+			copy_terrain_to_struct(burnable,tempStruct);
+			ds_priority_add(burnable.undoList, tempStruct, global.totalMoves);
+			burnable.dead = true;
+			
 		}
 		if(collision_point(x, y, obj_fire, false, false)){
 			var burnable = collision_point(x, y, obj_fire, false, false);
 			audio_play_sound(s_fire4, 1, false);
 			map[burnable.gridX, burnable.gridY].terrain = noone; 
-			
-			instance_destroy(burnable); 
+			var tempStruct = snap_deep_copy(burnable.terrainStruct);
+			copy_terrain_to_struct(burnable,tempStruct);
+			ds_priority_add(burnable.undoList, tempStruct, global.totalMoves);
+			burnable.dead = true;
 			
 			
 			
