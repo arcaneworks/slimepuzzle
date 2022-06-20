@@ -34,7 +34,7 @@ function fill_reaction_list(list, reactionType, range){
 					if(yy > oY){
 						ds_list_add(list, map[oX, yy]);
 					}		
-					map[oX, yy].actionNode = true;
+					//map[oX, yy].actionNode = true;
 				}				
 			}
 			

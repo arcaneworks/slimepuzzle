@@ -50,7 +50,6 @@ function mb_press_act(){
 			with(obj_enemy){
 					canAct = true;
 			}
-		
 		}
 	
 	}
