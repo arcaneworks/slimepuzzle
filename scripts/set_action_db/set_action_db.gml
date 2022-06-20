@@ -10,10 +10,11 @@ function set_action_db(){
 	}
 	
 	//creates struct containing damage variables (damage number, damage type)
-	function damage_struct(_damage = 0, _damageType = "physical") constructor {
+	function damage_struct(_damage = 0, _damageType = "physical", _backstab = false) constructor {
 		damage = _damage;
 		damageType = _damageType;
 		tempDamageType = _damageType; 
+		backstab = _backstab;
 	}
 	
 	//creates struct containing range and targetType
@@ -109,6 +110,21 @@ function set_action_db(){
 		targeting.reactionType = "facing";
 		damage.damage = 1;
 		damage.damageType = "physical";
+		targeting.targetType = "melee";
+		targeting.targetAll = false;
+	}
+	
+	backstab = new act_struct();
+	with(backstab){
+		info.title = "BACKSTAB";
+		info.instructText = "Use precision and press 'Z' to strike!"
+		info.actionText = "Deals 1 damage from the front and 2 from behind.";
+		targeting.range = 1;
+		targeting.reactionType = "facing";
+		effect.shove = false;
+		damage.damage = 1;
+		damage.damageType = "physical";
+		damage.backstab = true;
 		targeting.targetType = "melee";
 		targeting.targetAll = false;
 	}

@@ -16,8 +16,8 @@ function enemy_reaction_move(){
 				for(var ii = 0; ii < ds_list_size(reactList); ii++){
 					var tempTarget = ds_list_find_value(reactList, ii); 
 					if(tempTarget.occupant){
-						tempTarget = tempTarget.occupant;	
-					if(tempTarget.triggersReaction)
+						tempTarget = tempTarget;	
+					if(tempTarget.occupant.triggersReaction)
 					ds_list_add(targetList, tempTarget); 
 					}
 				}

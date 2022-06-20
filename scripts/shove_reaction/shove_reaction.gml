@@ -3,6 +3,7 @@
 function shove_reaction(){
 //this script is meant to run when an actor steps into an enemy's reaction list 
 	//wipe_nodes();
+	ds_priority_delete_value(global.actionQueue, id);
 	if(canAct)
 	if(!ds_list_empty(reactList)){
 			//if this node I just moved in is in the react List (returns -1	 
@@ -11,8 +12,8 @@ function shove_reaction(){
 				for(var ii = 0; ii < ds_list_size(reactList); ii++){
 					var tempTarget = ds_list_find_value(reactList, ii); 
 					if(tempTarget.occupant){
-						tempTarget = tempTarget.occupant;	
-					if(tempTarget.triggersReaction)
+						tempTarget = tempTarget;	
+					if(tempTarget.occupant && tempTarget.occupant.triggersReaction)
 						ds_list_add(targetList, tempTarget); 
 					}
 				}
@@ -22,8 +23,8 @@ function shove_reaction(){
 				for(var ii = 0; ii < ds_list_size(reactList); ii++){
 					var tempTarget = ds_list_find_value(reactList, ii); 
 					if(tempTarget.occupant){
-						tempTarget = tempTarget.occupant;	
-					if(tempTarget.triggersReaction)
+						tempTarget = tempTarget;	
+					if(tempTarget.occupant.triggersReaction)
 						ds_list_add(targetList, tempTarget); 
 						break;
 					}
@@ -54,7 +55,8 @@ function shove_reaction(){
 			//changes direction to face actor that stepped in reactnodes
 			
 			
-			ds_priority_add(global.actionQueue, id, SPD); 
+			ds_priority_add(global.actionQueue, id, SPD);
+			
 			canAct = false;
 			actState = "action standby";
 			global.cursorState = "idle";

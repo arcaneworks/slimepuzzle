@@ -55,12 +55,12 @@ event_inherited();
 							// if the target is a node and has an occupant
 							if(instance_exists(target) && target.node){ 
 								if(target.occupant){
-										target = target.occupant;
+										target = target;
 								}else{
 									//if there is no occupant, but there is a terrain
 									//target the terrain
 									if(target.terrain != noone){
-										target = target.terrain; 
+										target = target; 
 									}
 								}
 							}		
