@@ -3,7 +3,12 @@
 function shove_reaction(){
 //this script is meant to run when an actor steps into an enemy's reaction list 
 	//wipe_nodes();
-	ds_priority_delete_value(global.actionQueue, id);
+	if(ds_priority_find_priority(global.actionQueue, id) != undefined){
+		ds_priority_delete_value(global.actionQueue, id);
+		canAct = true;
+		ds_list_clear(targetList);
+		fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
+	}
 	if(canAct)
 	if(!ds_list_empty(reactList)){
 			//if this node I just moved in is in the react List (returns -1	 
@@ -60,6 +65,5 @@ function shove_reaction(){
 			canAct = false;
 			actState = "action standby";
 			global.cursorState = "idle";
-		
 	}
 }
