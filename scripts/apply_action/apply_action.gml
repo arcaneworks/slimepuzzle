@@ -16,7 +16,9 @@ function apply_action(){
 			
 				
 			//}
-			if(target.terrain){
+			if(target.node && target.terrain)
+				apply_damage_terrain(target.terrain);
+			else if(target.terrain){
 				apply_damage_terrain(target);
 			}
 		}
