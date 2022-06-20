@@ -22,6 +22,12 @@ if(shoved){
 			fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range); 
 			shove_reaction();
 		}
+		else if (hp <=0){
+			if(ds_priority_find_priority(global.actionQueue, id) != undefined || !ds_list_empty(targetList)){
+			ds_priority_delete_value(global.actionQueue, id);
+			canAct = true;
+			ds_list_clear(targetList);}
+		}
 		
 	}
 	

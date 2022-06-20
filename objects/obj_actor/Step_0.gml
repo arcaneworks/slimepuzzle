@@ -64,6 +64,12 @@ event_inherited();
 									}
 								}
 							}		
+							
+							if(target.node && target.occupant != noone){
+								ds_list_replace(targetList, j, target.occupant);
+								target = target.occupant;
+							}
+								
 							apply_action();
 						}		
 						if(playEndSfx){
@@ -155,6 +161,7 @@ event_inherited();
 							}
 						}		
 						if(instance_exists(target) && target != noone){ //if the target exists 
+							
 							if(target.component){ //and its a component
 								if(target.hitable){ //if the target is able to be hit (not a node)
 									if(target.hp <= 0){
@@ -205,6 +212,7 @@ event_inherited();
 								actState = "idle";
 							}else{
 								//if i can't act OR move
+							
 								global.cursor.selectedActor = noone; 
 								global.cursor.state = "idle";
 								actState = "idle";
@@ -214,6 +222,10 @@ event_inherited();
 				}else{ //if this actor isn't the selected actor
 					
 					//if this actor isn't the selected actor 
+						if(enemy){
+							canAct = true;
+
+						}
 					if(componentStruct.feats.reacts){
 						fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);	
 						actState = "idle";

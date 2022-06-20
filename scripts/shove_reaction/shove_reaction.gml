@@ -3,7 +3,7 @@
 function shove_reaction(){
 //this script is meant to run when an actor steps into an enemy's reaction list 
 	//wipe_nodes();
-	if(ds_priority_find_priority(global.actionQueue, id) != undefined){
+	if(ds_priority_find_priority(global.actionQueue, id) != undefined || !ds_list_empty(targetList)){
 		ds_priority_delete_value(global.actionQueue, id);
 		canAct = true;
 		ds_list_clear(targetList);
