@@ -1,2 +1,2 @@
 toolType = noone;
-depth = obj_toolbar.depth - 1; 
+depth = -5;

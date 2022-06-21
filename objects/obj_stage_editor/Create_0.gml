@@ -40,3 +40,4 @@ for(var ii = 1; ii <= maxLevels ; ii++){
 levelLoadBox = instance_create_layer(x + width + 10, y, "Instances", obj_level_load_se);
 saveBox = instance_create_layer(0, 0, "Instances", obj_saveas_se);
 stageLoadBox = instance_create_layer(x, y, "Instances", obj_stage_load_se);
+toolbar = instance_create_layer(x, y, "Instances", obj_toolbar_se);

@@ -1,6 +1,6 @@
 
 
-instance_create_layer(x, y, "Instances", global.cursor); //create the cursor
+instance_create_layer(x, y, "Instances", obj_interface_editor); //create the cursor
 global.cursor = global.cursor;
 global.gameObj = id;
 #region MAP VARIABLES (
