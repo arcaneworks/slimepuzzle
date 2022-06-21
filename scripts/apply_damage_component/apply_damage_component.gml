@@ -35,7 +35,7 @@ function apply_damage_component(component){
 			break;
 		
 			case "director":
-		
+				
 			break;
 		
 			case "breakable":
@@ -53,6 +53,31 @@ function apply_damage_component(component){
 	}else{
 		switch(component.damageClass){
 			case "director":
+			if(action.damage.tempDamageType == "fire"){
+					var burnable = component;
+		 			var newBonfire = instance_create_layer(burnable.x, burnable.y, "Instances", obj_director_fire);
+					audio_play_sound(s_fire4, 1, false);
+					newBonfire.dead = true;
+					var tempStruct = snap_deep_copy(newBonfire.componentStruct);
+			
+					copy_component_to_struct(newBonfire,tempStruct);
+					ds_priority_add(newBonfire.undoList, tempStruct, global.totalMoves);
+					newBonfire.dead = false;
+			
+			
+					copy_component_to_struct(burnable,tempStruct);
+					ds_priority_add(burnable.undoList, tempStruct, global.totalMoves);
+					newBonfire.gridX = burnable.gridX;
+					newBonfire.gridY = burnable.gridY;
+					newBonfire.facingDir = burnable.facingDir;
+		            newBonfire.redirect = burnable.redirect;
+		            newBonfire.targetedBy = burnable.targetedBy;
+					ds_list_clear(targetList);
+					ds_list_add(targetList, newBonfire);
+					//actor.target = newBonfire;
+					map[burnable.gridX, burnable.gridY].occupant = newBonfire; 
+					burnable.dead = true;
+				}
 				if(action.targeting.range > 1){
 					component.targetedBy = id;
 					component.redirect = true;
