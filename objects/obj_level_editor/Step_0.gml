@@ -1,7 +1,7 @@
 if(pause_pressed()){
-	if(obj_interface_editor.state != "load")
+	if(global.cursor.state != "load")
 		TransitionStart(rm_title_screen, sqFadeOut, sqFadeInMenu);	
 	else
-		obj_interface_editor.state = "move";
+		global.cursor.state = "move";
 }
 

@@ -41,7 +41,7 @@ if(accept_key > 0){
 	
 }
 
-if(obj_interface_editor.state != "load"){
+if(global.cursor.state != "load"){
 	instance_deactivate_object(id);	
 	
 }

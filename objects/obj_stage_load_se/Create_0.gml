@@ -1,10 +1,11 @@
 event_inherited();
-
-height = 250; 
+x = obj_stage_editor.x + obj_stage_editor.width * 1.5;
+y = obj_stage_editor.y + .5 * obj_stage_editor.height + 15;
+height = 150; 
 width = 100;
 
-
-var levelFile = file_find_first(working_directory + "CGs/*", 0);
+title = "LOAD STAGE";
+var levelFile = file_find_first(working_directory + "Stages/*", 0);
 while (levelFile != ""){
 	var extNum = string_last_pos(".csv", levelFile)
 	var LevelFileNoExt = string_delete(levelFile, extNum, 4);

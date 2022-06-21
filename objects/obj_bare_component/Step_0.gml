@@ -20,7 +20,7 @@ if(gridX != noone && gridY != noone){
 }
 
 
-if(obj_interface_editor.selectedComponent == id){
+if(global.cursor.selectedComponent == id){
 	alpha = .5;	
 }else{
 	alpha = 1;	

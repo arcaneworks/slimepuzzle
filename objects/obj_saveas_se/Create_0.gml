@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = 8;
-y = 70; 
+x = 0;
+y = 0; 
 
 message = "";
-keyboard_string = auto_gen_mapname(, "level");
+keyboard_string = auto_gen_mapname(, "stage");
 
 
 limit = 16;

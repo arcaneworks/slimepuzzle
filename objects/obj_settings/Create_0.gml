@@ -22,3 +22,7 @@ set_component_info_db();
 if(!directory_exists("CGs")){
 	directory_create("CGs");
 }
+
+if(!directory_exists("Stages")){
+	directory_create("Stages");
+}

@@ -23,7 +23,7 @@ function step_object_select(check = false, objTool = noone){
 				hoverObjTool = objTool;
 			if(hoverObjTool != noone && (check || hoverObjTool.hoverable)){
 				if(check || select_pressed()){
-					obj_interface_editor.selectedObjTool =  hoverObjTool;
+					global.cursor.selectedObjTool =  hoverObjTool;
 					obj_sub_toolbar_write.selectedObjTool = hoverObjTool;			
 				}			
 			}

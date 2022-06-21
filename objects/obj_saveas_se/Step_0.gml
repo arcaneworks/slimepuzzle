@@ -3,10 +3,6 @@
 //message = keyboard_string;
 
 
-if(obj_interface_editor.state != "saveas"){
-	instance_destroy();	
-	
-}
 
 if(!instance_exists(obj_confirm) && !saveNoti){
 	if(string_length(keyboard_string) < limit)
@@ -16,20 +12,18 @@ if(!instance_exists(obj_confirm) && !saveNoti){
 
 	
 	
-var saveBox = collision_rectangle(x , y + height, x + width/2 - 2, y + height *  2 , obj_interface_editor, false, false);
+var saveBox = collision_rectangle(x + width, y, x + width + width/2, y + height, global.cursor, false, false);
 
-var cancelBox = collision_rectangle(x + width/2 , y + height , x + width, y + height *  2, obj_interface_editor, false, false);
 
-		
 
 	if(saveBox){
 		saveColor = c_green;
 		if(select_pressed()){
-			if(file_exists("CGs\\" + message + ".csv")){
+			if(file_exists("Stages\\" + message + ".csv")){
 				create_confirm_box(x  + 100, y, "A file with this name already exists. Would you like to overwrite it?", true);
 			}else{
-				save_CG_set(message);
-				obj_interface_editor.selectedTool = noone;
+				save_stage(message);
+				global.cursor.selectedTool = noone;
 				saveNoti = true;
 				
 			}
@@ -38,32 +32,21 @@ var cancelBox = collision_rectangle(x + width/2 , y + height , x + width, y + he
 		saveColor = c_black;	
 	}
 
-	if(cancelBox){
-		cancelColor = c_maroon;	
-		if(select_pressed()){
-			instance_destroy(id);	
-			obj_interface_editor.state = "move";
-			obj_interface_editor.selectedTool = noone;
-		}
-	}else{
-		cancelColor = c_black;	
-
-	}
 }
 	
 if(confirmDec){
-	save_CG_set(message);
+	save_stage(message);
 	confirmDec = false;
 	saveNoti = true;
-	obj_interface_editor.selectedTool = noone;
+	global.cursor.selectedTool = noone;
 }
 
 if(saveNoti == true){
 	if(timer > 0){
 		timer--	
 	}else{
-		obj_interface_editor.state = "move";
-		instance_destroy()	
+		timer = 10; 
+		saveNoti = false;
 
 	}
 }
