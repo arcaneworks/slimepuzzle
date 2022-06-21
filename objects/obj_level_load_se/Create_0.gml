@@ -1,8 +1,6 @@
 event_inherited();
-height = 250; 
+height = obj_stage_editor.height; 
 width = 100;
-x = obj_stage_editor.x + obj_stage_editor.width + 10 + width;  
-y = 70;
 
 
 title = "LEVELS"

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_clear_button",
+    "path": "sprites/spr_clear_button/spr_clear_button.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -19,18 +22,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "04 - STAGE EDITOR",
-    "path": "folders/04 - STAGE EDITOR.yy",
+    "name": "Buttons & Tabs",
+    "path": "folders/01 - LEVEL EDITOR/Level Editor UI/Buttons & Tabs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_stage_editor",
+  "name": "obj_clear_button_se",
   "tags": [],
   "resourceType": "GMObject",
 }
