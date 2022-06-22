@@ -5,6 +5,8 @@ image_index = 1;
 
 update_cursor_pos();
 
+
+
 switch(state){
 	case "write":
 		step_tool_select_se();

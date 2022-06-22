@@ -6,10 +6,10 @@ if(instance_position(mouse_x, mouse_y, id)){
 		
 	if(select_pressed()){
 		
-	with(obj_level_box){
-		level = "empty";
+		with(obj_level_box){
+			level = "empty";
 		
-	}
+		}
 		
 	}		
 	

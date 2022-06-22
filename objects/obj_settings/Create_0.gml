@@ -1,6 +1,8 @@
 global.font_main = font_add_sprite(f_gameover_big, 32, true,1);
 global.playerProfile = "default";
-global.currentLevel = 1;
+global.stages = load_stage_set("stages");
+global.levelArray = load_stage_se(global.stages[0]);	
+global.currentLevel = 0;
 global.currentStage = 0;
 global.undoneMoves = 0;
 global.resets = 0;
@@ -14,7 +16,9 @@ global.cursorSensitivity = 5;
 global.lastRoom = room;
 componentCodes = ds_map_create(); // decoding key for CG data files
 
-global.stages = load_stage_set("stages");
+
+
+
 set_action_db();
 set_terrain_db();
 set_component_info_db();

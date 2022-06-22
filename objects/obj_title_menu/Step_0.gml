@@ -35,6 +35,7 @@ col2 = collision_rectangle(x + op_border, y + op_border + op_space * 2, x + widt
 col3 = collision_rectangle(x + op_border, y + op_border + op_space * 3, x + width,  y + op_border + op_space * 4, obj_interface_menu, false, true);
 col4 =  collision_rectangle(x + op_border, y + op_border + op_space * 4, x + width,  y + op_border + op_space * 5, obj_interface_menu, false, true);
 col5 =  collision_rectangle(x + op_border, y + op_border + op_space * 5, x + width,  y + op_border + op_space * 6, obj_interface_menu, false, true);
+col6 = collision_rectangle(x + op_border, y + op_border + op_space * 6, x + width,  y + op_border + op_space * 7, obj_interface_menu, false, true);
 if(col0){
 	pos = 0;
 }
@@ -52,6 +53,9 @@ if(col4){
 }
 if(col5){
 	pos = 5;
+}
+if(col6){
+	pos = 6;
 }
 
 if(accept_key > 0){
@@ -97,14 +101,21 @@ if(accept_key > 0){
 				//quit game
 				game_end();
 				break;
-			break
+			
 			case 5:
 				//Settings
 				menu_level = 2;
 				op_length = array_length(option[menu_level]);
 				break;
+			
+			case 6:
+				//load level editor
+				global.cursor = noone;
+				TransitionStart(stage_room,sqFadeOutMenu,sqFadeIn);
+				break;
 			}
 			break;
+			
 		case 1:
 			if(pos == op_length -1)
 				{

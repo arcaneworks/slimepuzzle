@@ -12,6 +12,7 @@ option[0,2] = "Continue";
 option[0,3] = "Level Editor";
 option[0,4] = "Quit Game";
 option[0,5] = "Settings";
+option[0,6] = "Stage Editor";
 
 
 op_length = 0;

@@ -8,7 +8,8 @@ push = max(keyboard_check_released(vk_enter), keyboard_check_released(ord("Z")),
 
 if(push == 1 && selected != noone){
 	
-	global.editorTarget = selected;
-	//loadStage;
+	load_stage_se(selected);
+	keyboard_string = selected;
 
 }	
+
