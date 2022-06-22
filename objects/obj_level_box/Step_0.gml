@@ -1,4 +1,4 @@
-if(selected || hovered){
+if(obj_interface_stage.selectedBox == id || hovered){
 	
 		image_index = 1;	
 
@@ -18,22 +18,7 @@ if(hasLevel){
 
 if(mouse_over()){
 	hovered = true; 	
-	
-	if(select_pressed()){
-		if(selected){
-			obj_stage_editor.selectedBox = noone;
-			selected = false;	
-			
-		}else{
-			with(obj_level_box){
-				if(selected){
-					selected = false;		
-				}
-			}
-			obj_stage_editor.selectedBox = id;
-			selected = true;
-		}
-	}
+
 }else{
 	hovered = false; 	
 

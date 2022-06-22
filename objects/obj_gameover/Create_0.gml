@@ -30,6 +30,8 @@ if(global.currentLevel < array_length(global.levelArray)){
 		global.levelArray = load_stage_se(global.stages[global.currentStage]);
 		newString = global.levelArray[global.currentLevel]; //first level of new stage
 		nextLevel = true;
+		
+		var kk = 0
 
 	}else{ //if there are no more stages to progress to
 		text = "VICTORY";

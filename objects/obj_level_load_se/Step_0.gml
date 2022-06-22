@@ -6,11 +6,9 @@ push = max(keyboard_check_released(vk_enter), keyboard_check_released(ord("Z")),
 
 if(push == 1 && selected != noone){
 	
-	if(obj_stage_editor.selectedBox != noone){
-		obj_stage_editor.selectedBox.level = selected; 
-		with(obj_level_box){
-			selected = false;	
-		}
+	if(obj_interface_stage.selectedBox != noone){
+		obj_interface_stage.selectedBox.level = selected; 
+			obj_interface_stage.selectedBox = noone;
 	}
 
 }	

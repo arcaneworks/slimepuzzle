@@ -7,6 +7,10 @@ draw_set_font(f_battle_text_28);
 
 
 draw_text_transformed(x + .5 * width - .5 * string_width(title) *textScale, y - string_height(title) * textScale, title, textScale, textScale, 0);
+
+draw_set_color(c_black); 
+
+draw_text_transformed(x + 1 + .5 * width - .5 * string_width(title) *textScale, y + 1 + - string_height(title) * textScale, title, textScale, textScale, 0);
 draw_default();
 
 if (firstVisObjId > ds_list_size(objs) - 1) {

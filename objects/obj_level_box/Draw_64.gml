@@ -10,9 +10,9 @@ numWidth = string_width(numString) * textScale;
 
 
 
-if(hovered || selected){
+if(hovered || obj_interface_stage.selectedBox == id || level != "empty"){
 		var textX = x + .5 * sprite_width - .5 * strWidth/2;
-		var textY = y - strHeight/2 - 3;
+		var textY = y - strHeight/2;
 		draw_text_transformed_color(textX + 1, textY + 1, level, strScale/2, strScale/2, 0, c_black,c_black,c_black,c_black,1);
 		draw_text_transformed(textX, textY, level, strScale/2, strScale/2, 0);
 	}

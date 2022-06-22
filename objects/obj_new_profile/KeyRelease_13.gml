@@ -10,7 +10,7 @@ if(instance_exists(obj_confirm)){
 }
 if(confirmDec){
 	global.playerProfile = message;
-	global.currentLevel = 1;
+	global.currentLevel = 0;
 	global.currentStage = 0;
 	room_goto_next();
 }
@@ -19,7 +19,7 @@ if(file_exists("saves\\" + message + ".sav")){
 		create_confirm_box(x + 200, y, "A file with this name already exists. Would you like to overwrite it?", true, id);
 		}else{
 			global.playerProfile = message;
-			global.currentLevel = 1;
+			global.currentLevel = 0;
 			global.currentStage = 0;
 			TransitionStart(game_room,sqFadeOutMenu,sqFadeIn);
 		}

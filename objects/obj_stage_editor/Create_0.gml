@@ -1,11 +1,11 @@
 bgSprite = spr_frame;
-frameWidth = 15;
-frameHeight = 10; 
+frameWidth = 10;
+frameHeight = 15; 
 
 levelBoxSize = 32; 
 font = f_battle_text_28;
-xBuffer = 2; 
-yBuffer =1.5;
+xBuffer = 1.6; 
+yBuffer =1.6;
 maxLevels = 30;
 maxLevelW = 5; 
 maxLevelH = maxLevels/maxLevelW;

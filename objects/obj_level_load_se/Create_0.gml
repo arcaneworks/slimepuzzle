@@ -1,5 +1,6 @@
-event_inherited();
-height = obj_stage_editor.height; 
+event_inherited(); 
+y += 10;
+height = obj_stage_editor.height - 10; 
 width = 100;
 
 
