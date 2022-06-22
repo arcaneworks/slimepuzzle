@@ -20,7 +20,8 @@ if(global.lastRoom == level_editor_room){
 	level = global.testTarget;
 	levelString = global.tempTarget;
 }else{
-	 levelString = stageString + string(global.currentLevel);
+	 levelString = global.levelArray[global.currentLevel];
+	 
 	 level = levelString;
 }
 
