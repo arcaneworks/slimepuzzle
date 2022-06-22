@@ -6,7 +6,7 @@
     "path": "folders/00 - GAME/2 - Scripts/Nodes &Targeting/Reactions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "find_fighter_target_node",
+  "name": "load_stage_se",
   "tags": [],
   "resourceType": "GMScript",
 }

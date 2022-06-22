@@ -2,17 +2,27 @@
 function save_stage(filename){
 	var maxLevels = obj_stage_editor.maxLevels;
 	var levelList = obj_stage_editor.drawList;
+	var writeList = ds_list_create();
 	// empty array for csv rows
-	var csvRows = array_create(maxLevels - 1, "empty");
-	//manually filling out the first three columns of each row;
-	csvRows[0] = filename + "\n";
-	
+
 	for(var ii = 0; ii < ds_list_size(levelList); ii++){
 		var level = ds_list_find_value(levelList, ii); 
-		
-		csvRows[ii +1] = level + "\n"; 
-		
+		if(level != "empty"){
+			ds_list_add(writeList, level);
+		}	
 	}
+	
+	var csvRows = array_create(ds_list_size(writeList));
+	//mnually filling out the first three columns of each row;
+	csvRows[0] = filename + "\n";
+	
+	
+	for(var ii = 0; ii < ds_list_size(writeList); ii++){
+		var writeLv = ds_list_find_value(writeList, ii); 
+		csvRows[ii +1] = writeLv + "\n"; 
+	}
+	
+
 	//for (var ii = 0; ii < map_height; ii++) { // for every row in this CG (Y)
 	//		for (var jj = 0; jj < map_width; jj++) { // for every node in this row, left-right (X)
 	//			// print the content of the row
@@ -37,7 +47,7 @@ function save_stage(filename){
 			//initialize the save string
 			var saveString = "";
 			// copy each line of the array to the save string
-			for(var k = 0; k <= maxLevels ; k++){
+			for(var k = 0; k <= ds_list_size(writeList); k++){
 				saveString += csvRows[k];
 			}
 			

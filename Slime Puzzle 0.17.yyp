@@ -42,7 +42,7 @@
     {"id":{"name":"spr_wizard_s","path":"sprites/spr_wizard_s/spr_wizard_s.yy",},"order":6,},
     {"id":{"name":"obj_level_load_menu","path":"objects/obj_level_load_menu/obj_level_load_menu.yy",},"order":1,},
     {"id":{"name":"spr_cybermage_s","path":"sprites/spr_cybermage_s/spr_cybermage_s.yy",},"order":3,},
-    {"id":{"name":"find_fighter_target_node","path":"scripts/find_fighter_target_node/find_fighter_target_node.yy",},"order":5,},
+    {"id":{"name":"load_stage_se","path":"scripts/load_stage_se/load_stage_se.yy",},"order":5,},
     {"id":{"name":"obj_clear_button","path":"objects/obj_clear_button/obj_clear_button.yy",},"order":2,},
     {"id":{"name":"spr_grabber_n","path":"sprites/spr_grabber_n/spr_grabber_n.yy",},"order":20,},
     {"id":{"name":"clear_node","path":"scripts/clear_node/clear_node.yy",},"order":5,},
