@@ -11,7 +11,7 @@ xDif = oNodeX - tNodeX,
 yDif = oNodeY - tNodeY,
 newGridX = tNodeX,
 newGridY = tNodeY,
-pushNode = noone;
+pushNode = originNode;
 
 
 

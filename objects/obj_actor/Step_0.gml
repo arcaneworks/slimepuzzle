@@ -71,6 +71,7 @@ event_inherited();
 							}
 								
 							apply_action();
+							
 						}		
 						if(playEndSfx){
 							audio_play_sound(action.sfx.endSfx, 1, false);

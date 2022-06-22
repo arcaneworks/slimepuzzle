@@ -47,7 +47,7 @@ function apply_terrain(component, node){
 							component.damaged = true;
 							ds_priority_add(global.actionQueue, component,component.SPD);
 							component.actState = "action standby";
-							//component.damageClass = "default";
+							component.damageClass = "default";
 							
 						}
 						else {

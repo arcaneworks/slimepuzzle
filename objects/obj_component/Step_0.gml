@@ -127,7 +127,7 @@ switch(moveState){
 		}
 		if(instance_exists(moveToNode)){
 			if(actor || element){
-				if(moveToNode.occupant != noone){ // IF THERE IS A COLLISION BETWEEN ACTORS movementPath =  path_add(); //add path of movementPath
+				if(moveToNode.occupant != noone || (moveToNode.gridX == currNode.gridX && moveToNode.gridY == currNode.gridY)){ // IF THERE IS A COLLISION BETWEEN ACTORS movementPath =  path_add(); //add path of movementPath
 					movementPath =  path_add();
 					path_set_kind(movementPath,2);
 					path_set_closed(movementPath, false);
