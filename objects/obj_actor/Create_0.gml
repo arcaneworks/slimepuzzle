@@ -55,6 +55,7 @@ event_inherited(); //inherits most stuff from obj_component
 	
 	waitForDeath = false;
 	actionNodes = ds_list_create();
+	victimList = ds_list_create();
 	//queueWait = false;
 #endregion 
 

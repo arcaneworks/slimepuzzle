@@ -28,12 +28,13 @@ function set_component_info_db(){
 			diagonal = _Diagonal;
 		}
 	
-		function component_feats_struct(_triggersReaction = true, _faces = true, _damagable = true, _movable = true, _reacts = false) constructor{
+		function component_feats_struct(_triggersReaction = true, _faces = true, _damagable = true, _movable = true, _reacts = false, _chases = false) constructor{
 			triggersReaction = _triggersReaction;
 			faces = _faces;
 			damagable = _damagable; 
 			movable = _movable;
 			reacts = _reacts;
+			chases = _chases;
 		}
 	
 		function component_visuals_struct(_sprite = spr_error0, _portraitSpr = spr_portrait_noone) constructor{
@@ -224,6 +225,19 @@ function set_component_info_db(){
 			action = global.actionDB.slime;
 			stats.maxHp = 1;
 		}
+		grabber = new component_struct();
+		with (grabber){
+			info.class = "grabber";
+			info.infoText = "A hideous insectoid beast that roams the desert, homing in on the nearest threat";
+			info.componentCode = "CG";
+			feats.reacts = true;
+			feats.chases = true;
+			visuals.sprite = spr_grabber_s;
+			visuals.portraitSpr = spr_port_grabber;
+			action = global.actionDB.grab;
+			stats.maxHp = 2;
+			
+		}
 	
 	#endregion
 
@@ -320,7 +334,7 @@ function set_component_info_db(){
 		eye : other.eye,
 		slime : other.slime,
 		brawler : other.brawler,
-		
+		grabber : other.grabber,
 		rock : other.rock, 
 		barrel : other.barrel,
 		crate : other.crate,

@@ -71,7 +71,7 @@ function set_action_db(){
 		targeting = _targeting; 
 		effect = _effect;
 		vfx = _vfx; 
-		sfx = _sfx
+		sfx = _sfx;
 	
 					
 	}
@@ -253,6 +253,19 @@ function set_action_db(){
 		targeting.range = "4";
 		targeting.targetAll = false;
 	}
+	grab = new act_struct();
+	with(grab){
+	info.title = "GRAB";
+	info.infoText = "Prevents the grabbed actor from moving or acting";
+	damage.damage = 1;
+	effect.stun = true;
+	targeting.targetType = "melee";
+	targeting.reactionType = "facing";
+	targeting.range = "1";
+	targeting.targetAll = false;
+		
+		
+	}
 	
 	global.actionDB = {
 		
@@ -267,6 +280,7 @@ function set_action_db(){
 		thump : other.thump,
 		stun : other.stun,
 		slime : other.slime,
+		grab : other.grab
 	}
 
 

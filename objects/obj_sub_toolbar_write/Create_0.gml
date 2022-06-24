@@ -85,6 +85,11 @@ set_component_info(global.componentDB.bomb, bomb);
 ds_list_add(actorList, bomb);
 
 
+grabber = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+grabber.tabType = "actors";
+set_component_info(global.componentDB.grabber, grabber);
+ds_list_add(actorList, grabber);
+
 
 totalActorPages = ceil(ds_list_size(actorList)/5);
 

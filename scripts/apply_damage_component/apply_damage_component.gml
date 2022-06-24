@@ -2,6 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function apply_damage_component(component){
 	if(component.damagable){
+		var targetTargetSize = ds_list_size(component.victimList);
+		if(targetTargetSize > 0){
+			for(var i =0; i < targetTargetSize; i ++){
+				ds_list_find_value( component.victimList,i).canAct = true;
+			}
+		}
 		switch(component.damageClass){
 			case "default":
 				component.hp -= action.damage.damage;

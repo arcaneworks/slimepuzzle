@@ -168,6 +168,7 @@ event_inherited();
 									if(target.hp <= 0){
 										ds_queue_enqueue(global.deathQueue, target);	
 										target.deathWait = true;
+										
 									}
 								}
 							}

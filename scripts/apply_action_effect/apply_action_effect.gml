@@ -11,6 +11,6 @@ function apply_action_effect(target){
 	
 	if(action.effect.stun){
 		target.canAct = false;	
-		
+		ds_list_add(victimList, target);
 	}
 }
