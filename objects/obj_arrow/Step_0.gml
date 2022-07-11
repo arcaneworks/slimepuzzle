@@ -30,6 +30,7 @@
 			newBonfire.facingDir = burnable.facingDir;
             newBonfire.redirect = burnable.redirect;
             newBonfire.targetedBy = burnable.targetedBy;
+			newBonfire.currNode = burnable.currNode;
 			ds_list_clear(actor.targetList);
 			ds_list_add(actor.targetList, newBonfire);
 			//actor.target = newBonfire;
@@ -46,6 +47,8 @@
 			audio_play_sound(s_fire4, 1, false);
 			map[burnable.gridX, burnable.gridY].terrain = newBonfire; 
 			newBonfire.dead = true;
+			
+			newBonfire.currNode = burnable.currNode;
 			
 			var tempStruct = snap_deep_copy(newBonfire.terrainStruct);
 			
