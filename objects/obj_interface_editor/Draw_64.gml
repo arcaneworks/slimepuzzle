@@ -32,7 +32,7 @@ if(selectedObjTool != noone){
 //}
 
 if(selectedObj != noone){
-	draw_sprite_ext(selectedObj.sprite_index, selectedObj.image_index, x + 20, y, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(selectedObj.sprite_index, selectedObj.image_index, x + 20 + selectedObj.xOffset, y, selectedObj.image_xscale,1, 0, c_white, 1);
 	
 }//draw_sprite(sprite_index,cursorImg, mouse_x+ x_offset, mouse_y + y_offset);
 if(obj_level_editor.debugMode){

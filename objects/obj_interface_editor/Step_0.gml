@@ -14,6 +14,7 @@ update_cursor_pos();
 		function set_mode_move2(check = false){
 				cursorSprite = spr_move_cursor;
 				step_move_relocate();
+				step_object_rotate(selectedObj);
 				step_tool_select(check);
 		}
 		function set_mode_write(check = false){
@@ -21,7 +22,7 @@ update_cursor_pos();
 					step_tab_select();
 					step_object_select();
 					step_object_place();
-					step_object_rotate();
+					step_object_rotate(selectedObjTool);
 		}
 		function set_mode_delete(check = false){
 					cursorSprite = spr_delete_cursor;	
