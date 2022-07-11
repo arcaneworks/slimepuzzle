@@ -66,9 +66,16 @@
 			copy_terrain_to_struct(burnable,tempStruct);
 			ds_priority_add(burnable.undoList, tempStruct, global.totalMoves);
 			burnable.dead = true;
-			
-			
-			
+		}
+		
+		if(collision_point(x, y, obj_web, false, false)){
+			var burnable = collision_point(x, y, obj_web, false, false);
+			audio_play_sound(s_fire4, 1, false);
+			map[burnable.gridX, burnable.gridY].terrain = noone; 
+			var tempStruct = snap_deep_copy(burnable.terrainStruct);
+			copy_terrain_to_struct(burnable,tempStruct);
+			ds_priority_add(burnable.undoList, tempStruct, global.totalMoves);
+			burnable.dead = true;
 			
 		}
 	}

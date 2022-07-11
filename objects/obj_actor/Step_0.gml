@@ -200,7 +200,7 @@ event_inherited();
 					if(ds_queue_empty(global.deathQueue)){
 						
 						//if you can act, then go to action target
-						if(canAct){
+						if(canAct && !disabled){
 							
 							global.cursor.getTargets = true;
 							global.cursor.state = "action target";
