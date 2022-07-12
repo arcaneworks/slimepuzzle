@@ -11,6 +11,7 @@
     {"id":{"name":"spr_archer_e","path":"sprites/spr_archer_e/spr_archer_e.yy",},"order":13,},
     {"id":{"name":"obj_director_fire","path":"objects/obj_director_fire/obj_director_fire.yy",},"order":5,},
     {"id":{"name":"obj_cleric","path":"objects/obj_cleric/obj_cleric.yy",},"order":4,},
+    {"id":{"name":"obj_cybermage","path":"objects/obj_cybermage/obj_cybermage.yy",},"order":5,},
     {"id":{"name":"spr_node","path":"sprites/spr_node/spr_node.yy",},"order":0,},
     {"id":{"name":"spr_shooter2_n","path":"sprites/spr_shooter2_n/spr_shooter2_n.yy",},"order":22,},
     {"id":{"name":"fill_reaction_list","path":"scripts/fill_reaction_list/fill_reaction_list.yy",},"order":9,},
