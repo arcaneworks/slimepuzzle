@@ -26,6 +26,7 @@ function init_CG_decoding_key_new(){
 	ds_map_add(componentCodes, "A", asset_get_index("obj_archer"));
 	ds_map_add(componentCodes, "R", asset_get_index("obj_rogue"));
 	ds_map_add(componentCodes, "C", asset_get_index("obj_cleric"));
+	ds_map_add(componentCodes, "Y", asset_get_index("obj_cybermage"));
 	//enemies
 	ds_map_add(componentCodes, "S", asset_get_index("obj_shooter_par"))
 	ds_map_add(componentCodes, "P", asset_get_index("obj_shooter_fire"));

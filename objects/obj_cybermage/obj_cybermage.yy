@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_wizard_s",
-    "path": "sprites/spr_wizard_s/spr_wizard_s.yy",
+    "name": "spr_cybermage_s",
+    "path": "sprites/spr_cybermage_s/spr_cybermage_s.yy",
   },
   "solid": false,
   "visible": true,

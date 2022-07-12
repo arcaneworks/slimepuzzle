@@ -169,6 +169,21 @@ function set_action_db(){
 		sfx.endSfx = noone;
 	}
 	
+	spin = new act_struct();
+	with(spin){
+		info.title = "SPIN";
+		info.infoText = "Rotates a target clockwise and triggers enemy reactions.";
+		damage.damage = 0;
+		damage.damageType = "thunder";
+		effect.rotate = true;
+		targeting.range = 1; 
+		info.iconSpr = spr_thunder_sm;
+		vfx.vfxSprite = spr_thunder_burst_sm;
+		vfx.vfxType = "target node";
+		targeting.range = 1; 
+		targeting.targetType = "diagonal";
+	}
+	
 	counter = new act_struct();
 	with(counter){
 		info.title = "COUNTER";
@@ -253,18 +268,17 @@ function set_action_db(){
 		targeting.range = "4";
 		targeting.targetAll = false;
 	}
+	
 	grab = new act_struct();
 	with(grab){
-	info.title = "GRAB";
-	info.infoText = "Prevents the grabbed actor from moving or acting";
-	damage.damage = 1;
-	effect.stun = true;
-	targeting.targetType = "melee";
-	targeting.reactionType = "facing";
-	targeting.range = "1";
-	targeting.targetAll = false;
-		
-		
+		info.title = "GRAB";
+		info.infoText = "Prevents the grabbed actor from moving or acting";
+		damage.damage = 1;
+		effect.stun = true;
+		targeting.targetType = "melee";
+		targeting.reactionType = "facing";
+		targeting.range = "1";
+		targeting.targetAll = false;
 	}
 	
 	global.actionDB = {
@@ -281,6 +295,7 @@ function set_action_db(){
 		stun : other.stun,
 		slime : other.slime,
 		grab : other.grab,
+		spin : other.spin,
 		backstab: other.backstab
 	}
 

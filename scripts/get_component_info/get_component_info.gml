@@ -13,6 +13,10 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.wizard; 
 		break; 
 		
+		case "CY": 
+			tempStruct = global.componentDB.cybermage; 
+		break;
+		
 		case "CA":
 			tempStruct = global.componentDB.archer; 
 		break; 
@@ -45,6 +49,7 @@ function get_component_info(component, componentCode){
 			tempStruct = global.componentDB.thumper;
 			
 		break;
+		
 			
 		case "CE":
 			tempStruct = global.componentDB.eye;

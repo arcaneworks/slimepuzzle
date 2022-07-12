@@ -32,6 +32,11 @@ set_component_info(global.componentDB.wizard, wizard);
 wizard.tabType = "actors";
 ds_list_add(actorList, wizard);
 
+cybermage = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+set_component_info(global.componentDB.cybermage, cybermage);
+cybermage.tabType = "actors";
+ds_list_add(actorList, cybermage);
+
 rogue = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.rogue, rogue);
 rogue.tabType = "actors";

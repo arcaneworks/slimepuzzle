@@ -14,4 +14,17 @@ function apply_action_effect(target){
 		ds_list_add(victimList, target);
 		wipe_nodes();
 	}
+	
+	if(action.effect.rotate){
+		if(target.faces){
+			var tempPos = target.facingDir + 1;
+			target.facingDir = tempPos mod 4;	
+			if(target.componentStruct.feats.reacts){
+				with(target){
+					fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
+					enemy_reaction();
+				}
+			}
+		}
+	}
 }

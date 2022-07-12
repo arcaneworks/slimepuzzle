@@ -98,6 +98,16 @@ function set_component_info_db(){
 			visuals.portraitSpr = spr_port_wizard;
 			action = global.actionDB.fire;
 		}
+		
+		cybermage = new component_struct();
+		with(cybermage){
+			info.class = "cybermage"; 
+			info.infoText = "The cybermage rotates actors and elements that face.";
+			info.componentCode = "CY";
+			visuals.sprite = spr_cybermage_s;
+			visuals.portraitSpr = spr_port_wizard;
+			action = global.actionDB.spin;
+		}
 	
 		cleric = new component_struct();
 		with(cleric){
@@ -325,6 +335,7 @@ function set_component_info_db(){
 		wizard : other.wizard, 
 		cleric : other.cleric,
 		rogue : other.rogue,
+		cybermage : other.cybermage,
 		
 		shooter : other.shooter, 
 		shooter2 : other.shooter2, 
