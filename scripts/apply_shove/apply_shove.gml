@@ -9,6 +9,7 @@ function apply_shove(){
 				tempNode = push_to_node(map[target.gridX, target.gridY],tempNode);	
 			}
 			target.moveToNode = tempNode; // set the target's push to node as that node
+			
 			target.moveState = "start path";
 			target.shoved = true;	
 		}

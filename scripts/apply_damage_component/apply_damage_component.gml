@@ -8,9 +8,27 @@ function apply_damage_component(component){
 				ds_list_find_value( component.victimList,i).canAct = true;
 			}
 		}
+		
+		var xx = 1;
+		if(action.damage.backstab == true){
+			
+			if(component.faces && component.facingDir == facingDir){
+			
+				
+				var tempDamage = action.damage.damage * 2;	
+			}else{
+				 tempDamage = action.damage.damage;	
+			}
+			
+		}else{
+			var tempDamage = action.damage.damage;	
+			
+		}
+		
 		switch(component.damageClass){
 			case "default":
-				component.hp -= action.damage.damage;
+			
+				component.hp -= tempDamage;
 				component.damaged = true;
 				component.shake = true;	
 			break;
@@ -18,7 +36,7 @@ function apply_damage_component(component){
 
 			case "fire weak":
 				if(action.damage.tempDamageType == "fire"){
-					component.hp -= action.damage.damage;
+					component.hp -= tempDamage;
 					component.damaged = true;
 					component.shake = true;
 				

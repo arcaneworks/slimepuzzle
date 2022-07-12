@@ -280,7 +280,8 @@ function set_action_db(){
 		thump : other.thump,
 		stun : other.stun,
 		slime : other.slime,
-		grab : other.grab
+		grab : other.grab,
+		backstab: other.backstab
 	}
 
 
