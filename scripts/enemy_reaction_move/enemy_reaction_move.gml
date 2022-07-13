@@ -37,15 +37,20 @@ function enemy_reaction_move(){
 			
 			xDiff = clamp(xDiff,-1,1);
 			yDiff = clamp(yDiff,-1,1);
-				
 			
-
-			var xCoord = clamp(gridX + xDiff, 0 , map_width - 1);			
-			var yCoord = clamp(gridY + yDiff, 0 , map_height - 1);
+			var pathList = path_to_node(currNode, move ,target.currNode)
+			
+			
+			//var xCoord = clamp(gridX + xDiff, 0 , map_width - 1);			
+			//var yCoord = clamp(gridY + yDiff, 0 , map_height - 1);
 			var tempStruct = componentStruct;
 			copy_component_to_struct(id,tempStruct);
 			ds_priority_add(undoList, tempStruct, global.totalMoves);
-			moveToNode = map[xCoord, yCoord];
+			var index = ds_list_size(pathList)-1;
+			if ( ds_list_find_value(pathList, index).occupant != noone){
+				index = index -1;	
+			}
+			moveToNode = ds_list_find_value(pathList, index);
 			moveState = "start path";
 			canMove = false;
 			wipe_nodes();

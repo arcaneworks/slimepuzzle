@@ -149,3 +149,151 @@ function movement_nodes(originNode, moveRange) {
 
 
 }
+
+function path_to_node(originNode, moveRange, targetNode){
+	//argument0 - origin node, the node to pathfind from
+	//argument1 - units movement range
+
+
+	//reset all node data
+	wipe_nodes_range_info();
+
+
+	var processing, destNodes, cameFrom, gScore;
+	var start, current, neighbor, goal;
+	var tempG, range, costMod;
+
+	//declare relevant variables from arguments
+	start = argument0;
+	range = argument1;
+	goal = argument2;
+
+	var diagonal = false;
+	if( originNode.occupant != -4){
+		diagonal = originNode.occupant.diagonal;
+	}
+	//create data structures
+	processing = ds_priority_create();
+	cameFrom = ds_map_create();
+	gScore = ds_map_create();
+	ds_map_add(gScore, start, start.G);
+	//fScore = ds_map_create();
+	//ds_map_add(fScore, start, heuristic_function(start, goal));
+	destNodes = ds_list_create(); // list of nodes the actor can move TO (end of path)
+	//add starting node to processing list
+	ds_priority_add(processing, start, heuristic_function(start,goal));
+ 
+
+	//while processing queue is NOT empty...
+	//repeat the following untill ALl nodes have been looked at
+	while(ds_priority_size(processing) > 0) {
+		//remove node with the lowest G score from processing
+		current = ds_priority_delete_min(processing);
+		if(current == goal)
+			return reconstruct_path(cameFrom, current);
+			
+			
+		//// add node to destNodes list 
+	    //ds_list_add(destNodes, current);
+
+		//step through all of current's neighbors
+		for(ii = 0; ii < ds_list_size(current.neighbors); ii ++){
+			costMod = 1;
+				
+			var neighbor = ds_list_find_value(current.neighbors, ii);
+					//give neighbor the appropriate parent
+					neighbor.parent = current;
+					if(neighbor.terrain){
+						//TODO activate this once info is implemented
+						//costMod = neighbor.terrain.info.cost;
+					}
+					//if node is diagonal, create appropriate costMod
+					if(neighbor.gridX != current.gridX && neighbor.gridY != current.gridY){
+						if(diagonal)
+						costMod = 1;
+						else
+						costMod = 2;
+					}
+						if(neighbor.occupant != noone && neighbor != goal){
+							costMod = 999999;	
+						}
+				
+			var tentative_gScore = ds_map_find_value(gScore, current) + costMod * neighbor.cost;
+			var tentative_fScore = tentative_gScore + heuristic_function(neighbor,goal);
+			if(is_undefined(ds_map_find_value(gScore, neighbor)) ){
+				ds_map_add(cameFrom,neighbor,current);	
+				ds_map_add(gScore,neighbor, tentative_gScore);
+				if(is_undefined( ds_priority_find_priority(processing, neighbor))){
+						ds_priority_add(processing, neighbor, tentative_fScore);
+				}else if( ds_priority_find_priority(processing, neighbor) > tentative_fScore){
+						ds_priority_change_priority(processing, neighbor, tentative_fScore);
+				}
+				
+			}
+			else if(ds_map_find_value(gScore, neighbor) > tentative_gScore){
+				ds_map_replace(cameFrom, neighbor, current);
+				ds_map_replace(gScore, neighbor, tentative_gScore);
+				if(is_undefined( ds_priority_find_priority(processing, neighbor))){
+						ds_priority_add(processing, neighbor, tentative_fScore);
+				}else if( ds_priority_find_priority(processing, neighbor) > tentative_fScore){
+						ds_priority_change_priority(processing, neighbor, tentative_fScore);
+				}
+			}
+		
+		}
+	
+	}
+
+	//round down all G scores for movement calculations!
+
+
+
+	//ALWAYS DESTROY - NO LEAKES
+	ds_priority_destroy(processing);
+	
+	//color all the move nodes then destroy destNodes list
+
+
+
+
+	//destroy destNodes list!!
+	ds_list_destroy(destNodes);
+	ds_map_destroy(cameFrom);
+	ds_map_destroy(gScore);
+
+
+	
+	
+	
+}
+function reconstruct_path(cameFrom, current){
+	var total_path = ds_list_create();
+	var curNode = argument1;
+	ds_list_add(total_path, current);
+	for(var k = ds_map_find_first(cameFrom); !is_undefined(k); k = ds_map_find_next(cameFrom, k)){
+		var v = ds_map_find_value(cameFrom, k);
+		if(k == curNode){
+			ds_list_add(total_path, v);
+			curNode = v;
+			k = ds_map_find_first(cameFrom);
+			
+			
+		}
+		
+	}
+	return total_path;
+	
+}
+function heuristic_function(origin, target){
+	var start = argument0;
+	var goal = argument1;
+	
+	var xDif = abs( goal.gridX - start.gridX);
+	var yDif = abs(goal.gridY - start.gridY);
+	
+	var pythag = sqrt(xDif * xDif + yDif * yDif);
+	return pythag;
+	
+	
+	
+}
