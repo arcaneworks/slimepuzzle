@@ -182,8 +182,6 @@ function path_to_node(originNode, moveRange, targetNode){
 	destNodes = ds_list_create(); // list of nodes the actor can move TO (end of path)
 	//add starting node to processing list
 	ds_priority_add(processing, start, heuristic_function(start,goal));
- 
-
 	//while processing queue is NOT empty...
 	//repeat the following untill ALl nodes have been looked at
 	while(ds_priority_size(processing) > 0) {
@@ -191,11 +189,6 @@ function path_to_node(originNode, moveRange, targetNode){
 		current = ds_priority_delete_min(processing);
 		if(current == goal)
 			return reconstruct_path(cameFrom, current);
-			
-			
-		//// add node to destNodes list 
-	    //ds_list_add(destNodes, current);
-
 		//step through all of current's neighbors
 		for(ii = 0; ii < ds_list_size(current.neighbors); ii ++){
 			costMod = 1;
@@ -221,7 +214,18 @@ function path_to_node(originNode, moveRange, targetNode){
 			var tentative_gScore = ds_map_find_value(gScore, current) + costMod * neighbor.cost;
 			var tentative_fScore = tentative_gScore + heuristic_function(neighbor,goal);
 			if(is_undefined(ds_map_find_value(gScore, neighbor)) ){
-				ds_map_add(cameFrom,neighbor,current);	
+				if(ds_map_find_value(cameFrom,neighbor) == undefined 
+				|| ds_map_find_value(gScore, ds_map_find_value(cameFrom,neighbor)) != undefined 
+				&& ds_map_find_value(gScore, ds_map_find_value(cameFrom,neighbor))> tentative_gScore){
+					
+					var oldLink = ds_map_find_value(cameFrom,neighbor);
+					if(oldLink != undefined)
+						show_debug_message("Node: " + string(oldLink.gridX) + ", " + string(oldLink.gridY) + " link to Node: " + string(neighbor.gridX) + ", " + string(neighbor.gridY) + " replaced with link to Node: " + string (current.gridX) + ", " + string(current.gridY));
+					else{
+						show_debug_message( "Node: " + string(neighbor.gridX) + ", " + string(neighbor.gridY) + " linked to Node: " + string(current.gridX) + ", " + string(current.gridY));
+					}
+					ds_map_add(cameFrom,neighbor,current);	
+				}
 				ds_map_add(gScore,neighbor, tentative_gScore);
 				if(is_undefined( ds_priority_find_priority(processing, neighbor))){
 						ds_priority_add(processing, neighbor, tentative_fScore);
@@ -231,7 +235,14 @@ function path_to_node(originNode, moveRange, targetNode){
 				
 			}
 			else if(ds_map_find_value(gScore, neighbor) > tentative_gScore){
-				ds_map_replace(cameFrom, neighbor, current);
+				
+				if(ds_map_find_value(cameFrom,neighbor) == undefined 
+				|| ds_map_find_value( gScore,ds_map_find_value(cameFrom,neighbor)) != undefined 
+				&& ds_map_find_value( gScore,ds_map_find_value(cameFrom,neighbor))> tentative_gScore){
+					var oldLink = ds_map_find_value(cameFrom, neighbor);
+					show_debug_message("Node: " + oldLink.gridX + ", " + oldLink.gridY + " link to Node: " + neighbor.gridX + ", " + neighbor.gridY + " replaced with link to Node: " + current.gridX + ", " + current.gridY);
+					ds_map_replace(cameFrom, neighbor, current);
+				}
 				ds_map_replace(gScore, neighbor, tentative_gScore);
 				if(is_undefined( ds_priority_find_priority(processing, neighbor))){
 						ds_priority_add(processing, neighbor, tentative_fScore);
@@ -270,16 +281,26 @@ function reconstruct_path(cameFrom, current){
 	var total_path = ds_list_create();
 	var curNode = argument1;
 	ds_list_add(total_path, current);
-	for(var k = ds_map_find_first(cameFrom); !is_undefined(k); k = ds_map_find_next(cameFrom, k)){
-		var v = ds_map_find_value(cameFrom, k);
-		if(k == curNode){
+	show_debug_message("Reconstructing Path");
+	
+	var keys = ds_map_keys_to_array(cameFrom);
+	var values = ds_map_values_to_array(cameFrom);
+	var size = array_length(keys);
+	var attempt = 0;
+	for(var k = 0;k < size; k++)
+	{
+		var key = keys[k];
+		var v = values[k];
+		//show_debug_message("attempt " + string(attempt) + ", iteration " + string(k));
+		show_debug_message("scanning node: " + string(key.gridX) + ", " + string(key.gridY) + " in search of node: " + string(curNode.gridX) + ", " + string(curNode.gridY) + " iteration " + string(k));
+		if(key == curNode){
 			ds_list_add(total_path, v);
 			curNode = v;
-			k = ds_map_find_first(cameFrom);
-			
-			
+			var s = "Node: " + string(v.gridX) + ", " + string(v.gridY) + " came from Node: " + string(key.gridX) + ", " + string(key.gridY);
+			show_debug_message(s);
+			k = -1;
+			attempt ++;
 		}
-		
 	}
 	return total_path;
 	
