@@ -144,7 +144,6 @@ function set_action_db(){
 		info.actionText = "Targets up to three nodes in any direction. Ignores Holes."
 		info.instructText = "Hold 'Z' and release to shoot!";
 		info.iconSpr = spr_shoot_sm;
-		effect.rotate = true;
 		targeting.range = 8; 
 		targeting.targetType = "bow";
 		targeting.targetAll = false;
