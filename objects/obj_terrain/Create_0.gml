@@ -15,7 +15,7 @@ xPos = 0;
 yPos = 0; 
 cost = 1;
 
-
+currNode = noone;
 slippery = false; 
 flamable = false;
 spreadsFire = false;

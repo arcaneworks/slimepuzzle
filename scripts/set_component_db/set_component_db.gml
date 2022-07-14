@@ -1,4 +1,5 @@
 
+
 function set_component_info_db(){
 	
 	#region constructors of structs within each component struct
@@ -28,10 +29,11 @@ function set_component_info_db(){
 			diagonal = _Diagonal;
 		}
 	
-		function component_feats_struct(_triggersReaction = true, _faces = true, _damagable = true, _movable = true, _reacts = false, _chases = false) constructor{
+		function component_feats_struct(_triggersReaction = true, _faces = true, _damagable = true, _movable = true, _reacts = false, _chases = false, _targetable = true) constructor{
 			triggersReaction = _triggersReaction;
 			faces = _faces;
 			damagable = _damagable; 
+			targetable = _targetable;
 			movable = _movable;
 			reacts = _reacts;
 			chases = _chases;
@@ -156,7 +158,7 @@ function set_component_info_db(){
 			visuals.sprite = spr_shooter_s;
 			visuals.portraitSpr = spr_port_shooter;
 			feats.reacts = true;
-			action = global.actionDB.spit;
+			action = global.actionDB.spit2;
 			stats.maxHp = 1;
 		}
 	
@@ -271,6 +273,7 @@ function set_component_info_db(){
 			info.componentCode = "EW";
 			feats.faces = false;
 			feats.damagable = false;
+			feats.targetable = false;
 			feats.movable = false;
 			visuals.sprite = spr_wall;
 			visuals.portraitSpr = spr_wall;

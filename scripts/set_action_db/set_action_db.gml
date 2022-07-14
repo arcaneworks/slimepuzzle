@@ -236,6 +236,20 @@ function set_action_db(){
 		vfx.vfxType = "projectile";
 	}
 	
+	spit2 = new act_struct();
+	with(spit2){
+		info.title = "SPIT2";
+		info.infoText =  "SPIT2 shoots a projectile up to three nodes in their facing direction. Deals two damage."
+		info.iconSpr = spr_shoot_sm;
+		targeting.targetType = "line";
+		targeting.range = 3; 
+		targeting.targetAll = false;
+		targeting.reactionType = "bow";
+		damage.damage = 2;
+		vfx.vfxSprite = spr_arrow;
+		vfx.vfxType = "projectile";
+	}
+	
 	explode = new act_struct();
 	with(explode){
 		info.title = "EXPLODE";
@@ -288,6 +302,7 @@ function set_action_db(){
 		fire : other.fire,
 		counter: other.counter,
 		spit: other.spit,
+		spit2: other.spit2,
 		explode : other.explode,
 		bless : other.bless,
 		thump : other.thump,
