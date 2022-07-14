@@ -248,6 +248,7 @@ function set_component_info_db(){
 			visuals.portraitSpr = spr_port_grabber;
 			action = global.actionDB.grab;
 			stats.maxHp = 2;
+			stats.diagonal = true;
 			
 		}
 	

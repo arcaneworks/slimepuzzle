@@ -3,6 +3,9 @@
 function enemy_reaction_move(){
 	wipe_nodes();
 	if(canMove && componentStruct.feats.chases){
+			var tempStruct = componentStruct;
+			copy_component_to_struct(id,tempStruct);
+			ds_priority_add(undoList, tempStruct, global.totalMoves);
 		var distance = 15;
 		var target = noone;
 		with(obj_agent){
@@ -14,6 +17,7 @@ function enemy_reaction_move(){
 				target = id;		
 			}	
 		}
+		
 		if(target != noone && distance > 1){
 			move_nodes(currNode);
 			var xDiff = target.gridX - gridX;
@@ -23,11 +27,9 @@ function enemy_reaction_move(){
 				facingDir = dir.east;
 			else if (xDiff < 0)
 				facingDir = dir.west;
-				
-				
-			if(yDiff < 0)
+			else if(yDiff < 0)
 				facingDir = dir.south;
-			else 
+			else
 				facingDir = dir.north;
 					
 			if(abs(xDiff) == 1 && abs(yDiff) == 1){
@@ -43,9 +45,6 @@ function enemy_reaction_move(){
 			
 			//var xCoord = clamp(gridX + xDiff, 0 , map_width - 1);			
 			//var yCoord = clamp(gridY + yDiff, 0 , map_height - 1);
-			var tempStruct = componentStruct;
-			copy_component_to_struct(id,tempStruct);
-			ds_priority_add(undoList, tempStruct, global.totalMoves);
 			var index = ds_list_size(pathList)-1;
 			if ( ds_list_find_value(pathList, index).occupant != noone){
 				index = index -1;	
@@ -54,6 +53,7 @@ function enemy_reaction_move(){
 			moveState = "start path";
 			canMove = false;
 			wipe_nodes();
+			ds_list_destroy(pathList);
 		
 		}
 	}
@@ -128,6 +128,8 @@ function enemy_reaction_move(){
 				canAct = false;
 				actState = "action standby";
 				global.cursorState = "idle";
+				if(componentStruct.feats.chases)
+					canMove = true;
 			}
 		}
 	}

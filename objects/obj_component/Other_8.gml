@@ -9,7 +9,8 @@ with(obj_enemy){
 	if(hp > 0 && !other.disabled){
 		if(componentStruct.feats.reacts){
 			fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
-			enemy_reaction_move(); 
+			if(!other.componentStruct.feats.chases)
+				enemy_reaction_move(); 
 		}
 	}
 }

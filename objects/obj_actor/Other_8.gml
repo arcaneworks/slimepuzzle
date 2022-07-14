@@ -11,7 +11,9 @@ if(hp > 0){
 				if(id != other.id)
 					canMove = true;
 				fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
-				enemy_reaction_move(); 
+				if(other.componentStruct.feats.chases)
+					other.canMove = false;
+				enemy_reaction_move();
 			}
 		}
 	}
