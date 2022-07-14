@@ -19,6 +19,7 @@ actState = "idle";
 triggersReaction = true;
 victimList = ds_list_create();
 targetedBy = noone;
+targetable = true;
  undoList = ds_priority_create(); //list of structs to undo
  xOffset = 0;
 sprXscale = 1;

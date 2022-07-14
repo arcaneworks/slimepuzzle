@@ -1,4 +1,4 @@
-//this script looks at all the 
+//NO LONGER IN USE
 function trigger_enemy_reactions(){
 	
 		with(obj_enemy){

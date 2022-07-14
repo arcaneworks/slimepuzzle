@@ -10,7 +10,7 @@ function enemy_reaction(enemy){
 					var tempTarget = ds_list_find_value(reactList, ii); 
 					if(tempTarget.occupant){
 						tempTarget = tempTarget;	
-					if(tempTarget.occupant && tempTarget.occupant.triggersReaction)
+					if(tempTarget.occupant && tempTarget.occupant.triggersReaction && tempTarget.occupant.targetable)
 						ds_list_add(targetList, tempTarget); 
 					}
 				}
@@ -21,7 +21,7 @@ function enemy_reaction(enemy){
 					var tempTarget = ds_list_find_value(reactList, ii); 
 					if(tempTarget.occupant){
 						tempTarget = tempTarget;	
-					if(tempTarget.occupant.triggersReaction)
+					if(tempTarget.occupant.triggersReaction && tempTarget.occupant.targetable)
 						ds_list_add(targetList, tempTarget); 
 						break;
 					}

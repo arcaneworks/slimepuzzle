@@ -26,10 +26,11 @@ function copy_component_to_struct(component, struct){
 		s.stats.diagonal = comp.diagonal;
 	
 		s.feats.triggersReaction = comp.triggersReaction;
-		s.feats.faces = comp.faces
-		s.feats.damagable = comp.damagable
-		s.feats.movable =comp.movable 
-		s.feats.reacts = comp.reacts
+		s.feats.faces = comp.faces;
+		s.feats.damagable = comp.damagable;
+		s.feats.movable =comp.movable;
+		s.feats.reacts = comp.reacts;
+		s.feats.targetable = comp.targetable;
 	
 		s.visuals.sprite = comp.sprite_index;
 		s.visuals.portraitSpr = comp.portraitSpr;

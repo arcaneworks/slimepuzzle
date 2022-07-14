@@ -35,6 +35,7 @@ function set_component_info(struct, comp, setPos = false){
 	comp.damagable = s.feats.damagable;
 	comp.movable = s.feats.movable;
 	comp.reacts = s.feats.reacts;
+	comp.targetable = s.feats.targetable;
 	
 	comp.sprite_index = s.visuals.sprite; 
 	comp.portraitSpr = s.visuals.portraitSpr;

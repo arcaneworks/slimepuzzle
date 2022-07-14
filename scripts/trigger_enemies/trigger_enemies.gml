@@ -1,3 +1,7 @@
+//NO LONGER IN USE
+
+
+
 function trigger_enemies() {
 	if(!invisible){
 	
