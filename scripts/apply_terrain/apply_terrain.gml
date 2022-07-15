@@ -100,6 +100,18 @@ function apply_terrain(component, node){
 				component.disabled = true;
 			
 			break;
+			
+			case "SPIKE":
+				
+				if(component.triggersReaction){
+					
+						terrain.actState = "action standby";
+						ds_list_add(terrain.targetList, component);
+						ds_priority_add(global.actionQueue, terrain, 1000);
+
+				}
+			
+			break;
 		
 		}
 		

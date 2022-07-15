@@ -8,21 +8,7 @@ function apply_action(){
 				apply_damage_component(target); //apply damage based on target's damage class
 				apply_action_effect(target); //apply action effect to target
 			}
-		}else{ 
-			//if the target is a terrain and NOT a component
-			//if(target.node && target.occupant){
-			//	apply_damage_component(target.occupant); //apply damage based on target's damage class
-			//	apply_action_effect(target.occupant); //apply action effect to target
-			
-				
-			//}
-			if(target.node && target.terrain)
-				apply_damage_terrain(target.terrain);
-			else if(target.terrain){
-				apply_damage_terrain(target);
-			}
 		}
 	}
-	playEndSfx = true;
 	action.damage.tempDamageType = action.damage.damageType;
 }

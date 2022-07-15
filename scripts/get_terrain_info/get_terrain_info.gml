@@ -24,6 +24,10 @@ function get_terrain_info(terrain, terrainCode){
 		case "TO":
 			tempStruct = global.terrainDB.bonfireOff; 
 		break; 
+		
+		case "TS":
+			tempStruct = global.terrainDB.spike; 
+		break; 
 
 	}
 	

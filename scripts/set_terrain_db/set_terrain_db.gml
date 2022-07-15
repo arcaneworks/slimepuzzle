@@ -18,6 +18,7 @@ function set_terrain_db(){
 		slippery = false;
 		flamable = false; 
 		spreadsFire = false; 
+		damages = false;
 		
 	}
 	
@@ -71,6 +72,15 @@ function set_terrain_db(){
 		info.terrainCode = "TO";
 	}
 		
+	spike = new terrain_struct(); 
+	with(spike){
+		info.terrainString = "SPIKE";
+		info.infoText = "It's a trap.";
+		info.sprite = spr_spike_hole;
+		info.terrainCode = "TS";
+	}
+	
+		
 	bareStruct = new terrain_struct();
 		
 	global.terrainDB = {
@@ -79,7 +89,8 @@ function set_terrain_db(){
 		web : other.web,
 		bonfire : other.bonfire,
 		bonfireOff : other.bonfireOff,
-		bareStruct : other.bareStruct
+		bareStruct : other.bareStruct,
+		spike : other.spike
 			
 	}
 	

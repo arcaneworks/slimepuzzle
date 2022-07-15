@@ -181,6 +181,14 @@ totalActorPages = ceil(ds_list_size(actorList)/5);
 	bonfireOff.tool = true;
 	ds_list_add(terrainList, bonfireOff);
 	
+	spike = instance_create_layer(x, y, "Instances", obj_bare_terrain_tool);
+	spike.tabType = "terrains";
+	spike.terrainString = "SPIKE";
+	spike.terrainCode = "TS";
+	spike.sprite_index = spr_spike_hole;
+	spike.tool = true;
+	ds_list_add(terrainList, spike);
+	
 	
 	
 	

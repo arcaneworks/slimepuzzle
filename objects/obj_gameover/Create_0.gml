@@ -22,7 +22,7 @@ if(global.currentLevel < array_length(global.levelArray)){
 	
 	//if the current level is bigger than the levelArraySize (all the levels of this stage have been completed)
 	//see if there is another stage
-	if(global.currentStage < array_length(global.stages)){
+	if(global.currentStage < array_length(global.stages) - 1){
 
 		//go to the next stage, reset the current level, and load that stage into the level array
 		global.currentStage++;
@@ -35,6 +35,7 @@ if(global.currentLevel < array_length(global.levelArray)){
 
 	}else{ //if there are no more stages to progress to
 		text = "VICTORY";
+		instance_deactivate_all(true); //deactive all the objects
 		subtext = "YOU HAVE COMPLETED ALL THE LEVELS. PRESS ESCAPE TO RETURN TO THE MAIN MENU.";
 		nextLevel = false;
 		

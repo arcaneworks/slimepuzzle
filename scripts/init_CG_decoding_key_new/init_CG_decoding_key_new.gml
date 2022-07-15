@@ -54,6 +54,7 @@ function init_CG_decoding_key_new(){
 	ds_map_add(terrainCodes, "W", asset_get_index("obj_web"));
 	ds_map_add(terrainCodes, "B", asset_get_index("obj_bonfire"));
 	ds_map_add(terrainCodes, "O", asset_get_index("obj_bonfire_off"));
+	ds_map_add(terrainCodes, "S", asset_get_index("obj_spike"));
 	
 	
 	

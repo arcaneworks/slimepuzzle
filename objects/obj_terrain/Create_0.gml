@@ -2,7 +2,7 @@ component = false;
 node = false;
 terrain = true;
 depth = -2; 
-
+actState = "idle";
 terrainStruct = noone;
 sprite = sprite_index;
 terrainString = "GROUND";
@@ -18,7 +18,9 @@ cost = 1;
 currNode = noone;
 slippery = false; 
 flamable = false;
+hasAction = false;
 spreadsFire = false;
-
-
+targetList = ds_list_create();
 undoList = ds_priority_create();
+actTurn = false;
+target = noone;

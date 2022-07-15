@@ -26,6 +26,7 @@ function set_terrain_info(terrainStruct, terrain, setPos = false){
 	t.yPos = s.info.yPos; 
 	t.dead = s.info.dead;
 	t.terrainCode = s.info.terrainCode;
+	t.damages = s.effect.damages;
 	
 	t.slippery = s.effect.slippery;
 	t.flamable = s.effect.flamable; 

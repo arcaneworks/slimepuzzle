@@ -114,6 +114,20 @@ function set_action_db(){
 		targeting.targetAll = false;
 	}
 	
+	spike = new act_struct();
+	with(spike){
+		info.title = "SPIKE";
+		info.instructText = "trap"
+		info.actionText = "Deals 1 damage";
+		targeting.range = 1;
+		damage.damage = 1;
+		damage.damageType = "physical";
+		targeting.targetType = "melee";
+		targeting.targetAll = false;
+		vfx.vfxSprite = spr_spike_wood;
+		vfx.vfxType = "target node";
+	}
+	
 	backstab = new act_struct();
 	with(backstab){
 		info.title = "BACKSTAB";
@@ -310,7 +324,8 @@ function set_action_db(){
 		slime : other.slime,
 		grab : other.grab,
 		spin : other.spin,
-		backstab: other.backstab
+		backstab: other.backstab,
+		spike: other.spike
 	}
 
 

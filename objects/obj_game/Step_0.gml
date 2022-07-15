@@ -29,6 +29,7 @@ switch(actionState){
 			standbyActor = ds_priority_find_max(global.actionQueue); //take the first standbyActor in the queue
 				
 			if(instance_exists(standbyActor)){
+				
 				standbyActor.actTurn = true; //make it their turn 
 						
 			}else{
