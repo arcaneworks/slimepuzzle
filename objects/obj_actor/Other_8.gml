@@ -8,7 +8,7 @@ if(hp > 0){
 	with(obj_enemy){
 		if(hp > 0 && !other.disabled){
 			if(componentStruct.feats.reacts){
-				if(id != other.id)
+				if(id != other.id && !other.componentStruct.feats.chases)
 					canMove = true;
 				fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range);
 				if(other.componentStruct.feats.chases)

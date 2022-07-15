@@ -5,7 +5,7 @@ function apply_damage_component(component){
 		var targetTargetSize = ds_list_size(component.victimList);
 		if(targetTargetSize > 0){
 			for(var i =0; i < targetTargetSize; i ++){
-				ds_list_find_value( component.victimList,i).canAct = true;
+				ds_list_find_value( component.victimList,i).disabled = true;
 			}
 		}
 		
@@ -47,6 +47,7 @@ function apply_damage_component(component){
 				if(hp > 0){
 					if(action.damage.tempDamageType == "fire"){
 					find_bomb_targets(component);
+						component.disabled = false;
 						component.shake = true;
 						component.damaged = true;
 						ds_priority_add(global.actionQueue, component,component.SPD);

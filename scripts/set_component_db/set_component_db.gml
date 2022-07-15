@@ -278,6 +278,8 @@ function set_component_info_db(){
 			feats.movable = false;
 			visuals.sprite = spr_wall;
 			visuals.portraitSpr = spr_wall;
+			feats.triggersReaction = false;
+			
 		}
 	
 		barrel = new component_struct();

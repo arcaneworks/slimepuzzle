@@ -2,7 +2,9 @@
 //
 function enemy_reaction_move(){
 	wipe_nodes();
-	if(canMove && componentStruct.feats.chases){
+	if(disabled)
+		return;
+	if(!disabled && canMove && componentStruct.feats.chases && other.componentStruct.feats.triggersReaction){
 			var tempStruct = componentStruct;
 			copy_component_to_struct(id,tempStruct);
 			ds_priority_add(undoList, tempStruct, global.totalMoves);
@@ -32,28 +34,33 @@ function enemy_reaction_move(){
 			else
 				facingDir = dir.north;
 					
+			//if(abs(xDiff) == 1 && abs(yDiff) == 1){
+			//	yDiff = 0;
+				
+			//}
 			if(abs(xDiff) == 1 && abs(yDiff) == 1){
-				yDiff = 0;
+				if(map[gridX + xDiff, gridY].occupant == noone)
+					moveToNode = map[gridX + xDiff, gridY];
+				else
+					moveToNode = map[gridX, gridY + yDiff];
 				
 			}
-			
-			xDiff = clamp(xDiff,-1,1);
-			yDiff = clamp(yDiff,-1,1);
-			
-			var pathList = path_to_node(currNode, move ,target.currNode)
+			else{
+				var pathList = path_to_node(currNode, move ,target.currNode)
 			
 			
-			//var xCoord = clamp(gridX + xDiff, 0 , map_width - 1);			
-			//var yCoord = clamp(gridY + yDiff, 0 , map_height - 1);
-			var index = ds_list_size(pathList)-1;
-			if ( ds_list_find_value(pathList, index).occupant != noone){
-				index = index -1;	
+				//var xCoord = clamp(gridX + xDiff, 0 , map_width - 1);			
+				//var yCoord = clamp(gridY + yDiff, 0 , map_height - 1);
+				var index = ds_list_size(pathList)-1;
+				if ( ds_list_find_value(pathList, index).occupant != noone){
+					index = index -1;	
+				}
+				moveToNode = ds_list_find_value(pathList, index);
+				ds_list_destroy(pathList);
 			}
-			moveToNode = ds_list_find_value(pathList, index);
 			moveState = "start path";
 			canMove = false;
 			wipe_nodes();
-			ds_list_destroy(pathList);
 		
 		}
 	}
@@ -84,14 +91,14 @@ function enemy_reaction_move(){
 				}else{
 					//if this action single targets
 					if(other.id != id){
-						if(other.triggersReaction)
+						if(other.componentStruct.feats.triggersReaction)
 							ds_list_add(targetList, other.id); 
 						}
 					else{
 						if(ds_list_size(reactList) >0)
 						{
 							var tempTarget = ds_list_find_value(reactList, 0);
-							if(tempTarget.occupant)
+							if(tempTarget.occupant && tempTarget.occupant.componentStruct.feats.triggersReaction)
 								ds_list_add(targetList, tempTarget );	
 						}
 						
@@ -129,6 +136,7 @@ function enemy_reaction_move(){
 				actState = "action standby";
 				global.cursorState = "idle";
 				if(componentStruct.feats.chases)
+
 					canMove = true;
 			}
 		}

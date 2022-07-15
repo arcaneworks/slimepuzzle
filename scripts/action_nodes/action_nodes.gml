@@ -103,7 +103,7 @@ function action_nodes(originNode, targetType, range) {
 						
 					var tempTarget = map[oX,yy];
 				
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+					if(instance_exists(tempTarget) && tempTarget.occupant){
 						var dirList = ds_list_find_value(dirNodes, dir.north);
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
@@ -125,7 +125,7 @@ function action_nodes(originNode, targetType, range) {
 				if(xx <= rBound){
 					var tempTarget = map[xx, oY];
 					
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+					if(instance_exists(tempTarget) && tempTarget.occupant){
 						var dirList = ds_list_find_value(dirNodes, dir.east);
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
@@ -148,7 +148,7 @@ function action_nodes(originNode, targetType, range) {
 						
 					var tempTarget = map[oX, yy]; 
 							
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
+					if(instance_exists(tempTarget) && tempTarget.occupant){// and that node has an occupant
 						var dirList = ds_list_find_value(dirNodes, dir.south);
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
@@ -172,7 +172,7 @@ function action_nodes(originNode, targetType, range) {
 				if(xx >= 0){
 					var tempTarget = map[xx, oY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+						if(instance_exists(tempTarget) && tempTarget.occupant ){
 							var dirList = ds_list_find_value(dirNodes, dir.west);
 							tempTarget.actionNode = true;
 							ds_list_add(dirList, tempTarget);
@@ -263,7 +263,7 @@ function action_nodes(originNode, targetType, range) {
 						
 					var tempTarget = map[oX,yy];
 				
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+					if(instance_exists(tempTarget) && tempTarget.occupant){
 						var dirList = ds_list_find_value(dirNodes, dir.north);
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
@@ -285,7 +285,7 @@ function action_nodes(originNode, targetType, range) {
 				if(xx <= rBound){
 					var tempTarget = map[xx, oY];
 					
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+					if(instance_exists(tempTarget) && tempTarget.occupant ){
 						var dirList = ds_list_find_value(dirNodes, dir.east);
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
@@ -308,7 +308,7 @@ function action_nodes(originNode, targetType, range) {
 						
 					var tempTarget = map[oX, yy]; 
 							
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
+					if(instance_exists(tempTarget) && tempTarget.occupant ){// and that node has an occupant
 						var dirList = ds_list_find_value(dirNodes, dir.south);
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
@@ -332,7 +332,7 @@ function action_nodes(originNode, targetType, range) {
 				if(xx >= 0){
 					var tempTarget = map[xx, oY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+						if(instance_exists(tempTarget) && tempTarget.occupant ){
 							var dirList = ds_list_find_value(dirNodes, dir.west);
 							tempTarget.actionNode = true;
 							ds_list_add(dirList, tempTarget);

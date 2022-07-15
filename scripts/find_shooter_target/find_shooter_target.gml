@@ -31,7 +31,7 @@ function find_shooter_target(){
 				if(xx <= rBound){
 					var tempTarget = map[xx, gridY];
 					
-					if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+					if(instance_exists(tempTarget) && tempTarget.occupant){
 						tempTarget.actionNode = true;
 						ds_list_add(dirList, tempTarget);
 						break;
@@ -46,7 +46,7 @@ function find_shooter_target(){
 						
 						var tempTarget = map[gridX, yy]; 
 							
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){// and that node has an occupant
+						if(instance_exists(tempTarget) && tempTarget.occupant){// and that node has an occupant
 							tempTarget.actionNode = true;
 							ds_list_add(dirList, tempTarget);
 							break;// get out of for loop
@@ -60,7 +60,7 @@ function find_shooter_target(){
 				if(xx >= 0){
 					var tempTarget = map[xx, gridY]; 
 						
-						if(instance_exists(tempTarget) && tempTarget.occupant && !tempTarget.occupant.disabled){
+						if(instance_exists(tempTarget) && tempTarget.occupant){
 							tempTarget.actionNode = true;
 							ds_list_add(dirList, tempTarget);
 							

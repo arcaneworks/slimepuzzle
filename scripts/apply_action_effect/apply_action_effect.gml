@@ -10,7 +10,9 @@ function apply_action_effect(target){
 	}
 	
 	if(action.effect.stun){
-		target.canAct = false;	
+		//target.canAct = false;	
+		//target.canMove = false;
+		target.disabled = true;
 		ds_list_add(victimList, target);
 		wipe_nodes();
 	}
