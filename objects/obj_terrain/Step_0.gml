@@ -125,9 +125,11 @@ switch(terrainString){
 				
 			//If this actor is the head of the action queue (and finished applying action), dequeue it. 
 			//the actor loses action
-			if(headActor == id && ds_queue_empty(global.deathQueue)){
+			
+			if(headActor == id){
 				ds_list_clear(targetList);
 				ds_priority_delete_max(actQueue);
+				
 				actTurn = false;
 				actState = "idle";
 			}
