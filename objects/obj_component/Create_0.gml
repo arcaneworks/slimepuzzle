@@ -6,6 +6,8 @@ infoText = " this is a component. a component is an object that occupies a node.
 class = "no class";
 agent = false;
 component = true;
+terrain = false;
+node = false;
 faces = false; 
 facingDir = dir.south; //current facing direction. 
 dirStr = 1; //how many places component is getting rotated;
@@ -73,7 +75,7 @@ hitable = true;
 timer = 15;
 shake = false;
 shakeTimer = 5;
-
+blink = false;
 alpha = 1;
 
 hitSfx = s_impact_hit;
@@ -91,7 +93,7 @@ applyStatus = false;
 maxHp = 0; 
 hp = 0; 
 dead = false;
-displayTime = 25;
+displayTime = 40;
 hpTimer = displayTime; 
 
 displayHp = false;
@@ -103,6 +105,7 @@ fillSpr = spr_valuebar_fill_red;
 hpSec1 = spr_valuebar_section1;
 hpSec2 = spr_valuebar_section2;
 hpSec3 = spr_valuebar_section3;
+valuebarAlpha = .75;
 
 #endregion
 

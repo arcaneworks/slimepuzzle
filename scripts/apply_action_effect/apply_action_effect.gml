@@ -28,5 +28,6 @@ function apply_action_effect(target){
 				}
 			}
 		}
+		apply_terrain(target, map[target.gridX,target.gridY]);
 	}
 }

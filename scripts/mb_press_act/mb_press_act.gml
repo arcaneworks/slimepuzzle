@@ -15,7 +15,11 @@ function mb_press_act(){
 				selectedActor.target = hoverNode.occupant;
 				hoverNode.occupant.targetedBy = selectedActor;
 			}else{
-				selectedActor.target = hoverNode;
+				if(hoverNode.terrain != noone){
+					selectedActor.target = hoverNode.terrain;	
+				}else{
+					selectedActor.target = hoverNode;
+				}
 			}
 			
 			ds_list_add(selectedActor.targetList, selectedActor.target);

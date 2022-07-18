@@ -30,11 +30,38 @@ event_inherited();
 					snapshot_target_struct();
 					
 				}
-
-				//play startSfx
-				if(action.sfx.startSfx){
-					audio_play_sound(action.sfx.startSfx, 0, false);	
-				}		
+				
+				#region consolidate target list for applied action
+					var tempList = ds_list_create();
+					for(var j = 0; j < ds_list_size(targetList); j++){ 
+						target = ds_list_find_value(targetList, j); 
+					
+						if(target.node){
+							if(target.occupant != noone){
+								ds_list_add(tempList, target.occupant);
+							}else{
+								if(target.terrain != noone){
+									ds_list_add(tempList, target.terrain);
+								}
+							}							
+						}else{		
+					
+							if(target.component){
+								ds_list_add(tempList, target);
+							}
+					
+							if(target.terrain){
+								ds_list_add(tempList, target);
+							}
+						}
+					}
+						ds_list_copy(targetList, tempList);
+						ds_list_destroy(tempList);
+					//play startSfx
+					if(action.sfx.startSfx){
+						audio_play_sound(action.sfx.startSfx, 0, false);	
+					}	
+				#endregion
 				
 					actState = "apply action"; 
 			}else{ //if there is no target
@@ -51,27 +78,7 @@ event_inherited();
 						
 					for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
 						target = ds_list_find_value(targetList, j); 
-							
-							// if the target is a node and has an occupant
-							if(instance_exists(target) && target.node){ 
-								if(target.occupant){
-										target = target;
-								}else{
-									//if there is no occupant, but there is a terrain
-									//target the terrain
-									if(target.terrain != noone){
-										target = target; 
-									}
-								}
-							}		
-							
-							if(target.node && target.occupant != noone){
-								ds_list_replace(targetList, j, target.occupant);
-								target = target.occupant;
-							}
-								
-							apply_action();
-							
+							apply_action();	
 						}		
 						if(playEndSfx){
 							audio_play_sound(action.sfx.endSfx, 1, false);
@@ -100,14 +107,9 @@ event_inherited();
 					for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
 						var tempTarget = ds_list_find_value(targetList, j); 
 						if(instance_exists(tempTarget)){
-							if( tempTarget.component){
+							if(tempTarget.component){
 								target = tempTarget;	
-							}else{
-								if(tempTarget.node){
-									if(tempTarget.occupant != noone){
-										target = tempTarget.occupant	
-									}	
-								}
+								target.targeted = false;
 							}
 						}
 						
@@ -147,22 +149,9 @@ event_inherited();
 			//kills all targets at 0 hp
 			if(ds_list_size(targetList) > 0){
 				for(var j = 0; j < ds_list_size(targetList); j++){ //go through list, create vfx at each target
-					target = ds_list_find_value(targetList, j); 
-							
-						// if the target is a node and has an occupant
-						if(instance_exists(target) && target.node){ 
-							if(target.occupant){
-									target = target.occupant;
-							}else{
-								//if there is no occupant, but there is a terrain
-								//target the terrain
-								if(target.terrain != noone){
-									target = target.terrain; 
-								}
-							}
-						}		
+					target = ds_list_find_value(targetList, j); 						
+						// if the target is a node and has an occupan
 						if(instance_exists(target) && target != noone){ //if the target exists 
-							
 							if(target.component){ //and its a component
 								if(target.hitable){ //if the target is able to be hit (not a node)
 									if(target.hp <= 0){
