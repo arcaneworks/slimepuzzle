@@ -116,7 +116,9 @@ event_inherited();
 						apply_shove();	
 					}
 					finShove = true; //finished applying shove to everyone
-				}		
+				}else{
+					actState = "wait";	
+				}
 			}
 			//if there is a target, and the shove has been applied
 			if(target != noone && finShove){
