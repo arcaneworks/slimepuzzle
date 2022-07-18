@@ -104,6 +104,7 @@ function apply_damage_component(component){
 					newBonfire.facingDir = component.facingDir;
 		            newBonfire.redirect = component.redirect;
 		            newBonfire.targetedBy = id
+					newBonfire.currNode = component.currNode;
 					ds_list_clear(targetList);
 					ds_list_add(targetList, newBonfire);
 					//actor.target = newBonfire;
