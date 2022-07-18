@@ -9,7 +9,6 @@ function apply_damage_component(component){
 			}
 		}
 		
-		var xx = 1;
 		if(action.damage.backstab == true){
 			
 			if(component.faces && component.facingDir == facingDir){
@@ -31,6 +30,7 @@ function apply_damage_component(component){
 				component.hp -= tempDamage;
 				component.damaged = true;
 				component.shake = true;	
+				component.displayHp = true;
 			break;
 		
 
@@ -39,6 +39,7 @@ function apply_damage_component(component){
 					component.hp -= tempDamage;
 					component.damaged = true;
 					component.shake = true;
+					component.displayHp = true;
 				
 				}
 			break;
@@ -50,6 +51,7 @@ function apply_damage_component(component){
 						component.disabled = false;
 						component.shake = true;
 						component.damaged = true;
+						component.displayHp = true;
 						ds_priority_add(global.actionQueue, component,component.SPD);
 						component.actState = "action standby";
 						component.damageClass = "default";
@@ -68,6 +70,7 @@ function apply_damage_component(component){
 					component.hp -= 1;
 					component.damaged = true;
 					component.shake = true;	
+					component.displayHp = true;
 				}
 		
 			break;

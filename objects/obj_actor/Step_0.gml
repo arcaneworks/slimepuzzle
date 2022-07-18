@@ -86,7 +86,7 @@ event_inherited();
 						}
 					
 					}		
-					
+	
 					redirect = false;
 					
 					if(action.effect.shove){

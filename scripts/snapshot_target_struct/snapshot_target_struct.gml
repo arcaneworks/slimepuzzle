@@ -16,6 +16,7 @@ function snapshot_target_struct(){
 	}
 		
 	if(target.component){
+		target.targeted = true;
 		var uList = target.undoList;
 		
 			//if there is already an undo struct within this guy

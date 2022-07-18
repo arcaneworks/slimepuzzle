@@ -58,17 +58,37 @@ if(shake){
 // set hp display/outline flags if hovered
 if(global.cursor.hoverNode != noone && global.cursor.hoverNode.occupant == id && damaged == false){
 	hovered = true;	
-	displayHp = true;
 }else{
 	hovered = false;	
 }
 // deincrement display timer if damaged
 if(displayHp && damaged){
+	
 	if(hpTimer > 0){
-		hpTimer--;	
+		hpTimer--;
+		
+		if(hpTimer % 10 == 0){
+			valuebarAlpha = 0;
+			blink = false;	
+		}else{
+			blink = true;
+			valuebarAlpha = .75;
+		}
 	}else{
 		displayHp = false; 	
+		damaged = false;
 		hpTimer = displayTime;
+	}
+	
+}else{
+	if(hovered){
+		displayHp = true;
+	}else{
+		if(global.cursor.selectedActor == id && !targeted){
+			displayHp = true;	
+		}else{
+			displayHp = false;	
+		}
 	}
 	
 }
@@ -96,21 +116,21 @@ if(applyStatus){ //APPLY STATUS
 	applyStatus = false;	
 }
 
-#region sets "selected" and "hovered" variables based on global.cursor.selectedActor and hoverNode.occupant
+//#region sets "selected" and "hovered" variables based on global.cursor.selectedActor and hoverNode.occupant
 
-		if(global.cursor.hoverNode != noone && global.cursor.hoverNode.occupant == id){
-			hovered = true;
-		}else{
-			hovered = false;
-		}
-		if(hovered){	
-			displayHp = true;
-		}else{
-			if(!applyDamage){
-				displayHp = false;	
-			}
-		}
-#endregion 
+//		if(global.cursor.hoverNode != noone && global.cursor.hoverNode.occupant == id){
+//			hovered = true;
+//		}else{
+//			hovered = false;
+//		}
+//		if(hovered){	
+//			displayHp = true;
+//		}else{
+//			if(!applyDamage){
+//				displayHp = false;	
+//			}
+//		}
+//#endregion 
 
 
 switch(moveState){

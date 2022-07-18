@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4630cc58-19ee-4676-af85-29c9290a76b3","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4630cc58-19ee-4676-af85-29c9290a76b3","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"LayerId":{"name":"648f350d-11d1-427d-84a0-6ae082d78bff","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4630cc58-19ee-4676-af85-29c9290a76b3","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"LayerId":{"name":"5ce38dc5-5f5c-4801-ae97-8ef5b6e23c9c","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4630cc58-19ee-4676-af85-29c9290a76b3","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"LayerId":{"name":"648f350d-11d1-427d-84a0-6ae082d78bff","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_spike_hole","path":"sprites/spr_spike_hole/spr_spike_hole.yy",},"resourceVersion":"1.0","name":"4630cc58-19ee-4676-af85-29c9290a76b3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
