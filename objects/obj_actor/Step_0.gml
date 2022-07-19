@@ -8,7 +8,7 @@ event_inherited();
 	switch(actState){
 		
 		case "action standby":
-			if(actTurn){
+			if(actTurn && ds_queue_head(global.deathQueue) != id){
 				actState = "create effect";
 			}
 
@@ -157,9 +157,9 @@ event_inherited();
 							if(target.component){ //and its a component
 								if(target.hitable){ //if the target is able to be hit (not a node)
 									if(target.hp <= 0){
+										target.canAct = false; 
 										ds_queue_enqueue(global.deathQueue, target);	
 										target.deathWait = true;
-										
 									}
 								}
 							}
