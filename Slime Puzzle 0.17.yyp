@@ -907,7 +907,6 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"mountain5.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"mountain6.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"mountain8.csv","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"mountain9.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"mountain7.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/Stages","resourceVersion":"1.0","name":"level.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/Stages","resourceVersion":"1.0","name":"forest.csv","resourceType":"GMIncludedFile",},
@@ -928,6 +927,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"forest18.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"forest23.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"forest22.csv","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/CGs","resourceVersion":"1.0","name":"mountain9.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
