@@ -5,9 +5,10 @@ function enemy_reaction_move(){
 	if(disabled)
 		return;
 	if(!disabled && canMove && componentStruct.feats.chases && other.componentStruct.feats.triggersReaction){
-			var tempStruct = componentStruct;
-			copy_component_to_struct(id,tempStruct);
-			ds_priority_add(undoList, tempStruct, global.totalMoves);
+		var tempStruct = snap_deep_copy(id.componentStruct);
+		copy_component_to_struct(id, tempStruct);
+		show_debug_message(id.class + " performing reaction move at turn number " + string(global.totalMoves));
+		ds_priority_add(undoList, tempStruct, global.totalMoves);
 		var distance = 15;
 		var target = noone;
 		with(obj_agent){
@@ -75,9 +76,9 @@ function enemy_reaction_move(){
 				listIndex = 0;
 			if(listIndex > -1){ 
 				//if this action targets all reactNodes
-				var tempStruct = snap_deep_copy(id.componentStruct);
-				copy_component_to_struct(id, tempStruct);
-				ds_priority_add(undoList, tempStruct, global.totalMoves);
+				//var tempStruct = snap_deep_copy(id.componentStruct);
+				//copy_component_to_struct(id, tempStruct);
+				//ds_priority_add(undoList, tempStruct, global.totalMoves);
 			
 				if(action.targeting.targetAll){
 					for(var ii = 0; ii < ds_list_size(reactList); ii++){

@@ -219,11 +219,11 @@ function path_to_node(originNode, moveRange, targetNode){
 				&& ds_map_find_value(gScore, ds_map_find_value(cameFrom,neighbor))> tentative_gScore){
 					
 					var oldLink = ds_map_find_value(cameFrom,neighbor);
-					if(oldLink != undefined)
-						show_debug_message("Node: " + string(oldLink.gridX) + ", " + string(oldLink.gridY) + " link to Node: " + string(neighbor.gridX) + ", " + string(neighbor.gridY) + " replaced with link to Node: " + string (current.gridX) + ", " + string(current.gridY));
-					else{
-						show_debug_message( "Node: " + string(neighbor.gridX) + ", " + string(neighbor.gridY) + " linked to Node: " + string(current.gridX) + ", " + string(current.gridY));
-					}
+					//if(oldLink != undefined)
+					//	//show_debug_message("Node: " + string(oldLink.gridX) + ", " + string(oldLink.gridY) + " link to Node: " + string(neighbor.gridX) + ", " + string(neighbor.gridY) + " replaced with link to Node: " + string (current.gridX) + ", " + string(current.gridY));
+					//else{
+					//	show_debug_message( "Node: " + string(neighbor.gridX) + ", " + string(neighbor.gridY) + " linked to Node: " + string(current.gridX) + ", " + string(current.gridY));
+					//}
 					ds_map_add(cameFrom,neighbor,current);	
 				}
 				ds_map_add(gScore,neighbor, tentative_gScore);
@@ -239,8 +239,8 @@ function path_to_node(originNode, moveRange, targetNode){
 				if(ds_map_find_value(cameFrom,neighbor) == undefined 
 				|| ds_map_find_value( gScore,ds_map_find_value(cameFrom,neighbor)) != undefined 
 				&& ds_map_find_value( gScore,ds_map_find_value(cameFrom,neighbor))> tentative_gScore){
-					var oldLink = ds_map_find_value(cameFrom, neighbor);
-					show_debug_message("Node: " + oldLink.gridX + ", " + oldLink.gridY + " link to Node: " + neighbor.gridX + ", " + neighbor.gridY + " replaced with link to Node: " + current.gridX + ", " + current.gridY);
+					//var oldLink = ds_map_find_value(cameFrom, neighbor);
+					//show_debug_message("Node: " + oldLink.gridX + ", " + oldLink.gridY + " link to Node: " + neighbor.gridX + ", " + neighbor.gridY + " replaced with link to Node: " + current.gridX + ", " + current.gridY);
 					ds_map_replace(cameFrom, neighbor, current);
 				}
 				ds_map_replace(gScore, neighbor, tentative_gScore);
@@ -292,12 +292,12 @@ function reconstruct_path(cameFrom, current){
 		var key = keys[k];
 		var v = values[k];
 		//show_debug_message("attempt " + string(attempt) + ", iteration " + string(k));
-		show_debug_message("scanning node: " + string(key.gridX) + ", " + string(key.gridY) + " in search of node: " + string(curNode.gridX) + ", " + string(curNode.gridY) + " iteration " + string(k));
+		//show_debug_message("scanning node: " + string(key.gridX) + ", " + string(key.gridY) + " in search of node: " + string(curNode.gridX) + ", " + string(curNode.gridY) + " iteration " + string(k));
 		if(key == curNode){
 			ds_list_add(total_path, v);
 			curNode = v;
-			var s = "Node: " + string(v.gridX) + ", " + string(v.gridY) + " came from Node: " + string(key.gridX) + ", " + string(key.gridY);
-			show_debug_message(s);
+			//var s = "Node: " + string(v.gridX) + ", " + string(v.gridY) + " came from Node: " + string(key.gridX) + ", " + string(key.gridY);
+			//show_debug_message(s);
 			k = -1;
 			attempt ++;
 		}
