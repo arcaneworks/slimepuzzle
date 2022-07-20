@@ -32,7 +32,11 @@ switch(terrainString){
 		
 		case "action standby":
 			if(actTurn){
-				actState = "create effect";
+				if(map[gridX, gridY].occupant == ds_list_find_value(targetList, 0)){
+					actState = "create effect";
+				}else{
+					actState = "wait";	
+				}
 			}
 
 		break;
