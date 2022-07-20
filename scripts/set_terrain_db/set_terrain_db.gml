@@ -12,6 +12,7 @@ function set_terrain_db(){
 		xPos = 0;
 		yPos = 0; 
 		dead = false;
+		trap = false;
 	}
 	
 	function terrain_effect_struct() constructor {
@@ -78,6 +79,7 @@ function set_terrain_db(){
 		info.infoText = "It's a trap.";
 		info.sprite = spr_spike_hole;
 		info.terrainCode = "TS";
+		info.trap = true;
 	}
 	
 		
