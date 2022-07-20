@@ -8,14 +8,14 @@ event_inherited();
 	switch(actState){
 		
 		case "action standby":
-			if(actTurn && ds_queue_head(global.deathQueue) != id){
+			if(actTurn && ds_queue_head(global.deathQueue) != id && moveState == "idle"){
 				actState = "create effect";
 			}
 
 		break;
 		
 		case "create effect":
-
+			
 			//if disabled, clear targets 		
 			if(disabled){
 				ds_list_clear(targetList);		

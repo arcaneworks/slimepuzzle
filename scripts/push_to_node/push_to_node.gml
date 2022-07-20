@@ -26,7 +26,7 @@ if(abs(xDif) > 0 || abs(yDif)){
 	yDif = clamp(yDif, -1, 1);
 	newGridX -= xDif;
 	newGridY -= yDif;
-	if(newGridX >= lBound && newGridX <= rBound && newGridY >= bBound && newGridY <= tBound)
+	if(newGridX >= lBound && newGridX <= rBound && newGridY >= bBound && newGridY <= tBound && map[newGridX, newGridY].occupant == noone)
 		pushNode = map[newGridX, newGridY];
 }
 

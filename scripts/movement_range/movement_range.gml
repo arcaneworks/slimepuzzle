@@ -197,15 +197,16 @@ function path_to_node(originNode, moveRange, targetNode){
 					//give neighbor the appropriate parent
 					neighbor.parent = current;
 					if(neighbor.terrain){
-						//TODO activate this once info is implemented
-						//costMod = neighbor.terrain.info.cost;
+						if(neighbor.terrain.terrainString == "Ice")
+							costMod = 9999;
+						
 					}
 					//if node is diagonal, create appropriate costMod
 					if(neighbor.gridX != current.gridX && neighbor.gridY != current.gridY){
 						if(diagonal)
-						costMod = 1;
+						costMod += 1;
 						else
-						costMod = 2;
+						costMod += 2;
 					}
 						if(neighbor.occupant != noone && neighbor != goal){
 							costMod = 999999;	

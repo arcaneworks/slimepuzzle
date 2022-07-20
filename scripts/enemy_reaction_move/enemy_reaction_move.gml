@@ -4,7 +4,10 @@ function enemy_reaction_move(){
 	wipe_nodes();
 	if(disabled)
 		return;
-	if(!disabled && canMove && componentStruct.feats.chases && other.componentStruct.feats.triggersReaction){
+		
+	if(!disabled && canMove && componentStruct.feats.chases 
+	&& other.componentStruct.feats.triggersReaction && (currNode != noone ||
+	currNode.terrain == noone || currNode.terrain.terrainString != "Ice")){
 		var tempStruct = snap_deep_copy(id.componentStruct);
 		copy_component_to_struct(id, tempStruct);
 		show_debug_message(id.class + " performing reaction move at turn number " + string(global.totalMoves));
@@ -65,7 +68,7 @@ function enemy_reaction_move(){
 		
 		}
 	}
-	if(canAct){
+	if(canAct && moveState == "idle" ){
 		if(!ds_list_empty(reactList)){
 				//if this node I just moved in is in the react List (returns -1
 				

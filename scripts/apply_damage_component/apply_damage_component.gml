@@ -5,7 +5,7 @@ function apply_damage_component(component){
 		var targetTargetSize = ds_list_size(component.victimList);
 		if(targetTargetSize > 0){
 			for(var i =0; i < targetTargetSize; i ++){
-				ds_list_find_value( component.victimList,i).disabled = true;
+				ds_list_find_value( component.victimList,i).disabled = false;
 			}
 		}
 		
