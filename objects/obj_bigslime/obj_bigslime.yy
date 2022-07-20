@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_slime",
-    "path": "sprites/spr_slime/spr_slime.yy",
+    "name": "spr_bigslime",
+    "path": "sprites/spr_bigslime/spr_bigslime.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
     "path": "folders/00 - GAME/1 - Objects/Components/Actors/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_slime",
+  "name": "obj_bigslime",
   "tags": [],
   "resourceType": "GMObject",
 }

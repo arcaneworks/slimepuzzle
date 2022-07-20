@@ -5,44 +5,50 @@ function get_component_info(component, componentCode){
 		var tempStruct = noone;
 		
 	switch(componentCode){
-		case "CK":
-			tempStruct = global.componentDB.knight; 
-		break; 
-		
-		case "CW":
-			tempStruct = global.componentDB.wizard; 
-		break; 
-		
-		case "CY": 
-			tempStruct = global.componentDB.cybermage; 
-		break;
-		
 		case "CA":
 			tempStruct = global.componentDB.archer; 
 		break; 
 		
-		case "CR":
-			tempStruct = global.componentDB.rogue; 
+		case "CB":
+			tempStruct = global.componentDB.bomb; 
 		break;
 		
 		case "CC":
 			tempStruct = global.componentDB.cleric; 
 		break;
 		
-		case "CS":
-			tempStruct = global.componentDB.shooter; 
+		case "CD":
+			tempStruct = global.componentDB.bigslime;
+		break;
+
+		case "CE":
+			tempStruct = global.componentDB.eye;
 		break;
 		
-		case "CP":
-			tempStruct = global.componentDB.shooter2; 
-		break;
 		
 		case "CF":
 			tempStruct = global.componentDB.fighter; 
 		break;
 		
-		case "CB":
-			tempStruct = global.componentDB.bomb; 
+		
+		case "CK":
+			tempStruct = global.componentDB.knight; 
+		break; 
+		
+		
+		case "CP":
+			tempStruct = global.componentDB.shooter2; 
+		break;
+		
+		case "CQ":
+			tempStruct = global.componentDB.brawler;
+		break;
+		case "CR":
+			tempStruct = global.componentDB.rogue; 
+		break;
+			
+		case "CS":
+			tempStruct = global.componentDB.shooter; 
 		break;
 		
 		case "CT":
@@ -50,19 +56,23 @@ function get_component_info(component, componentCode){
 			
 		break;
 		
-			
-		case "CE":
-			tempStruct = global.componentDB.eye;
-		break;
+		case "CW":
+			tempStruct = global.componentDB.wizard; 
+		break; 
 		
 		case "CX":
 			tempStruct = global.componentDB.slime;
 		break;
 		
-		case "CQ":
-			tempStruct = global.componentDB.brawler;
+		case "CY": 
+			tempStruct = global.componentDB.cybermage; 
 		break;
+		
+		
 			
+		
+		
+		
 		case "ER":
 			tempStruct = global.componentDB.rock; 
 		break;

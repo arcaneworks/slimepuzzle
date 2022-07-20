@@ -52,6 +52,11 @@ set_component_info(global.componentDB.slime, slime);
 slime.tabType = "actors";
 ds_list_add(actorList, slime);
 
+bigslime = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
+set_component_info(global.componentDB.bigslime, bigslime);
+bigslime.tabType = "actors";
+ds_list_add(actorList, bigslime);
+
 shooter = instance_create_layer(x, y, "Instances", obj_bare_component_tool); 
 set_component_info(global.componentDB.shooter,shooter);
 shooter.tabType = "actors";

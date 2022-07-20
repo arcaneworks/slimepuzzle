@@ -237,6 +237,19 @@ function set_component_info_db(){
 			action = global.actionDB.slime;
 			stats.maxHp = 1;
 		}
+		
+		bigslime = new component_struct();
+		with(bigslime){
+			info.class = "bigslime"; 
+			info.infoText = "man, that's a big fuckin slime!";
+			info.componentCode = "CD";
+			visuals.sprite = spr_bigslime;
+			feats.faces = false;
+			visuals.portraitSpr = spr_port_slime;
+			action = global.actionDB.slime;
+			stats.maxHp = 3;
+		
+		}
 		grabber = new component_struct();
 		with (grabber){
 			info.class = "grabber";
@@ -350,8 +363,10 @@ function set_component_info_db(){
 		thumper : other.thumper,
 		eye : other.eye,
 		slime : other.slime,
+		bigslime : other.bigslime,
 		brawler : other.brawler,
 		grabber : other.grabber,
+		
 		rock : other.rock, 
 		barrel : other.barrel,
 		crate : other.crate,
