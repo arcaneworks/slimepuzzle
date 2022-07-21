@@ -196,11 +196,11 @@ function path_to_node(originNode, moveRange, targetNode){
 			var neighbor = ds_list_find_value(current.neighbors, ii);
 					//give neighbor the appropriate parent
 					neighbor.parent = current;
-					if(neighbor.terrain){
-						if(neighbor.terrain.terrainString == "Ice")
-							costMod = 9999;
+					//if(neighbor.terrain){
+					//	if(neighbor.terrain.terrainString == "Ice")
+					//		costMod = 9999;
 						
-					}
+					//}
 					//if node is diagonal, create appropriate costMod
 					if(neighbor.gridX != current.gridX && neighbor.gridY != current.gridY){
 						if(diagonal)

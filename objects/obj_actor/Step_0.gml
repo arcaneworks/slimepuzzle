@@ -177,7 +177,7 @@ event_inherited();
 				
 				ds_priority_delete_max(actQueue);
 				
-				canAct = false;
+ 				canAct = false;
 				
 				actTurn = false;
 			}

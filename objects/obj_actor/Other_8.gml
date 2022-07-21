@@ -4,7 +4,7 @@ apply_terrain(id, map[gridX, gridY]);
 
 
 
-if(hp > 0){
+if(hp > 0 && !shoved){
 	with(obj_enemy){
 		if(hp > 0 && !other.disabled){
 			if(componentStruct.feats.reacts){
