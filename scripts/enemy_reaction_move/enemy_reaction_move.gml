@@ -68,7 +68,7 @@ function enemy_reaction_move(){
 		
 		}
 	}
-	if(canAct && moveState == "idle" ){
+	if(canAct ){
 		if(!ds_list_empty(reactList)){
 				//if this node I just moved in is in the react List (returns -1
 				

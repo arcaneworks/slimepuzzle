@@ -22,7 +22,7 @@ if(hp > 0){
 if(shoved){
 		
 	if(object_get_parent(object_index) == obj_enemy){
-		if(componentStruct.feats.reacts && hp > 0){
+		if(componentStruct.feats.reacts && hp > 0 && (currNode.terrain == noone || currNode.terrain.terrainString != "Ice")){
 			fill_reaction_list(reactList, action.targeting.reactionType, action.targeting.range); 
 			shove_reaction();
 		}
