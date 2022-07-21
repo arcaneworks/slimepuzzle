@@ -105,8 +105,9 @@ function apply_damage_component(component){
 		            newBonfire.redirect = component.redirect;
 		            newBonfire.targetedBy = id
 					newBonfire.currNode = component.currNode;
-					ds_list_clear(targetList);
-					ds_list_add(targetList, newBonfire);
+					//ds_list_clear(targetList);
+					var componentIndex = ds_list_find_index(targetList, component);
+					ds_list_replace(targetList, newBonfire, componentIndex);
 					//actor.target = newBonfire;
 					map[component.gridX, component.gridY].occupant = newBonfire; 
 					component.dead = true;
